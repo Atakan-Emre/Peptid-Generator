@@ -1358,11 +1358,12 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
     # Checkpoint'ten devam et (varsa)
     start_epoch = 0
     best_val = float('inf')
+    best_epoch = 0  # En iyi epoch'u takip et
     patience_ctr = 0
     best_state = None
     train_losses = []
     val_losses = []
-    patience = 20  # Final eğitimde daha uzun patience
+    patience = 10  # Early stopping patience (validation loss iyileşmezse dur)
     
     if os.path.exists(checkpoint_path):
         print(f"  🔄 Checkpoint bulundu! Kaldığı yerden devam ediliyor: {checkpoint_path}")
@@ -1371,12 +1372,13 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         start_epoch = checkpoint['epoch'] + 1
         best_val = checkpoint.get('best_val', float('inf'))
+        best_epoch = checkpoint.get('best_epoch', 0)
         patience_ctr = checkpoint.get('patience_ctr', 0)
         if 'best_state' in checkpoint:
             best_state = checkpoint['best_state']
         train_losses = checkpoint.get('train_losses', [])
         val_losses = checkpoint.get('val_losses', [])
-        print(f"  ✓ Checkpoint yüklendi: Epoch {start_epoch}/{final_epochs}, Best Val Loss: {best_val:.6f}")
+        print(f"  ✓ Checkpoint yüklendi: Epoch {start_epoch}/{final_epochs}, Best Val Loss: {best_val:.6f} (at epoch {best_epoch})")
         log_file.write(f"🔄 Checkpoint'ten devam: Epoch {start_epoch}/{final_epochs}\n")
         log_file.flush()
     
@@ -1488,13 +1490,19 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
         
         if avg_val < best_val:
             best_val = avg_val
+            best_epoch = epoch + 1
             patience_ctr = 0
             # Deep copy kullanarak ağırlıkları güvenli şekilde kaydet
             best_state = copy.deepcopy(model.state_dict())
         else:
             patience_ctr += 1
             if patience_ctr >= patience:
-                print(f"\nEarly stopping at epoch {epoch + 1}")
+                print(f"\n⏹ Early stopping triggered at epoch {epoch + 1}")
+                print(f"   Best validation loss: {best_val:.6f} (at epoch {best_epoch})")
+                print(f"   Current validation loss: {avg_val:.6f}")
+                log_file.write(f"\nEarly stopping at epoch {epoch + 1}\n")
+                log_file.write(f"Best validation loss: {best_val:.6f} (at epoch {best_epoch})\n")
+                log_file.write(f"Current validation loss: {avg_val:.6f}\n")
                 break
         
         # Her epoch'ta checkpoint kaydet (kaldığı yerden devam için)
@@ -1503,6 +1511,7 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
             'model_state_dict': model.state_dict(),
             'optimizer_state_dict': optimizer.state_dict(),
             'best_val': best_val,
+            'best_epoch': best_epoch,
             'patience_ctr': patience_ctr,
             'train_losses': train_losses,
             'val_losses': val_losses,
@@ -1525,8 +1534,11 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
             else:
                 print(f"\n  Epoch {epoch + 1}/{final_epochs} - Train: {avg_train:.4f}, Val: {avg_val:.4f}")
     
+    # En iyi model state'ini yükle (early stopping varsa)
     if best_state:
+        print(f"\n✓ Best model state yüklendi (Epoch {best_epoch}, Val Loss: {best_val:.6f})")
         model.load_state_dict(best_state)
+        log_file.write(f"\nBest model state yüklendi: Epoch {best_epoch}, Val Loss: {best_val:.6f}\n")
     
     # Test
     model.eval()
@@ -2803,17 +2815,36 @@ def main():
         if results_dict:
             for model_type, result_data in results_dict.items():
                 try:
+                    # final_metrics varsa kullan (sadece en iyi model için var)
+                    # yoksa ablation sonuçlarındaki best_test_r2'yi kullan
+                    if 'final_metrics' in result_data and result_data['final_metrics']:
+                        test_r2 = result_data['final_metrics']['test']['r2']
+                        test_mae = result_data['final_metrics']['test']['mae']
+                        test_rmse = result_data['final_metrics']['test']['rmse']
+                    else:
+                        # Ablation sonuçlarından best_test_r2 kullan
+                        best_params = result_data.get('best_params', {})
+                        test_r2 = best_params.get('best_test_r2', None)
+                        test_mae = None  # Ablation'da MAE kaydedilmiyor
+                        test_rmse = None  # Ablation'da RMSE kaydedilmiyor
+                        if test_r2 is None:
+                            print(f"⚠ UYARI: {plastic_type} - {model_type} için test R² bulunamadı")
+                            continue
+                    
                     all_results_summary.append({
                         'Plastic_Type': plastic_type,
                         'Model_Type': model_type,
-                        'Test_R2': result_data['final_metrics']['test']['r2'],
-                        'Test_MAE': result_data['final_metrics']['test']['mae'],
-                        'Test_RMSE': result_data['final_metrics']['test']['rmse'],
-                        **{k: v for k, v in result_data['best_params'].items()
+                        'Test_R2': test_r2,
+                        'Test_MAE': test_mae,
+                        'Test_RMSE': test_rmse,
+                        **{k: v for k, v in result_data.get('best_params', {}).items()
                            if k not in ['score_mean', 'score_std', 'best_val_r2', 'best_test_r2']}
                     })
                 except KeyError as e:
                     print(f"⚠ UYARI: {plastic_type} - {model_type} için eksik veri: {e}")
+                    continue
+                except Exception as e:
+                    print(f"⚠ HATA: {plastic_type} - {model_type} için hata oluştu: {e}")
                     continue
         else:
             print(f"⚠ {plastic_type} için sonuç bulunamadı (çalıştırılmamış olabilir)")
@@ -2851,7 +2882,11 @@ def main():
         
         # Genel tabloyu göster ve kaydet
         display_summary = summary_df.copy()
-        display_summary = display_summary[['Plastic_Type', 'Model_Type', 'Test_R2', 'Test_MAE', 'Test_RMSE']]
+        # None değerleri 'N/A' ile değiştir (görüntüleme için)
+        display_summary['Test_MAE'] = display_summary['Test_MAE'].fillna('N/A')
+        display_summary['Test_RMSE'] = display_summary['Test_RMSE'].fillna('N/A')
+        display_cols = ['Plastic_Type', 'Model_Type', 'Test_R2', 'Test_MAE', 'Test_RMSE']
+        display_summary = display_summary[display_cols]
         print("\n" + display_summary.to_string(index=False))
         
         # Genel HTML tablo (best modelleri vurgula)
