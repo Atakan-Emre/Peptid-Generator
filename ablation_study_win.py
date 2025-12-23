@@ -138,12 +138,14 @@ if 'DRIVE_PROJECT_DIR' not in globals():
 ABLATION_DIR = os.path.join(DRIVE_PROJECT_DIR, "ablation_results")
 ABLATION_TABLES_DIR = os.path.join(ABLATION_DIR, "tables")
 ABLATION_FIGURES_DIR = os.path.join(ABLATION_DIR, "figures")
+ABLATION_TRAINING_CURVES_DIR = os.path.join(ABLATION_FIGURES_DIR, "training_curves_ablation")  # Ablation training curves için
 FINAL_MODELS_DIR = os.path.join(ABLATION_DIR, "final_models")
 ABLATION_LOGS_DIR = os.path.join(ABLATION_DIR, "logs")  # Detaylı loglar için
 CHECKPOINT_DIR = os.path.join(ABLATION_DIR, "checkpoints")  # Checkpoint'ler için
 
 os.makedirs(ABLATION_TABLES_DIR, exist_ok=True)
 os.makedirs(ABLATION_FIGURES_DIR, exist_ok=True)
+os.makedirs(ABLATION_TRAINING_CURVES_DIR, exist_ok=True)
 os.makedirs(FINAL_MODELS_DIR, exist_ok=True)
 os.makedirs(ABLATION_LOGS_DIR, exist_ok=True)
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
@@ -651,14 +653,14 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             'num_layers': [2, 3],
             'dropout': [0.1, 0.2],
             'latent_dim': [64],  # Fixed
-            'learning_rate': [1e-3],  # Fixed to most common good LR to save combos
+            'learning_rate': [1e-4, 1e-3],  # Test both lower and higher LR to prevent overfitting
             'batch_size': [512, 1024],
             'beta_kl': [1.0, 2.0],  # Increased KL penalty
             'gamma_score': [1.0],  # Fixed
             'weight_decay': [1e-4, 1e-2],
             'use_layernorm': [True, False]
         }
-        # Total: 2*2*2*1*1*2*2*1*2*2 = 128. Good.
+        # Total: 2*2*2*1*2*2*2*1*2*2 = 256. Good.
         
     elif model_type == 'encdec':
         param_grid = {
@@ -1059,6 +1061,31 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
         test_mae = mean_absolute_error(y_test, test_preds)
         test_rmse = math.sqrt(mean_squared_error(y_test, test_preds))
         
+        # OVERFITTING ANALİZİ: Final epoch'ta train-val loss gap hesapla
+        final_train_loss = train_losses_epoch[-1] if train_losses_epoch else 0.0
+        final_val_loss = val_losses_epoch[-1] if val_losses_epoch else 0.0
+        train_val_gap = final_train_loss - final_val_loss
+        overfitting_ratio = train_val_gap / final_val_loss if final_val_loss > 0 else 0.0  # Negatif = overfitting
+        
+        # Best epoch'ta train-val gap (daha anlamlı)
+        if best_epoch > 0 and best_epoch <= len(train_losses_epoch):
+            best_train_loss = train_losses_epoch[best_epoch - 1]
+            best_val_loss = val_losses_epoch[best_epoch - 1]
+            best_epoch_gap = best_train_loss - best_val_loss
+            best_epoch_overfitting_ratio = best_epoch_gap / best_val_loss if best_val_loss > 0 else 0.0
+        else:
+            best_train_loss = final_train_loss
+            best_val_loss = final_val_loss
+            best_epoch_gap = train_val_gap
+            best_epoch_overfitting_ratio = overfitting_ratio
+        
+        # Val R² trend analizi (son 10 epoch'ta iyileşme var mı?)
+        if len(val_r2_epoch) >= 10:
+            last_10_val_r2 = val_r2_epoch[-10:]
+            val_r2_trend = last_10_val_r2[-1] - last_10_val_r2[0]  # Pozitif = iyileşiyor
+        else:
+            val_r2_trend = 0.0
+        
         # Kombinasyon sonuç logu
         combo_log['final_results'] = {
             'best_val_r2': float(best_val_r2),
@@ -1067,7 +1094,16 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             'test_rmse': float(test_rmse),
             'best_epoch': int(best_epoch),
             'total_epochs': int(epoch + 1),
-            'early_stopped': epoch + 1 < ablation_epochs
+            'early_stopped': epoch + 1 < ablation_epochs,
+            'final_train_loss': float(final_train_loss),
+            'final_val_loss': float(final_val_loss),
+            'train_val_gap': float(train_val_gap),
+            'overfitting_ratio': float(overfitting_ratio),
+            'best_epoch_gap': float(best_epoch_gap),
+            'best_epoch_overfitting_ratio': float(best_epoch_overfitting_ratio),
+            'val_r2_trend': float(val_r2_trend),
+            'train_losses_epoch': [float(x) for x in train_losses_epoch],  # Training curves için kaydet
+            'val_losses_epoch': [float(x) for x in val_losses_epoch]
         }
         all_logs.append(combo_log)
         
@@ -1079,6 +1115,11 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
         log_file.write(f"     Test MAE: {test_mae:.6f}\n")
         log_file.write(f"     Test RMSE: {test_rmse:.6f}\n")
         log_file.write(f"     Toplam Epoch: {epoch + 1}/{ablation_epochs}\n")
+        log_file.write(f"     Overfitting Analizi:\n")
+        log_file.write(f"       Final Train Loss: {final_train_loss:.6f}, Val Loss: {final_val_loss:.6f}\n")
+        log_file.write(f"       Train-Val Gap: {train_val_gap:.6f} (Negatif = Overfitting)\n")
+        log_file.write(f"       Overfitting Ratio: {overfitting_ratio:.4f} (Negatif = Overfitting)\n")
+        log_file.write(f"       Best Epoch Gap: {best_epoch_gap:.6f}\n")
         log_file.flush()
         
         result = {
@@ -1089,6 +1130,13 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             'val_r2': best_val_r2,
             'best_epoch': best_epoch,  # Early stopping epoch'u
             'total_epochs': epoch + 1,  # Toplam çalışan epoch sayısı
+            'final_train_loss': final_train_loss,
+            'final_val_loss': final_val_loss,
+            'train_val_gap': train_val_gap,  # Negatif = overfitting
+            'overfitting_ratio': overfitting_ratio,  # Negatif = overfitting
+            'best_epoch_gap': best_epoch_gap,
+            'best_epoch_overfitting_ratio': best_epoch_overfitting_ratio,
+            'val_r2_trend': val_r2_trend,  # Son 10 epoch'ta R² trend'i
             **params
         }
         results.append(result)
@@ -1180,6 +1228,12 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
     
     # Ablation sonuçlarını görselleştir
     plot_ablation_results(results_df, model_type, plastic_type)
+    
+    # Top 15 kombinasyon için training curves çiz (overfitting analizi için)
+    plot_top_combinations_training_curves(all_logs, results_df, model_type, plastic_type, top_n=15)
+    
+    # Overfitting analiz grafiği oluştur
+    plot_overfitting_analysis(results_df, model_type, plastic_type)
     
     # Final özet logu
     log_file.write(f"\n{'='*80}\n")
@@ -1869,6 +1923,239 @@ def plot_training_curves(train_losses, val_losses, model_type, plastic_type, epo
     # plt.show()  # İsterseniz bu satırı açabilirsiniz (GUI backend gerekir)
     plt.close()
 
+def plot_top_combinations_training_curves(all_logs, results_df, model_type, plastic_type, top_n=15):
+    """
+    Top N kombinasyon için training curves çiz (overfitting analizi için)
+    
+    Args:
+        all_logs: JSON log dosyasındaki tüm kombinasyon logları
+        results_df: Ablation sonuçları DataFrame'i (val_r2'ye göre sıralı)
+        model_type: Model tipi
+        plastic_type: Plastik tipi
+        top_n: Çizilecek top N kombinasyon sayısı
+    """
+    if not all_logs or len(all_logs) == 0:
+        return
+    
+    # Top N kombinasyonu seç (val_r2'ye göre sıralı)
+    top_combinations = results_df.head(top_n)
+    
+    if len(top_combinations) == 0:
+        return
+    
+    # Her kombinasyon için training curves çiz
+    for idx, row in top_combinations.iterrows():
+        combo_id = int(row['combination_id'])
+        
+        # Bu kombinasyonun loglarını bul
+        combo_log = None
+        for log in all_logs:
+            if log.get('combination_id') == combo_id:
+                combo_log = log
+                break
+        
+        if not combo_log or 'epochs' not in combo_log:
+            continue
+        
+        # Epoch'lardan train ve val loss'ları çıkar
+        epochs_data = combo_log['epochs']
+        train_losses = [e['train_loss'] for e in epochs_data]
+        val_losses = [e['val_loss'] for e in epochs_data]
+        val_r2_list = [e.get('val_r2', 0) for e in epochs_data]
+        
+        if not train_losses or not val_losses:
+            continue
+        
+        # Training curves çiz
+        fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+        fig.suptitle(f'Training Curves - Combo #{combo_id} (Val R²: {row["val_r2"]:.4f})', 
+                     fontsize=14, fontweight='bold')
+        
+        epochs_list = range(1, len(train_losses) + 1)
+        best_epoch = int(row['best_epoch'])
+        
+        # 1. Loss grafiği
+        ax1 = axes[0]
+        ax1.plot(epochs_list, train_losses, label='Train Loss', color='steelblue', linewidth=2, alpha=0.8)
+        ax1.plot(epochs_list, val_losses, label='Validation Loss', color='coral', linewidth=2, alpha=0.8)
+        ax1.axvline(best_epoch, color='red', linestyle='--', linewidth=1.5, alpha=0.7, label=f'Best Epoch: {best_epoch}')
+        
+        # Overfitting durumunu göster
+        final_train = train_losses[-1]
+        final_val = val_losses[-1]
+        if final_train < final_val:
+            ax1.text(0.98, 0.02, '⚠ Overfitting', transform=ax1.transAxes, 
+                    fontsize=10, color='red', fontweight='bold', ha='right',
+                    bbox=dict(boxstyle='round', facecolor='yellow', alpha=0.5))
+        
+        ax1.set_xlabel('Epoch', fontsize=12)
+        ax1.set_ylabel('Loss', fontsize=12)
+        ax1.set_title(f'Loss (Gap: {row.get("train_val_gap", 0):.4f})', fontsize=12, fontweight='bold')
+        ax1.legend(fontsize=9)
+        ax1.grid(True, alpha=0.3)
+        
+        # 2. Val R² grafiği
+        ax2 = axes[1]
+        ax2.plot(epochs_list, val_r2_list, label='Validation R²', color='green', linewidth=2, alpha=0.8)
+        ax2.axvline(best_epoch, color='red', linestyle='--', linewidth=1.5, alpha=0.7, label=f'Best Epoch: {best_epoch}')
+        ax2.axhline(row['val_r2'], color='red', linestyle=':', linewidth=1, alpha=0.5, label=f'Best Val R²: {row["val_r2"]:.4f}')
+        
+        ax2.set_xlabel('Epoch', fontsize=12)
+        ax2.set_ylabel('Validation R²', fontsize=12)
+        ax2.set_title(f'Val R² Trend', fontsize=12, fontweight='bold')
+        ax2.legend(fontsize=9)
+        ax2.grid(True, alpha=0.3)
+        
+        plt.tight_layout()
+        
+        # Parametre bilgisi ekle (subtitle olarak)
+        params_str = f"hidden={row.get('hidden_dim', 'N/A')}, lr={row.get('learning_rate', 'N/A')}, " \
+                    f"dropout={row.get('dropout', 'N/A')}, batch={row.get('batch_size', 'N/A')}"
+        fig.text(0.5, 0.01, params_str, ha='center', fontsize=8, style='italic')
+        
+        # Kaydet
+        fig_path = os.path.join(ABLATION_TRAINING_CURVES_DIR, 
+                               f'training_curves_combo_{combo_id:03d}_{model_type}_{plastic_type}.png')
+        plt.savefig(fig_path, dpi=150, bbox_inches='tight')
+        plt.close()
+    
+    print(f"✓ Top {len(top_combinations)} kombinasyon için training curves kaydedildi: {ABLATION_TRAINING_CURVES_DIR}")
+
+def plot_overfitting_analysis(results_df, model_type, plastic_type):
+    """
+    Overfitting analiz grafiği oluştur
+    
+    Args:
+        results_df: Ablation sonuçları DataFrame'i (overfitting metrikleri ile)
+        model_type: Model tipi
+        plastic_type: Plastik tipi
+    """
+    if len(results_df) == 0:
+        return
+    
+    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+    fig.suptitle(f'Overfitting Analysis: {model_type.upper()} - {plastic_type}', 
+                 fontsize=16, fontweight='bold')
+    
+    # 1. Val R² vs Overfitting Ratio (scatter)
+    ax1 = axes[0, 0]
+    scatter = ax1.scatter(results_df['val_r2'], results_df['overfitting_ratio'], 
+                         c=results_df['test_r2'], cmap='viridis', 
+                         s=50, alpha=0.6, edgecolors='black', linewidth=0.5)
+    
+    # Overfitting olmayan modelleri işaretle (overfitting_ratio >= 0)
+    non_overfitting = results_df[results_df['overfitting_ratio'] >= 0]
+    if len(non_overfitting) > 0:
+        ax1.scatter(non_overfitting['val_r2'], non_overfitting['overfitting_ratio'],
+                   color='green', s=100, marker='*', edgecolors='black', linewidth=2,
+                   label='No Overfitting', zorder=5)
+    
+    # En iyi kombinasyonu işaretle
+    best_idx = results_df['val_r2'].idxmax()
+    ax1.scatter(results_df.loc[best_idx, 'val_r2'], 
+               results_df.loc[best_idx, 'overfitting_ratio'],
+               color='red', s=200, marker='X', edgecolors='black', linewidth=2,
+               label='Best Model', zorder=6)
+    
+    ax1.axhline(0, color='gray', linestyle='--', linewidth=1, alpha=0.5, label='No Overfitting Line')
+    ax1.set_xlabel('Validation R²', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Overfitting Ratio\n(Negatif = Overfitting)', fontsize=12, fontweight='bold')
+    ax1.set_title('Val R² vs Overfitting Ratio', fontsize=14, fontweight='bold')
+    ax1.legend(fontsize=9)
+    ax1.grid(True, alpha=0.3)
+    plt.colorbar(scatter, ax=ax1, label='Test R²')
+    
+    # 2. Train-Val Gap dağılımı
+    ax2 = axes[0, 1]
+    ax2.hist(results_df['train_val_gap'], bins=30, edgecolor='black', alpha=0.7, color='steelblue')
+    ax2.axvline(0, color='red', linestyle='--', linewidth=2, label='No Overfitting Line')
+    ax2.set_xlabel('Train-Val Loss Gap\n(Negatif = Overfitting)', fontsize=12, fontweight='bold')
+    ax2.set_ylabel('Frequency', fontsize=12, fontweight='bold')
+    ax2.set_title('Train-Val Gap Distribution', fontsize=14, fontweight='bold')
+    ax2.legend()
+    ax2.grid(True, alpha=0.3, axis='y')
+    
+    # 3. Top 20 kombinasyon: Val R² vs Overfitting Ratio
+    ax3 = axes[1, 0]
+    top_20 = results_df.head(20)
+    colors_map = ['green' if r >= 0 else 'red' for r in top_20['overfitting_ratio']]
+    bars = ax3.barh(range(len(top_20)), top_20['val_r2'], color=colors_map, alpha=0.7, edgecolor='black')
+    
+    # Overfitting ratio'yu göster
+    for i, (idx, row) in enumerate(top_20.iterrows()):
+        of_ratio = row['overfitting_ratio']
+        label = f"R²={row['val_r2']:.3f}\nOF={of_ratio:.2f}"
+        ax3.text(row['val_r2'] + 0.01, i, label, va='center', fontsize=8)
+    
+    ax3.set_yticks(range(len(top_20)))
+    ax3.set_yticklabels([f"Combo #{int(r['combination_id'])}" for _, r in top_20.iterrows()], fontsize=8)
+    ax3.set_xlabel('Validation R²', fontsize=12, fontweight='bold')
+    ax3.set_title('Top 20 Combinations: Val R² (Green=No Overfitting, Red=Overfitting)', 
+                  fontsize=12, fontweight='bold')
+    ax3.grid(True, alpha=0.3, axis='x')
+    
+    # 4. Overfitting olmayan modellerin özeti
+    ax4 = axes[1, 1]
+    non_overfitting_df = results_df[results_df['overfitting_ratio'] >= 0]
+    overfitting_df = results_df[results_df['overfitting_ratio'] < 0]
+    
+    categories = ['Overfitting\n(Negatif Ratio)', 'No Overfitting\n(Pozitif Ratio)']
+    counts = [len(overfitting_df), len(non_overfitting_df)]
+    colors_bar = ['red', 'green']
+    
+    bars = ax4.bar(categories, counts, color=colors_bar, alpha=0.7, edgecolor='black')
+    
+    # Ortalama Val R²'leri göster
+    if len(overfitting_df) > 0:
+        avg_r2_overfitting = overfitting_df['val_r2'].mean()
+        ax4.text(0, counts[0] + max(counts)*0.05, f'Avg R²: {avg_r2_overfitting:.4f}', 
+                ha='center', fontsize=10, fontweight='bold')
+    
+    if len(non_overfitting_df) > 0:
+        avg_r2_non_overfitting = non_overfitting_df['val_r2'].mean()
+        ax4.text(1, counts[1] + max(counts)*0.05, f'Avg R²: {avg_r2_non_overfitting:.4f}', 
+                ha='center', fontsize=10, fontweight='bold')
+    
+    ax4.set_ylabel('Count', fontsize=12, fontweight='bold')
+    ax4.set_title('Overfitting Distribution', fontsize=14, fontweight='bold')
+    ax4.grid(True, alpha=0.3, axis='y')
+    
+    # Değerleri üstte göster
+    for bar, count in zip(bars, counts):
+        height = bar.get_height()
+        ax4.text(bar.get_x() + bar.get_width()/2., height,
+                f'{count}',
+                ha='center', va='bottom', fontsize=12, fontweight='bold')
+    
+    plt.tight_layout()
+    
+    # Kaydet
+    fig_path = os.path.join(ABLATION_FIGURES_DIR, f'overfitting_analysis_{model_type}_{plastic_type}.png')
+    plt.savefig(fig_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Overfitting analiz grafiği kaydedildi: {fig_path}")
+    plt.close()
+    
+    # Özet istatistikleri yazdır
+    print(f"\n📊 OVERFITTING ANALİZ ÖZETİ ({model_type.upper()} - {plastic_type}):")
+    print("="*80)
+    print(f"Toplam Kombinasyon: {len(results_df)}")
+    print(f"Overfitting Olan (Negatif Ratio): {len(overfitting_df)} ({len(overfitting_df)/len(results_df)*100:.1f}%)")
+    print(f"Overfitting Olmayan (Pozitif Ratio): {len(non_overfitting_df)} ({len(non_overfitting_df)/len(results_df)*100:.1f}%)")
+    if len(overfitting_df) > 0:
+        print(f"\nOverfitting Olan Modeller Ortalama Val R²: {overfitting_df['val_r2'].mean():.4f}")
+    if len(non_overfitting_df) > 0:
+        print(f"Overfitting Olmayan Modeller Ortalama Val R²: {non_overfitting_df['val_r2'].mean():.4f}")
+    
+    # En iyi overfitting olmayan model
+    if len(non_overfitting_df) > 0:
+        best_non_overfitting = non_overfitting_df.loc[non_overfitting_df['val_r2'].idxmax()]
+        print(f"\n🏆 EN İYİ OVERFITTING OLMAYAN MODEL:")
+        print(f"   Val R²: {best_non_overfitting['val_r2']:.4f}")
+        print(f"   Test R²: {best_non_overfitting['test_r2']:.4f}")
+        print(f"   Overfitting Ratio: {best_non_overfitting['overfitting_ratio']:.4f}")
+        print(f"   Combo ID: {int(best_non_overfitting['combination_id'])}")
+    print("="*80)
+
 def plot_model_comparison(all_results_summary):
     """Model karşılaştırma grafiklerini çiz (Nylon için)"""
     
@@ -2103,7 +2390,8 @@ def create_comparison_table_and_heatmap(all_ablation_results, plastic_type, best
     fig_path = os.path.join(ABLATION_FIGURES_DIR, f'model_comparison_heatmap_{plastic_type}.png')
     plt.savefig(fig_path, dpi=300, bbox_inches='tight')
     print(f"✓ Model karşılaştırma heatmap kaydedildi: {fig_path}")
-    plt.show()
+    # Windows'ta plt.show() yerine sadece kaydet (GUI gerektirmez)
+    # plt.show()  # İsterseniz bu satırı açabilirsiniz (GUI backend gerekir)
     plt.close()
     
     return comparison_df
@@ -2192,7 +2480,8 @@ def plot_amino_acid_probability_mass_heatmap(plastic_type, data_dir=None):
     fig_path = os.path.join(ABLATION_FIGURES_DIR, f'aa_probability_mass_heatmap_{plastic_type}.png')
     plt.savefig(fig_path, dpi=300, bbox_inches='tight')
     print(f"✓ Amino acid probability x mass heatmap kaydedildi: {fig_path}")
-    plt.show()
+    # Windows'ta plt.show() yerine sadece kaydet (GUI gerektirmez)
+    # plt.show()  # İsterseniz bu satırı açabilirsiniz (GUI backend gerekir)
     plt.close()
     
     return sorted_probs, sorted_aas, sorted_masses
@@ -2305,7 +2594,8 @@ def plot_generated_peptides_amino_acid_heatmap(generated_peptides_list, plastic_
                            f'generated_peptides_aa_heatmap_{model_type}_{plastic_type}.png')
     plt.savefig(fig_path, dpi=300, bbox_inches='tight')
     print(f"✓ Üretilen peptidler amino acid heatmap kaydedildi: {fig_path}")
-    plt.show()
+    # Windows'ta plt.show() yerine sadece kaydet (GUI gerektirmez)
+    # plt.show()  # İsterseniz bu satırı açabilirsiniz (GUI backend gerekir)
     plt.close()
     
     # İstatistikler
