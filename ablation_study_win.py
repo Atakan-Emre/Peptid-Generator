@@ -276,33 +276,44 @@ def seed_everything(seed=42):
 # ============================================================================
 
 class LSTMRegressor(nn.Module):
-    def __init__(self, input_dim=18, hidden_dim=256, num_layers=2, dropout=0.1):
+    def __init__(self, input_dim=18, hidden_dim=256, num_layers=2, dropout=0.1, use_layernorm=False):
         super().__init__()
         self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers=num_layers,
                            batch_first=True, dropout=dropout if num_layers > 1 else 0.0)
+        self.ln = nn.LayerNorm(hidden_dim) if use_layernorm else nn.Identity()
         self.head = nn.Sequential(nn.Tanh(), nn.Linear(hidden_dim, 1))
 
     def forward(self, x):
         out, _ = self.lstm(x)
         out = out[:, -1, :]
+        out = self.ln(out)
         out = self.head(out).squeeze(-1)
         return out
 
 class CNNRegressor(nn.Module):
-    def __init__(self, input_channels=18):
+    def __init__(self, input_channels=18, dropout=0.2, use_batchnorm=False):
         super().__init__()
-        self.conv = nn.Sequential(
-            nn.Conv1d(input_channels, 64, kernel_size=3, padding=1),
-            nn.ReLU(),
-            nn.Conv1d(64, 128, kernel_size=3, padding=1),
-            nn.ReLU(),
-        )
+        
+        layers = []
+        # Layer 1
+        layers.append(nn.Conv1d(input_channels, 64, kernel_size=3, padding=1))
+        if use_batchnorm:
+            layers.append(nn.BatchNorm1d(64))
+        layers.append(nn.ReLU())
+        
+        # Layer 2
+        layers.append(nn.Conv1d(64, 128, kernel_size=3, padding=1))
+        if use_batchnorm:
+            layers.append(nn.BatchNorm1d(128))
+        layers.append(nn.ReLU())
+        
+        self.conv = nn.Sequential(*layers)
         self.pool = nn.AdaptiveMaxPool1d(1)
         self.head = nn.Sequential(
             nn.Flatten(),
             nn.Linear(128, 64),
             nn.ReLU(),
-            nn.Dropout(0.2),
+            nn.Dropout(dropout),
             nn.Linear(64, 1),
         )
 
@@ -314,12 +325,15 @@ class CNNRegressor(nn.Module):
         return out
 
 class LSTMVAE(nn.Module):
-    def __init__(self, input_dim=18, hidden_dim=256, latent_dim=64, num_layers=2, dropout=0.1):
+    def __init__(self, input_dim=18, hidden_dim=256, latent_dim=64, num_layers=2, dropout=0.1, use_layernorm=False):
         super().__init__()
         self.hidden_dim = hidden_dim
         self.num_layers = num_layers
         self.encoder = nn.LSTM(input_dim, hidden_dim, num_layers=num_layers,
                               batch_first=True, dropout=dropout if num_layers > 1 else 0.0)
+        
+        self.ln = nn.LayerNorm(hidden_dim) if use_layernorm else nn.Identity()
+        
         self.mu = nn.Linear(hidden_dim, latent_dim)
         self.logvar = nn.Linear(hidden_dim, latent_dim)
         self.dec_init = nn.Linear(latent_dim, hidden_dim)
@@ -336,6 +350,8 @@ class LSTMVAE(nn.Module):
     def forward(self, x):
         enc_out, _ = self.encoder(x)
         h_last = enc_out[:, -1, :]
+        h_last = self.ln(h_last)
+        
         mu = self.mu(h_last)
         logvar = self.logvar(h_last)
         z = self.reparameterize(mu, logvar)
@@ -350,12 +366,15 @@ class LSTMVAE(nn.Module):
         return recon_logits, mu, logvar, score_pred
 
 class LSTMEncoderDecoder(nn.Module):
-    def __init__(self, input_dim=18, hidden_dim=256, num_layers=2, dropout=0.1):
+    def __init__(self, input_dim=18, hidden_dim=256, num_layers=2, dropout=0.1, use_layernorm=False):
         super().__init__()
         self.hidden_dim = hidden_dim
         self.num_layers = num_layers
         self.encoder = nn.LSTM(input_dim, hidden_dim, num_layers=num_layers, 
                               batch_first=True, dropout=dropout if num_layers > 1 else 0.0)
+        
+        self.ln = nn.LayerNorm(hidden_dim) if use_layernorm else nn.Identity()
+        
         self.dec_init = nn.Linear(hidden_dim, hidden_dim)
         self.decoder = nn.LSTM(input_dim, hidden_dim, num_layers=num_layers, 
                               batch_first=True, dropout=dropout if num_layers > 1 else 0.0)
@@ -365,6 +384,8 @@ class LSTMEncoderDecoder(nn.Module):
     def forward(self, x):
         enc_out, _ = self.encoder(x)
         h_last = enc_out[:, -1, :]
+        h_last = self.ln(h_last)
+        
         score_pred = self.score_head(h_last).squeeze(-1)
         
         batch_size, seq_len, _ = x.shape
@@ -475,6 +496,22 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             else:
                 best_params['lambda_score'] = 0.7  # Varsayılan
         
+        # Yeni parametreler (Genel)
+        if 'weight_decay' in best_row and pd.notna(best_row['weight_decay']):
+            best_params['weight_decay'] = float(best_row['weight_decay'])
+        else:
+            best_params['weight_decay'] = 1e-2  # Varsayılan AdamW değeri
+            
+        if 'use_layernorm' in best_row and pd.notna(best_row['use_layernorm']):
+            best_params['use_layernorm'] = bool(best_row['use_layernorm'])
+        else:
+            best_params['use_layernorm'] = False
+            
+        if 'use_batchnorm' in best_row and pd.notna(best_row['use_batchnorm']):
+            best_params['use_batchnorm'] = bool(best_row['use_batchnorm'])
+        else:
+            best_params['use_batchnorm'] = False
+        
         # Score mean/std'yi veriyi tekrar yükleyerek hesapla (güvenilir yöntem)
         csv_path = os.path.join(data_dir, f"{plastic_type}.csv")
         if os.path.exists(csv_path):
@@ -517,7 +554,8 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
         print(f"  ✓ Score mean: {best_params['score_mean']:.4f}, std: {best_params['score_std']:.4f}")
         print(f"\n  📋 CSV'den yüklenen parametreler (Final eğitimde kullanılacak):")
         for key in ['hidden_dim', 'num_layers', 'dropout', 'learning_rate', 'batch_size', 
-                    'latent_dim', 'beta_kl', 'gamma_score', 'lambda_score']:
+                    'latent_dim', 'beta_kl', 'gamma_score', 'lambda_score', 
+                    'weight_decay', 'use_layernorm', 'use_batchnorm']:
             if key in best_params:
                 print(f"     {key}: {best_params[key]}")
         print(f"  ✓ Model atlandı, devam ediliyor...\n")
@@ -586,42 +624,54 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
     # Her model için ~50-100 kombinasyon hedefleniyor
     if model_type == 'lstm':
         param_grid = {
-            'hidden_dim': [256, 512],  # 2 değer
-            'num_layers': [2, 3],  # 2 değer
-            'dropout': [0.0, 0.1],  # 2 değer
-            'learning_rate': [1e-4, 1e-3],  # 2 değer
-            'batch_size': [512, 1024, 2048, 4096]  # RTX 4080 Super için maksimum performans (16GB VRAM)
+            'hidden_dim': [128, 256],  # Reduced size
+            'num_layers': [2, 3],  # 2 values
+            'dropout': [0.1, 0.2, 0.3],  # Increased dropout
+            'learning_rate': [1e-4, 1e-3],  # 2 values
+            'batch_size': [1024, 2048],  # High batch size
+            'weight_decay': [1e-4, 1e-2],  # Regularization
+            'use_layernorm': [True, False]  # Structure
         }
-        # Toplam: 2^5 = 32 kombinasyon
+        # Total: 2*2*3*2*2*2*2 = 192. Acceptable.
+        
     elif model_type == 'cnn':
         param_grid = {
-            'learning_rate': [1e-4, 1e-3, 5e-3],  # 3 değer
-            'batch_size': [512, 1024, 2048, 4096]  # RTX 4080 Super için maksimum performans (16GB VRAM)
+            'dropout': [0.2, 0.4],
+            'learning_rate': [1e-4, 1e-3],
+            'batch_size': [1024, 2048, 4096],
+            'weight_decay': [1e-4, 1e-3, 1e-2],
+            'use_batchnorm': [True, False]
         }
-        # Toplam: 3^2 = 9 kombinasyon
+        # Total: 2*2*3*3*2 = 72. Good.
+        
     elif model_type == 'lstm_vae':
         # LSTM-VAE için bazı parametreleri sabitleyerek kombinasyon sayısını azaltıyoruz
         param_grid = {
-            'hidden_dim': [256, 512],  # 2 değer
-            'num_layers': [2, 3],  # 2 değer
-            'dropout': [0.0, 0.1],  # 2 değer
-            'latent_dim': [64],  # 1 değer (sabitlendi)
-            'learning_rate': [1e-4, 1e-3],  # 2 değer
-            'batch_size': [256, 512, 1024],  # RTX 4080 Super için optimize edildi (yüksek batch size)
-            'beta_kl': [0.1, 1.0],  # 2 değer
-            'gamma_score': [1.0, 2.0]  # 2 değer
+            'hidden_dim': [128, 256],
+            'num_layers': [2, 3],
+            'dropout': [0.1, 0.2],
+            'latent_dim': [64],  # Fixed
+            'learning_rate': [1e-3],  # Fixed to most common good LR to save combos
+            'batch_size': [512, 1024],
+            'beta_kl': [1.0, 2.0],  # Increased KL penalty
+            'gamma_score': [1.0],  # Fixed
+            'weight_decay': [1e-4, 1e-2],
+            'use_layernorm': [True, False]
         }
-        # Toplam: 2^7 = 128 kombinasyon
+        # Total: 2*2*2*1*1*2*2*1*2*2 = 128. Good.
+        
     elif model_type == 'encdec':
         param_grid = {
-            'hidden_dim': [256, 512],  # 2 değer
-            'num_layers': [2, 3],  # 2 değer
-            'dropout': [0.0, 0.1],  # 2 değer
-            'learning_rate': [1e-4, 1e-3],  # 2 değer
-            'batch_size': [256, 512, 1024],  # RTX 4080 Super için optimize edildi (yüksek batch size)
-            'lambda_score': [0.7, 1.0]  # 2 değer
+            'hidden_dim': [128, 256],
+            'num_layers': [2, 3],
+            'dropout': [0.1, 0.2],
+            'learning_rate': [1e-3],
+            'batch_size': [512, 1024],
+            'lambda_score': [0.7, 1.0],
+            'weight_decay': [1e-4, 1e-2],
+            'use_layernorm': [True, False]
         }
-        # Toplam: 2^6 = 64 kombinasyon
+        # Total: 2*2*2*1*2*2*2*2 = 128. Good.
     
     # Grid search
     keys = list(param_grid.keys())
@@ -669,16 +719,24 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             dropout = params['dropout']
             lr = params['learning_rate']
             batch_size = params['batch_size']
+            wd = params.get('weight_decay', 1e-2)
+            use_ln = params.get('use_layernorm', False)
+            
             latent_dim = 64  # Not used
             beta_kl = 0.1  # Not used
             gamma_score = 1.0  # Not used
             lambda_score = 0.7  # Not used
+            use_bn = False # Not used
         elif model_type == 'cnn':
             hidden_dim = 256  # Not used
             num_layers = 2  # Not used
-            dropout = 0.1  # Not used
+            dropout = params.get('dropout', 0.2)
             lr = params['learning_rate']
             batch_size = params['batch_size']
+            wd = params.get('weight_decay', 1e-2)
+            use_bn = params.get('use_batchnorm', False)
+            
+            use_ln = False # Not used
             latent_dim = 64  # Not used
             beta_kl = 0.1  # Not used
             gamma_score = 1.0  # Not used
@@ -692,17 +750,25 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             batch_size = params['batch_size']
             beta_kl = params['beta_kl']
             gamma_score = params['gamma_score']
+            wd = params.get('weight_decay', 1e-2)
+            use_ln = params.get('use_layernorm', False)
+            
             lambda_score = 0.7  # Not used
+            use_bn = False # Not used
         elif model_type == 'encdec':
             hidden_dim = params['hidden_dim']
             num_layers = params['num_layers']
             dropout = params['dropout']
             lr = params['learning_rate']
             batch_size = params['batch_size']
+            lambda_score = params['lambda_score']
+            wd = params.get('weight_decay', 1e-2)
+            use_ln = params.get('use_layernorm', False)
+            
             latent_dim = 64  # Not used
             beta_kl = 0.1  # Not used
             gamma_score = 1.0  # Not used
-            lambda_score = params['lambda_score']
+            use_bn = False # Not used
         
         seed_everything(seed)
         
@@ -717,22 +783,22 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
         # Model oluştur
         if model_type == 'lstm':
             model = LSTMRegressor(input_dim=18, hidden_dim=hidden_dim, 
-                                 num_layers=num_layers, dropout=dropout)
+                                 num_layers=num_layers, dropout=dropout, use_layernorm=use_ln)
         elif model_type == 'cnn':
-            model = CNNRegressor(input_channels=18)
+            model = CNNRegressor(input_channels=18, dropout=dropout, use_batchnorm=use_bn)
         elif model_type == 'lstm_vae':
             model = LSTMVAE(input_dim=18, hidden_dim=hidden_dim, latent_dim=latent_dim,
-                           num_layers=num_layers, dropout=dropout)
+                           num_layers=num_layers, dropout=dropout, use_layernorm=use_ln)
         elif model_type == 'encdec':
             model = LSTMEncoderDecoder(input_dim=18, hidden_dim=hidden_dim,
-                                      num_layers=num_layers, dropout=dropout)
+                                      num_layers=num_layers, dropout=dropout, use_layernorm=use_ln)
         
         model = model.to(device)
         
         # Loss ve optimizer
         mse_loss = nn.MSELoss()
         ce_loss = nn.CrossEntropyLoss()
-        optimizer = optim.AdamW(model.parameters(), lr=lr)
+        optimizer = optim.AdamW(model.parameters(), lr=lr, weight_decay=wd)
         
         # Mixed Precision Training için scaler (RTX 4080 Super optimizasyonu)
         if USE_AMP and scaler is not None:
@@ -1224,16 +1290,22 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
         dropout = best_params.get('dropout', 0.1)
         lr = best_params.get('learning_rate', 0.001)
         batch_size = best_params.get('batch_size', 512)
+        wd = best_params.get('weight_decay', 1e-2)
+        use_ln = best_params.get('use_layernorm', False)
         latent_dim = 64
         beta_kl = 0.1
         gamma_score = 1.0
         lambda_score = 0.7
+        use_bn = False
     elif model_type == 'cnn':
         hidden_dim = 256
         num_layers = 2
-        dropout = 0.1
+        dropout = best_params.get('dropout', 0.2)
         lr = best_params.get('learning_rate', 0.001)
         batch_size = best_params.get('batch_size', 512)
+        wd = best_params.get('weight_decay', 1e-2)
+        use_bn = best_params.get('use_batchnorm', False)
+        use_ln = False
         latent_dim = 64
         beta_kl = 0.1
         gamma_score = 1.0
@@ -1247,17 +1319,23 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
         batch_size = best_params.get('batch_size', 512)
         beta_kl = best_params.get('beta_kl', 0.1)
         gamma_score = best_params.get('gamma_score', 1.0)
+        wd = best_params.get('weight_decay', 1e-2)
+        use_ln = best_params.get('use_layernorm', False)
         lambda_score = 0.7
+        use_bn = False
     elif model_type == 'encdec':
         hidden_dim = best_params.get('hidden_dim', 128)
         num_layers = best_params.get('num_layers', 2)
         dropout = best_params.get('dropout', 0.1)
         lr = best_params.get('learning_rate', 0.001)
         batch_size = best_params.get('batch_size', 512)
+        lambda_score = best_params.get('lambda_score', 0.7)
+        wd = best_params.get('weight_decay', 1e-2)
+        use_ln = best_params.get('use_layernorm', False)
         latent_dim = 64
         beta_kl = 0.1
         gamma_score = 1.0
-        lambda_score = best_params.get('lambda_score', 0.7)
+        use_bn = False
     
     seed_everything(seed)
     
@@ -1285,6 +1363,8 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
         print(f"   batch_size: {batch_size}")
         print(f"   beta_kl: {beta_kl}")
         print(f"   gamma_score: {gamma_score}")
+        print(f"   weight_decay: {wd}")
+        print(f"   use_layernorm: {use_ln}")
     elif model_type == 'encdec':
         print(f"   hidden_dim: {hidden_dim}")
         print(f"   num_layers: {num_layers}")
@@ -1292,6 +1372,8 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
         print(f"   learning_rate: {lr}")
         print(f"   batch_size: {batch_size}")
         print(f"   lambda_score: {lambda_score}")
+        print(f"   weight_decay: {wd}")
+        print(f"   use_layernorm: {use_ln}")
     print(f"   score_mean: {score_mean:.4f}")
     print(f"   score_std: {score_std:.4f}")
     print(f"{'='*80}\n")
@@ -1307,22 +1389,22 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
     # Model oluştur
     if model_type == 'lstm':
         model = LSTMRegressor(input_dim=18, hidden_dim=hidden_dim, 
-                             num_layers=num_layers, dropout=dropout)
+                             num_layers=num_layers, dropout=dropout, use_layernorm=use_ln)
     elif model_type == 'cnn':
-        model = CNNRegressor(input_channels=18)
+        model = CNNRegressor(input_channels=18, dropout=dropout, use_batchnorm=use_bn)
     elif model_type == 'lstm_vae':
         model = LSTMVAE(input_dim=18, hidden_dim=hidden_dim, latent_dim=latent_dim,
-                       num_layers=num_layers, dropout=dropout)
+                       num_layers=num_layers, dropout=dropout, use_layernorm=use_ln)
     elif model_type == 'encdec':
         model = LSTMEncoderDecoder(input_dim=18, hidden_dim=hidden_dim,
-                                  num_layers=num_layers, dropout=dropout)
+                                  num_layers=num_layers, dropout=dropout, use_layernorm=use_ln)
     
     model = model.to(device)
     
     # Loss ve optimizer
     mse_loss = nn.MSELoss()
     ce_loss = nn.CrossEntropyLoss()
-    optimizer = optim.AdamW(model.parameters(), lr=lr)
+    optimizer = optim.AdamW(model.parameters(), lr=lr, weight_decay=wd)
     
     # Mixed Precision Training için scaler (RTX 4080 Super optimizasyonu)
     if USE_AMP and scaler is not None:
@@ -2464,24 +2546,31 @@ def generate_peptides_with_best_model(plastic_type, model_type, best_params,
             input_dim=len(AMINO_ACIDS),
             hidden_dim=best_params.get('hidden_dim', 128),
             num_layers=best_params.get('num_layers', 2),
-            dropout=best_params.get('dropout', 0.1)
+            dropout=best_params.get('dropout', 0.1),
+            use_layernorm=best_params.get('use_layernorm', False)
         )
     elif model_type == 'cnn':
-        model = CNNRegressor(input_dim=len(AMINO_ACIDS))
+        model = CNNRegressor(
+            input_channels=len(AMINO_ACIDS),
+            dropout=best_params.get('dropout', 0.2),
+            use_batchnorm=best_params.get('use_batchnorm', False)
+        )
     elif model_type == 'lstm_vae':
         model = LSTMVAE(
             input_dim=len(AMINO_ACIDS),
             hidden_dim=best_params.get('hidden_dim', 128),
             num_layers=best_params.get('num_layers', 2),
             latent_dim=best_params.get('latent_dim', 64),
-            dropout=best_params.get('dropout', 0.1)
+            dropout=best_params.get('dropout', 0.1),
+            use_layernorm=best_params.get('use_layernorm', False)
         )
     elif model_type == 'encdec':
         model = LSTMEncoderDecoder(
             input_dim=len(AMINO_ACIDS),
             hidden_dim=best_params.get('hidden_dim', 128),
             num_layers=best_params.get('num_layers', 2),
-            dropout=best_params.get('dropout', 0.1)
+            dropout=best_params.get('dropout', 0.1),
+            use_layernorm=best_params.get('use_layernorm', False)
         )
     else:
         print(f"✗ Bilinmeyen model tipi: {model_type}")
