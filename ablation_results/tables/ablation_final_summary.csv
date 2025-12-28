@@ -1,0 +1,5 @@
+Plastic_Type,Model_Type,Test_R2,Test_MAE,Test_RMSE,hidden_dim,num_layers,dropout,learning_rate,batch_size,lambda_score,weight_decay,use_layernorm,use_batchnorm,latent_dim,beta_kl,gamma_score
+Nylon,encdec,0.9576020323517508,1.7506833458324436,2.463572169308422,256,3,0.1,0.001,128,1.0,0.0001,False,,,,
+Nylon,lstm,0.9473700550933052,,,256,2,0.1,0.001,128,,0.01,False,False,,,
+Nylon,cnn,0.8708057108162186,,,128,2,0.4,0.001,128,,0.001,False,True,,,
+Nylon,lstm_vae,0.9413102569997494,,,256,2,0.1,0.001,128,,0.01,False,False,64.0,1.0,1.0

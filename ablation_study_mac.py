@@ -842,6 +842,10 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
         log_file.write(f"{'='*80}\n")
         log_file.flush()
         
+        # Eğer checkpoint'ten yüklenen kombinasyon zaten tamamlanmışsa döngüye girme
+        # epoch değişkenini başlangıçta tanımla (checkpoint'ten devam durumu için)
+        epoch = start_epoch - 1 if start_epoch > 0 else -1
+        
         # Canlı progress bar için tqdm
         epoch_pbar = tqdm(range(start_epoch, ablation_epochs), 
                          desc=f"Komb {idx+1}/{len(all_combinations)} | Epoch",
