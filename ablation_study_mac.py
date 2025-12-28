@@ -249,15 +249,22 @@ def one_hot_encode_sequences(seqs: List[str]) -> np.ndarray:
     return np.stack(encoded, axis=0)
 
 def seed_everything(seed=42):
-    """Seed all random number generators."""
+    """Seed all random number generators.
+    
+    NOT: cudnn.benchmark ve cudnn.deterministic ayarları burada değiştirilmiyor.
+    Bu ayarlar script başında bir kez yapılıyor (performans için benchmark=True).
+    Her seed'de değiştirmek performansı düşürür.
+    """
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
-        torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
+    # MPS için ek seed (Apple Silicon)
+    if torch.backends.mps.is_available():
+        # MPS'de manuel seed yoktur, sadece torch.manual_seed yeterli
+        pass
 
 # ============================================================================
 # Model Mimarileri
@@ -3334,6 +3341,12 @@ def main():
             create_detailed_report(summary_df, all_results_summary)
         except Exception as e:
             print(f"⚠ Rapor oluşturma hatası: {e}")
+    
+    # Benzerlik analizi çalıştır (R² açıklaması dahil)
+    try:
+        run_similarity_analysis(plastics_to_process, all_generated_peptides_dict)
+    except Exception as e:
+        print(f"⚠ Benzerlik analizi hatası: {e}")
 
 # ============================================================================
 # HÜCRE 7: Üretilen Peptitlerin Orijinal Veri Setine Benzerlik Analizi
@@ -3548,10 +3561,11 @@ def analyze_generated_peptides_similarity(generated_peptides, data_dir=None,
         return None
 
 # ============================================================================
-# R² Skorunun Açıklaması ve Doğrulama
+# R² Skorunun Açıklaması ve Doğrulama (Bu fonksiyon main() içinden çağrılır)
 # ============================================================================
 
-    # R² Skorunun Açıklaması ve Doğrulama
+def print_r2_explanation():
+    """R² skoru hakkında açıklama yazdır."""
     print("\n" + "="*80)
     print("R² SKORU AÇIKLAMASI VE DOĞRULAMA")
     print("="*80)
@@ -3595,10 +3609,12 @@ R² skoru şu formülle hesaplanır:
    - Üretilen peptitler daha iyi skorlara sahip (optimizasyon başarılı)
 """)
 
-    # Örnek: Eğer üretilen peptitler varsa analiz yap
-    # Not: Bu kısım optimizasyon sonuçlarından üretilen peptitleri alır
-    # Şimdilik placeholder olarak bırakıyoruz, gerçek kullanımda optimizasyon sonuçlarından alınacak
 
+def run_similarity_analysis(plastics_to_process, all_generated_peptides_dict):
+    """Üretilen peptitlerin benzerlik analizini çalıştır."""
+    # R² açıklamasını yazdır
+    print_r2_explanation()
+    
     # HÜCRE 7: Üretilen peptitlerin benzerlik analizi
     print("\n" + "="*80)
     print("HÜCRE 7: ÜRETİLEN PEPTİTLERİN BENZERLİK ANALİZİ")

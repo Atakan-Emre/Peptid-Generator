@@ -151,16 +151,18 @@ os.makedirs(ABLATION_LOGS_DIR, exist_ok=True)
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
 # DataLoader için num_workers ayarı (Windows için optimize)
-# Windows'ta multiprocessing sorunları nedeniyle 0 kullanıyoruz (tek thread ama güvenli)
-# Batch size artışı ile performans kaybı telafi edilecek
-NUM_WORKERS = 0  # Windows'ta multiprocessing sorunlarını önlemek için 0
-PREFETCH_FACTOR = 2  # num_workers=0 olduğunda kullanılmaz ama tanımlı tutuyoruz
+# Windows'ta if __name__ == '__main__' guard'ı varsa num_workers > 0 kullanılabilir
+# RTX 4080 Super + Ryzen 9700X + 64GB RAM için optimize edildi
+NUM_WORKERS = 4  # Windows'ta multiprocessing aktif (main guard var)
+PREFETCH_FACTOR = 2  # Veri ön yükleme faktörü
 PIN_MEMORY = True  # GPU'ya veri transferini hızlandırır
+PERSISTENT_WORKERS = True  # Worker'ları canlı tut (overhead azaltır)
 
-print(f"\n⚙️  PERFORMANS AYARLARI (Windows Optimize):")
-print(f"   NUM_WORKERS: {NUM_WORKERS} (Windows multiprocessing sorunlarını önlemek için)")
+print(f"\n⚙️  PERFORMANS AYARLARI (Windows + RTX 4080 Super Optimize):")
+print(f"   NUM_WORKERS: {NUM_WORKERS} (Paralel veri yükleme aktif)")
 print(f"   PIN_MEMORY: {PIN_MEMORY} (GPU transfer hızlandırma)")
-print(f"   Batch size artırıldı (performans telafisi)")
+print(f"   PERSISTENT_WORKERS: {PERSISTENT_WORKERS} (Worker overhead azaltma)")
+print(f"   Yüksek batch size'lar aktif (16GB VRAM için optimize)")
 
 # GPU kontrolü ve optimizasyon
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -190,24 +192,36 @@ if torch.cuda.is_available():
         # Mixed Precision için scaler (RTX 4080 Super için önerilir)
         USE_AMP = True  # Automatic Mixed Precision
         try:
-            from torch.cuda.amp import GradScaler, autocast
-            scaler = GradScaler()
-            print("     - GradScaler hazır")
+            # PyTorch 2.x uyumlu import
+            from torch.amp import GradScaler, autocast
+            scaler = GradScaler('cuda')
+            print("     - GradScaler hazır (PyTorch 2.x)")
         except ImportError:
-            USE_AMP = False
-            scaler = None
-            print("     ⚠ AMP mevcut değil, normal precision kullanılacak")
+            # Eski PyTorch versiyonları için fallback
+            try:
+                from torch.cuda.amp import GradScaler, autocast
+                scaler = GradScaler()
+                print("     - GradScaler hazır (Legacy)")
+            except ImportError:
+                USE_AMP = False
+                scaler = None
+                print("     ⚠ AMP mevcut değil, normal precision kullanılacak")
     else:
         # Diğer GPU'lar için de AMP kullanabiliriz
         USE_AMP = True
         try:
-            from torch.cuda.amp import GradScaler, autocast
-            scaler = GradScaler()
-            print(f"   ✓ GPU tespit edildi - Mixed Precision Training aktif")
+            from torch.amp import GradScaler, autocast
+            scaler = GradScaler('cuda')
+            print(f"   ✓ GPU tespit edildi - Mixed Precision Training aktif (PyTorch 2.x)")
         except ImportError:
-            USE_AMP = False
-            scaler = None
-            print("   ⚠ AMP mevcut değil, normal precision kullanılacak")
+            try:
+                from torch.cuda.amp import GradScaler, autocast
+                scaler = GradScaler()
+                print(f"   ✓ GPU tespit edildi - Mixed Precision Training aktif (Legacy)")
+            except ImportError:
+                USE_AMP = False
+                scaler = None
+                print("   ⚠ AMP mevcut değil, normal precision kullanılacak")
 else:
     USE_AMP = False
     scaler = None
@@ -264,14 +278,18 @@ def one_hot_encode_sequences(seqs: List[str]) -> np.ndarray:
     return np.stack(encoded, axis=0)
 
 def seed_everything(seed=42):
-    """Seed all random number generators."""
+    """Seed all random number generators.
+    
+    NOT: cudnn.benchmark ve cudnn.deterministic ayarları burada değiştirilmiyor.
+    Bu ayarlar script başında bir kez yapılıyor (performans için benchmark=True).
+    Her seed'de değiştirmek performansı düşürür.
+    """
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
 
 # ============================================================================
 # Model Mimarileri
@@ -630,7 +648,7 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             'num_layers': [2, 3],  # 2 values
             'dropout': [0.1, 0.2, 0.3],  # Increased dropout
             'learning_rate': [1e-4, 1e-3],  # 2 values
-            'batch_size': [1024, 2048],  # High batch size
+            'batch_size': [2048, 4096],  # RTX 4080 Super için yüksek batch size
             'weight_decay': [1e-4, 1e-2],  # Regularization
             'use_layernorm': [True, False]  # Structure
         }
@@ -640,11 +658,11 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
         param_grid = {
             'dropout': [0.2, 0.4],
             'learning_rate': [1e-4, 1e-3],
-            'batch_size': [1024, 2048, 4096],
+            'batch_size': [4096, 8192],  # RTX 4080 Super için yüksek batch size
             'weight_decay': [1e-4, 1e-3, 1e-2],
             'use_batchnorm': [True, False]
         }
-        # Total: 2*2*3*3*2 = 72. Good.
+        # Total: 2*2*2*3*2 = 48. Good.
         
     elif model_type == 'lstm_vae':
         # LSTM-VAE için bazı parametreleri sabitleyerek kombinasyon sayısını azaltıyoruz
@@ -654,7 +672,7 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             'dropout': [0.1, 0.2],
             'latent_dim': [64],  # Fixed
             'learning_rate': [1e-4, 1e-3],  # Test both lower and higher LR to prevent overfitting
-            'batch_size': [512, 1024],
+            'batch_size': [1024, 2048],  # RTX 4080 Super için yüksek batch size
             'beta_kl': [1.0, 2.0],  # Increased KL penalty
             'gamma_score': [1.0],  # Fixed
             'weight_decay': [1e-4, 1e-2],
@@ -668,7 +686,7 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             'num_layers': [2, 3],
             'dropout': [0.1, 0.2],
             'learning_rate': [1e-3],
-            'batch_size': [512, 1024],
+            'batch_size': [1024, 2048],  # RTX 4080 Super için yüksek batch size
             'lambda_score': [0.7, 1.0],
             'weight_decay': [1e-4, 1e-2],
             'use_layernorm': [True, False]
@@ -774,13 +792,19 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
         
         seed_everything(seed)
         
-        # Windows için DataLoader ayarları (multiprocessing sorunlarını önlemek için)
+        # Windows için DataLoader ayarları (RTX 4080 Super optimize)
         train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True, 
-                                  num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY)
+                                  num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY,
+                                  persistent_workers=PERSISTENT_WORKERS if NUM_WORKERS > 0 else False,
+                                  prefetch_factor=PREFETCH_FACTOR if NUM_WORKERS > 0 else None)
         val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False, 
-                               num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY)
+                               num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY,
+                               persistent_workers=PERSISTENT_WORKERS if NUM_WORKERS > 0 else False,
+                               prefetch_factor=PREFETCH_FACTOR if NUM_WORKERS > 0 else None)
         test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False, 
-                                num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY)
+                                num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY,
+                                persistent_workers=PERSISTENT_WORKERS if NUM_WORKERS > 0 else False,
+                                prefetch_factor=PREFETCH_FACTOR if NUM_WORKERS > 0 else None)
         
         # Model oluştur
         if model_type == 'lstm':
@@ -1432,13 +1456,19 @@ def train_final_model(model_type, plastic_type, best_params, data_dir=None,
     print(f"   score_std: {score_std:.4f}")
     print(f"{'='*80}\n")
     
-    # Windows için DataLoader ayarları (multiprocessing sorunlarını önlemek için)
+    # Windows için DataLoader ayarları (RTX 4080 Super optimize)
     train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True, 
-                              num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY)
+                              num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY,
+                              persistent_workers=PERSISTENT_WORKERS if NUM_WORKERS > 0 else False,
+                              prefetch_factor=PREFETCH_FACTOR if NUM_WORKERS > 0 else None)
     val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False, 
-                           num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY)
+                           num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY,
+                           persistent_workers=PERSISTENT_WORKERS if NUM_WORKERS > 0 else False,
+                           prefetch_factor=PREFETCH_FACTOR if NUM_WORKERS > 0 else None)
     test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False, 
-                            num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY)
+                            num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY,
+                            persistent_workers=PERSISTENT_WORKERS if NUM_WORKERS > 0 else False,
+                            prefetch_factor=PREFETCH_FACTOR if NUM_WORKERS > 0 else None)
     
     # Model oluştur
     if model_type == 'lstm':
@@ -3344,6 +3374,12 @@ def main():
             create_detailed_report(summary_df, all_results_summary)
         except Exception as e:
             print(f"⚠ Rapor oluşturma hatası: {e}")
+    
+    # Benzerlik analizi çalıştır (R² açıklaması dahil)
+    try:
+        run_similarity_analysis(plastics_to_process, all_generated_peptides_dict)
+    except Exception as e:
+        print(f"⚠ Benzerlik analizi hatası: {e}")
 
 # ============================================================================
 # HÜCRE 7: Üretilen Peptitlerin Orijinal Veri Setine Benzerlik Analizi
@@ -3558,10 +3594,11 @@ def analyze_generated_peptides_similarity(generated_peptides, data_dir=None,
         return None
 
 # ============================================================================
-# R² Skorunun Açıklaması ve Doğrulama
+# R² Skorunun Açıklaması ve Doğrulama (Bu fonksiyon main() içinden çağrılır)
 # ============================================================================
 
-    # R² Skorunun Açıklaması ve Doğrulama
+def print_r2_explanation():
+    """R² skoru hakkında açıklama yazdır."""
     print("\n" + "="*80)
     print("R² SKORU AÇIKLAMASI VE DOĞRULAMA")
     print("="*80)
@@ -3605,10 +3642,12 @@ R² skoru şu formülle hesaplanır:
    - Üretilen peptitler daha iyi skorlara sahip (optimizasyon başarılı)
 """)
 
-    # Örnek: Eğer üretilen peptitler varsa analiz yap
-    # Not: Bu kısım optimizasyon sonuçlarından üretilen peptitleri alır
-    # Şimdilik placeholder olarak bırakıyoruz, gerçek kullanımda optimizasyon sonuçlarından alınacak
 
+def run_similarity_analysis(plastics_to_process, all_generated_peptides_dict):
+    """Üretilen peptitlerin benzerlik analizini çalıştır."""
+    # R² açıklamasını yazdır
+    print_r2_explanation()
+    
     # HÜCRE 7: Üretilen peptitlerin benzerlik analizi
     print("\n" + "="*80)
     print("HÜCRE 7: ÜRETİLEN PEPTİTLERİN BENZERLİK ANALİZİ")
