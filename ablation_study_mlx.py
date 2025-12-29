@@ -60,9 +60,10 @@ ABLATION_FIGURES_DIR = os.path.join(ABLATION_DIR, "figures")
 ABLATION_TRAINING_CURVES_DIR = os.path.join(ABLATION_FIGURES_DIR, "training_curves")
 FINAL_MODELS_DIR = os.path.join(ABLATION_DIR, "final_models")
 ABLATION_LOGS_DIR = os.path.join(ABLATION_DIR, "logs")
+CHECKPOINT_DIR = os.path.join(ABLATION_DIR, "checkpoints")
 
 for d in [ABLATION_TABLES_DIR, ABLATION_FIGURES_DIR, ABLATION_TRAINING_CURVES_DIR, 
-          FINAL_MODELS_DIR, ABLATION_LOGS_DIR]:
+          FINAL_MODELS_DIR, ABLATION_LOGS_DIR, CHECKPOINT_DIR]:
     os.makedirs(d, exist_ok=True)
 
 # Veri klasörü
@@ -135,6 +136,58 @@ def seed_everything(seed=42):
     random.seed(seed)
     np.random.seed(seed)
     mx.random.seed(seed)
+
+# ============================================================================
+# MLX Checkpoint Functions
+# ============================================================================
+def flatten_params(d, prefix=''):
+    """MLX parametrelerini düzleştir"""
+    result = {}
+    for k, v in d.items():
+        key = f"{prefix}_{k}" if prefix else k
+        if isinstance(v, dict):
+            result.update(flatten_params(v, key))
+        else:
+            result[key] = np.array(v)
+    return result
+
+def save_checkpoint(checkpoint_path, model, epoch, best_val_r2, best_epoch, patience_ctr,
+                   train_losses, val_losses, val_r2s, params, model_type, plastic_type, combo_id):
+    """Epoch-level checkpoint kaydet"""
+    checkpoint_data = {
+        'epoch': epoch,
+        'model_params': flatten_params(model.parameters()),
+        'best_val_r2': best_val_r2,
+        'best_epoch': best_epoch,
+        'patience_ctr': patience_ctr,
+        'train_losses': train_losses,
+        'val_losses': val_losses,
+        'val_r2s': val_r2s,
+        'params': params,
+        'model_type': model_type,
+        'plastic_type': plastic_type,
+        'combination_id': combo_id
+    }
+    np.savez(checkpoint_path, **{k: v if isinstance(v, np.ndarray) else np.array([v], dtype=object) 
+                                  for k, v in checkpoint_data.items()})
+
+def load_checkpoint(checkpoint_path):
+    """Checkpoint yükle"""
+    if not os.path.exists(checkpoint_path):
+        return None
+    try:
+        data = np.load(checkpoint_path, allow_pickle=True)
+        checkpoint = {}
+        for k in data.files:
+            v = data[k]
+            if v.dtype == object and v.size == 1:
+                checkpoint[k] = v.item()
+            else:
+                checkpoint[k] = v
+        return checkpoint
+    except Exception as e:
+        print(f"  ⚠ Checkpoint yüklenemedi: {e}")
+        return None
 
 def one_hot_encode(seqs: List[str]) -> np.ndarray:
     encoded = []
@@ -632,18 +685,39 @@ def run_ablation(model_type, plastic_type, data_dir=None, epochs=None, seed=42):
     logger.log(f"Toplam {len(combos)} kombinasyon")
     print(f"Toplam {len(combos)} kombinasyon")
     
-    results, best_r2, best_params = [], -float('inf'), None
+    # Checkpoint sistemi - kaldığı yerden devam
+    checkpoint_path = os.path.join(ABLATION_LOGS_DIR, f'checkpoint_{model_type}_{plastic_type}.csv')
+    start_idx = 0
+    results = []
+    if os.path.exists(checkpoint_path):
+        checkpoint_df = pd.read_csv(checkpoint_path)
+        results = checkpoint_df.to_dict('records')
+        start_idx = len(results)
+        print(f"  🔄 Checkpoint bulundu: {start_idx}/{len(combos)} tamamlanmış, devam ediliyor...")
+        logger.log(f"Checkpoint'ten devam: {start_idx} kombinasyon atlandı")
+    
+    best_r2, best_params = -float('inf'), None
     best_history = {'train': [], 'val': [], 'r2': []}
     best_overfit = {}
     overfit_count = 0
     
-    for idx, combo in enumerate(tqdm(combos, desc=f"Ablation {model_type}", dynamic_ncols=True, mininterval=1)):
+    # Önceki sonuçlardan best_r2 bul
+    if results:
+        for r in results:
+            if r['val_r2'] > best_r2:
+                best_r2 = r['val_r2']
+            if r.get('is_overfitting'): overfit_count += 1
+    
+    for idx, combo in enumerate(tqdm(combos[start_idx:], desc=f"Ablation {model_type}", initial=start_idx, total=len(combos), dynamic_ncols=True, mininterval=1)):
+        actual_idx = start_idx + idx
         params = dict(zip(keys, combo))
         seed_everything(seed)
         
-        # Her 20 kombinasyonda durum yazdır
-        if idx > 0 and idx % 20 == 0:
-            print(f"\n  [{idx}/{len(combos)}] Best R²: {best_r2:.4f}", flush=True)
+        # Her 10 kombinasyonda durum yazdır ve checkpoint kaydet
+        if actual_idx > 0 and actual_idx % 10 == 0:
+            print(f"\n  [{actual_idx}/{len(combos)}] Best R²: {best_r2:.4f}", flush=True)
+            # Checkpoint kaydet
+            pd.DataFrame(results).to_csv(checkpoint_path, index=False)
         
         bs = params.get('batch_size', 128)
         train_l = MLXDataLoader(data['X_train'], data['y_train'], bs, True)
@@ -656,11 +730,28 @@ def run_ablation(model_type, plastic_type, data_dir=None, epochs=None, seed=42):
         loss_fn = get_loss_fn(model_type, params.get('beta_kl', 0.1),
                              params.get('gamma_score', 1.0), params.get('lambda_score', 0.7))
         
-        # Epoch history
+        # Epoch-level checkpoint path
+        combo_checkpoint_path = os.path.join(CHECKPOINT_DIR, f'ablation_{model_type}_{plastic_type}_combo_{actual_idx+1}.npz')
+        
+        # Epoch history ve checkpoint'ten devam
         train_losses, val_losses, val_r2s = [], [], []
         best_ep_r2, best_ep, patience = -float('inf'), 0, 0
+        start_epoch = 0
         
-        for ep in range(epochs):
+        # Checkpoint'ten devam et (varsa)
+        combo_ckpt = load_checkpoint(combo_checkpoint_path)
+        if combo_ckpt is not None:
+            start_epoch = int(combo_ckpt['epoch']) + 1
+            best_ep_r2 = float(combo_ckpt['best_val_r2'])
+            best_ep = int(combo_ckpt['best_epoch'])
+            patience = int(combo_ckpt['patience_ctr'])
+            train_losses = list(combo_ckpt['train_losses'])
+            val_losses = list(combo_ckpt['val_losses'])
+            val_r2s = list(combo_ckpt['val_r2s'])
+            print(f"\n  🔄 Combo #{actual_idx+1} checkpoint: Epoch {start_epoch}/{epochs}, Best R²: {best_ep_r2:.4f}")
+            logger.log(f"Combo #{actual_idx+1} checkpoint'ten devam: Epoch {start_epoch}")
+        
+        for ep in range(start_epoch, epochs):
             tl = train_epoch(model, train_l, opt, loss_fn)
             val_m = evaluate(model, val_l, loss_fn, data['score_mean'], data['score_std'], model_type)
             train_losses.append(tl)
@@ -672,6 +763,11 @@ def run_ablation(model_type, plastic_type, data_dir=None, epochs=None, seed=42):
             else:
                 patience += 1
                 if patience >= M4_CONFIG.patience: break
+            
+            # Her 5 epoch'ta checkpoint kaydet
+            if (ep + 1) % 5 == 0 or ep == epochs - 1:
+                save_checkpoint(combo_checkpoint_path, model, ep, best_ep_r2, best_ep, patience,
+                               train_losses, val_losses, val_r2s, params, model_type, plastic_type, actual_idx+1)
         
         # Overfitting analizi
         overfit = detect_overfitting(train_losses, val_losses)
@@ -679,13 +775,20 @@ def run_ablation(model_type, plastic_type, data_dir=None, epochs=None, seed=42):
         
         test_m = evaluate(model, test_l, loss_fn, data['score_mean'], data['score_std'], model_type)
         
-        result = {'combination_id': idx+1, 'val_r2': best_ep_r2, 'test_r2': test_m['r2'],
+        result = {'combination_id': actual_idx+1, 'val_r2': best_ep_r2, 'test_r2': test_m['r2'],
                   'test_mae': test_m['mae'], 'test_rmse': test_m['rmse'], 'best_epoch': best_ep,
                   'overfit_gap': overfit['gap'], 'is_overfitting': overfit['is_overfitting'], **params}
         results.append(result)
         
+        # Kombinasyon tamamlandı - epoch checkpoint'i temizle
+        if os.path.exists(combo_checkpoint_path):
+            os.remove(combo_checkpoint_path)
+        
+        # Her kombinasyondan sonra results checkpoint kaydet
+        pd.DataFrame(results).to_csv(checkpoint_path, index=False)
+        
         # Logger
-        logger.log_combo(idx+1, params, {'val_r2': best_ep_r2, 'test_r2': test_m['r2']}, overfit)
+        logger.log_combo(actual_idx+1, params, {'val_r2': best_ep_r2, 'test_r2': test_m['r2']}, overfit)
         
         if best_ep_r2 > best_r2:
             best_r2 = best_ep_r2
@@ -702,6 +805,11 @@ def run_ablation(model_type, plastic_type, data_dir=None, epochs=None, seed=42):
     df['is_best'] = df['val_r2'] == best_r2
     df = df.sort_values('val_r2', ascending=False).reset_index(drop=True)
     df.to_csv(out_path, index=False)
+    
+    # Checkpoint temizle (başarılı tamamlandı)
+    if os.path.exists(checkpoint_path):
+        os.remove(checkpoint_path)
+        print("  ✓ Checkpoint temizlendi")
     
     # Logger finalize
     logger.finalize({'best_val_r2': best_r2, 'best_test_r2': best_params['best_test_r2'],
@@ -743,10 +851,26 @@ def train_final(model_type, plastic_type, best_params, data_dir=None, epochs=Non
                          float(best_params.get('gamma_score', 1.0)),
                          float(best_params.get('lambda_score', 0.7)))
     
+    # Final training checkpoint path
+    final_checkpoint_path = os.path.join(CHECKPOINT_DIR, f'final_{model_type}_{plastic_type}.npz')
+    
     train_losses, val_losses, val_r2s = [], [], []
     best_loss, best_ep, patience = float('inf'), 0, 0
+    start_epoch = 0
     
-    pbar = tqdm(range(epochs), desc=f"Final {model_type}")
+    # Checkpoint'ten devam et (varsa)
+    final_ckpt = load_checkpoint(final_checkpoint_path)
+    if final_ckpt is not None:
+        start_epoch = int(final_ckpt['epoch']) + 1
+        best_loss = float(final_ckpt.get('best_val_r2', float('inf')))  # Actually best_loss
+        best_ep = int(final_ckpt['best_epoch'])
+        patience = int(final_ckpt['patience_ctr'])
+        train_losses = list(final_ckpt['train_losses'])
+        val_losses = list(final_ckpt['val_losses'])
+        val_r2s = list(final_ckpt['val_r2s'])
+        print(f"  🔄 Final checkpoint: Epoch {start_epoch}/{epochs}, Best Loss: {best_loss:.4f}")
+    
+    pbar = tqdm(range(start_epoch, epochs), desc=f"Final {model_type}", initial=start_epoch, total=epochs)
     for ep in pbar:
         tl = train_epoch(model, train_l, opt, loss_fn)
         vm = evaluate(model, val_l, loss_fn, data['score_mean'], data['score_std'], model_type)
@@ -759,6 +883,11 @@ def train_final(model_type, plastic_type, best_params, data_dir=None, epochs=Non
         else:
             patience += 1
             if patience >= M4_CONFIG.patience * 2: break
+        
+        # Her 10 epoch'ta checkpoint kaydet
+        if (ep + 1) % 10 == 0 or ep == epochs - 1:
+            save_checkpoint(final_checkpoint_path, model, ep, best_loss, best_ep, patience,
+                           train_losses, val_losses, val_r2s, best_params, model_type, plastic_type, 0)
     
     # Test evaluation with predictions
     tm = evaluate(model, test_l, loss_fn, data['score_mean'], data['score_std'], model_type)
@@ -772,22 +901,15 @@ def train_final(model_type, plastic_type, best_params, data_dir=None, epochs=Non
     
     # Model kaydet
     path = os.path.join(FINAL_MODELS_DIR, f'{model_type}_{plastic_type}_mlx.npz')
-    
-    def flatten_params(d, prefix=''):
-        """MLX parametrelerini düzleştir"""
-        result = {}
-        for k, v in d.items():
-            key = f"{prefix}_{k}" if prefix else k
-            if isinstance(v, dict):
-                result.update(flatten_params(v, key))
-            else:
-                result[key] = np.array(v)
-        return result
-    
     state = flatten_params(model.parameters())
     np.savez(path, **state, score_mean=data['score_mean'], score_std=data['score_std'],
              config=json.dumps({**best_params, 'model_type': model_type, 'plastic_type': plastic_type}))
     print(f"✓ Model kaydedildi: {path}")
+    
+    # Final checkpoint temizle
+    if os.path.exists(final_checkpoint_path):
+        os.remove(final_checkpoint_path)
+        print("  ✓ Final checkpoint temizlendi")
     
     # Grafikler
     try:
