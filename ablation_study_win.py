@@ -13,18 +13,26 @@
 # - Windows multiprocessing için optimize edilmiş num_workers
 # ============================================================================
 
+import os
+import multiprocessing
+
+# Worker process'lerde print'leri engelle (NUM_WORKERS > 0 için gerekli)
+def is_main_process():
+    """Ana process'te mi kontrol et (worker'larda False döner)"""
+    return multiprocessing.current_process().name == 'MainProcess'
+
 # ============================================================================
 # HÜCRE 1: Setup ve Windows Yerel Ortam Yapılandırması
 # ============================================================================
-print("="*80)
-print("HÜCRE 1: WINDOWS YEREL ORTAM SETUP")
-print("="*80)
-
-import os
+if is_main_process():
+    print("="*80)
+    print("HÜCRE 1: WINDOWS YEREL ORTAM SETUP")
+    print("="*80)
 
 # Windows yerel ortam - Colab desteği yok
 IS_COLAB = False
-print("✓ Windows yerel PC ortamı tespit edildi")
+if is_main_process():
+    print("✓ Windows yerel PC ortamı tespit edildi")
 
 # Proje kök dizini (script'in bulunduğu klasör)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -32,7 +40,8 @@ PROJECT_ROOT = SCRIPT_DIR
 
 # Yerel PC için proje dizini
 DRIVE_PROJECT_DIR = PROJECT_ROOT
-print(f"✓ Proje kök dizini: {PROJECT_ROOT}")
+if is_main_process():
+    print(f"✓ Proje kök dizini: {PROJECT_ROOT}")
 
 RESULTS_DIR = os.path.join(DRIVE_PROJECT_DIR, "results")
 MODELS_DIR = os.path.join(RESULTS_DIR, "models")
@@ -45,17 +54,18 @@ os.makedirs(NLP_MODELS_DIR, exist_ok=True)
 os.makedirs(FIG_DIR, exist_ok=True)
 os.makedirs(TABLE_DIR, exist_ok=True)
 
-print(f"✓ Kalıcı kayıt klasörleri oluşturuldu (Yerel: {DRIVE_PROJECT_DIR})")
-print("="*80)
+if is_main_process():
+    print(f"✓ Kalıcı kayıt klasörleri oluşturuldu (Yerel: {DRIVE_PROJECT_DIR})")
+    print("="*80)
 
 # ============================================================================
 # HÜCRE 2: Import'lar ve Setup
 # ============================================================================
-print("\n" + "="*80)
-print("HÜCRE 2: IMPORT'LAR VE SETUP")
-print("="*80)
-
-print("📦 Kütüphaneler yükleniyor...")
+if is_main_process():
+    print("\n" + "="*80)
+    print("HÜCRE 2: IMPORT'LAR VE SETUP")
+    print("="*80)
+    print("📦 Kütüphaneler yükleniyor...")
 import sys
 import torch
 import torch.nn as nn
@@ -80,7 +90,8 @@ import warnings
 import itertools
 import copy
 warnings.filterwarnings('ignore')
-print("✓ Tüm kütüphaneler yüklendi")
+if is_main_process():
+    print("✓ Tüm kütüphaneler yüklendi")
 
 # Veri klasörü - önce newDate, yoksa Data klasörünü dene
 DATA_DIR = os.path.join(DRIVE_PROJECT_DIR, "newDate")
@@ -88,15 +99,18 @@ if not os.path.exists(DATA_DIR):
     # Alternatif olarak Data klasörünü dene
     DATA_DIR = os.path.join(DRIVE_PROJECT_DIR, "Data")
     if not os.path.exists(DATA_DIR):
-        print(f"⚠ UYARI: Veri klasörü bulunamadı!")
-        print(f"   Denenen yollar:")
-        print(f"   - {os.path.join(DRIVE_PROJECT_DIR, 'newDate')}")
-        print(f"   - {os.path.join(DRIVE_PROJECT_DIR, 'Data')}")
+        if is_main_process():
+            print(f"⚠ UYARI: Veri klasörü bulunamadı!")
+            print(f"   Denenen yollar:")
+            print(f"   - {os.path.join(DRIVE_PROJECT_DIR, 'newDate')}")
+            print(f"   - {os.path.join(DRIVE_PROJECT_DIR, 'Data')}")
         raise FileNotFoundError(f"Veri klasörü bulunamadı! Lütfen 'newDate' veya 'Data' klasörünün proje dizininde olduğundan emin olun.")
     else:
-        print(f"✓ Veri klasörü bulundu (Data): {DATA_DIR}")
+        if is_main_process():
+            print(f"✓ Veri klasörü bulundu (Data): {DATA_DIR}")
 else:
-    print(f"✓ Veri klasörü bulundu (newDate): {DATA_DIR}")
+    if is_main_process():
+        print(f"✓ Veri klasörü bulundu (newDate): {DATA_DIR}")
 
 # CSV dosyalarını dinamik olarak tespit et
 def detect_plastic_types_from_csv(data_dir):
@@ -121,19 +135,23 @@ def detect_plastic_types_from_csv(data_dir):
 try:
     DETECTED_PLASTICS = detect_plastic_types_from_csv(DATA_DIR)
     if DETECTED_PLASTICS:
-        print(f"✓ Otomatik tespit edilen plastik tipleri: {', '.join(DETECTED_PLASTICS)}")
+        if is_main_process():
+            print(f"✓ Otomatik tespit edilen plastik tipleri: {', '.join(DETECTED_PLASTICS)}")
     else:
-        print(f"⚠ UYARI: CSV dosyası bulunamadı: {DATA_DIR}")
-        print(f"   Mevcut dosyalar: {os.listdir(DATA_DIR) if os.path.exists(DATA_DIR) else 'Klasör yok'}")
+        if is_main_process():
+            print(f"⚠ UYARI: CSV dosyası bulunamadı: {DATA_DIR}")
+            print(f"   Mevcut dosyalar: {os.listdir(DATA_DIR) if os.path.exists(DATA_DIR) else 'Klasör yok'}")
 except:
     DETECTED_PLASTICS = []
-    print(f"⚠ CSV tespiti için DATA_DIR henüz hazır değil, main() içinde tekrar kontrol edilecek")
+    if is_main_process():
+        print(f"⚠ CSV tespiti için DATA_DIR henüz hazır değil, main() içinde tekrar kontrol edilecek")
 
 # Ablation study için özel klasörler
 # DRIVE_PROJECT_DIR HÜCRE 1'de tanımlanmış olmalı
 if 'DRIVE_PROJECT_DIR' not in globals():
     DRIVE_PROJECT_DIR = PROJECT_ROOT
-    print(f"⚠ DRIVE_PROJECT_DIR tanımlı değildi, proje kök dizini kullanılıyor: {DRIVE_PROJECT_DIR}")
+    if is_main_process():
+        print(f"⚠ DRIVE_PROJECT_DIR tanımlı değildi, proje kök dizini kullanılıyor: {DRIVE_PROJECT_DIR}")
 
 ABLATION_DIR = os.path.join(DRIVE_PROJECT_DIR, "ablation_results")
 ABLATION_TABLES_DIR = os.path.join(ABLATION_DIR, "tables")
@@ -158,15 +176,17 @@ PREFETCH_FACTOR = 2  # Veri ön yükleme faktörü
 PIN_MEMORY = True  # GPU'ya veri transferini hızlandırır
 PERSISTENT_WORKERS = True  # Worker'ları canlı tut (overhead azaltır)
 
-print(f"\n⚙️  PERFORMANS AYARLARI (Windows + RTX 4080 Super Optimize):")
-print(f"   NUM_WORKERS: {NUM_WORKERS} (Paralel veri yükleme aktif)")
-print(f"   PIN_MEMORY: {PIN_MEMORY} (GPU transfer hızlandırma)")
-print(f"   PERSISTENT_WORKERS: {PERSISTENT_WORKERS} (Worker overhead azaltma)")
-print(f"   Yüksek batch size'lar aktif (16GB VRAM için optimize)")
+if is_main_process():
+    print(f"\n⚙️  PERFORMANS AYARLARI (Windows + RTX 4080 Super Optimize):")
+    print(f"   NUM_WORKERS: {NUM_WORKERS} (Paralel veri yükleme aktif)")
+    print(f"   PIN_MEMORY: {PIN_MEMORY} (GPU transfer hızlandırma)")
+    print(f"   PERSISTENT_WORKERS: {PERSISTENT_WORKERS} (Worker overhead azaltma)")
+    print(f"   Yüksek batch size'lar aktif (16GB VRAM için optimize)")
 
 # GPU kontrolü ve optimizasyon
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-print(f"\n🖥️  Using device: {device}")
+if is_main_process():
+    print(f"\n🖥️  Using device: {device}")
 
 # GPU optimizasyon ayarları
 if torch.cuda.is_available():
@@ -179,15 +199,17 @@ if torch.cuda.is_available():
 if torch.cuda.is_available():
     gpu_name = torch.cuda.get_device_name(0)
     gpu_memory = torch.cuda.get_device_properties(0).total_memory / 1024**3
-    print(f"   GPU: {gpu_name}")
-    print(f"   GPU Memory: {gpu_memory:.2f} GB")
+    if is_main_process():
+        print(f"   GPU: {gpu_name}")
+        print(f"   GPU Memory: {gpu_memory:.2f} GB")
     
     # RTX 4080 Super optimizasyonları
     if '4080' in gpu_name or 'RTX' in gpu_name:
-        print("   ✓ RTX 4080 Super GPU tespit edildi - Optimizasyonlar aktif:")
-        print("     - Mixed Precision Training (AMP) aktif")
-        print("     - Optimize edilmiş batch size aralığı (yüksek batch size)")
-        print("     - Windows için optimize edilmiş num_workers")
+        if is_main_process():
+            print("   ✓ RTX 4080 Super GPU tespit edildi - Optimizasyonlar aktif:")
+            print("     - Mixed Precision Training (AMP) aktif")
+            print("     - Optimize edilmiş batch size aralığı (yüksek batch size)")
+            print("     - Windows için optimize edilmiş num_workers")
         
         # Mixed Precision için scaler (RTX 4080 Super için önerilir)
         USE_AMP = True  # Automatic Mixed Precision
@@ -195,49 +217,58 @@ if torch.cuda.is_available():
             # PyTorch 2.x uyumlu import
             from torch.amp import GradScaler, autocast
             scaler = GradScaler('cuda')
-            print("     - GradScaler hazır (PyTorch 2.x)")
+            if is_main_process():
+                print("     - GradScaler hazır (PyTorch 2.x)")
         except ImportError:
             # Eski PyTorch versiyonları için fallback
             try:
                 from torch.cuda.amp import GradScaler, autocast
                 scaler = GradScaler()
-                print("     - GradScaler hazır (Legacy)")
+                if is_main_process():
+                    print("     - GradScaler hazır (Legacy)")
             except ImportError:
                 USE_AMP = False
                 scaler = None
-                print("     ⚠ AMP mevcut değil, normal precision kullanılacak")
+                if is_main_process():
+                    print("     ⚠ AMP mevcut değil, normal precision kullanılacak")
     else:
         # Diğer GPU'lar için de AMP kullanabiliriz
         USE_AMP = True
         try:
             from torch.amp import GradScaler, autocast
             scaler = GradScaler('cuda')
-            print(f"   ✓ GPU tespit edildi - Mixed Precision Training aktif (PyTorch 2.x)")
+            if is_main_process():
+                print(f"   ✓ GPU tespit edildi - Mixed Precision Training aktif (PyTorch 2.x)")
         except ImportError:
             try:
                 from torch.cuda.amp import GradScaler, autocast
                 scaler = GradScaler()
-                print(f"   ✓ GPU tespit edildi - Mixed Precision Training aktif (Legacy)")
+                if is_main_process():
+                    print(f"   ✓ GPU tespit edildi - Mixed Precision Training aktif (Legacy)")
             except ImportError:
                 USE_AMP = False
                 scaler = None
-                print("   ⚠ AMP mevcut değil, normal precision kullanılacak")
+                if is_main_process():
+                    print("   ⚠ AMP mevcut değil, normal precision kullanılacak")
 else:
     USE_AMP = False
     scaler = None
-    print("   ⚠ CPU kullanılıyor (GPU bulunamadı)")
+    if is_main_process():
+        print("   ⚠ CPU kullanılıyor (GPU bulunamadı)")
 
-print(f"\n📁 Veri klasörü: {DATA_DIR}")
-print(f"📁 Ablation sonuçları: {ABLATION_DIR}")
-print(f"📁 Log klasörü: {ABLATION_LOGS_DIR}")
-print("="*80)
+if is_main_process():
+    print(f"\n📁 Veri klasörü: {DATA_DIR}")
+    print(f"📁 Ablation sonuçları: {ABLATION_DIR}")
+    print(f"📁 Log klasörü: {ABLATION_LOGS_DIR}")
+    print("="*80)
 
 # ============================================================================
 # HÜCRE 3: Utility Fonksiyonlar
 # ============================================================================
-print("\n" + "="*80)
-print("HÜCRE 3: UTILITY FONKSİYONLAR")
-print("="*80)
+if is_main_process():
+    print("\n" + "="*80)
+    print("HÜCRE 3: UTILITY FONKSİYONLAR")
+    print("="*80)
 
 AMINO_ACIDS = "ADEFGHIKLMNQRSTVWY"
 AA_TO_IDX = {aa: i for i, aa in enumerate(AMINO_ACIDS)}
@@ -250,9 +281,10 @@ AA_MASSES = {
     'V': 117, 'W': 204, 'Y': 181, 'C': 121, 'P': 115
 }
 
-print(f"✓ Amino asitler tanımlandı: {len(AMINO_ACIDS)} amino asit")
-print(f"✓ Amino asit kütleleri tanımlandı")
-print("="*80)
+if is_main_process():
+    print(f"✓ Amino asitler tanımlandı: {len(AMINO_ACIDS)} amino asit")
+    print(f"✓ Amino asit kütleleri tanımlandı")
+    print("="*80)
 
 def _onehotencode(s, vocab=None):
     """One-hot encode peptide sequence."""
@@ -416,15 +448,17 @@ class LSTMEncoderDecoder(nn.Module):
         recon_logits = self.out_proj(dec_out)
         return recon_logits, score_pred
 
-print("✓ Model mimarileri tanımlandı: LSTM, CNN, LSTM-VAE, Encoder-Decoder")
-print("="*80)
+if is_main_process():
+    print("✓ Model mimarileri tanımlandı: LSTM, CNN, LSTM-VAE, Encoder-Decoder")
+    print("="*80)
 
 # ============================================================================
 # HÜCRE 5: Dataset
 # ============================================================================
-print("\n" + "="*80)
-print("HÜCRE 5: DATASET")
-print("="*80)
+if is_main_process():
+    print("\n" + "="*80)
+    print("HÜCRE 5: DATASET")
+    print("="*80)
 
 class PeptideDataset(Dataset):
     def __init__(self, X, y):
@@ -879,6 +913,9 @@ def run_ablation_study(model_type, plastic_type, data_dir=None,
             log_file.write(f"🔄 Checkpoint'ten devam: Epoch {start_epoch}/{ablation_epochs}\n")
         log_file.write(f"{'='*80}\n")
         log_file.flush()
+        
+        # Eğitim zaten tamamlandıysa (checkpoint'ten), epoch'u son değere ayarla
+        epoch = start_epoch - 1 if start_epoch > 0 else 0
         
         # Canlı progress bar için tqdm
         epoch_pbar = tqdm(range(start_epoch, ablation_epochs), 
