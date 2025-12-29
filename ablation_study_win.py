@@ -93,8 +93,8 @@ warnings.filterwarnings('ignore')
 if is_main_process():
     print("✓ Tüm kütüphaneler yüklendi")
 
-# Veri klasörü - önce newDate, yoksa Data klasörünü dene
-DATA_DIR = os.path.join(DRIVE_PROJECT_DIR, "newDate")
+# Veri klasörü - Windows için Data_win klasörü
+DATA_DIR = os.path.join(DRIVE_PROJECT_DIR, "Data_win")
 if not os.path.exists(DATA_DIR):
     # Alternatif olarak Data klasörünü dene
     DATA_DIR = os.path.join(DRIVE_PROJECT_DIR, "Data")
@@ -102,15 +102,15 @@ if not os.path.exists(DATA_DIR):
         if is_main_process():
             print(f"⚠ UYARI: Veri klasörü bulunamadı!")
             print(f"   Denenen yollar:")
-            print(f"   - {os.path.join(DRIVE_PROJECT_DIR, 'newDate')}")
+            print(f"   - {os.path.join(DRIVE_PROJECT_DIR, 'Data_win')}")
             print(f"   - {os.path.join(DRIVE_PROJECT_DIR, 'Data')}")
-        raise FileNotFoundError(f"Veri klasörü bulunamadı! Lütfen 'newDate' veya 'Data' klasörünün proje dizininde olduğundan emin olun.")
+        raise FileNotFoundError(f"Veri klasörü bulunamadı! Lütfen 'Data_win' veya 'Data' klasörünün proje dizininde olduğundan emin olun.")
     else:
         if is_main_process():
             print(f"✓ Veri klasörü bulundu (Data): {DATA_DIR}")
 else:
     if is_main_process():
-        print(f"✓ Veri klasörü bulundu (newDate): {DATA_DIR}")
+        print(f"✓ Veri klasörü bulundu (Data_win): {DATA_DIR}")
 
 # CSV dosyalarını dinamik olarak tespit et
 def detect_plastic_types_from_csv(data_dir):
