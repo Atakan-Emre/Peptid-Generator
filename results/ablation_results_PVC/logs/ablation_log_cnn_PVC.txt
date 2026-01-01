@@ -1,0 +1,2964 @@
+
+================================================================================
+ABLATION STUDY: CNN - PVC
+Tarih: 2025-12-28 22:26:32
+Toplam Kombinasyon: 48
+Ablation Epochs: 50
+Seed: 42
+================================================================================
+
+
+================================================================================
+KOMBİNASYON 1/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.883349, Val Loss: 0.749888, Val R²: 0.249485
+  Epoch   2/50: Train Loss: 0.617803, Val Loss: 0.538894, Val R²: 0.460655
+  Epoch   3/50: Train Loss: 0.546215, Val Loss: 0.508374, Val R²: 0.491201
+  Epoch   4/50: Train Loss: 0.515814, Val Loss: 0.488722, Val R²: 0.510870
+  Epoch   5/50: Train Loss: 0.495418, Val Loss: 0.472944, Val R²: 0.526660
+  Epoch   6/50: Train Loss: 0.478815, Val Loss: 0.459719, Val R²: 0.539897
+  Epoch   7/50: Train Loss: 0.464714, Val Loss: 0.447776, Val R²: 0.551850
+  Epoch   8/50: Train Loss: 0.452625, Val Loss: 0.437085, Val R²: 0.562550
+  Epoch   9/50: Train Loss: 0.442947, Val Loss: 0.427477, Val R²: 0.572166
+  Epoch  10/50: Train Loss: 0.433207, Val Loss: 0.419409, Val R²: 0.580241
+  Epoch  11/50: Train Loss: 0.425167, Val Loss: 0.412373, Val R²: 0.587282
+  Epoch  12/50: Train Loss: 0.417358, Val Loss: 0.405899, Val R²: 0.593762
+  Epoch  13/50: Train Loss: 0.411165, Val Loss: 0.399988, Val R²: 0.599678
+  Epoch  14/50: Train Loss: 0.404811, Val Loss: 0.394962, Val R²: 0.604708
+  Epoch  15/50: Train Loss: 0.398741, Val Loss: 0.390487, Val R²: 0.609187
+  Epoch  16/50: Train Loss: 0.393087, Val Loss: 0.385875, Val R²: 0.613803
+  Epoch  17/50: Train Loss: 0.387766, Val Loss: 0.381793, Val R²: 0.617888
+  Epoch  18/50: Train Loss: 0.383844, Val Loss: 0.377987, Val R²: 0.621697
+  Epoch  19/50: Train Loss: 0.380066, Val Loss: 0.374902, Val R²: 0.624785
+  Epoch  20/50: Train Loss: 0.375268, Val Loss: 0.371452, Val R²: 0.628237
+  Epoch  21/50: Train Loss: 0.370902, Val Loss: 0.367937, Val R²: 0.631756
+  Epoch  22/50: Train Loss: 0.367302, Val Loss: 0.365345, Val R²: 0.634350
+  Epoch  23/50: Train Loss: 0.363115, Val Loss: 0.362233, Val R²: 0.637464
+  Epoch  24/50: Train Loss: 0.360232, Val Loss: 0.359746, Val R²: 0.639953
+  Epoch  25/50: Train Loss: 0.356074, Val Loss: 0.356995, Val R²: 0.642707
+  Epoch  26/50: Train Loss: 0.353794, Val Loss: 0.354275, Val R²: 0.645429
+  Epoch  27/50: Train Loss: 0.349954, Val Loss: 0.352351, Val R²: 0.647354
+  Epoch  28/50: Train Loss: 0.346324, Val Loss: 0.350020, Val R²: 0.649687
+  Epoch  29/50: Train Loss: 0.343274, Val Loss: 0.347762, Val R²: 0.651948
+  Epoch  30/50: Train Loss: 0.339969, Val Loss: 0.345043, Val R²: 0.654669
+  Epoch  31/50: Train Loss: 0.337587, Val Loss: 0.344666, Val R²: 0.655046
+  Epoch  32/50: Train Loss: 0.334204, Val Loss: 0.340806, Val R²: 0.658909
+  Epoch  33/50: Train Loss: 0.331244, Val Loss: 0.339028, Val R²: 0.660689
+  Epoch  34/50: Train Loss: 0.328249, Val Loss: 0.336906, Val R²: 0.662813
+  Epoch  35/50: Train Loss: 0.325473, Val Loss: 0.334952, Val R²: 0.664768
+  Epoch  36/50: Train Loss: 0.322635, Val Loss: 0.333031, Val R²: 0.666691
+  Epoch  37/50: Train Loss: 0.320219, Val Loss: 0.331386, Val R²: 0.668337
+  Epoch  38/50: Train Loss: 0.317765, Val Loss: 0.329683, Val R²: 0.670042
+  Epoch  39/50: Train Loss: 0.314512, Val Loss: 0.327791, Val R²: 0.671935
+  Epoch  40/50: Train Loss: 0.312512, Val Loss: 0.325844, Val R²: 0.673883
+  Epoch  41/50: Train Loss: 0.309832, Val Loss: 0.324370, Val R²: 0.675359
+  Epoch  42/50: Train Loss: 0.307898, Val Loss: 0.322960, Val R²: 0.676770
+  Epoch  43/50: Train Loss: 0.305297, Val Loss: 0.321625, Val R²: 0.678106
+  Epoch  44/50: Train Loss: 0.302372, Val Loss: 0.320400, Val R²: 0.679332
+  Epoch  45/50: Train Loss: 0.300343, Val Loss: 0.318231, Val R²: 0.681503
+  Epoch  46/50: Train Loss: 0.297749, Val Loss: 0.317029, Val R²: 0.682706
+  Epoch  47/50: Train Loss: 0.295739, Val Loss: 0.316164, Val R²: 0.683572
+  Epoch  48/50: Train Loss: 0.293865, Val Loss: 0.314369, Val R²: 0.685369
+  Epoch  49/50: Train Loss: 0.291141, Val Loss: 0.313290, Val R²: 0.686448
+  Epoch  50/50: Train Loss: 0.289054, Val Loss: 0.311844, Val R²: 0.687896
+
+  ✓ Kombinasyon 1 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': True}
+     Best Val R²: 0.687896 (Epoch 50)
+     Test R²: 0.694275
+     Test MAE: 4.565501
+     Test RMSE: 5.869188
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.289054, Val Loss: 0.311844
+       Train-Val Gap: -0.022790 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0731 (Negatif = Overfitting)
+       Best Epoch Gap: -0.022790
+
+================================================================================
+KOMBİNASYON 2/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.998335, Val Loss: 0.982200, Val R²: 0.016979
+  Epoch   2/50: Train Loss: 0.962067, Val Loss: 0.927067, Val R²: 0.072159
+  Epoch   3/50: Train Loss: 0.870006, Val Loss: 0.790696, Val R²: 0.208644
+  Epoch   4/50: Train Loss: 0.705102, Val Loss: 0.616975, Val R²: 0.382510
+  Epoch   5/50: Train Loss: 0.577656, Val Loss: 0.543328, Val R²: 0.456218
+  Epoch   6/50: Train Loss: 0.536268, Val Loss: 0.520411, Val R²: 0.479154
+  Epoch   7/50: Train Loss: 0.517705, Val Loss: 0.505473, Val R²: 0.494105
+  Epoch   8/50: Train Loss: 0.503894, Val Loss: 0.493158, Val R²: 0.506430
+  Epoch   9/50: Train Loss: 0.492905, Val Loss: 0.482152, Val R²: 0.517445
+  Epoch  10/50: Train Loss: 0.482550, Val Loss: 0.472384, Val R²: 0.527221
+  Epoch  11/50: Train Loss: 0.474304, Val Loss: 0.462823, Val R²: 0.536790
+  Epoch  12/50: Train Loss: 0.464937, Val Loss: 0.454406, Val R²: 0.545214
+  Epoch  13/50: Train Loss: 0.458051, Val Loss: 0.446942, Val R²: 0.552684
+  Epoch  14/50: Train Loss: 0.450881, Val Loss: 0.440045, Val R²: 0.559587
+  Epoch  15/50: Train Loss: 0.444635, Val Loss: 0.433773, Val R²: 0.565865
+  Epoch  16/50: Train Loss: 0.438583, Val Loss: 0.428208, Val R²: 0.571434
+  Epoch  17/50: Train Loss: 0.433573, Val Loss: 0.423223, Val R²: 0.576423
+  Epoch  18/50: Train Loss: 0.429274, Val Loss: 0.418831, Val R²: 0.580819
+  Epoch  19/50: Train Loss: 0.425586, Val Loss: 0.415015, Val R²: 0.584639
+  Epoch  20/50: Train Loss: 0.421071, Val Loss: 0.411295, Val R²: 0.588361
+  Epoch  21/50: Train Loss: 0.418090, Val Loss: 0.408014, Val R²: 0.591646
+  Epoch  22/50: Train Loss: 0.414515, Val Loss: 0.404776, Val R²: 0.594886
+  Epoch  23/50: Train Loss: 0.411500, Val Loss: 0.401974, Val R²: 0.597690
+  Epoch  24/50: Train Loss: 0.408693, Val Loss: 0.399328, Val R²: 0.600338
+  Epoch  25/50: Train Loss: 0.404991, Val Loss: 0.396312, Val R²: 0.603357
+  Epoch  26/50: Train Loss: 0.403254, Val Loss: 0.394424, Val R²: 0.605247
+  Epoch  27/50: Train Loss: 0.399931, Val Loss: 0.391815, Val R²: 0.607858
+  Epoch  28/50: Train Loss: 0.397724, Val Loss: 0.389103, Val R²: 0.610572
+  Epoch  29/50: Train Loss: 0.395159, Val Loss: 0.387104, Val R²: 0.612572
+  Epoch  30/50: Train Loss: 0.392493, Val Loss: 0.384849, Val R²: 0.614830
+  Epoch  31/50: Train Loss: 0.389988, Val Loss: 0.382795, Val R²: 0.616886
+  Epoch  32/50: Train Loss: 0.387420, Val Loss: 0.380745, Val R²: 0.618937
+  Epoch  33/50: Train Loss: 0.385770, Val Loss: 0.379271, Val R²: 0.620412
+  Epoch  34/50: Train Loss: 0.383840, Val Loss: 0.377716, Val R²: 0.621969
+  Epoch  35/50: Train Loss: 0.381220, Val Loss: 0.375534, Val R²: 0.624153
+  Epoch  36/50: Train Loss: 0.379386, Val Loss: 0.373926, Val R²: 0.625761
+  Epoch  37/50: Train Loss: 0.377891, Val Loss: 0.372402, Val R²: 0.627287
+  Epoch  38/50: Train Loss: 0.375804, Val Loss: 0.370975, Val R²: 0.628715
+  Epoch  39/50: Train Loss: 0.374266, Val Loss: 0.369531, Val R²: 0.630160
+  Epoch  40/50: Train Loss: 0.372148, Val Loss: 0.368323, Val R²: 0.631369
+  Epoch  41/50: Train Loss: 0.370772, Val Loss: 0.366817, Val R²: 0.632876
+  Epoch  42/50: Train Loss: 0.369231, Val Loss: 0.366738, Val R²: 0.632956
+  Epoch  43/50: Train Loss: 0.367081, Val Loss: 0.364344, Val R²: 0.635351
+  Epoch  44/50: Train Loss: 0.365341, Val Loss: 0.363281, Val R²: 0.636416
+  Epoch  45/50: Train Loss: 0.363708, Val Loss: 0.361903, Val R²: 0.637795
+  Epoch  46/50: Train Loss: 0.362137, Val Loss: 0.360704, Val R²: 0.638994
+  Epoch  47/50: Train Loss: 0.360855, Val Loss: 0.359608, Val R²: 0.640092
+  Epoch  48/50: Train Loss: 0.358851, Val Loss: 0.358489, Val R²: 0.641212
+  Epoch  49/50: Train Loss: 0.358047, Val Loss: 0.357416, Val R²: 0.642285
+  Epoch  50/50: Train Loss: 0.355905, Val Loss: 0.356412, Val R²: 0.643290
+
+  ✓ Kombinasyon 2 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': False}
+     Best Val R²: 0.643290 (Epoch 50)
+     Test R²: 0.647761
+     Test MAE: 4.903552
+     Test RMSE: 6.299867
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.355905, Val Loss: 0.356412
+       Train-Val Gap: -0.000506 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0014 (Negatif = Overfitting)
+       Best Epoch Gap: -0.000506
+
+================================================================================
+KOMBİNASYON 3/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.893572, Val Loss: 0.756976, Val R²: 0.242392
+  Epoch   2/50: Train Loss: 0.621427, Val Loss: 0.540417, Val R²: 0.459131
+  Epoch   3/50: Train Loss: 0.547488, Val Loss: 0.509310, Val R²: 0.490265
+  Epoch   4/50: Train Loss: 0.516663, Val Loss: 0.489425, Val R²: 0.510166
+  Epoch   5/50: Train Loss: 0.496055, Val Loss: 0.473571, Val R²: 0.526033
+  Epoch   6/50: Train Loss: 0.479357, Val Loss: 0.460357, Val R²: 0.539259
+  Epoch   7/50: Train Loss: 0.465211, Val Loss: 0.448246, Val R²: 0.551379
+  Epoch   8/50: Train Loss: 0.453041, Val Loss: 0.437494, Val R²: 0.562140
+  Epoch   9/50: Train Loss: 0.443281, Val Loss: 0.427871, Val R²: 0.571771
+  Epoch  10/50: Train Loss: 0.433485, Val Loss: 0.419747, Val R²: 0.579902
+  Epoch  11/50: Train Loss: 0.425381, Val Loss: 0.412653, Val R²: 0.587002
+  Epoch  12/50: Train Loss: 0.417549, Val Loss: 0.406170, Val R²: 0.593491
+  Epoch  13/50: Train Loss: 0.411381, Val Loss: 0.400222, Val R²: 0.599443
+  Epoch  14/50: Train Loss: 0.405040, Val Loss: 0.395210, Val R²: 0.604460
+  Epoch  15/50: Train Loss: 0.399063, Val Loss: 0.390812, Val R²: 0.608861
+  Epoch  16/50: Train Loss: 0.393420, Val Loss: 0.386196, Val R²: 0.613482
+  Epoch  17/50: Train Loss: 0.388141, Val Loss: 0.382108, Val R²: 0.617573
+  Epoch  18/50: Train Loss: 0.384192, Val Loss: 0.378319, Val R²: 0.621365
+  Epoch  19/50: Train Loss: 0.380302, Val Loss: 0.375279, Val R²: 0.624407
+  Epoch  20/50: Train Loss: 0.375583, Val Loss: 0.371739, Val R²: 0.627951
+  Epoch  21/50: Train Loss: 0.371170, Val Loss: 0.368296, Val R²: 0.631396
+  Epoch  22/50: Train Loss: 0.367536, Val Loss: 0.365664, Val R²: 0.634031
+  Epoch  23/50: Train Loss: 0.363306, Val Loss: 0.362738, Val R²: 0.636959
+  Epoch  24/50: Train Loss: 0.360390, Val Loss: 0.360107, Val R²: 0.639592
+  Epoch  25/50: Train Loss: 0.356263, Val Loss: 0.357351, Val R²: 0.642350
+  Epoch  26/50: Train Loss: 0.353931, Val Loss: 0.354657, Val R²: 0.645047
+  Epoch  27/50: Train Loss: 0.350182, Val Loss: 0.352845, Val R²: 0.646860
+  Epoch  28/50: Train Loss: 0.346541, Val Loss: 0.350351, Val R²: 0.649356
+  Epoch  29/50: Train Loss: 0.343579, Val Loss: 0.347962, Val R²: 0.651747
+  Epoch  30/50: Train Loss: 0.340217, Val Loss: 0.345462, Val R²: 0.654249
+  Epoch  31/50: Train Loss: 0.337866, Val Loss: 0.345101, Val R²: 0.654611
+  Epoch  32/50: Train Loss: 0.334455, Val Loss: 0.341214, Val R²: 0.658501
+  Epoch  33/50: Train Loss: 0.331460, Val Loss: 0.339603, Val R²: 0.660114
+  Epoch  34/50: Train Loss: 0.328466, Val Loss: 0.337244, Val R²: 0.662475
+  Epoch  35/50: Train Loss: 0.325670, Val Loss: 0.335380, Val R²: 0.664340
+  Epoch  36/50: Train Loss: 0.322807, Val Loss: 0.333401, Val R²: 0.666320
+  Epoch  37/50: Train Loss: 0.320434, Val Loss: 0.331667, Val R²: 0.668056
+  Epoch  38/50: Train Loss: 0.317871, Val Loss: 0.330184, Val R²: 0.669540
+  Epoch  39/50: Train Loss: 0.314595, Val Loss: 0.328265, Val R²: 0.671461
+  Epoch  40/50: Train Loss: 0.312584, Val Loss: 0.326315, Val R²: 0.673412
+  Epoch  41/50: Train Loss: 0.309985, Val Loss: 0.324785, Val R²: 0.674944
+  Epoch  42/50: Train Loss: 0.307989, Val Loss: 0.323270, Val R²: 0.676460
+  Epoch  43/50: Train Loss: 0.305280, Val Loss: 0.321900, Val R²: 0.677831
+  Epoch  44/50: Train Loss: 0.302511, Val Loss: 0.320566, Val R²: 0.679166
+  Epoch  45/50: Train Loss: 0.300403, Val Loss: 0.318297, Val R²: 0.681437
+  Epoch  46/50: Train Loss: 0.297828, Val Loss: 0.316916, Val R²: 0.682819
+  Epoch  47/50: Train Loss: 0.295797, Val Loss: 0.316029, Val R²: 0.683707
+  Epoch  48/50: Train Loss: 0.293921, Val Loss: 0.314227, Val R²: 0.685511
+  Epoch  49/50: Train Loss: 0.291146, Val Loss: 0.313026, Val R²: 0.686712
+  Epoch  50/50: Train Loss: 0.289137, Val Loss: 0.311691, Val R²: 0.688048
+
+  ✓ Kombinasyon 3 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': True}
+     Best Val R²: 0.688048 (Epoch 50)
+     Test R²: 0.694483
+     Test MAE: 4.561134
+     Test RMSE: 5.867190
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.289137, Val Loss: 0.311691
+       Train-Val Gap: -0.022554 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0724 (Negatif = Overfitting)
+       Best Epoch Gap: -0.022554
+
+================================================================================
+KOMBİNASYON 4/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.998336, Val Loss: 0.982203, Val R²: 0.016976
+  Epoch   2/50: Train Loss: 0.962149, Val Loss: 0.927360, Val R²: 0.071865
+  Epoch   3/50: Train Loss: 0.870228, Val Loss: 0.790961, Val R²: 0.208378
+  Epoch   4/50: Train Loss: 0.705359, Val Loss: 0.617134, Val R²: 0.382351
+  Epoch   5/50: Train Loss: 0.577716, Val Loss: 0.543319, Val R²: 0.456227
+  Epoch   6/50: Train Loss: 0.536261, Val Loss: 0.520407, Val R²: 0.479158
+  Epoch   7/50: Train Loss: 0.517702, Val Loss: 0.505474, Val R²: 0.494104
+  Epoch   8/50: Train Loss: 0.503917, Val Loss: 0.493180, Val R²: 0.506408
+  Epoch   9/50: Train Loss: 0.492943, Val Loss: 0.482198, Val R²: 0.517399
+  Epoch  10/50: Train Loss: 0.482622, Val Loss: 0.472433, Val R²: 0.527172
+  Epoch  11/50: Train Loss: 0.474379, Val Loss: 0.462860, Val R²: 0.536753
+  Epoch  12/50: Train Loss: 0.465001, Val Loss: 0.454434, Val R²: 0.545186
+  Epoch  13/50: Train Loss: 0.458112, Val Loss: 0.446965, Val R²: 0.552661
+  Epoch  14/50: Train Loss: 0.450921, Val Loss: 0.440042, Val R²: 0.559590
+  Epoch  15/50: Train Loss: 0.444666, Val Loss: 0.433774, Val R²: 0.565863
+  Epoch  16/50: Train Loss: 0.438605, Val Loss: 0.428234, Val R²: 0.571408
+  Epoch  17/50: Train Loss: 0.433606, Val Loss: 0.423242, Val R²: 0.576405
+  Epoch  18/50: Train Loss: 0.429301, Val Loss: 0.418836, Val R²: 0.580814
+  Epoch  19/50: Train Loss: 0.425612, Val Loss: 0.415042, Val R²: 0.584611
+  Epoch  20/50: Train Loss: 0.421094, Val Loss: 0.411337, Val R²: 0.588320
+  Epoch  21/50: Train Loss: 0.418105, Val Loss: 0.408043, Val R²: 0.591616
+  Epoch  22/50: Train Loss: 0.414518, Val Loss: 0.404767, Val R²: 0.594894
+  Epoch  23/50: Train Loss: 0.411487, Val Loss: 0.401963, Val R²: 0.597702
+  Epoch  24/50: Train Loss: 0.408652, Val Loss: 0.399292, Val R²: 0.600374
+  Epoch  25/50: Train Loss: 0.404927, Val Loss: 0.396272, Val R²: 0.603397
+  Epoch  26/50: Train Loss: 0.403198, Val Loss: 0.394379, Val R²: 0.605291
+  Epoch  27/50: Train Loss: 0.399875, Val Loss: 0.391713, Val R²: 0.607959
+  Epoch  28/50: Train Loss: 0.397663, Val Loss: 0.389004, Val R²: 0.610671
+  Epoch  29/50: Train Loss: 0.395065, Val Loss: 0.387008, Val R²: 0.612669
+  Epoch  30/50: Train Loss: 0.392368, Val Loss: 0.384728, Val R²: 0.614950
+  Epoch  31/50: Train Loss: 0.389894, Val Loss: 0.382672, Val R²: 0.617008
+  Epoch  32/50: Train Loss: 0.387355, Val Loss: 0.380665, Val R²: 0.619017
+  Epoch  33/50: Train Loss: 0.385712, Val Loss: 0.379206, Val R²: 0.620477
+  Epoch  34/50: Train Loss: 0.383791, Val Loss: 0.377650, Val R²: 0.622034
+  Epoch  35/50: Train Loss: 0.381195, Val Loss: 0.375466, Val R²: 0.624220
+  Epoch  36/50: Train Loss: 0.379354, Val Loss: 0.373862, Val R²: 0.625826
+  Epoch  37/50: Train Loss: 0.377860, Val Loss: 0.372317, Val R²: 0.627372
+  Epoch  38/50: Train Loss: 0.375776, Val Loss: 0.370907, Val R²: 0.628783
+  Epoch  39/50: Train Loss: 0.374200, Val Loss: 0.369448, Val R²: 0.630243
+  Epoch  40/50: Train Loss: 0.372094, Val Loss: 0.368259, Val R²: 0.631433
+  Epoch  41/50: Train Loss: 0.370724, Val Loss: 0.366711, Val R²: 0.632982
+  Epoch  42/50: Train Loss: 0.369185, Val Loss: 0.366620, Val R²: 0.633074
+  Epoch  43/50: Train Loss: 0.367031, Val Loss: 0.364219, Val R²: 0.635477
+  Epoch  44/50: Train Loss: 0.365260, Val Loss: 0.363157, Val R²: 0.636540
+  Epoch  45/50: Train Loss: 0.363666, Val Loss: 0.361735, Val R²: 0.637963
+  Epoch  46/50: Train Loss: 0.362082, Val Loss: 0.360507, Val R²: 0.639192
+  Epoch  47/50: Train Loss: 0.360784, Val Loss: 0.359381, Val R²: 0.640318
+  Epoch  48/50: Train Loss: 0.358807, Val Loss: 0.358245, Val R²: 0.641456
+  Epoch  49/50: Train Loss: 0.357981, Val Loss: 0.357169, Val R²: 0.642532
+  Epoch  50/50: Train Loss: 0.355866, Val Loss: 0.356149, Val R²: 0.643553
+
+  ✓ Kombinasyon 4 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': False}
+     Best Val R²: 0.643553 (Epoch 50)
+     Test R²: 0.647662
+     Test MAE: 4.904389
+     Test RMSE: 6.300755
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.355866, Val Loss: 0.356149
+       Train-Val Gap: -0.000284 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0008 (Negatif = Overfitting)
+       Best Epoch Gap: -0.000284
+
+================================================================================
+KOMBİNASYON 5/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.893559, Val Loss: 0.756927, Val R²: 0.242440
+  Epoch   2/50: Train Loss: 0.621456, Val Loss: 0.540417, Val R²: 0.459131
+  Epoch   3/50: Train Loss: 0.547493, Val Loss: 0.509270, Val R²: 0.490305
+  Epoch   4/50: Train Loss: 0.516646, Val Loss: 0.489437, Val R²: 0.510154
+  Epoch   5/50: Train Loss: 0.496029, Val Loss: 0.473572, Val R²: 0.526032
+  Epoch   6/50: Train Loss: 0.479316, Val Loss: 0.460283, Val R²: 0.539333
+  Epoch   7/50: Train Loss: 0.465167, Val Loss: 0.448219, Val R²: 0.551407
+  Epoch   8/50: Train Loss: 0.452996, Val Loss: 0.437538, Val R²: 0.562097
+  Epoch   9/50: Train Loss: 0.443264, Val Loss: 0.427883, Val R²: 0.571760
+  Epoch  10/50: Train Loss: 0.433451, Val Loss: 0.419708, Val R²: 0.579941
+  Epoch  11/50: Train Loss: 0.425360, Val Loss: 0.412608, Val R²: 0.587048
+  Epoch  12/50: Train Loss: 0.417522, Val Loss: 0.406186, Val R²: 0.593474
+  Epoch  13/50: Train Loss: 0.411354, Val Loss: 0.400216, Val R²: 0.599450
+  Epoch  14/50: Train Loss: 0.404966, Val Loss: 0.395181, Val R²: 0.604489
+  Epoch  15/50: Train Loss: 0.398931, Val Loss: 0.390683, Val R²: 0.608991
+  Epoch  16/50: Train Loss: 0.393235, Val Loss: 0.386047, Val R²: 0.613630
+  Epoch  17/50: Train Loss: 0.387914, Val Loss: 0.381861, Val R²: 0.617820
+  Epoch  18/50: Train Loss: 0.383983, Val Loss: 0.378090, Val R²: 0.621594
+  Epoch  19/50: Train Loss: 0.380118, Val Loss: 0.375080, Val R²: 0.624606
+  Epoch  20/50: Train Loss: 0.375378, Val Loss: 0.371548, Val R²: 0.628141
+  Epoch  21/50: Train Loss: 0.370999, Val Loss: 0.368116, Val R²: 0.631576
+  Epoch  22/50: Train Loss: 0.367402, Val Loss: 0.365556, Val R²: 0.634138
+  Epoch  23/50: Train Loss: 0.363210, Val Loss: 0.362552, Val R²: 0.637145
+  Epoch  24/50: Train Loss: 0.360310, Val Loss: 0.359980, Val R²: 0.639719
+  Epoch  25/50: Train Loss: 0.356192, Val Loss: 0.357338, Val R²: 0.642364
+  Epoch  26/50: Train Loss: 0.353886, Val Loss: 0.354614, Val R²: 0.645089
+  Epoch  27/50: Train Loss: 0.350110, Val Loss: 0.352869, Val R²: 0.646836
+  Epoch  28/50: Train Loss: 0.346494, Val Loss: 0.350276, Val R²: 0.649431
+  Epoch  29/50: Train Loss: 0.343519, Val Loss: 0.347981, Val R²: 0.651729
+  Epoch  30/50: Train Loss: 0.340186, Val Loss: 0.345447, Val R²: 0.654265
+  Epoch  31/50: Train Loss: 0.337791, Val Loss: 0.345056, Val R²: 0.654656
+  Epoch  32/50: Train Loss: 0.334408, Val Loss: 0.341199, Val R²: 0.658516
+  Epoch  33/50: Train Loss: 0.331411, Val Loss: 0.339497, Val R²: 0.660219
+  Epoch  34/50: Train Loss: 0.328397, Val Loss: 0.337270, Val R²: 0.662448
+  Epoch  35/50: Train Loss: 0.325607, Val Loss: 0.335389, Val R²: 0.664331
+  Epoch  36/50: Train Loss: 0.322685, Val Loss: 0.333463, Val R²: 0.666258
+  Epoch  37/50: Train Loss: 0.320292, Val Loss: 0.331755, Val R²: 0.667967
+  Epoch  38/50: Train Loss: 0.317741, Val Loss: 0.330107, Val R²: 0.669618
+  Epoch  39/50: Train Loss: 0.314488, Val Loss: 0.328207, Val R²: 0.671519
+  Epoch  40/50: Train Loss: 0.312432, Val Loss: 0.326277, Val R²: 0.673450
+  Epoch  41/50: Train Loss: 0.309878, Val Loss: 0.324839, Val R²: 0.674890
+  Epoch  42/50: Train Loss: 0.307860, Val Loss: 0.323231, Val R²: 0.676499
+  Epoch  43/50: Train Loss: 0.305130, Val Loss: 0.321951, Val R²: 0.677780
+  Epoch  44/50: Train Loss: 0.302374, Val Loss: 0.320676, Val R²: 0.679056
+  Epoch  45/50: Train Loss: 0.300292, Val Loss: 0.318424, Val R²: 0.681310
+  Epoch  46/50: Train Loss: 0.297781, Val Loss: 0.317045, Val R²: 0.682690
+  Epoch  47/50: Train Loss: 0.295702, Val Loss: 0.316176, Val R²: 0.683560
+  Epoch  48/50: Train Loss: 0.293785, Val Loss: 0.314407, Val R²: 0.685330
+  Epoch  49/50: Train Loss: 0.290991, Val Loss: 0.313283, Val R²: 0.686456
+  Epoch  50/50: Train Loss: 0.289002, Val Loss: 0.311783, Val R²: 0.687956
+
+  ✓ Kombinasyon 5 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True}
+     Best Val R²: 0.687956 (Epoch 50)
+     Test R²: 0.694469
+     Test MAE: 4.563276
+     Test RMSE: 5.867328
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.289002, Val Loss: 0.311783
+       Train-Val Gap: -0.022782 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0731 (Negatif = Overfitting)
+       Best Epoch Gap: -0.022782
+
+================================================================================
+KOMBİNASYON 6/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.998336, Val Loss: 0.982203, Val R²: 0.016977
+  Epoch   2/50: Train Loss: 0.962146, Val Loss: 0.927364, Val R²: 0.071861
+  Epoch   3/50: Train Loss: 0.870257, Val Loss: 0.791032, Val R²: 0.208307
+  Epoch   4/50: Train Loss: 0.705459, Val Loss: 0.617239, Val R²: 0.382245
+  Epoch   5/50: Train Loss: 0.577788, Val Loss: 0.543365, Val R²: 0.456181
+  Epoch   6/50: Train Loss: 0.536302, Val Loss: 0.520447, Val R²: 0.479118
+  Epoch   7/50: Train Loss: 0.517745, Val Loss: 0.505514, Val R²: 0.494063
+  Epoch   8/50: Train Loss: 0.503957, Val Loss: 0.493222, Val R²: 0.506366
+  Epoch   9/50: Train Loss: 0.492993, Val Loss: 0.482267, Val R²: 0.517330
+  Epoch  10/50: Train Loss: 0.482697, Val Loss: 0.472508, Val R²: 0.527097
+  Epoch  11/50: Train Loss: 0.474460, Val Loss: 0.462934, Val R²: 0.536679
+  Epoch  12/50: Train Loss: 0.465064, Val Loss: 0.454489, Val R²: 0.545131
+  Epoch  13/50: Train Loss: 0.458160, Val Loss: 0.447017, Val R²: 0.552610
+  Epoch  14/50: Train Loss: 0.450962, Val Loss: 0.440089, Val R²: 0.559544
+  Epoch  15/50: Train Loss: 0.444698, Val Loss: 0.433808, Val R²: 0.565829
+  Epoch  16/50: Train Loss: 0.438626, Val Loss: 0.428241, Val R²: 0.571401
+  Epoch  17/50: Train Loss: 0.433628, Val Loss: 0.423269, Val R²: 0.576377
+  Epoch  18/50: Train Loss: 0.429336, Val Loss: 0.418871, Val R²: 0.580779
+  Epoch  19/50: Train Loss: 0.425641, Val Loss: 0.415079, Val R²: 0.584574
+  Epoch  20/50: Train Loss: 0.421131, Val Loss: 0.411367, Val R²: 0.588289
+  Epoch  21/50: Train Loss: 0.418152, Val Loss: 0.408076, Val R²: 0.591583
+  Epoch  22/50: Train Loss: 0.414570, Val Loss: 0.404836, Val R²: 0.594825
+  Epoch  23/50: Train Loss: 0.411557, Val Loss: 0.402025, Val R²: 0.597639
+  Epoch  24/50: Train Loss: 0.408748, Val Loss: 0.399391, Val R²: 0.600276
+  Epoch  25/50: Train Loss: 0.405034, Val Loss: 0.396392, Val R²: 0.603277
+  Epoch  26/50: Train Loss: 0.403305, Val Loss: 0.394517, Val R²: 0.605154
+  Epoch  27/50: Train Loss: 0.399989, Val Loss: 0.391871, Val R²: 0.607801
+  Epoch  28/50: Train Loss: 0.397754, Val Loss: 0.389108, Val R²: 0.610567
+  Epoch  29/50: Train Loss: 0.395096, Val Loss: 0.387095, Val R²: 0.612581
+  Epoch  30/50: Train Loss: 0.392386, Val Loss: 0.384829, Val R²: 0.614850
+  Epoch  31/50: Train Loss: 0.389940, Val Loss: 0.382783, Val R²: 0.616897
+  Epoch  32/50: Train Loss: 0.387423, Val Loss: 0.380733, Val R²: 0.618949
+  Epoch  33/50: Train Loss: 0.385773, Val Loss: 0.379290, Val R²: 0.620393
+  Epoch  34/50: Train Loss: 0.383877, Val Loss: 0.377741, Val R²: 0.621943
+  Epoch  35/50: Train Loss: 0.381275, Val Loss: 0.375589, Val R²: 0.624097
+  Epoch  36/50: Train Loss: 0.379444, Val Loss: 0.373994, Val R²: 0.625694
+  Epoch  37/50: Train Loss: 0.377958, Val Loss: 0.372448, Val R²: 0.627241
+  Epoch  38/50: Train Loss: 0.375874, Val Loss: 0.371057, Val R²: 0.628633
+  Epoch  39/50: Train Loss: 0.374309, Val Loss: 0.369607, Val R²: 0.630085
+  Epoch  40/50: Train Loss: 0.372214, Val Loss: 0.368384, Val R²: 0.631308
+  Epoch  41/50: Train Loss: 0.370852, Val Loss: 0.366849, Val R²: 0.632844
+  Epoch  42/50: Train Loss: 0.369298, Val Loss: 0.366773, Val R²: 0.632920
+  Epoch  43/50: Train Loss: 0.367153, Val Loss: 0.364340, Val R²: 0.635356
+  Epoch  44/50: Train Loss: 0.365359, Val Loss: 0.363266, Val R²: 0.636431
+  Epoch  45/50: Train Loss: 0.363750, Val Loss: 0.361828, Val R²: 0.637870
+  Epoch  46/50: Train Loss: 0.362163, Val Loss: 0.360593, Val R²: 0.639105
+  Epoch  47/50: Train Loss: 0.360884, Val Loss: 0.359483, Val R²: 0.640216
+  Epoch  48/50: Train Loss: 0.358901, Val Loss: 0.358353, Val R²: 0.641347
+  Epoch  49/50: Train Loss: 0.358096, Val Loss: 0.357254, Val R²: 0.642448
+  Epoch  50/50: Train Loss: 0.355964, Val Loss: 0.356220, Val R²: 0.643482
+
+  ✓ Kombinasyon 6 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': False}
+     Best Val R²: 0.643482 (Epoch 50)
+     Test R²: 0.647609
+     Test MAE: 4.904226
+     Test RMSE: 6.301231
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.355964, Val Loss: 0.356220
+       Train-Val Gap: -0.000256 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0007 (Negatif = Overfitting)
+       Best Epoch Gap: -0.000256
+
+================================================================================
+KOMBİNASYON 7/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.990565, Val Loss: 0.981696, Val R²: 0.017484
+  Epoch   2/50: Train Loss: 0.781191, Val Loss: 0.735028, Val R²: 0.264358
+  Epoch   3/50: Train Loss: 0.640759, Val Loss: 0.570702, Val R²: 0.428821
+  Epoch   4/50: Train Loss: 0.579564, Val Loss: 0.534356, Val R²: 0.465198
+  Epoch   5/50: Train Loss: 0.550759, Val Loss: 0.516143, Val R²: 0.483425
+  Epoch   6/50: Train Loss: 0.529600, Val Loss: 0.502695, Val R²: 0.496885
+  Epoch   7/50: Train Loss: 0.514201, Val Loss: 0.491230, Val R²: 0.508360
+  Epoch   8/50: Train Loss: 0.501877, Val Loss: 0.481774, Val R²: 0.517824
+  Epoch   9/50: Train Loss: 0.490549, Val Loss: 0.472506, Val R²: 0.527099
+  Epoch  10/50: Train Loss: 0.480520, Val Loss: 0.464350, Val R²: 0.535262
+  Epoch  11/50: Train Loss: 0.472503, Val Loss: 0.456365, Val R²: 0.543253
+  Epoch  12/50: Train Loss: 0.464494, Val Loss: 0.449067, Val R²: 0.550558
+  Epoch  13/50: Train Loss: 0.456727, Val Loss: 0.443541, Val R²: 0.556088
+  Epoch  14/50: Train Loss: 0.449229, Val Loss: 0.436135, Val R²: 0.563500
+  Epoch  15/50: Train Loss: 0.442172, Val Loss: 0.430274, Val R²: 0.569367
+  Epoch  16/50: Train Loss: 0.436798, Val Loss: 0.425016, Val R²: 0.574629
+  Epoch  17/50: Train Loss: 0.431218, Val Loss: 0.420067, Val R²: 0.579582
+  Epoch  18/50: Train Loss: 0.426164, Val Loss: 0.415816, Val R²: 0.583837
+  Epoch  19/50: Train Loss: 0.422420, Val Loss: 0.411321, Val R²: 0.588335
+  Epoch  20/50: Train Loss: 0.416701, Val Loss: 0.407262, Val R²: 0.592398
+  Epoch  21/50: Train Loss: 0.412616, Val Loss: 0.403487, Val R²: 0.596176
+  Epoch  22/50: Train Loss: 0.409725, Val Loss: 0.400126, Val R²: 0.599540
+  Epoch  23/50: Train Loss: 0.404759, Val Loss: 0.396859, Val R²: 0.602810
+  Epoch  24/50: Train Loss: 0.401428, Val Loss: 0.394035, Val R²: 0.605636
+  Epoch  25/50: Train Loss: 0.397672, Val Loss: 0.391118, Val R²: 0.608555
+  Epoch  26/50: Train Loss: 0.394524, Val Loss: 0.388328, Val R²: 0.611348
+  Epoch  27/50: Train Loss: 0.391810, Val Loss: 0.385685, Val R²: 0.613992
+  Epoch  28/50: Train Loss: 0.388186, Val Loss: 0.383938, Val R²: 0.615741
+  Epoch  29/50: Train Loss: 0.385093, Val Loss: 0.380566, Val R²: 0.619116
+  Epoch  30/50: Train Loss: 0.382347, Val Loss: 0.378421, Val R²: 0.621263
+  Epoch  31/50: Train Loss: 0.379286, Val Loss: 0.376379, Val R²: 0.623306
+  Epoch  32/50: Train Loss: 0.376938, Val Loss: 0.373773, Val R²: 0.625915
+  Epoch  33/50: Train Loss: 0.374286, Val Loss: 0.371814, Val R²: 0.627876
+  Epoch  34/50: Train Loss: 0.371327, Val Loss: 0.369771, Val R²: 0.629920
+  Epoch  35/50: Train Loss: 0.368864, Val Loss: 0.367843, Val R²: 0.631850
+  Epoch  36/50: Train Loss: 0.365966, Val Loss: 0.366233, Val R²: 0.633461
+  Epoch  37/50: Train Loss: 0.364271, Val Loss: 0.364044, Val R²: 0.635652
+  Epoch  38/50: Train Loss: 0.361588, Val Loss: 0.362265, Val R²: 0.637433
+  Epoch  39/50: Train Loss: 0.358679, Val Loss: 0.360489, Val R²: 0.639210
+  Epoch  40/50: Train Loss: 0.357204, Val Loss: 0.358897, Val R²: 0.640803
+  Epoch  41/50: Train Loss: 0.355062, Val Loss: 0.357239, Val R²: 0.642463
+  Epoch  42/50: Train Loss: 0.353359, Val Loss: 0.355778, Val R²: 0.643925
+  Epoch  43/50: Train Loss: 0.351582, Val Loss: 0.354021, Val R²: 0.645684
+  Epoch  44/50: Train Loss: 0.348898, Val Loss: 0.352730, Val R²: 0.646975
+  Epoch  45/50: Train Loss: 0.345953, Val Loss: 0.351039, Val R²: 0.648667
+  Epoch  46/50: Train Loss: 0.343823, Val Loss: 0.349683, Val R²: 0.650025
+  Epoch  47/50: Train Loss: 0.341901, Val Loss: 0.348676, Val R²: 0.651033
+  Epoch  48/50: Train Loss: 0.340329, Val Loss: 0.346787, Val R²: 0.652923
+  Epoch  49/50: Train Loss: 0.337864, Val Loss: 0.345363, Val R²: 0.654348
+  Epoch  50/50: Train Loss: 0.335546, Val Loss: 0.343803, Val R²: 0.655909
+
+  ✓ Kombinasyon 7 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': True}
+     Best Val R²: 0.655909 (Epoch 50)
+     Test R²: 0.663852
+     Test MAE: 4.788640
+     Test RMSE: 6.154294
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.335546, Val Loss: 0.343803
+       Train-Val Gap: -0.008257 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0240 (Negatif = Overfitting)
+       Best Epoch Gap: -0.008257
+
+================================================================================
+KOMBİNASYON 8/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 1.005523, Val Loss: 0.995047, Val R²: 0.004121
+  Epoch   2/50: Train Loss: 0.990265, Val Loss: 0.980938, Val R²: 0.018242
+  Epoch   3/50: Train Loss: 0.973607, Val Loss: 0.959603, Val R²: 0.039595
+  Epoch   4/50: Train Loss: 0.944264, Val Loss: 0.919507, Val R²: 0.079724
+  Epoch   5/50: Train Loss: 0.893926, Val Loss: 0.856210, Val R²: 0.143075
+  Epoch   6/50: Train Loss: 0.819949, Val Loss: 0.770312, Val R²: 0.229044
+  Epoch   7/50: Train Loss: 0.727827, Val Loss: 0.674719, Val R²: 0.324717
+  Epoch   8/50: Train Loss: 0.639945, Val Loss: 0.598069, Val R²: 0.401431
+  Epoch   9/50: Train Loss: 0.580442, Val Loss: 0.556328, Val R²: 0.443208
+  Epoch  10/50: Train Loss: 0.552098, Val Loss: 0.537236, Val R²: 0.462315
+  Epoch  11/50: Train Loss: 0.537045, Val Loss: 0.524499, Val R²: 0.475063
+  Epoch  12/50: Train Loss: 0.525276, Val Loss: 0.514975, Val R²: 0.484595
+  Epoch  13/50: Train Loss: 0.516442, Val Loss: 0.506638, Val R²: 0.492939
+  Epoch  14/50: Train Loss: 0.507285, Val Loss: 0.499036, Val R²: 0.500547
+  Epoch  15/50: Train Loss: 0.500038, Val Loss: 0.491992, Val R²: 0.507597
+  Epoch  16/50: Train Loss: 0.493427, Val Loss: 0.485401, Val R²: 0.514193
+  Epoch  17/50: Train Loss: 0.487509, Val Loss: 0.479134, Val R²: 0.520466
+  Epoch  18/50: Train Loss: 0.481439, Val Loss: 0.473301, Val R²: 0.526304
+  Epoch  19/50: Train Loss: 0.477386, Val Loss: 0.467878, Val R²: 0.531731
+  Epoch  20/50: Train Loss: 0.471092, Val Loss: 0.462857, Val R²: 0.536756
+  Epoch  21/50: Train Loss: 0.466876, Val Loss: 0.457991, Val R²: 0.541626
+  Epoch  22/50: Train Loss: 0.462420, Val Loss: 0.453316, Val R²: 0.546305
+  Epoch  23/50: Train Loss: 0.457748, Val Loss: 0.448887, Val R²: 0.550738
+  Epoch  24/50: Train Loss: 0.454138, Val Loss: 0.444779, Val R²: 0.554849
+  Epoch  25/50: Train Loss: 0.449870, Val Loss: 0.440743, Val R²: 0.558889
+  Epoch  26/50: Train Loss: 0.446520, Val Loss: 0.437048, Val R²: 0.562587
+  Epoch  27/50: Train Loss: 0.442707, Val Loss: 0.433634, Val R²: 0.566004
+  Epoch  28/50: Train Loss: 0.440076, Val Loss: 0.430308, Val R²: 0.569333
+  Epoch  29/50: Train Loss: 0.436351, Val Loss: 0.427795, Val R²: 0.571847
+  Epoch  30/50: Train Loss: 0.433479, Val Loss: 0.424299, Val R²: 0.575347
+  Epoch  31/50: Train Loss: 0.430363, Val Loss: 0.421493, Val R²: 0.578155
+  Epoch  32/50: Train Loss: 0.427949, Val Loss: 0.418953, Val R²: 0.580697
+  Epoch  33/50: Train Loss: 0.425643, Val Loss: 0.416419, Val R²: 0.583233
+  Epoch  34/50: Train Loss: 0.422809, Val Loss: 0.414945, Val R²: 0.584709
+  Epoch  35/50: Train Loss: 0.420936, Val Loss: 0.412474, Val R²: 0.587182
+  Epoch  36/50: Train Loss: 0.418662, Val Loss: 0.409812, Val R²: 0.589846
+  Epoch  37/50: Train Loss: 0.417015, Val Loss: 0.407874, Val R²: 0.591785
+  Epoch  38/50: Train Loss: 0.414453, Val Loss: 0.405854, Val R²: 0.593807
+  Epoch  39/50: Train Loss: 0.412732, Val Loss: 0.403921, Val R²: 0.595742
+  Epoch  40/50: Train Loss: 0.410754, Val Loss: 0.402800, Val R²: 0.596864
+  Epoch  41/50: Train Loss: 0.409030, Val Loss: 0.400439, Val R²: 0.599227
+  Epoch  42/50: Train Loss: 0.407313, Val Loss: 0.398609, Val R²: 0.601058
+  Epoch  43/50: Train Loss: 0.405873, Val Loss: 0.397079, Val R²: 0.602589
+  Epoch  44/50: Train Loss: 0.403524, Val Loss: 0.395568, Val R²: 0.604101
+  Epoch  45/50: Train Loss: 0.401510, Val Loss: 0.394016, Val R²: 0.605655
+  Epoch  46/50: Train Loss: 0.400190, Val Loss: 0.392668, Val R²: 0.607004
+  Epoch  47/50: Train Loss: 0.398412, Val Loss: 0.390888, Val R²: 0.608785
+  Epoch  48/50: Train Loss: 0.396707, Val Loss: 0.389623, Val R²: 0.610051
+  Epoch  49/50: Train Loss: 0.396176, Val Loss: 0.388142, Val R²: 0.611533
+  Epoch  50/50: Train Loss: 0.393264, Val Loss: 0.386845, Val R²: 0.612832
+
+  ✓ Kombinasyon 8 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': False}
+     Best Val R²: 0.612832 (Epoch 50)
+     Test R²: 0.617162
+     Test MAE: 5.158817
+     Test RMSE: 6.567807
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.393264, Val Loss: 0.386845
+       Train-Val Gap: 0.006419 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0166 (Negatif = Overfitting)
+       Best Epoch Gap: 0.006419
+
+================================================================================
+KOMBİNASYON 9/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.977800, Val Loss: 0.980368, Val R²: 0.018812
+  Epoch   2/50: Train Loss: 0.772854, Val Loss: 0.728097, Val R²: 0.271295
+  Epoch   3/50: Train Loss: 0.636364, Val Loss: 0.568297, Val R²: 0.431228
+  Epoch   4/50: Train Loss: 0.577921, Val Loss: 0.533341, Val R²: 0.466214
+  Epoch   5/50: Train Loss: 0.549698, Val Loss: 0.515459, Val R²: 0.484110
+  Epoch   6/50: Train Loss: 0.528882, Val Loss: 0.502231, Val R²: 0.497349
+  Epoch   7/50: Train Loss: 0.513852, Val Loss: 0.491378, Val R²: 0.508211
+  Epoch   8/50: Train Loss: 0.502107, Val Loss: 0.482150, Val R²: 0.517447
+  Epoch   9/50: Train Loss: 0.491087, Val Loss: 0.473193, Val R²: 0.526411
+  Epoch  10/50: Train Loss: 0.481295, Val Loss: 0.465269, Val R²: 0.534342
+  Epoch  11/50: Train Loss: 0.473480, Val Loss: 0.457370, Val R²: 0.542248
+  Epoch  12/50: Train Loss: 0.465781, Val Loss: 0.450221, Val R²: 0.549403
+  Epoch  13/50: Train Loss: 0.458011, Val Loss: 0.444648, Val R²: 0.554980
+  Epoch  14/50: Train Loss: 0.450723, Val Loss: 0.437349, Val R²: 0.562286
+  Epoch  15/50: Train Loss: 0.443666, Val Loss: 0.431400, Val R²: 0.568239
+  Epoch  16/50: Train Loss: 0.438338, Val Loss: 0.426127, Val R²: 0.573517
+  Epoch  17/50: Train Loss: 0.432739, Val Loss: 0.421181, Val R²: 0.578467
+  Epoch  18/50: Train Loss: 0.427753, Val Loss: 0.416814, Val R²: 0.582838
+  Epoch  19/50: Train Loss: 0.424017, Val Loss: 0.412436, Val R²: 0.587220
+  Epoch  20/50: Train Loss: 0.418265, Val Loss: 0.408317, Val R²: 0.591342
+  Epoch  21/50: Train Loss: 0.414144, Val Loss: 0.404560, Val R²: 0.595102
+  Epoch  22/50: Train Loss: 0.410970, Val Loss: 0.401090, Val R²: 0.598574
+  Epoch  23/50: Train Loss: 0.405949, Val Loss: 0.397722, Val R²: 0.601946
+  Epoch  24/50: Train Loss: 0.402687, Val Loss: 0.395030, Val R²: 0.604640
+  Epoch  25/50: Train Loss: 0.399002, Val Loss: 0.391994, Val R²: 0.607679
+  Epoch  26/50: Train Loss: 0.395998, Val Loss: 0.389175, Val R²: 0.610500
+  Epoch  27/50: Train Loss: 0.392981, Val Loss: 0.386481, Val R²: 0.613196
+  Epoch  28/50: Train Loss: 0.389509, Val Loss: 0.384591, Val R²: 0.615087
+  Epoch  29/50: Train Loss: 0.386245, Val Loss: 0.381313, Val R²: 0.618368
+  Epoch  30/50: Train Loss: 0.383633, Val Loss: 0.379268, Val R²: 0.620416
+  Epoch  31/50: Train Loss: 0.380847, Val Loss: 0.377126, Val R²: 0.622559
+  Epoch  32/50: Train Loss: 0.378459, Val Loss: 0.374577, Val R²: 0.625110
+  Epoch  33/50: Train Loss: 0.375789, Val Loss: 0.372616, Val R²: 0.627072
+  Epoch  34/50: Train Loss: 0.372773, Val Loss: 0.370666, Val R²: 0.629025
+  Epoch  35/50: Train Loss: 0.370479, Val Loss: 0.368754, Val R²: 0.630937
+  Epoch  36/50: Train Loss: 0.367471, Val Loss: 0.367160, Val R²: 0.632533
+  Epoch  37/50: Train Loss: 0.365853, Val Loss: 0.365085, Val R²: 0.634610
+  Epoch  38/50: Train Loss: 0.363120, Val Loss: 0.363301, Val R²: 0.636396
+  Epoch  39/50: Train Loss: 0.360069, Val Loss: 0.361411, Val R²: 0.638287
+  Epoch  40/50: Train Loss: 0.358587, Val Loss: 0.359785, Val R²: 0.639914
+  Epoch  41/50: Train Loss: 0.356577, Val Loss: 0.358161, Val R²: 0.641540
+  Epoch  42/50: Train Loss: 0.354764, Val Loss: 0.356658, Val R²: 0.643044
+  Epoch  43/50: Train Loss: 0.352843, Val Loss: 0.354793, Val R²: 0.644911
+  Epoch  44/50: Train Loss: 0.350255, Val Loss: 0.353455, Val R²: 0.646249
+  Epoch  45/50: Train Loss: 0.347373, Val Loss: 0.351631, Val R²: 0.648075
+  Epoch  46/50: Train Loss: 0.344951, Val Loss: 0.350215, Val R²: 0.649493
+  Epoch  47/50: Train Loss: 0.343217, Val Loss: 0.349233, Val R²: 0.650475
+  Epoch  48/50: Train Loss: 0.341695, Val Loss: 0.347420, Val R²: 0.652290
+  Epoch  49/50: Train Loss: 0.339156, Val Loss: 0.345868, Val R²: 0.653843
+  Epoch  50/50: Train Loss: 0.336981, Val Loss: 0.344301, Val R²: 0.655411
+
+  ✓ Kombinasyon 9 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': True}
+     Best Val R²: 0.655411 (Epoch 50)
+     Test R²: 0.663440
+     Test MAE: 4.793664
+     Test RMSE: 6.158062
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.336981, Val Loss: 0.344301
+       Train-Val Gap: -0.007320 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0213 (Negatif = Overfitting)
+       Best Epoch Gap: -0.007320
+
+================================================================================
+KOMBİNASYON 10/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 1.005524, Val Loss: 0.995048, Val R²: 0.004121
+  Epoch   2/50: Train Loss: 0.990265, Val Loss: 0.980937, Val R²: 0.018243
+  Epoch   3/50: Train Loss: 0.973612, Val Loss: 0.959654, Val R²: 0.039544
+  Epoch   4/50: Train Loss: 0.944693, Val Loss: 0.920461, Val R²: 0.078769
+  Epoch   5/50: Train Loss: 0.895412, Val Loss: 0.858470, Val R²: 0.140812
+  Epoch   6/50: Train Loss: 0.823120, Val Loss: 0.774579, Val R²: 0.224774
+  Epoch   7/50: Train Loss: 0.732887, Val Loss: 0.680627, Val R²: 0.318805
+  Epoch   8/50: Train Loss: 0.645729, Val Loss: 0.603444, Val R²: 0.396052
+  Epoch   9/50: Train Loss: 0.584861, Val Loss: 0.559728, Val R²: 0.439804
+  Epoch  10/50: Train Loss: 0.554927, Val Loss: 0.539589, Val R²: 0.459960
+  Epoch  11/50: Train Loss: 0.539580, Val Loss: 0.526859, Val R²: 0.472701
+  Epoch  12/50: Train Loss: 0.527953, Val Loss: 0.517593, Val R²: 0.481974
+  Epoch  13/50: Train Loss: 0.519300, Val Loss: 0.509673, Val R²: 0.489901
+  Epoch  14/50: Train Loss: 0.510497, Val Loss: 0.502376, Val R²: 0.497204
+  Epoch  15/50: Train Loss: 0.503537, Val Loss: 0.495765, Val R²: 0.503821
+  Epoch  16/50: Train Loss: 0.497431, Val Loss: 0.489662, Val R²: 0.509929
+  Epoch  17/50: Train Loss: 0.491824, Val Loss: 0.483792, Val R²: 0.515803
+  Epoch  18/50: Train Loss: 0.486004, Val Loss: 0.478043, Val R²: 0.521557
+  Epoch  19/50: Train Loss: 0.481983, Val Loss: 0.472609, Val R²: 0.526996
+  Epoch  20/50: Train Loss: 0.475621, Val Loss: 0.467632, Val R²: 0.531977
+  Epoch  21/50: Train Loss: 0.471336, Val Loss: 0.462754, Val R²: 0.536859
+  Epoch  22/50: Train Loss: 0.466766, Val Loss: 0.458052, Val R²: 0.541565
+  Epoch  23/50: Train Loss: 0.462159, Val Loss: 0.453532, Val R²: 0.546089
+  Epoch  24/50: Train Loss: 0.458347, Val Loss: 0.449249, Val R²: 0.550375
+  Epoch  25/50: Train Loss: 0.454035, Val Loss: 0.445025, Val R²: 0.554603
+  Epoch  26/50: Train Loss: 0.450462, Val Loss: 0.441135, Val R²: 0.558497
+  Epoch  27/50: Train Loss: 0.446628, Val Loss: 0.437527, Val R²: 0.562108
+  Epoch  28/50: Train Loss: 0.443736, Val Loss: 0.434034, Val R²: 0.565603
+  Epoch  29/50: Train Loss: 0.439881, Val Loss: 0.431327, Val R²: 0.568313
+  Epoch  30/50: Train Loss: 0.436771, Val Loss: 0.427687, Val R²: 0.571956
+  Epoch  31/50: Train Loss: 0.433612, Val Loss: 0.424748, Val R²: 0.574897
+  Epoch  32/50: Train Loss: 0.431082, Val Loss: 0.422056, Val R²: 0.577591
+  Epoch  33/50: Train Loss: 0.428661, Val Loss: 0.419423, Val R²: 0.580227
+  Epoch  34/50: Train Loss: 0.425702, Val Loss: 0.417821, Val R²: 0.581830
+  Epoch  35/50: Train Loss: 0.423601, Val Loss: 0.415319, Val R²: 0.584334
+  Epoch  36/50: Train Loss: 0.421287, Val Loss: 0.412592, Val R²: 0.587063
+  Epoch  37/50: Train Loss: 0.419523, Val Loss: 0.410537, Val R²: 0.589120
+  Epoch  38/50: Train Loss: 0.416829, Val Loss: 0.408510, Val R²: 0.591149
+  Epoch  39/50: Train Loss: 0.414953, Val Loss: 0.406505, Val R²: 0.593155
+  Epoch  40/50: Train Loss: 0.413023, Val Loss: 0.405353, Val R²: 0.594308
+  Epoch  41/50: Train Loss: 0.411108, Val Loss: 0.402981, Val R²: 0.596682
+  Epoch  42/50: Train Loss: 0.409570, Val Loss: 0.401177, Val R²: 0.598488
+  Epoch  43/50: Train Loss: 0.408167, Val Loss: 0.399660, Val R²: 0.600006
+  Epoch  44/50: Train Loss: 0.405954, Val Loss: 0.398111, Val R²: 0.601556
+  Epoch  45/50: Train Loss: 0.403866, Val Loss: 0.396547, Val R²: 0.603122
+  Epoch  46/50: Train Loss: 0.402489, Val Loss: 0.395095, Val R²: 0.604575
+  Epoch  47/50: Train Loss: 0.400666, Val Loss: 0.393378, Val R²: 0.606293
+  Epoch  48/50: Train Loss: 0.398908, Val Loss: 0.392155, Val R²: 0.607517
+  Epoch  49/50: Train Loss: 0.398327, Val Loss: 0.390632, Val R²: 0.609041
+  Epoch  50/50: Train Loss: 0.395658, Val Loss: 0.389340, Val R²: 0.610335
+
+  ✓ Kombinasyon 10 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': False}
+     Best Val R²: 0.610335 (Epoch 50)
+     Test R²: 0.615263
+     Test MAE: 5.174306
+     Test RMSE: 6.584076
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.395658, Val Loss: 0.389340
+       Train-Val Gap: 0.006319 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0162 (Negatif = Overfitting)
+       Best Epoch Gap: 0.006319
+
+================================================================================
+KOMBİNASYON 11/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.977809, Val Loss: 0.980369, Val R²: 0.018812
+  Epoch   2/50: Train Loss: 0.772866, Val Loss: 0.728145, Val R²: 0.271246
+  Epoch   3/50: Train Loss: 0.636367, Val Loss: 0.568298, Val R²: 0.431227
+  Epoch   4/50: Train Loss: 0.577938, Val Loss: 0.533313, Val R²: 0.466241
+  Epoch   5/50: Train Loss: 0.549706, Val Loss: 0.515485, Val R²: 0.484085
+  Epoch   6/50: Train Loss: 0.528891, Val Loss: 0.502230, Val R²: 0.497351
+  Epoch   7/50: Train Loss: 0.513861, Val Loss: 0.491397, Val R²: 0.508193
+  Epoch   8/50: Train Loss: 0.502121, Val Loss: 0.482175, Val R²: 0.517422
+  Epoch   9/50: Train Loss: 0.491091, Val Loss: 0.473207, Val R²: 0.526397
+  Epoch  10/50: Train Loss: 0.481295, Val Loss: 0.465236, Val R²: 0.534375
+  Epoch  11/50: Train Loss: 0.473480, Val Loss: 0.457396, Val R²: 0.542222
+  Epoch  12/50: Train Loss: 0.465784, Val Loss: 0.450228, Val R²: 0.549396
+  Epoch  13/50: Train Loss: 0.458017, Val Loss: 0.444623, Val R²: 0.555005
+  Epoch  14/50: Train Loss: 0.450731, Val Loss: 0.437390, Val R²: 0.562245
+  Epoch  15/50: Train Loss: 0.443663, Val Loss: 0.431418, Val R²: 0.568221
+  Epoch  16/50: Train Loss: 0.438337, Val Loss: 0.426123, Val R²: 0.573521
+  Epoch  17/50: Train Loss: 0.432736, Val Loss: 0.421215, Val R²: 0.578433
+  Epoch  18/50: Train Loss: 0.427755, Val Loss: 0.416812, Val R²: 0.582839
+  Epoch  19/50: Train Loss: 0.424006, Val Loss: 0.412436, Val R²: 0.587220
+  Epoch  20/50: Train Loss: 0.418269, Val Loss: 0.408314, Val R²: 0.591345
+  Epoch  21/50: Train Loss: 0.414146, Val Loss: 0.404599, Val R²: 0.595063
+  Epoch  22/50: Train Loss: 0.410971, Val Loss: 0.401131, Val R²: 0.598534
+  Epoch  23/50: Train Loss: 0.405951, Val Loss: 0.397776, Val R²: 0.601892
+  Epoch  24/50: Train Loss: 0.402683, Val Loss: 0.395026, Val R²: 0.604644
+  Epoch  25/50: Train Loss: 0.398996, Val Loss: 0.391917, Val R²: 0.607755
+  Epoch  26/50: Train Loss: 0.396009, Val Loss: 0.389199, Val R²: 0.610476
+  Epoch  27/50: Train Loss: 0.392991, Val Loss: 0.386476, Val R²: 0.613201
+  Epoch  28/50: Train Loss: 0.389498, Val Loss: 0.384607, Val R²: 0.615072
+  Epoch  29/50: Train Loss: 0.386240, Val Loss: 0.381334, Val R²: 0.618348
+  Epoch  30/50: Train Loss: 0.383612, Val Loss: 0.379191, Val R²: 0.620492
+  Epoch  31/50: Train Loss: 0.380838, Val Loss: 0.377051, Val R²: 0.622634
+  Epoch  32/50: Train Loss: 0.378443, Val Loss: 0.374547, Val R²: 0.625140
+  Epoch  33/50: Train Loss: 0.375765, Val Loss: 0.372624, Val R²: 0.627064
+  Epoch  34/50: Train Loss: 0.372756, Val Loss: 0.370625, Val R²: 0.629065
+  Epoch  35/50: Train Loss: 0.370473, Val Loss: 0.368731, Val R²: 0.630960
+  Epoch  36/50: Train Loss: 0.367440, Val Loss: 0.367058, Val R²: 0.632636
+  Epoch  37/50: Train Loss: 0.365832, Val Loss: 0.365045, Val R²: 0.634650
+  Epoch  38/50: Train Loss: 0.363098, Val Loss: 0.363291, Val R²: 0.636405
+  Epoch  39/50: Train Loss: 0.360071, Val Loss: 0.361404, Val R²: 0.638294
+  Epoch  40/50: Train Loss: 0.358621, Val Loss: 0.359795, Val R²: 0.639905
+  Epoch  41/50: Train Loss: 0.356609, Val Loss: 0.358165, Val R²: 0.641535
+  Epoch  42/50: Train Loss: 0.354792, Val Loss: 0.356683, Val R²: 0.643019
+  Epoch  43/50: Train Loss: 0.352873, Val Loss: 0.354781, Val R²: 0.644922
+  Epoch  44/50: Train Loss: 0.350296, Val Loss: 0.353398, Val R²: 0.646307
+  Epoch  45/50: Train Loss: 0.347386, Val Loss: 0.351652, Val R²: 0.648054
+  Epoch  46/50: Train Loss: 0.344967, Val Loss: 0.350188, Val R²: 0.649519
+  Epoch  47/50: Train Loss: 0.343257, Val Loss: 0.349215, Val R²: 0.650493
+  Epoch  48/50: Train Loss: 0.341715, Val Loss: 0.347384, Val R²: 0.652325
+  Epoch  49/50: Train Loss: 0.339165, Val Loss: 0.345816, Val R²: 0.653895
+  Epoch  50/50: Train Loss: 0.336995, Val Loss: 0.344290, Val R²: 0.655422
+
+  ✓ Kombinasyon 11 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': True}
+     Best Val R²: 0.655422 (Epoch 50)
+     Test R²: 0.663381
+     Test MAE: 4.794062
+     Test RMSE: 6.158600
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.336995, Val Loss: 0.344290
+       Train-Val Gap: -0.007295 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0212 (Negatif = Overfitting)
+       Best Epoch Gap: -0.007295
+
+================================================================================
+KOMBİNASYON 12/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 1.005524, Val Loss: 0.995047, Val R²: 0.004122
+  Epoch   2/50: Train Loss: 0.990265, Val Loss: 0.980939, Val R²: 0.018241
+  Epoch   3/50: Train Loss: 0.973616, Val Loss: 0.959662, Val R²: 0.039536
+  Epoch   4/50: Train Loss: 0.944703, Val Loss: 0.920485, Val R²: 0.078746
+  Epoch   5/50: Train Loss: 0.895451, Val Loss: 0.858525, Val R²: 0.140758
+  Epoch   6/50: Train Loss: 0.823188, Val Loss: 0.774713, Val R²: 0.224640
+  Epoch   7/50: Train Loss: 0.733040, Val Loss: 0.680777, Val R²: 0.318654
+  Epoch   8/50: Train Loss: 0.645861, Val Loss: 0.603556, Val R²: 0.395940
+  Epoch   9/50: Train Loss: 0.584948, Val Loss: 0.559811, Val R²: 0.439721
+  Epoch  10/50: Train Loss: 0.554994, Val Loss: 0.539658, Val R²: 0.459892
+  Epoch  11/50: Train Loss: 0.539635, Val Loss: 0.526908, Val R²: 0.472652
+  Epoch  12/50: Train Loss: 0.528001, Val Loss: 0.517630, Val R²: 0.481938
+  Epoch  13/50: Train Loss: 0.519340, Val Loss: 0.509706, Val R²: 0.489868
+  Epoch  14/50: Train Loss: 0.510525, Val Loss: 0.502401, Val R²: 0.497179
+  Epoch  15/50: Train Loss: 0.503563, Val Loss: 0.495787, Val R²: 0.503798
+  Epoch  16/50: Train Loss: 0.497449, Val Loss: 0.489677, Val R²: 0.509914
+  Epoch  17/50: Train Loss: 0.491837, Val Loss: 0.483804, Val R²: 0.515792
+  Epoch  18/50: Train Loss: 0.486057, Val Loss: 0.478256, Val R²: 0.521344
+  Epoch  19/50: Train Loss: 0.482260, Val Loss: 0.472989, Val R²: 0.526615
+  Epoch  20/50: Train Loss: 0.476088, Val Loss: 0.468093, Val R²: 0.531516
+  Epoch  21/50: Train Loss: 0.471889, Val Loss: 0.463287, Val R²: 0.536326
+  Epoch  22/50: Train Loss: 0.467324, Val Loss: 0.458607, Val R²: 0.541009
+  Epoch  23/50: Train Loss: 0.462854, Val Loss: 0.454146, Val R²: 0.545474
+  Epoch  24/50: Train Loss: 0.459057, Val Loss: 0.449933, Val R²: 0.549691
+  Epoch  25/50: Train Loss: 0.454888, Val Loss: 0.445745, Val R²: 0.553883
+  Epoch  26/50: Train Loss: 0.451348, Val Loss: 0.441875, Val R²: 0.557756
+  Epoch  27/50: Train Loss: 0.447504, Val Loss: 0.438249, Val R²: 0.561385
+  Epoch  28/50: Train Loss: 0.444574, Val Loss: 0.434731, Val R²: 0.564906
+  Epoch  29/50: Train Loss: 0.440874, Val Loss: 0.432068, Val R²: 0.567571
+  Epoch  30/50: Train Loss: 0.437694, Val Loss: 0.428403, Val R²: 0.571239
+  Epoch  31/50: Train Loss: 0.434472, Val Loss: 0.425414, Val R²: 0.574231
+  Epoch  32/50: Train Loss: 0.431881, Val Loss: 0.422590, Val R²: 0.577057
+  Epoch  33/50: Train Loss: 0.429401, Val Loss: 0.419919, Val R²: 0.579730
+  Epoch  34/50: Train Loss: 0.426350, Val Loss: 0.418293, Val R²: 0.581358
+  Epoch  35/50: Train Loss: 0.424081, Val Loss: 0.415723, Val R²: 0.583930
+  Epoch  36/50: Train Loss: 0.421808, Val Loss: 0.412964, Val R²: 0.586691
+  Epoch  37/50: Train Loss: 0.419954, Val Loss: 0.410893, Val R²: 0.588764
+  Epoch  38/50: Train Loss: 0.417265, Val Loss: 0.408836, Val R²: 0.590822
+  Epoch  39/50: Train Loss: 0.415319, Val Loss: 0.406810, Val R²: 0.592850
+  Epoch  40/50: Train Loss: 0.413350, Val Loss: 0.405606, Val R²: 0.594055
+  Epoch  41/50: Train Loss: 0.411428, Val Loss: 0.403224, Val R²: 0.596439
+  Epoch  42/50: Train Loss: 0.409866, Val Loss: 0.401426, Val R²: 0.598238
+  Epoch  43/50: Train Loss: 0.408438, Val Loss: 0.399883, Val R²: 0.599783
+  Epoch  44/50: Train Loss: 0.406218, Val Loss: 0.398337, Val R²: 0.601330
+  Epoch  45/50: Train Loss: 0.404104, Val Loss: 0.396714, Val R²: 0.602955
+  Epoch  46/50: Train Loss: 0.402694, Val Loss: 0.395259, Val R²: 0.604410
+  Epoch  47/50: Train Loss: 0.400859, Val Loss: 0.393495, Val R²: 0.606176
+  Epoch  48/50: Train Loss: 0.399089, Val Loss: 0.392225, Val R²: 0.607447
+  Epoch  49/50: Train Loss: 0.398453, Val Loss: 0.390684, Val R²: 0.608989
+  Epoch  50/50: Train Loss: 0.395727, Val Loss: 0.389353, Val R²: 0.610322
+
+  ✓ Kombinasyon 12 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': False}
+     Best Val R²: 0.610322 (Epoch 50)
+     Test R²: 0.615220
+     Test MAE: 5.174907
+     Test RMSE: 6.584446
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.395727, Val Loss: 0.389353
+       Train-Val Gap: 0.006374 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0164 (Negatif = Overfitting)
+       Best Epoch Gap: 0.006374
+
+================================================================================
+KOMBİNASYON 13/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.606687, Val Loss: 0.506146, Val R²: 0.493431
+  Epoch   2/50: Train Loss: 0.447577, Val Loss: 0.410759, Val R²: 0.588898
+  Epoch   3/50: Train Loss: 0.405144, Val Loss: 0.379899, Val R²: 0.619783
+  Epoch   4/50: Train Loss: 0.377962, Val Loss: 0.359894, Val R²: 0.639806
+  Epoch   5/50: Train Loss: 0.358277, Val Loss: 0.346133, Val R²: 0.653578
+  Epoch   7/50: Train Loss: 0.326466, Val Loss: 0.329900, Val R²: 0.669824
+  Epoch   8/50: Train Loss: 0.311479, Val Loss: 0.320683, Val R²: 0.679049
+  Epoch   9/50: Train Loss: 0.300908, Val Loss: 0.305987, Val R²: 0.693757
+  Epoch  10/50: Train Loss: 0.290437, Val Loss: 0.296777, Val R²: 0.702975
+  Epoch  11/50: Train Loss: 0.278432, Val Loss: 0.291938, Val R²: 0.707818
+  Epoch  12/50: Train Loss: 0.271203, Val Loss: 0.287410, Val R²: 0.712350
+  Epoch  13/50: Train Loss: 0.261025, Val Loss: 0.282692, Val R²: 0.717072
+  Epoch  14/50: Train Loss: 0.252701, Val Loss: 0.280204, Val R²: 0.719562
+  Epoch  15/50: Train Loss: 0.245450, Val Loss: 0.276224, Val R²: 0.723545
+  Epoch  16/50: Train Loss: 0.238943, Val Loss: 0.270003, Val R²: 0.729772
+  Epoch  19/50: Train Loss: 0.228689, Val Loss: 0.265999, Val R²: 0.733779
+  Epoch  20/50: Train Loss: 0.219984, Val Loss: 0.259112, Val R²: 0.740671
+  Epoch  22/50: Train Loss: 0.213473, Val Loss: 0.258441, Val R²: 0.741343
+  Epoch  23/50: Train Loss: 0.211098, Val Loss: 0.255078, Val R²: 0.744709
+  Epoch  24/50: Train Loss: 0.207382, Val Loss: 0.250754, Val R²: 0.749036
+  Epoch  28/50: Train Loss: 0.196174, Val Loss: 0.246115, Val R²: 0.753679
+  Epoch  30/50: Train Loss: 0.195075, Val Loss: 0.247628, Val R²: 0.752165
+  Epoch  33/50: Train Loss: 0.186501, Val Loss: 0.241778, Val R²: 0.758020
+  Epoch  37/50: Train Loss: 0.181456, Val Loss: 0.241266, Val R²: 0.758533
+  Epoch  39/50: Train Loss: 0.177147, Val Loss: 0.238152, Val R²: 0.761649
+  Epoch  40/50: Train Loss: 0.180300, Val Loss: 0.241719, Val R²: 0.758079
+  Epoch  41/50: Train Loss: 0.181147, Val Loss: 0.237027, Val R²: 0.762775
+  Epoch  42/50: Train Loss: 0.177176, Val Loss: 0.236825, Val R²: 0.762977
+  Epoch  43/50: Train Loss: 0.173319, Val Loss: 0.235226, Val R²: 0.764577
+  Epoch  47/50: Train Loss: 0.169764, Val Loss: 0.233461, Val R²: 0.766344
+  Epoch  48/50: Train Loss: 0.169495, Val Loss: 0.233230, Val R²: 0.766575
+  Epoch  50/50: Train Loss: 0.168277, Val Loss: 0.234122, Val R²: 0.765682
+
+  ✓ Kombinasyon 13 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': True}
+     Best Val R²: 0.766575 (Epoch 48)
+     Test R²: 0.768395
+     Test MAE: 3.951666
+     Test RMSE: 5.108418
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.168277, Val Loss: 0.234122
+       Train-Val Gap: -0.065845 (Negatif = Overfitting)
+       Overfitting Ratio: -0.2812 (Negatif = Overfitting)
+       Best Epoch Gap: -0.063735
+
+================================================================================
+KOMBİNASYON 14/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.763514, Val Loss: 0.518184, Val R²: 0.481383
+  Epoch   2/50: Train Loss: 0.491620, Val Loss: 0.453028, Val R²: 0.546594
+  Epoch   3/50: Train Loss: 0.443683, Val Loss: 0.417379, Val R²: 0.582272
+  Epoch   4/50: Train Loss: 0.419955, Val Loss: 0.400695, Val R²: 0.598970
+  Epoch   5/50: Train Loss: 0.403905, Val Loss: 0.387518, Val R²: 0.612159
+  Epoch   6/50: Train Loss: 0.389393, Val Loss: 0.385090, Val R²: 0.614589
+  Epoch   7/50: Train Loss: 0.379440, Val Loss: 0.369701, Val R²: 0.629990
+  Epoch   8/50: Train Loss: 0.368722, Val Loss: 0.361926, Val R²: 0.637772
+  Epoch   9/50: Train Loss: 0.363586, Val Loss: 0.360344, Val R²: 0.639355
+  Epoch  10/50: Train Loss: 0.355080, Val Loss: 0.350559, Val R²: 0.649148
+  Epoch  11/50: Train Loss: 0.349360, Val Loss: 0.347863, Val R²: 0.651846
+  Epoch  12/50: Train Loss: 0.342263, Val Loss: 0.342552, Val R²: 0.657161
+  Epoch  13/50: Train Loss: 0.337742, Val Loss: 0.340100, Val R²: 0.659616
+  Epoch  14/50: Train Loss: 0.332604, Val Loss: 0.337376, Val R²: 0.662342
+  Epoch  15/50: Train Loss: 0.325527, Val Loss: 0.329377, Val R²: 0.670347
+  Epoch  17/50: Train Loss: 0.316387, Val Loss: 0.324035, Val R²: 0.675695
+  Epoch  19/50: Train Loss: 0.308139, Val Loss: 0.320156, Val R²: 0.679576
+  Epoch  20/50: Train Loss: 0.304737, Val Loss: 0.315514, Val R²: 0.684222
+  Epoch  21/50: Train Loss: 0.298855, Val Loss: 0.314170, Val R²: 0.685568
+  Epoch  22/50: Train Loss: 0.296450, Val Loss: 0.310930, Val R²: 0.688810
+  Epoch  23/50: Train Loss: 0.291329, Val Loss: 0.306994, Val R²: 0.692750
+  Epoch  25/50: Train Loss: 0.284315, Val Loss: 0.303109, Val R²: 0.696638
+  Epoch  26/50: Train Loss: 0.285992, Val Loss: 0.301816, Val R²: 0.697932
+  Epoch  28/50: Train Loss: 0.276167, Val Loss: 0.298317, Val R²: 0.701434
+  Epoch  29/50: Train Loss: 0.271963, Val Loss: 0.297255, Val R²: 0.702497
+  Epoch  30/50: Train Loss: 0.274428, Val Loss: 0.304598, Val R²: 0.695147
+  Epoch  31/50: Train Loss: 0.268832, Val Loss: 0.295329, Val R²: 0.704424
+  Epoch  32/50: Train Loss: 0.272301, Val Loss: 0.293348, Val R²: 0.706407
+  Epoch  33/50: Train Loss: 0.266978, Val Loss: 0.292344, Val R²: 0.707411
+  Epoch  36/50: Train Loss: 0.258462, Val Loss: 0.287447, Val R²: 0.712313
+  Epoch  38/50: Train Loss: 0.255562, Val Loss: 0.286640, Val R²: 0.713121
+  Epoch  39/50: Train Loss: 0.251533, Val Loss: 0.286138, Val R²: 0.713623
+  Epoch  40/50: Train Loss: 0.251555, Val Loss: 0.285361, Val R²: 0.714400
+  Epoch  41/50: Train Loss: 0.250501, Val Loss: 0.284434, Val R²: 0.715329
+  Epoch  42/50: Train Loss: 0.250085, Val Loss: 0.281275, Val R²: 0.718490
+  Epoch  43/50: Train Loss: 0.249892, Val Loss: 0.280425, Val R²: 0.719340
+  Epoch  44/50: Train Loss: 0.246436, Val Loss: 0.280214, Val R²: 0.719552
+  Epoch  45/50: Train Loss: 0.242830, Val Loss: 0.278937, Val R²: 0.720830
+  Epoch  46/50: Train Loss: 0.241931, Val Loss: 0.278617, Val R²: 0.721150
+  Epoch  48/50: Train Loss: 0.243215, Val Loss: 0.275669, Val R²: 0.724101
+  Epoch  50/50: Train Loss: 0.238842, Val Loss: 0.275827, Val R²: 0.723943
+
+  ✓ Kombinasyon 14 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': False}
+     Best Val R²: 0.724101 (Epoch 48)
+     Test R²: 0.729653
+     Test MAE: 4.258335
+     Test RMSE: 5.519168
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.238842, Val Loss: 0.275827
+       Train-Val Gap: -0.036985 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1341 (Negatif = Overfitting)
+       Best Epoch Gap: -0.032454
+
+================================================================================
+KOMBİNASYON 15/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.606651, Val Loss: 0.506259, Val R²: 0.493318
+  Epoch   2/50: Train Loss: 0.447565, Val Loss: 0.410584, Val R²: 0.589073
+  Epoch   3/50: Train Loss: 0.405169, Val Loss: 0.380437, Val R²: 0.619246
+  Epoch   4/50: Train Loss: 0.378041, Val Loss: 0.360198, Val R²: 0.639501
+  Epoch   5/50: Train Loss: 0.358201, Val Loss: 0.347310, Val R²: 0.652400
+  Epoch   7/50: Train Loss: 0.326328, Val Loss: 0.326735, Val R²: 0.672992
+  Epoch   8/50: Train Loss: 0.311449, Val Loss: 0.320497, Val R²: 0.679235
+  Epoch   9/50: Train Loss: 0.301197, Val Loss: 0.305621, Val R²: 0.694123
+  Epoch  10/50: Train Loss: 0.290909, Val Loss: 0.298627, Val R²: 0.701124
+  Epoch  11/50: Train Loss: 0.278403, Val Loss: 0.295090, Val R²: 0.704663
+  Epoch  12/50: Train Loss: 0.271879, Val Loss: 0.286253, Val R²: 0.713508
+  Epoch  13/50: Train Loss: 0.262124, Val Loss: 0.283523, Val R²: 0.716240
+  Epoch  15/50: Train Loss: 0.247061, Val Loss: 0.275144, Val R²: 0.724626
+  Epoch  16/50: Train Loss: 0.241120, Val Loss: 0.269964, Val R²: 0.729811
+  Epoch  18/50: Train Loss: 0.235082, Val Loss: 0.269566, Val R²: 0.730209
+  Epoch  19/50: Train Loss: 0.229937, Val Loss: 0.265110, Val R²: 0.734668
+  Epoch  20/50: Train Loss: 0.221518, Val Loss: 0.258495, Val R²: 0.741289
+  Epoch  24/50: Train Loss: 0.209204, Val Loss: 0.251698, Val R²: 0.748092
+  Epoch  28/50: Train Loss: 0.196743, Val Loss: 0.246294, Val R²: 0.753501
+  Epoch  30/50: Train Loss: 0.194760, Val Loss: 0.263822, Val R²: 0.735958
+  Epoch  31/50: Train Loss: 0.191445, Val Loss: 0.244902, Val R²: 0.754893
+  Epoch  33/50: Train Loss: 0.187510, Val Loss: 0.244794, Val R²: 0.755001
+  Epoch  34/50: Train Loss: 0.187090, Val Loss: 0.244013, Val R²: 0.755783
+  Epoch  35/50: Train Loss: 0.185278, Val Loss: 0.243618, Val R²: 0.756178
+  Epoch  37/50: Train Loss: 0.181998, Val Loss: 0.241829, Val R²: 0.757969
+  Epoch  39/50: Train Loss: 0.178991, Val Loss: 0.239336, Val R²: 0.760464
+  Epoch  40/50: Train Loss: 0.179860, Val Loss: 0.242094, Val R²: 0.757704
+  Epoch  42/50: Train Loss: 0.179508, Val Loss: 0.238614, Val R²: 0.761187
+  Epoch  44/50: Train Loss: 0.173627, Val Loss: 0.237066, Val R²: 0.762736
+  Epoch  47/50: Train Loss: 0.170810, Val Loss: 0.236365, Val R²: 0.763438
+  Epoch  48/50: Train Loss: 0.170315, Val Loss: 0.234799, Val R²: 0.765005
+  Epoch  50/50: Train Loss: 0.168685, Val Loss: 0.237084, Val R²: 0.762718
+
+  ✓ Kombinasyon 15 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': True}
+     Best Val R²: 0.765005 (Epoch 48)
+     Test R²: 0.768072
+     Test MAE: 3.954144
+     Test RMSE: 5.111984
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.168685, Val Loss: 0.237084
+       Train-Val Gap: -0.068399 (Negatif = Overfitting)
+       Overfitting Ratio: -0.2885 (Negatif = Overfitting)
+       Best Epoch Gap: -0.064485
+
+================================================================================
+KOMBİNASYON 16/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.763654, Val Loss: 0.518265, Val R²: 0.481302
+  Epoch   2/50: Train Loss: 0.491601, Val Loss: 0.453235, Val R²: 0.546387
+  Epoch   3/50: Train Loss: 0.444072, Val Loss: 0.418234, Val R²: 0.581416
+  Epoch   4/50: Train Loss: 0.420781, Val Loss: 0.403408, Val R²: 0.596255
+  Epoch   5/50: Train Loss: 0.404469, Val Loss: 0.387785, Val R²: 0.611891
+  Epoch   6/50: Train Loss: 0.389651, Val Loss: 0.384481, Val R²: 0.615198
+  Epoch   7/50: Train Loss: 0.379352, Val Loss: 0.369795, Val R²: 0.629896
+  Epoch   8/50: Train Loss: 0.368485, Val Loss: 0.361668, Val R²: 0.638030
+  Epoch   9/50: Train Loss: 0.363540, Val Loss: 0.360203, Val R²: 0.639496
+  Epoch  10/50: Train Loss: 0.355201, Val Loss: 0.349914, Val R²: 0.649794
+  Epoch  11/50: Train Loss: 0.350004, Val Loss: 0.346281, Val R²: 0.653429
+  Epoch  12/50: Train Loss: 0.342102, Val Loss: 0.343168, Val R²: 0.656545
+  Epoch  13/50: Train Loss: 0.337204, Val Loss: 0.338593, Val R²: 0.661124
+  Epoch  15/50: Train Loss: 0.326761, Val Loss: 0.330014, Val R²: 0.669710
+  Epoch  16/50: Train Loss: 0.321880, Val Loss: 0.328697, Val R²: 0.671028
+  Epoch  17/50: Train Loss: 0.317905, Val Loss: 0.326637, Val R²: 0.673090
+  Epoch  18/50: Train Loss: 0.313253, Val Loss: 0.321871, Val R²: 0.677860
+  Epoch  19/50: Train Loss: 0.309273, Val Loss: 0.321089, Val R²: 0.678643
+  Epoch  20/50: Train Loss: 0.305629, Val Loss: 0.315484, Val R²: 0.684252
+  Epoch  22/50: Train Loss: 0.297692, Val Loss: 0.312677, Val R²: 0.687062
+  Epoch  23/50: Train Loss: 0.293518, Val Loss: 0.307749, Val R²: 0.691994
+  Epoch  25/50: Train Loss: 0.285537, Val Loss: 0.304375, Val R²: 0.695371
+  Epoch  26/50: Train Loss: 0.287132, Val Loss: 0.302420, Val R²: 0.697328
+  Epoch  28/50: Train Loss: 0.277536, Val Loss: 0.298219, Val R²: 0.701532
+  Epoch  30/50: Train Loss: 0.275065, Val Loss: 0.315017, Val R²: 0.684720
+  Epoch  31/50: Train Loss: 0.273378, Val Loss: 0.294306, Val R²: 0.705448
+  Epoch  33/50: Train Loss: 0.263912, Val Loss: 0.293876, Val R²: 0.705879
+  Epoch  34/50: Train Loss: 0.263750, Val Loss: 0.290797, Val R²: 0.708960
+  Epoch  36/50: Train Loss: 0.258414, Val Loss: 0.287600, Val R²: 0.712160
+  Epoch  39/50: Train Loss: 0.252768, Val Loss: 0.287083, Val R²: 0.712678
+  Epoch  40/50: Train Loss: 0.255085, Val Loss: 0.286432, Val R²: 0.713329
+  Epoch  41/50: Train Loss: 0.251763, Val Loss: 0.282528, Val R²: 0.717236
+  Epoch  42/50: Train Loss: 0.249916, Val Loss: 0.281595, Val R²: 0.718170
+  Epoch  44/50: Train Loss: 0.245594, Val Loss: 0.281044, Val R²: 0.718721
+  Epoch  45/50: Train Loss: 0.243262, Val Loss: 0.279530, Val R²: 0.720236
+  Epoch  48/50: Train Loss: 0.240673, Val Loss: 0.277653, Val R²: 0.722115
+  Epoch  50/50: Train Loss: 0.239361, Val Loss: 0.278017, Val R²: 0.721751
+
+  ✓ Kombinasyon 16 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': False}
+     Best Val R²: 0.722115 (Epoch 48)
+     Test R²: 0.729998
+     Test MAE: 4.275864
+     Test RMSE: 5.515646
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.239361, Val Loss: 0.278017
+       Train-Val Gap: -0.038656 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1390 (Negatif = Overfitting)
+       Best Epoch Gap: -0.036980
+
+================================================================================
+KOMBİNASYON 17/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.606673, Val Loss: 0.505350, Val R²: 0.494227
+  Epoch   2/50: Train Loss: 0.447654, Val Loss: 0.411033, Val R²: 0.588624
+  Epoch   3/50: Train Loss: 0.405276, Val Loss: 0.380940, Val R²: 0.618741
+  Epoch   4/50: Train Loss: 0.378156, Val Loss: 0.360341, Val R²: 0.639358
+  Epoch   5/50: Train Loss: 0.358325, Val Loss: 0.346070, Val R²: 0.653641
+  Epoch   7/50: Train Loss: 0.326032, Val Loss: 0.327464, Val R²: 0.672262
+  Epoch   8/50: Train Loss: 0.311425, Val Loss: 0.319110, Val R²: 0.680623
+  Epoch   9/50: Train Loss: 0.301183, Val Loss: 0.305716, Val R²: 0.694029
+  Epoch  10/50: Train Loss: 0.291159, Val Loss: 0.298733, Val R²: 0.701017
+  Epoch  11/50: Train Loss: 0.278675, Val Loss: 0.292119, Val R²: 0.707637
+  Epoch  12/50: Train Loss: 0.271326, Val Loss: 0.287896, Val R²: 0.711864
+  Epoch  13/50: Train Loss: 0.261733, Val Loss: 0.283206, Val R²: 0.716557
+  Epoch  15/50: Train Loss: 0.246334, Val Loss: 0.276252, Val R²: 0.723518
+  Epoch  16/50: Train Loss: 0.240581, Val Loss: 0.271091, Val R²: 0.728682
+  Epoch  20/50: Train Loss: 0.221348, Val Loss: 0.265050, Val R²: 0.734728
+  Epoch  21/50: Train Loss: 0.216385, Val Loss: 0.258661, Val R²: 0.741123
+  Epoch  22/50: Train Loss: 0.214065, Val Loss: 0.256952, Val R²: 0.742834
+  Epoch  23/50: Train Loss: 0.211272, Val Loss: 0.254012, Val R²: 0.745775
+  Epoch  24/50: Train Loss: 0.208670, Val Loss: 0.253207, Val R²: 0.746582
+  Epoch  25/50: Train Loss: 0.205052, Val Loss: 0.250996, Val R²: 0.748794
+  Epoch  28/50: Train Loss: 0.197260, Val Loss: 0.246296, Val R²: 0.753498
+  Epoch  30/50: Train Loss: 0.195142, Val Loss: 0.263276, Val R²: 0.736504
+  Epoch  31/50: Train Loss: 0.190656, Val Loss: 0.243541, Val R²: 0.756256
+  Epoch  35/50: Train Loss: 0.184240, Val Loss: 0.241429, Val R²: 0.758369
+  Epoch  38/50: Train Loss: 0.180317, Val Loss: 0.241027, Val R²: 0.758772
+  Epoch  39/50: Train Loss: 0.178122, Val Loss: 0.238995, Val R²: 0.760806
+  Epoch  40/50: Train Loss: 0.180529, Val Loss: 0.256736, Val R²: 0.743050
+  Epoch  43/50: Train Loss: 0.174081, Val Loss: 0.237110, Val R²: 0.762692
+  Epoch  47/50: Train Loss: 0.172354, Val Loss: 0.235428, Val R²: 0.764375
+  Epoch  48/50: Train Loss: 0.169808, Val Loss: 0.234113, Val R²: 0.765691
+  Epoch  50/50: Train Loss: 0.168620, Val Loss: 0.237332, Val R²: 0.762470
+
+  ✓ Kombinasyon 17 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True}
+     Best Val R²: 0.765691 (Epoch 48)
+     Test R²: 0.771926
+     Test MAE: 3.918416
+     Test RMSE: 5.069333
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.168620, Val Loss: 0.237332
+       Train-Val Gap: -0.068711 (Negatif = Overfitting)
+       Overfitting Ratio: -0.2895 (Negatif = Overfitting)
+       Best Epoch Gap: -0.064306
+
+================================================================================
+KOMBİNASYON 18/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.763501, Val Loss: 0.518215, Val R²: 0.481352
+  Epoch   2/50: Train Loss: 0.491757, Val Loss: 0.453213, Val R²: 0.546409
+  Epoch   3/50: Train Loss: 0.444046, Val Loss: 0.418162, Val R²: 0.581489
+  Epoch   4/50: Train Loss: 0.420758, Val Loss: 0.403430, Val R²: 0.596233
+  Epoch   5/50: Train Loss: 0.404616, Val Loss: 0.388048, Val R²: 0.611628
+  Epoch   6/50: Train Loss: 0.390075, Val Loss: 0.385202, Val R²: 0.614476
+  Epoch   7/50: Train Loss: 0.379976, Val Loss: 0.370558, Val R²: 0.629132
+  Epoch   8/50: Train Loss: 0.369046, Val Loss: 0.362560, Val R²: 0.637137
+  Epoch   9/50: Train Loss: 0.364124, Val Loss: 0.361554, Val R²: 0.638144
+  Epoch  10/50: Train Loss: 0.355619, Val Loss: 0.350900, Val R²: 0.648807
+  Epoch  11/50: Train Loss: 0.350298, Val Loss: 0.346866, Val R²: 0.652844
+  Epoch  12/50: Train Loss: 0.342477, Val Loss: 0.344561, Val R²: 0.655151
+  Epoch  13/50: Train Loss: 0.337808, Val Loss: 0.339693, Val R²: 0.660023
+  Epoch  15/50: Train Loss: 0.326535, Val Loss: 0.330361, Val R²: 0.669363
+  Epoch  16/50: Train Loss: 0.322640, Val Loss: 0.328334, Val R²: 0.671392
+  Epoch  17/50: Train Loss: 0.318193, Val Loss: 0.327166, Val R²: 0.672561
+  Epoch  18/50: Train Loss: 0.313769, Val Loss: 0.325454, Val R²: 0.674274
+  Epoch  19/50: Train Loss: 0.308848, Val Loss: 0.323268, Val R²: 0.676462
+  Epoch  20/50: Train Loss: 0.306067, Val Loss: 0.316192, Val R²: 0.683544
+  Epoch  22/50: Train Loss: 0.298007, Val Loss: 0.312165, Val R²: 0.687574
+  Epoch  23/50: Train Loss: 0.293422, Val Loss: 0.308102, Val R²: 0.691641
+  Epoch  25/50: Train Loss: 0.285994, Val Loss: 0.303854, Val R²: 0.695892
+  Epoch  26/50: Train Loss: 0.287665, Val Loss: 0.302309, Val R²: 0.697438
+  Epoch  27/50: Train Loss: 0.278912, Val Loss: 0.302085, Val R²: 0.697663
+  Epoch  28/50: Train Loss: 0.278473, Val Loss: 0.298474, Val R²: 0.701276
+  Epoch  29/50: Train Loss: 0.273172, Val Loss: 0.297903, Val R²: 0.701848
+  Epoch  30/50: Train Loss: 0.275299, Val Loss: 0.305864, Val R²: 0.693880
+  Epoch  32/50: Train Loss: 0.269404, Val Loss: 0.295856, Val R²: 0.703897
+  Epoch  33/50: Train Loss: 0.262756, Val Loss: 0.290358, Val R²: 0.709399
+  Epoch  36/50: Train Loss: 0.258614, Val Loss: 0.287452, Val R²: 0.712308
+  Epoch  39/50: Train Loss: 0.254447, Val Loss: 0.283573, Val R²: 0.716190
+  Epoch  40/50: Train Loss: 0.250306, Val Loss: 0.282338, Val R²: 0.717426
+  Epoch  44/50: Train Loss: 0.246725, Val Loss: 0.279436, Val R²: 0.720330
+  Epoch  45/50: Train Loss: 0.243244, Val Loss: 0.278269, Val R²: 0.721499
+  Epoch  47/50: Train Loss: 0.243359, Val Loss: 0.276999, Val R²: 0.722770
+  Epoch  50/50: Train Loss: 0.239821, Val Loss: 0.277092, Val R²: 0.722676
+
+  ✓ Kombinasyon 18 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': False}
+     Best Val R²: 0.722770 (Epoch 47)
+     Test R²: 0.727502
+     Test MAE: 4.272357
+     Test RMSE: 5.541084
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.239821, Val Loss: 0.277092
+       Train-Val Gap: -0.037271 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1345 (Negatif = Overfitting)
+       Best Epoch Gap: -0.033640
+
+================================================================================
+KOMBİNASYON 19/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.701011, Val Loss: 0.810663, Val R²: 0.188660
+  Epoch   2/50: Train Loss: 0.493212, Val Loss: 0.512576, Val R²: 0.486995
+  Epoch   3/50: Train Loss: 0.450325, Val Loss: 0.427933, Val R²: 0.571710
+  Epoch   4/50: Train Loss: 0.421492, Val Loss: 0.399602, Val R²: 0.600064
+  Epoch   5/50: Train Loss: 0.401000, Val Loss: 0.383669, Val R²: 0.616010
+  Epoch   6/50: Train Loss: 0.383444, Val Loss: 0.370873, Val R²: 0.628817
+  Epoch   7/50: Train Loss: 0.369210, Val Loss: 0.358951, Val R²: 0.640749
+  Epoch   8/50: Train Loss: 0.356852, Val Loss: 0.352766, Val R²: 0.646939
+  Epoch   9/50: Train Loss: 0.346168, Val Loss: 0.343562, Val R²: 0.656151
+  Epoch  10/50: Train Loss: 0.334582, Val Loss: 0.334035, Val R²: 0.665686
+  Epoch  11/50: Train Loss: 0.324862, Val Loss: 0.326697, Val R²: 0.673031
+  Epoch  12/50: Train Loss: 0.316673, Val Loss: 0.320210, Val R²: 0.679523
+  Epoch  13/50: Train Loss: 0.305777, Val Loss: 0.314209, Val R²: 0.685529
+  Epoch  14/50: Train Loss: 0.299456, Val Loss: 0.308123, Val R²: 0.691620
+  Epoch  15/50: Train Loss: 0.289163, Val Loss: 0.305170, Val R²: 0.694575
+  Epoch  16/50: Train Loss: 0.280906, Val Loss: 0.300447, Val R²: 0.699302
+  Epoch  18/50: Train Loss: 0.268331, Val Loss: 0.300136, Val R²: 0.699614
+  Epoch  19/50: Train Loss: 0.265705, Val Loss: 0.298832, Val R²: 0.700919
+  Epoch  20/50: Train Loss: 0.259363, Val Loss: 0.285153, Val R²: 0.714609
+  Epoch  22/50: Train Loss: 0.245554, Val Loss: 0.278100, Val R²: 0.721667
+  Epoch  24/50: Train Loss: 0.237809, Val Loss: 0.270436, Val R²: 0.729338
+  Epoch  25/50: Train Loss: 0.233271, Val Loss: 0.268004, Val R²: 0.731772
+  Epoch  26/50: Train Loss: 0.231169, Val Loss: 0.266679, Val R²: 0.733098
+  Epoch  27/50: Train Loss: 0.227025, Val Loss: 0.266286, Val R²: 0.733491
+  Epoch  28/50: Train Loss: 0.223711, Val Loss: 0.265690, Val R²: 0.734088
+  Epoch  29/50: Train Loss: 0.220158, Val Loss: 0.261227, Val R²: 0.738554
+  Epoch  30/50: Train Loss: 0.217181, Val Loss: 0.274185, Val R²: 0.725586
+  Epoch  31/50: Train Loss: 0.213266, Val Loss: 0.258836, Val R²: 0.740948
+  Epoch  33/50: Train Loss: 0.210777, Val Loss: 0.256201, Val R²: 0.743585
+  Epoch  34/50: Train Loss: 0.208300, Val Loss: 0.255794, Val R²: 0.743992
+  Epoch  36/50: Train Loss: 0.202805, Val Loss: 0.253053, Val R²: 0.746736
+  Epoch  39/50: Train Loss: 0.198289, Val Loss: 0.251633, Val R²: 0.748156
+  Epoch  40/50: Train Loss: 0.195561, Val Loss: 0.250814, Val R²: 0.748977
+  Epoch  41/50: Train Loss: 0.195436, Val Loss: 0.248742, Val R²: 0.751050
+  Epoch  42/50: Train Loss: 0.193522, Val Loss: 0.248476, Val R²: 0.751317
+  Epoch  44/50: Train Loss: 0.188855, Val Loss: 0.246457, Val R²: 0.753337
+  Epoch  46/50: Train Loss: 0.187248, Val Loss: 0.246375, Val R²: 0.753419
+  Epoch  47/50: Train Loss: 0.185868, Val Loss: 0.245498, Val R²: 0.754296
+  Epoch  48/50: Train Loss: 0.185642, Val Loss: 0.244012, Val R²: 0.755784
+  Epoch  50/50: Train Loss: 0.181901, Val Loss: 0.243904, Val R²: 0.755892
+
+  ✓ Kombinasyon 19 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': True}
+     Best Val R²: 0.755892 (Epoch 50)
+     Test R²: 0.758652
+     Test MAE: 4.044203
+     Test RMSE: 5.214766
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.181901, Val Loss: 0.243904
+       Train-Val Gap: -0.062003 (Negatif = Overfitting)
+       Overfitting Ratio: -0.2542 (Negatif = Overfitting)
+       Best Epoch Gap: -0.062003
+
+================================================================================
+KOMBİNASYON 20/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.930385, Val Loss: 0.742292, Val R²: 0.257088
+  Epoch   2/50: Train Loss: 0.602810, Val Loss: 0.519602, Val R²: 0.479964
+  Epoch   3/50: Train Loss: 0.508074, Val Loss: 0.478363, Val R²: 0.521237
+  Epoch   4/50: Train Loss: 0.472904, Val Loss: 0.454952, Val R²: 0.544668
+  Epoch   5/50: Train Loss: 0.451945, Val Loss: 0.431390, Val R²: 0.568249
+  Epoch   6/50: Train Loss: 0.433634, Val Loss: 0.416933, Val R²: 0.582718
+  Epoch   7/50: Train Loss: 0.420280, Val Loss: 0.404530, Val R²: 0.595132
+  Epoch   8/50: Train Loss: 0.409021, Val Loss: 0.396448, Val R²: 0.603221
+  Epoch   9/50: Train Loss: 0.400595, Val Loss: 0.386942, Val R²: 0.612735
+  Epoch  10/50: Train Loss: 0.391290, Val Loss: 0.380602, Val R²: 0.619080
+  Epoch  11/50: Train Loss: 0.384376, Val Loss: 0.375416, Val R²: 0.624270
+  Epoch  12/50: Train Loss: 0.378402, Val Loss: 0.371668, Val R²: 0.628021
+  Epoch  13/50: Train Loss: 0.373525, Val Loss: 0.367134, Val R²: 0.632559
+  Epoch  15/50: Train Loss: 0.363453, Val Loss: 0.360693, Val R²: 0.639005
+  Epoch  16/50: Train Loss: 0.357805, Val Loss: 0.357125, Val R²: 0.642576
+  Epoch  17/50: Train Loss: 0.355480, Val Loss: 0.352509, Val R²: 0.647196
+  Epoch  18/50: Train Loss: 0.351564, Val Loss: 0.351014, Val R²: 0.648693
+  Epoch  20/50: Train Loss: 0.343103, Val Loss: 0.344926, Val R²: 0.654786
+  Epoch  22/50: Train Loss: 0.339199, Val Loss: 0.341997, Val R²: 0.657717
+  Epoch  23/50: Train Loss: 0.332686, Val Loss: 0.337806, Val R²: 0.661912
+  Epoch  25/50: Train Loss: 0.328506, Val Loss: 0.335445, Val R²: 0.664274
+  Epoch  26/50: Train Loss: 0.323883, Val Loss: 0.331678, Val R²: 0.668045
+  Epoch  27/50: Train Loss: 0.322680, Val Loss: 0.331589, Val R²: 0.668134
+  Epoch  30/50: Train Loss: 0.313906, Val Loss: 0.328066, Val R²: 0.671660
+  Epoch  32/50: Train Loss: 0.311673, Val Loss: 0.321571, Val R²: 0.678160
+  Epoch  35/50: Train Loss: 0.304163, Val Loss: 0.317454, Val R²: 0.682281
+  Epoch  36/50: Train Loss: 0.298437, Val Loss: 0.315689, Val R²: 0.684047
+  Epoch  37/50: Train Loss: 0.296714, Val Loss: 0.314402, Val R²: 0.685336
+  Epoch  39/50: Train Loss: 0.294508, Val Loss: 0.311939, Val R²: 0.687800
+  Epoch  40/50: Train Loss: 0.292155, Val Loss: 0.313270, Val R²: 0.686468
+  Epoch  45/50: Train Loss: 0.284976, Val Loss: 0.308887, Val R²: 0.690855
+  Epoch  46/50: Train Loss: 0.280438, Val Loss: 0.305110, Val R²: 0.694635
+  Epoch  50/50: Train Loss: 0.277662, Val Loss: 0.305518, Val R²: 0.694227
+
+  ✓ Kombinasyon 20 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': False}
+     Best Val R²: 0.694635 (Epoch 46)
+     Test R²: 0.702396
+     Test MAE: 4.486591
+     Test RMSE: 5.790717
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.277662, Val Loss: 0.305518
+       Train-Val Gap: -0.027856 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0912 (Negatif = Overfitting)
+       Best Epoch Gap: -0.024672
+
+================================================================================
+KOMBİNASYON 21/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.701006, Val Loss: 0.811058, Val R²: 0.188265
+  Epoch   2/50: Train Loss: 0.493236, Val Loss: 0.512181, Val R²: 0.487391
+  Epoch   3/50: Train Loss: 0.450365, Val Loss: 0.428104, Val R²: 0.571538
+  Epoch   4/50: Train Loss: 0.421485, Val Loss: 0.399441, Val R²: 0.600226
+  Epoch   5/50: Train Loss: 0.400969, Val Loss: 0.383248, Val R²: 0.616431
+  Epoch   6/50: Train Loss: 0.383440, Val Loss: 0.370926, Val R²: 0.628764
+  Epoch   7/50: Train Loss: 0.369189, Val Loss: 0.359428, Val R²: 0.640271
+  Epoch   8/50: Train Loss: 0.356849, Val Loss: 0.351897, Val R²: 0.647809
+  Epoch   9/50: Train Loss: 0.346070, Val Loss: 0.344248, Val R²: 0.655465
+  Epoch  10/50: Train Loss: 0.334662, Val Loss: 0.333680, Val R²: 0.666041
+  Epoch  11/50: Train Loss: 0.324719, Val Loss: 0.326576, Val R²: 0.673151
+  Epoch  12/50: Train Loss: 0.316373, Val Loss: 0.320036, Val R²: 0.679697
+  Epoch  13/50: Train Loss: 0.305614, Val Loss: 0.312784, Val R²: 0.686954
+  Epoch  14/50: Train Loss: 0.299062, Val Loss: 0.309325, Val R²: 0.690417
+  Epoch  15/50: Train Loss: 0.288883, Val Loss: 0.304509, Val R²: 0.695236
+  Epoch  16/50: Train Loss: 0.280678, Val Loss: 0.300690, Val R²: 0.699059
+  Epoch  20/50: Train Loss: 0.257962, Val Loss: 0.282472, Val R²: 0.717292
+  Epoch  21/50: Train Loss: 0.250712, Val Loss: 0.281341, Val R²: 0.718424
+  Epoch  22/50: Train Loss: 0.245184, Val Loss: 0.276404, Val R²: 0.723365
+  Epoch  23/50: Train Loss: 0.243298, Val Loss: 0.275822, Val R²: 0.723948
+  Epoch  24/50: Train Loss: 0.239028, Val Loss: 0.272165, Val R²: 0.727607
+  Epoch  25/50: Train Loss: 0.233201, Val Loss: 0.268600, Val R²: 0.731175
+  Epoch  26/50: Train Loss: 0.230747, Val Loss: 0.266741, Val R²: 0.733036
+  Epoch  28/50: Train Loss: 0.223086, Val Loss: 0.264843, Val R²: 0.734935
+  Epoch  29/50: Train Loss: 0.219679, Val Loss: 0.261880, Val R²: 0.737901
+  Epoch  30/50: Train Loss: 0.216612, Val Loss: 0.277068, Val R²: 0.722701
+  Epoch  31/50: Train Loss: 0.213260, Val Loss: 0.258587, Val R²: 0.741197
+  Epoch  33/50: Train Loss: 0.210123, Val Loss: 0.258133, Val R²: 0.741651
+  Epoch  34/50: Train Loss: 0.208974, Val Loss: 0.255728, Val R²: 0.744058
+  Epoch  36/50: Train Loss: 0.203479, Val Loss: 0.255640, Val R²: 0.744146
+  Epoch  38/50: Train Loss: 0.201365, Val Loss: 0.254827, Val R²: 0.744960
+  Epoch  39/50: Train Loss: 0.197081, Val Loss: 0.252607, Val R²: 0.747182
+  Epoch  40/50: Train Loss: 0.195225, Val Loss: 0.252481, Val R²: 0.747308
+  Epoch  41/50: Train Loss: 0.194745, Val Loss: 0.251537, Val R²: 0.748252
+  Epoch  42/50: Train Loss: 0.192578, Val Loss: 0.247981, Val R²: 0.751811
+  Epoch  44/50: Train Loss: 0.189456, Val Loss: 0.247654, Val R²: 0.752139
+  Epoch  45/50: Train Loss: 0.189925, Val Loss: 0.247646, Val R²: 0.752147
+  Epoch  46/50: Train Loss: 0.187119, Val Loss: 0.245633, Val R²: 0.754162
+  Epoch  47/50: Train Loss: 0.186003, Val Loss: 0.244647, Val R²: 0.755149
+  Epoch  48/50: Train Loss: 0.185627, Val Loss: 0.244155, Val R²: 0.755641
+  Epoch  50/50: Train Loss: 0.182748, Val Loss: 0.244089, Val R²: 0.755707
+
+  ✓ Kombinasyon 21 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': True}
+     Best Val R²: 0.755707 (Epoch 50)
+     Test R²: 0.760557
+     Test MAE: 4.038845
+     Test RMSE: 5.194147
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.182748, Val Loss: 0.244089
+       Train-Val Gap: -0.061341 (Negatif = Overfitting)
+       Overfitting Ratio: -0.2513 (Negatif = Overfitting)
+       Best Epoch Gap: -0.061341
+
+================================================================================
+KOMBİNASYON 22/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.930357, Val Loss: 0.742209, Val R²: 0.257171
+  Epoch   2/50: Train Loss: 0.602762, Val Loss: 0.519582, Val R²: 0.479983
+  Epoch   3/50: Train Loss: 0.508088, Val Loss: 0.478414, Val R²: 0.521186
+  Epoch   4/50: Train Loss: 0.473073, Val Loss: 0.454890, Val R²: 0.544730
+  Epoch   5/50: Train Loss: 0.452130, Val Loss: 0.431612, Val R²: 0.568028
+  Epoch   6/50: Train Loss: 0.433839, Val Loss: 0.417064, Val R²: 0.582587
+  Epoch   7/50: Train Loss: 0.420460, Val Loss: 0.404668, Val R²: 0.594994
+  Epoch   8/50: Train Loss: 0.409376, Val Loss: 0.396893, Val R²: 0.602775
+  Epoch   9/50: Train Loss: 0.400988, Val Loss: 0.387159, Val R²: 0.612517
+  Epoch  10/50: Train Loss: 0.391479, Val Loss: 0.380838, Val R²: 0.618844
+  Epoch  11/50: Train Loss: 0.384717, Val Loss: 0.375369, Val R²: 0.624317
+  Epoch  12/50: Train Loss: 0.379023, Val Loss: 0.371126, Val R²: 0.628563
+  Epoch  13/50: Train Loss: 0.374693, Val Loss: 0.367696, Val R²: 0.631996
+  Epoch  15/50: Train Loss: 0.363159, Val Loss: 0.360842, Val R²: 0.638857
+  Epoch  16/50: Train Loss: 0.357742, Val Loss: 0.355785, Val R²: 0.643917
+  Epoch  17/50: Train Loss: 0.354775, Val Loss: 0.352778, Val R²: 0.646928
+  Epoch  18/50: Train Loss: 0.352693, Val Loss: 0.351587, Val R²: 0.648119
+  Epoch  19/50: Train Loss: 0.348229, Val Loss: 0.348304, Val R²: 0.651405
+  Epoch  20/50: Train Loss: 0.342196, Val Loss: 0.344685, Val R²: 0.655027
+  Epoch  22/50: Train Loss: 0.338081, Val Loss: 0.339528, Val R²: 0.660189
+  Epoch  23/50: Train Loss: 0.333301, Val Loss: 0.337409, Val R²: 0.662309
+  Epoch  24/50: Train Loss: 0.334474, Val Loss: 0.335928, Val R²: 0.663791
+  Epoch  25/50: Train Loss: 0.326576, Val Loss: 0.333056, Val R²: 0.666666
+  Epoch  26/50: Train Loss: 0.322492, Val Loss: 0.330922, Val R²: 0.668802
+  Epoch  27/50: Train Loss: 0.322064, Val Loss: 0.328611, Val R²: 0.671115
+  Epoch  29/50: Train Loss: 0.319559, Val Loss: 0.325334, Val R²: 0.674394
+  Epoch  30/50: Train Loss: 0.312525, Val Loss: 0.326520, Val R²: 0.673207
+  Epoch  32/50: Train Loss: 0.310687, Val Loss: 0.322360, Val R²: 0.677371
+  Epoch  33/50: Train Loss: 0.304491, Val Loss: 0.319775, Val R²: 0.679958
+  Epoch  35/50: Train Loss: 0.305004, Val Loss: 0.317073, Val R²: 0.682663
+  Epoch  36/50: Train Loss: 0.297917, Val Loss: 0.315420, Val R²: 0.684317
+  Epoch  37/50: Train Loss: 0.296199, Val Loss: 0.313831, Val R²: 0.685906
+  Epoch  39/50: Train Loss: 0.294786, Val Loss: 0.313255, Val R²: 0.686483
+  Epoch  40/50: Train Loss: 0.290233, Val Loss: 0.313125, Val R²: 0.686613
+  Epoch  42/50: Train Loss: 0.295301, Val Loss: 0.311984, Val R²: 0.687756
+  Epoch  45/50: Train Loss: 0.283627, Val Loss: 0.305754, Val R²: 0.693990
+  Epoch  46/50: Train Loss: 0.280404, Val Loss: 0.305375, Val R²: 0.694370
+  Epoch  48/50: Train Loss: 0.280796, Val Loss: 0.302461, Val R²: 0.697286
+  Epoch  50/50: Train Loss: 0.276124, Val Loss: 0.314691, Val R²: 0.685046
+
+  ✓ Kombinasyon 22 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': False}
+     Best Val R²: 0.697286 (Epoch 48)
+     Test R²: 0.704507
+     Test MAE: 4.464857
+     Test RMSE: 5.770144
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.276124, Val Loss: 0.314691
+       Train-Val Gap: -0.038567 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1226 (Negatif = Overfitting)
+       Best Epoch Gap: -0.021665
+
+================================================================================
+KOMBİNASYON 23/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.701036, Val Loss: 0.811461, Val R²: 0.187860
+  Epoch   2/50: Train Loss: 0.493152, Val Loss: 0.512964, Val R²: 0.486607
+  Epoch   3/50: Train Loss: 0.450053, Val Loss: 0.426689, Val R²: 0.572954
+  Epoch   4/50: Train Loss: 0.420909, Val Loss: 0.399131, Val R²: 0.600535
+  Epoch   5/50: Train Loss: 0.400200, Val Loss: 0.382818, Val R²: 0.616862
+  Epoch   6/50: Train Loss: 0.382612, Val Loss: 0.370132, Val R²: 0.629559
+  Epoch   7/50: Train Loss: 0.368611, Val Loss: 0.358582, Val R²: 0.641118
+  Epoch   8/50: Train Loss: 0.356348, Val Loss: 0.352789, Val R²: 0.646916
+  Epoch   9/50: Train Loss: 0.345656, Val Loss: 0.342093, Val R²: 0.657621
+  Epoch  10/50: Train Loss: 0.334033, Val Loss: 0.334118, Val R²: 0.665603
+  Epoch  11/50: Train Loss: 0.324320, Val Loss: 0.327223, Val R²: 0.672503
+  Epoch  12/50: Train Loss: 0.316191, Val Loss: 0.320959, Val R²: 0.678773
+  Epoch  13/50: Train Loss: 0.305854, Val Loss: 0.314591, Val R²: 0.685146
+  Epoch  14/50: Train Loss: 0.298570, Val Loss: 0.308717, Val R²: 0.691025
+  Epoch  15/50: Train Loss: 0.288955, Val Loss: 0.305285, Val R²: 0.694460
+  Epoch  16/50: Train Loss: 0.280788, Val Loss: 0.298872, Val R²: 0.700878
+  Epoch  20/50: Train Loss: 0.259263, Val Loss: 0.284947, Val R²: 0.714815
+  Epoch  21/50: Train Loss: 0.250617, Val Loss: 0.281409, Val R²: 0.718356
+  Epoch  22/50: Train Loss: 0.244149, Val Loss: 0.277913, Val R²: 0.721855
+  Epoch  23/50: Train Loss: 0.243231, Val Loss: 0.272468, Val R²: 0.727305
+  Epoch  24/50: Train Loss: 0.237923, Val Loss: 0.269437, Val R²: 0.730338
+  Epoch  25/50: Train Loss: 0.231687, Val Loss: 0.266886, Val R²: 0.732891
+  Epoch  26/50: Train Loss: 0.228315, Val Loss: 0.264824, Val R²: 0.734954
+  Epoch  27/50: Train Loss: 0.224475, Val Loss: 0.263120, Val R²: 0.736660
+  Epoch  29/50: Train Loss: 0.218158, Val Loss: 0.261884, Val R²: 0.737897
+  Epoch  30/50: Train Loss: 0.214433, Val Loss: 0.267596, Val R²: 0.732181
+  Epoch  31/50: Train Loss: 0.211726, Val Loss: 0.256802, Val R²: 0.742983
+  Epoch  33/50: Train Loss: 0.207755, Val Loss: 0.253442, Val R²: 0.746346
+  Epoch  36/50: Train Loss: 0.200675, Val Loss: 0.252312, Val R²: 0.747477
+  Epoch  39/50: Train Loss: 0.194864, Val Loss: 0.249218, Val R²: 0.750574
+  Epoch  40/50: Train Loss: 0.193122, Val Loss: 0.249308, Val R²: 0.750484
+  Epoch  41/50: Train Loss: 0.192266, Val Loss: 0.247096, Val R²: 0.752697
+  Epoch  42/50: Train Loss: 0.190180, Val Loss: 0.247046, Val R²: 0.752747
+  Epoch  44/50: Train Loss: 0.186525, Val Loss: 0.245240, Val R²: 0.754555
+  Epoch  47/50: Train Loss: 0.183517, Val Loss: 0.242406, Val R²: 0.757391
+  Epoch  49/50: Train Loss: 0.181114, Val Loss: 0.242378, Val R²: 0.757420
+  Epoch  50/50: Train Loss: 0.178908, Val Loss: 0.245807, Val R²: 0.753988
+
+  ✓ Kombinasyon 23 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': True}
+     Best Val R²: 0.757420 (Epoch 49)
+     Test R²: 0.763746
+     Test MAE: 3.994528
+     Test RMSE: 5.159436
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.178908, Val Loss: 0.245807
+       Train-Val Gap: -0.066899 (Negatif = Overfitting)
+       Overfitting Ratio: -0.2722 (Negatif = Overfitting)
+       Best Epoch Gap: -0.061263
+
+================================================================================
+KOMBİNASYON 24/48
+Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.930441, Val Loss: 0.742519, Val R²: 0.256861
+  Epoch   2/50: Train Loss: 0.602937, Val Loss: 0.519658, Val R²: 0.479908
+  Epoch   3/50: Train Loss: 0.508139, Val Loss: 0.478473, Val R²: 0.521128
+  Epoch   4/50: Train Loss: 0.473009, Val Loss: 0.455068, Val R²: 0.544552
+  Epoch   5/50: Train Loss: 0.452072, Val Loss: 0.431513, Val R²: 0.568126
+  Epoch   6/50: Train Loss: 0.433730, Val Loss: 0.417034, Val R²: 0.582617
+  Epoch   7/50: Train Loss: 0.420333, Val Loss: 0.404615, Val R²: 0.595047
+  Epoch   8/50: Train Loss: 0.409070, Val Loss: 0.396674, Val R²: 0.602994
+  Epoch   9/50: Train Loss: 0.400720, Val Loss: 0.386941, Val R²: 0.612736
+  Epoch  10/50: Train Loss: 0.391317, Val Loss: 0.380728, Val R²: 0.618953
+  Epoch  11/50: Train Loss: 0.384481, Val Loss: 0.375403, Val R²: 0.624284
+  Epoch  12/50: Train Loss: 0.378689, Val Loss: 0.371441, Val R²: 0.628249
+  Epoch  13/50: Train Loss: 0.374062, Val Loss: 0.366473, Val R²: 0.633220
+  Epoch  15/50: Train Loss: 0.363503, Val Loss: 0.360776, Val R²: 0.638922
+  Epoch  16/50: Train Loss: 0.358097, Val Loss: 0.357355, Val R²: 0.642346
+  Epoch  17/50: Train Loss: 0.355774, Val Loss: 0.352977, Val R²: 0.646728
+  Epoch  18/50: Train Loss: 0.352099, Val Loss: 0.351861, Val R²: 0.647845
+  Epoch  20/50: Train Loss: 0.343554, Val Loss: 0.345549, Val R²: 0.654162
+  Epoch  22/50: Train Loss: 0.339997, Val Loss: 0.341074, Val R²: 0.658641
+  Epoch  23/50: Train Loss: 0.333377, Val Loss: 0.338179, Val R²: 0.661538
+  Epoch  24/50: Train Loss: 0.333761, Val Loss: 0.337256, Val R²: 0.662462
+  Epoch  25/50: Train Loss: 0.328427, Val Loss: 0.335143, Val R²: 0.664576
+  Epoch  26/50: Train Loss: 0.324166, Val Loss: 0.331841, Val R²: 0.667881
+  Epoch  27/50: Train Loss: 0.323424, Val Loss: 0.330656, Val R²: 0.669067
+  Epoch  29/50: Train Loss: 0.319989, Val Loss: 0.328850, Val R²: 0.670876
+  Epoch  30/50: Train Loss: 0.313685, Val Loss: 0.325523, Val R²: 0.674205
+  Epoch  31/50: Train Loss: 0.312602, Val Loss: 0.323349, Val R²: 0.676381
+  Epoch  32/50: Train Loss: 0.310652, Val Loss: 0.321161, Val R²: 0.678571
+  Epoch  33/50: Train Loss: 0.306998, Val Loss: 0.320571, Val R²: 0.679161
+  Epoch  35/50: Train Loss: 0.303554, Val Loss: 0.319820, Val R²: 0.679913
+  Epoch  36/50: Train Loss: 0.299125, Val Loss: 0.316360, Val R²: 0.683376
+  Epoch  37/50: Train Loss: 0.297741, Val Loss: 0.314010, Val R²: 0.685727
+  Epoch  39/50: Train Loss: 0.296290, Val Loss: 0.311612, Val R²: 0.688128
+  Epoch  40/50: Train Loss: 0.291908, Val Loss: 0.312013, Val R²: 0.687726
+  Epoch  45/50: Train Loss: 0.284903, Val Loss: 0.305815, Val R²: 0.693929
+  Epoch  46/50: Train Loss: 0.281363, Val Loss: 0.304075, Val R²: 0.695671
+  Epoch  50/50: Train Loss: 0.277303, Val Loss: 0.311755, Val R²: 0.687984
+
+  ✓ Kombinasyon 24 tamamlandı:
+     Parametreler: {'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': False}
+     Best Val R²: 0.695671 (Epoch 46)
+     Test R²: 0.700862
+     Test MAE: 4.493624
+     Test RMSE: 5.805618
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.277303, Val Loss: 0.311755
+       Train-Val Gap: -0.034452 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1105 (Negatif = Overfitting)
+       Best Epoch Gap: -0.022712
+
+================================================================================
+KOMBİNASYON 25/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.928679, Val Loss: 0.764364, Val R²: 0.234997
+  Epoch   2/50: Train Loss: 0.656839, Val Loss: 0.547468, Val R²: 0.452075
+  Epoch   3/50: Train Loss: 0.573566, Val Loss: 0.515700, Val R²: 0.483869
+  Epoch   4/50: Train Loss: 0.538879, Val Loss: 0.497031, Val R²: 0.502554
+  Epoch   5/50: Train Loss: 0.518036, Val Loss: 0.481421, Val R²: 0.518177
+  Epoch   6/50: Train Loss: 0.501980, Val Loss: 0.468400, Val R²: 0.531209
+  Epoch   7/50: Train Loss: 0.488672, Val Loss: 0.456341, Val R²: 0.543278
+  Epoch   8/50: Train Loss: 0.475791, Val Loss: 0.446310, Val R²: 0.553317
+  Epoch   9/50: Train Loss: 0.464672, Val Loss: 0.436129, Val R²: 0.563506
+  Epoch  10/50: Train Loss: 0.456374, Val Loss: 0.428046, Val R²: 0.571596
+  Epoch  11/50: Train Loss: 0.447592, Val Loss: 0.420806, Val R²: 0.578843
+  Epoch  12/50: Train Loss: 0.439838, Val Loss: 0.413914, Val R²: 0.585740
+  Epoch  13/50: Train Loss: 0.432960, Val Loss: 0.407787, Val R²: 0.591872
+  Epoch  14/50: Train Loss: 0.427317, Val Loss: 0.402215, Val R²: 0.597449
+  Epoch  15/50: Train Loss: 0.420967, Val Loss: 0.398579, Val R²: 0.601088
+  Epoch  16/50: Train Loss: 0.415221, Val Loss: 0.393912, Val R²: 0.605758
+  Epoch  17/50: Train Loss: 0.411060, Val Loss: 0.389566, Val R²: 0.610108
+  Epoch  18/50: Train Loss: 0.406632, Val Loss: 0.385956, Val R²: 0.613722
+  Epoch  19/50: Train Loss: 0.403140, Val Loss: 0.382895, Val R²: 0.616785
+  Epoch  20/50: Train Loss: 0.397500, Val Loss: 0.379555, Val R²: 0.620128
+  Epoch  21/50: Train Loss: 0.394197, Val Loss: 0.376161, Val R²: 0.623525
+  Epoch  22/50: Train Loss: 0.391127, Val Loss: 0.374556, Val R²: 0.625131
+  Epoch  23/50: Train Loss: 0.387174, Val Loss: 0.370747, Val R²: 0.628943
+  Epoch  24/50: Train Loss: 0.384880, Val Loss: 0.368934, Val R²: 0.630758
+  Epoch  25/50: Train Loss: 0.379930, Val Loss: 0.365395, Val R²: 0.634299
+  Epoch  26/50: Train Loss: 0.378280, Val Loss: 0.362644, Val R²: 0.637053
+  Epoch  27/50: Train Loss: 0.375082, Val Loss: 0.360176, Val R²: 0.639523
+  Epoch  28/50: Train Loss: 0.371551, Val Loss: 0.358218, Val R²: 0.641483
+  Epoch  29/50: Train Loss: 0.369155, Val Loss: 0.356272, Val R²: 0.643431
+  Epoch  30/50: Train Loss: 0.365332, Val Loss: 0.353664, Val R²: 0.646041
+  Epoch  31/50: Train Loss: 0.362907, Val Loss: 0.352045, Val R²: 0.647660
+  Epoch  32/50: Train Loss: 0.360428, Val Loss: 0.349764, Val R²: 0.649944
+  Epoch  33/50: Train Loss: 0.358075, Val Loss: 0.347735, Val R²: 0.651974
+  Epoch  34/50: Train Loss: 0.355213, Val Loss: 0.345192, Val R²: 0.654520
+  Epoch  35/50: Train Loss: 0.351724, Val Loss: 0.343664, Val R²: 0.656048
+  Epoch  36/50: Train Loss: 0.349199, Val Loss: 0.341392, Val R²: 0.658322
+  Epoch  37/50: Train Loss: 0.347216, Val Loss: 0.340298, Val R²: 0.659418
+  Epoch  38/50: Train Loss: 0.345174, Val Loss: 0.337948, Val R²: 0.661769
+  Epoch  39/50: Train Loss: 0.342143, Val Loss: 0.335812, Val R²: 0.663908
+  Epoch  40/50: Train Loss: 0.340159, Val Loss: 0.334393, Val R²: 0.665327
+  Epoch  41/50: Train Loss: 0.336586, Val Loss: 0.333396, Val R²: 0.666325
+  Epoch  42/50: Train Loss: 0.336674, Val Loss: 0.331387, Val R²: 0.668336
+  Epoch  43/50: Train Loss: 0.333851, Val Loss: 0.329315, Val R²: 0.670410
+  Epoch  44/50: Train Loss: 0.330726, Val Loss: 0.328841, Val R²: 0.670885
+  Epoch  45/50: Train Loss: 0.328504, Val Loss: 0.326337, Val R²: 0.673390
+  Epoch  46/50: Train Loss: 0.326338, Val Loss: 0.324582, Val R²: 0.675146
+  Epoch  48/50: Train Loss: 0.321879, Val Loss: 0.321630, Val R²: 0.678102
+  Epoch  49/50: Train Loss: 0.319984, Val Loss: 0.320254, Val R²: 0.679479
+  Epoch  50/50: Train Loss: 0.318927, Val Loss: 0.319043, Val R²: 0.680691
+
+  ✓ Kombinasyon 25 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': True}
+     Best Val R²: 0.680691 (Epoch 50)
+     Test R²: 0.686376
+     Test MAE: 4.614980
+     Test RMSE: 5.944525
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.318927, Val Loss: 0.319043
+       Train-Val Gap: -0.000115 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0004 (Negatif = Overfitting)
+       Best Epoch Gap: -0.000115
+
+================================================================================
+KOMBİNASYON 26/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.998992, Val Loss: 0.982707, Val R²: 0.016472
+  Epoch   2/50: Train Loss: 0.964397, Val Loss: 0.931288, Val R²: 0.067934
+  Epoch   3/50: Train Loss: 0.877356, Val Loss: 0.799541, Val R²: 0.199791
+  Epoch   4/50: Train Loss: 0.719557, Val Loss: 0.627200, Val R²: 0.372276
+  Epoch   5/50: Train Loss: 0.594217, Val Loss: 0.548158, Val R²: 0.451384
+  Epoch   6/50: Train Loss: 0.551307, Val Loss: 0.524302, Val R²: 0.475260
+  Epoch   7/50: Train Loss: 0.532590, Val Loss: 0.509330, Val R²: 0.490244
+  Epoch   8/50: Train Loss: 0.518163, Val Loss: 0.497122, Val R²: 0.502462
+  Epoch   9/50: Train Loss: 0.506886, Val Loss: 0.486151, Val R²: 0.513443
+  Epoch  10/50: Train Loss: 0.497130, Val Loss: 0.476539, Val R²: 0.523063
+  Epoch  11/50: Train Loss: 0.488496, Val Loss: 0.467381, Val R²: 0.532229
+  Epoch  12/50: Train Loss: 0.479871, Val Loss: 0.459387, Val R²: 0.540229
+  Epoch  13/50: Train Loss: 0.472541, Val Loss: 0.452076, Val R²: 0.547546
+  Epoch  14/50: Train Loss: 0.466459, Val Loss: 0.445314, Val R²: 0.554313
+  Epoch  15/50: Train Loss: 0.459798, Val Loss: 0.439497, Val R²: 0.560136
+  Epoch  16/50: Train Loss: 0.453690, Val Loss: 0.433791, Val R²: 0.565846
+  Epoch  17/50: Train Loss: 0.449057, Val Loss: 0.428790, Val R²: 0.570852
+  Epoch  18/50: Train Loss: 0.444546, Val Loss: 0.424081, Val R²: 0.575564
+  Epoch  19/50: Train Loss: 0.440670, Val Loss: 0.420722, Val R²: 0.578927
+  Epoch  20/50: Train Loss: 0.434643, Val Loss: 0.416817, Val R²: 0.582835
+  Epoch  21/50: Train Loss: 0.432537, Val Loss: 0.413591, Val R²: 0.586063
+  Epoch  22/50: Train Loss: 0.429391, Val Loss: 0.410060, Val R²: 0.589598
+  Epoch  23/50: Train Loss: 0.425753, Val Loss: 0.406538, Val R²: 0.593122
+  Epoch  24/50: Train Loss: 0.422649, Val Loss: 0.404699, Val R²: 0.594963
+  Epoch  25/50: Train Loss: 0.418726, Val Loss: 0.401170, Val R²: 0.598495
+  Epoch  26/50: Train Loss: 0.417203, Val Loss: 0.399478, Val R²: 0.600188
+  Epoch  27/50: Train Loss: 0.413546, Val Loss: 0.396038, Val R²: 0.603631
+  Epoch  28/50: Train Loss: 0.411363, Val Loss: 0.393421, Val R²: 0.606250
+  Epoch  29/50: Train Loss: 0.408618, Val Loss: 0.391368, Val R²: 0.608305
+  Epoch  30/50: Train Loss: 0.404846, Val Loss: 0.388714, Val R²: 0.610961
+  Epoch  31/50: Train Loss: 0.403126, Val Loss: 0.386924, Val R²: 0.612753
+  Epoch  32/50: Train Loss: 0.400113, Val Loss: 0.384436, Val R²: 0.615243
+  Epoch  33/50: Train Loss: 0.398468, Val Loss: 0.382231, Val R²: 0.617449
+  Epoch  34/50: Train Loss: 0.396538, Val Loss: 0.380483, Val R²: 0.619199
+  Epoch  35/50: Train Loss: 0.393435, Val Loss: 0.378701, Val R²: 0.620982
+  Epoch  36/50: Train Loss: 0.391084, Val Loss: 0.376833, Val R²: 0.622852
+  Epoch  37/50: Train Loss: 0.389821, Val Loss: 0.374819, Val R²: 0.624868
+  Epoch  38/50: Train Loss: 0.388003, Val Loss: 0.373792, Val R²: 0.625896
+  Epoch  39/50: Train Loss: 0.385468, Val Loss: 0.371706, Val R²: 0.627984
+  Epoch  40/50: Train Loss: 0.384024, Val Loss: 0.370217, Val R²: 0.629474
+  Epoch  41/50: Train Loss: 0.382065, Val Loss: 0.368791, Val R²: 0.630900
+  Epoch  42/50: Train Loss: 0.381282, Val Loss: 0.368028, Val R²: 0.631664
+  Epoch  43/50: Train Loss: 0.379451, Val Loss: 0.365769, Val R²: 0.633926
+  Epoch  44/50: Train Loss: 0.377127, Val Loss: 0.365270, Val R²: 0.634424
+  Epoch  45/50: Train Loss: 0.374972, Val Loss: 0.363428, Val R²: 0.636268
+  Epoch  46/50: Train Loss: 0.374133, Val Loss: 0.361953, Val R²: 0.637745
+  Epoch  47/50: Train Loss: 0.372789, Val Loss: 0.361053, Val R²: 0.638645
+  Epoch  48/50: Train Loss: 0.370206, Val Loss: 0.359970, Val R²: 0.639730
+  Epoch  49/50: Train Loss: 0.369349, Val Loss: 0.358598, Val R²: 0.641102
+  Epoch  50/50: Train Loss: 0.368363, Val Loss: 0.357142, Val R²: 0.642560
+
+  ✓ Kombinasyon 26 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': False}
+     Best Val R²: 0.642560 (Epoch 50)
+     Test R²: 0.647581
+     Test MAE: 4.911041
+     Test RMSE: 6.301473
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.368363, Val Loss: 0.357142
+       Train-Val Gap: 0.011221 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0314 (Negatif = Overfitting)
+       Best Epoch Gap: 0.011221
+
+================================================================================
+KOMBİNASYON 27/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.939301, Val Loss: 0.770844, Val R²: 0.228512
+  Epoch   2/50: Train Loss: 0.660845, Val Loss: 0.548907, Val R²: 0.450634
+  Epoch   3/50: Train Loss: 0.574900, Val Loss: 0.516580, Val R²: 0.482988
+  Epoch   4/50: Train Loss: 0.539460, Val Loss: 0.497462, Val R²: 0.502122
+  Epoch   5/50: Train Loss: 0.518278, Val Loss: 0.481776, Val R²: 0.517821
+  Epoch   6/50: Train Loss: 0.501989, Val Loss: 0.469133, Val R²: 0.530475
+  Epoch   7/50: Train Loss: 0.489216, Val Loss: 0.457375, Val R²: 0.542243
+  Epoch   8/50: Train Loss: 0.476806, Val Loss: 0.447767, Val R²: 0.551859
+  Epoch   9/50: Train Loss: 0.466082, Val Loss: 0.437381, Val R²: 0.562254
+  Epoch  10/50: Train Loss: 0.457684, Val Loss: 0.429525, Val R²: 0.570116
+  Epoch  11/50: Train Loss: 0.448922, Val Loss: 0.421982, Val R²: 0.577665
+  Epoch  12/50: Train Loss: 0.441351, Val Loss: 0.415295, Val R²: 0.584358
+  Epoch  13/50: Train Loss: 0.434485, Val Loss: 0.408938, Val R²: 0.590721
+  Epoch  14/50: Train Loss: 0.428793, Val Loss: 0.403256, Val R²: 0.596407
+  Epoch  15/50: Train Loss: 0.422405, Val Loss: 0.399630, Val R²: 0.600036
+  Epoch  16/50: Train Loss: 0.416771, Val Loss: 0.394931, Val R²: 0.604740
+  Epoch  17/50: Train Loss: 0.412570, Val Loss: 0.390374, Val R²: 0.609300
+  Epoch  18/50: Train Loss: 0.408158, Val Loss: 0.386815, Val R²: 0.612862
+  Epoch  19/50: Train Loss: 0.404523, Val Loss: 0.383564, Val R²: 0.616115
+  Epoch  20/50: Train Loss: 0.398955, Val Loss: 0.380100, Val R²: 0.619582
+  Epoch  21/50: Train Loss: 0.395781, Val Loss: 0.376928, Val R²: 0.622757
+  Epoch  22/50: Train Loss: 0.392542, Val Loss: 0.374946, Val R²: 0.624741
+  Epoch  23/50: Train Loss: 0.388568, Val Loss: 0.371210, Val R²: 0.628480
+  Epoch  24/50: Train Loss: 0.386237, Val Loss: 0.369366, Val R²: 0.630326
+  Epoch  25/50: Train Loss: 0.381400, Val Loss: 0.365716, Val R²: 0.633978
+  Epoch  26/50: Train Loss: 0.379728, Val Loss: 0.362906, Val R²: 0.636791
+  Epoch  27/50: Train Loss: 0.376407, Val Loss: 0.360454, Val R²: 0.639244
+  Epoch  28/50: Train Loss: 0.372812, Val Loss: 0.358472, Val R²: 0.641228
+  Epoch  29/50: Train Loss: 0.370489, Val Loss: 0.356423, Val R²: 0.643279
+  Epoch  30/50: Train Loss: 0.366465, Val Loss: 0.353619, Val R²: 0.646086
+  Epoch  31/50: Train Loss: 0.364297, Val Loss: 0.352226, Val R²: 0.647480
+  Epoch  32/50: Train Loss: 0.361843, Val Loss: 0.349773, Val R²: 0.649934
+  Epoch  33/50: Train Loss: 0.359045, Val Loss: 0.347690, Val R²: 0.652019
+  Epoch  34/50: Train Loss: 0.356232, Val Loss: 0.345185, Val R²: 0.654527
+  Epoch  35/50: Train Loss: 0.352965, Val Loss: 0.343649, Val R²: 0.656064
+  Epoch  36/50: Train Loss: 0.350530, Val Loss: 0.341473, Val R²: 0.658242
+  Epoch  37/50: Train Loss: 0.348466, Val Loss: 0.340349, Val R²: 0.659366
+  Epoch  38/50: Train Loss: 0.346292, Val Loss: 0.338090, Val R²: 0.661627
+  Epoch  39/50: Train Loss: 0.343259, Val Loss: 0.335846, Val R²: 0.663873
+  Epoch  40/50: Train Loss: 0.341403, Val Loss: 0.334477, Val R²: 0.665243
+  Epoch  41/50: Train Loss: 0.337771, Val Loss: 0.333332, Val R²: 0.666390
+  Epoch  42/50: Train Loss: 0.337771, Val Loss: 0.331450, Val R²: 0.668273
+  Epoch  43/50: Train Loss: 0.334926, Val Loss: 0.329377, Val R²: 0.670347
+  Epoch  44/50: Train Loss: 0.331847, Val Loss: 0.328808, Val R²: 0.670917
+  Epoch  45/50: Train Loss: 0.329534, Val Loss: 0.326679, Val R²: 0.673048
+  Epoch  46/50: Train Loss: 0.327366, Val Loss: 0.324982, Val R²: 0.674746
+  Epoch  48/50: Train Loss: 0.322822, Val Loss: 0.322301, Val R²: 0.677430
+  Epoch  49/50: Train Loss: 0.320992, Val Loss: 0.320874, Val R²: 0.678858
+  Epoch  50/50: Train Loss: 0.319703, Val Loss: 0.319687, Val R²: 0.680046
+
+  ✓ Kombinasyon 27 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': True}
+     Best Val R²: 0.680046 (Epoch 50)
+     Test R²: 0.685987
+     Test MAE: 4.621549
+     Test RMSE: 5.948211
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.319703, Val Loss: 0.319687
+       Train-Val Gap: 0.000016 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0001 (Negatif = Overfitting)
+       Best Epoch Gap: 0.000016
+
+================================================================================
+KOMBİNASYON 28/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.998994, Val Loss: 0.982709, Val R²: 0.016470
+  Epoch   2/50: Train Loss: 0.964371, Val Loss: 0.931229, Val R²: 0.067993
+  Epoch   3/50: Train Loss: 0.877301, Val Loss: 0.799476, Val R²: 0.199856
+  Epoch   4/50: Train Loss: 0.719476, Val Loss: 0.627112, Val R²: 0.372364
+  Epoch   5/50: Train Loss: 0.594169, Val Loss: 0.548083, Val R²: 0.451459
+  Epoch   6/50: Train Loss: 0.551207, Val Loss: 0.524197, Val R²: 0.475365
+  Epoch   7/50: Train Loss: 0.532474, Val Loss: 0.509249, Val R²: 0.490326
+  Epoch   8/50: Train Loss: 0.518064, Val Loss: 0.497085, Val R²: 0.502500
+  Epoch   9/50: Train Loss: 0.506816, Val Loss: 0.486136, Val R²: 0.513458
+  Epoch  10/50: Train Loss: 0.497069, Val Loss: 0.476506, Val R²: 0.523096
+  Epoch  11/50: Train Loss: 0.488461, Val Loss: 0.467240, Val R²: 0.532370
+  Epoch  12/50: Train Loss: 0.479533, Val Loss: 0.458900, Val R²: 0.540717
+  Epoch  13/50: Train Loss: 0.471875, Val Loss: 0.451498, Val R²: 0.548125
+  Epoch  14/50: Train Loss: 0.465631, Val Loss: 0.444655, Val R²: 0.554974
+  Epoch  15/50: Train Loss: 0.458862, Val Loss: 0.438781, Val R²: 0.560853
+  Epoch  16/50: Train Loss: 0.452805, Val Loss: 0.433120, Val R²: 0.566519
+  Epoch  17/50: Train Loss: 0.448059, Val Loss: 0.428267, Val R²: 0.571376
+  Epoch  18/50: Train Loss: 0.443953, Val Loss: 0.423683, Val R²: 0.575963
+  Epoch  19/50: Train Loss: 0.440177, Val Loss: 0.420410, Val R²: 0.579239
+  Epoch  20/50: Train Loss: 0.434215, Val Loss: 0.416520, Val R²: 0.583132
+  Epoch  21/50: Train Loss: 0.432177, Val Loss: 0.413259, Val R²: 0.586396
+  Epoch  22/50: Train Loss: 0.429029, Val Loss: 0.409791, Val R²: 0.589866
+  Epoch  23/50: Train Loss: 0.425462, Val Loss: 0.406298, Val R²: 0.593363
+  Epoch  24/50: Train Loss: 0.422353, Val Loss: 0.404436, Val R²: 0.595226
+  Epoch  25/50: Train Loss: 0.418493, Val Loss: 0.400925, Val R²: 0.598740
+  Epoch  26/50: Train Loss: 0.416961, Val Loss: 0.399202, Val R²: 0.600465
+  Epoch  27/50: Train Loss: 0.413298, Val Loss: 0.395800, Val R²: 0.603869
+  Epoch  28/50: Train Loss: 0.411146, Val Loss: 0.393183, Val R²: 0.606488
+  Epoch  29/50: Train Loss: 0.408370, Val Loss: 0.391129, Val R²: 0.608544
+  Epoch  30/50: Train Loss: 0.404595, Val Loss: 0.388424, Val R²: 0.611251
+  Epoch  31/50: Train Loss: 0.402897, Val Loss: 0.386658, Val R²: 0.613019
+  Epoch  32/50: Train Loss: 0.399884, Val Loss: 0.384217, Val R²: 0.615461
+  Epoch  33/50: Train Loss: 0.398259, Val Loss: 0.382017, Val R²: 0.617664
+  Epoch  34/50: Train Loss: 0.396336, Val Loss: 0.380266, Val R²: 0.619417
+  Epoch  35/50: Train Loss: 0.393247, Val Loss: 0.378486, Val R²: 0.621198
+  Epoch  36/50: Train Loss: 0.390867, Val Loss: 0.376641, Val R²: 0.623044
+  Epoch  37/50: Train Loss: 0.389618, Val Loss: 0.374633, Val R²: 0.625054
+  Epoch  38/50: Train Loss: 0.387828, Val Loss: 0.373582, Val R²: 0.626106
+  Epoch  39/50: Train Loss: 0.385293, Val Loss: 0.371505, Val R²: 0.628184
+  Epoch  40/50: Train Loss: 0.383843, Val Loss: 0.370018, Val R²: 0.629672
+  Epoch  41/50: Train Loss: 0.381874, Val Loss: 0.368552, Val R²: 0.631140
+  Epoch  42/50: Train Loss: 0.381094, Val Loss: 0.367844, Val R²: 0.631848
+  Epoch  43/50: Train Loss: 0.379281, Val Loss: 0.365559, Val R²: 0.634136
+  Epoch  44/50: Train Loss: 0.376984, Val Loss: 0.364992, Val R²: 0.634703
+  Epoch  45/50: Train Loss: 0.374808, Val Loss: 0.363225, Val R²: 0.636471
+  Epoch  46/50: Train Loss: 0.373994, Val Loss: 0.361734, Val R²: 0.637963
+  Epoch  47/50: Train Loss: 0.372634, Val Loss: 0.360821, Val R²: 0.638877
+  Epoch  48/50: Train Loss: 0.370084, Val Loss: 0.359671, Val R²: 0.640028
+  Epoch  49/50: Train Loss: 0.369201, Val Loss: 0.358361, Val R²: 0.641339
+  Epoch  50/50: Train Loss: 0.368216, Val Loss: 0.356902, Val R²: 0.642800
+
+  ✓ Kombinasyon 28 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': False}
+     Best Val R²: 0.642800 (Epoch 50)
+     Test R²: 0.647589
+     Test MAE: 4.911090
+     Test RMSE: 6.301407
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.368216, Val Loss: 0.356902
+       Train-Val Gap: 0.011314 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0317 (Negatif = Overfitting)
+       Best Epoch Gap: 0.011314
+
+================================================================================
+KOMBİNASYON 29/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.939274, Val Loss: 0.770821, Val R²: 0.228535
+  Epoch   2/50: Train Loss: 0.660815, Val Loss: 0.548891, Val R²: 0.450650
+  Epoch   3/50: Train Loss: 0.574870, Val Loss: 0.516544, Val R²: 0.483024
+  Epoch   4/50: Train Loss: 0.539444, Val Loss: 0.497455, Val R²: 0.502129
+  Epoch   5/50: Train Loss: 0.518279, Val Loss: 0.481761, Val R²: 0.517836
+  Epoch   6/50: Train Loss: 0.501985, Val Loss: 0.469142, Val R²: 0.530466
+  Epoch   7/50: Train Loss: 0.489216, Val Loss: 0.457440, Val R²: 0.542177
+  Epoch   8/50: Train Loss: 0.476805, Val Loss: 0.447714, Val R²: 0.551912
+  Epoch   9/50: Train Loss: 0.466077, Val Loss: 0.437355, Val R²: 0.562280
+  Epoch  10/50: Train Loss: 0.457679, Val Loss: 0.429512, Val R²: 0.570129
+  Epoch  11/50: Train Loss: 0.448902, Val Loss: 0.422006, Val R²: 0.577642
+  Epoch  12/50: Train Loss: 0.441346, Val Loss: 0.415288, Val R²: 0.584365
+  Epoch  13/50: Train Loss: 0.434474, Val Loss: 0.408954, Val R²: 0.590704
+  Epoch  14/50: Train Loss: 0.428774, Val Loss: 0.403261, Val R²: 0.596402
+  Epoch  15/50: Train Loss: 0.422389, Val Loss: 0.399634, Val R²: 0.600032
+  Epoch  16/50: Train Loss: 0.416742, Val Loss: 0.394926, Val R²: 0.604744
+  Epoch  17/50: Train Loss: 0.412531, Val Loss: 0.390418, Val R²: 0.609255
+  Epoch  18/50: Train Loss: 0.408125, Val Loss: 0.386853, Val R²: 0.612824
+  Epoch  19/50: Train Loss: 0.404497, Val Loss: 0.383606, Val R²: 0.616074
+  Epoch  20/50: Train Loss: 0.398956, Val Loss: 0.380146, Val R²: 0.619537
+  Epoch  21/50: Train Loss: 0.395767, Val Loss: 0.376929, Val R²: 0.622756
+  Epoch  22/50: Train Loss: 0.392522, Val Loss: 0.375048, Val R²: 0.624639
+  Epoch  23/50: Train Loss: 0.388574, Val Loss: 0.371260, Val R²: 0.628429
+  Epoch  24/50: Train Loss: 0.386239, Val Loss: 0.369282, Val R²: 0.630409
+  Epoch  25/50: Train Loss: 0.381402, Val Loss: 0.365753, Val R²: 0.633941
+  Epoch  26/50: Train Loss: 0.379722, Val Loss: 0.362989, Val R²: 0.636707
+  Epoch  27/50: Train Loss: 0.376439, Val Loss: 0.360586, Val R²: 0.639113
+  Epoch  28/50: Train Loss: 0.372846, Val Loss: 0.358537, Val R²: 0.641163
+  Epoch  29/50: Train Loss: 0.370498, Val Loss: 0.356465, Val R²: 0.643237
+  Epoch  30/50: Train Loss: 0.366474, Val Loss: 0.353797, Val R²: 0.645907
+  Epoch  31/50: Train Loss: 0.364292, Val Loss: 0.352288, Val R²: 0.647418
+  Epoch  32/50: Train Loss: 0.361860, Val Loss: 0.349890, Val R²: 0.649818
+  Epoch  33/50: Train Loss: 0.359034, Val Loss: 0.347775, Val R²: 0.651935
+  Epoch  34/50: Train Loss: 0.356247, Val Loss: 0.345261, Val R²: 0.654450
+  Epoch  35/50: Train Loss: 0.352957, Val Loss: 0.343706, Val R²: 0.656007
+  Epoch  36/50: Train Loss: 0.350504, Val Loss: 0.341455, Val R²: 0.658260
+  Epoch  37/50: Train Loss: 0.348458, Val Loss: 0.340441, Val R²: 0.659275
+  Epoch  38/50: Train Loss: 0.346293, Val Loss: 0.338133, Val R²: 0.661585
+  Epoch  39/50: Train Loss: 0.343314, Val Loss: 0.336052, Val R²: 0.663668
+  Epoch  40/50: Train Loss: 0.341461, Val Loss: 0.334751, Val R²: 0.664970
+  Epoch  41/50: Train Loss: 0.337757, Val Loss: 0.333458, Val R²: 0.666263
+  Epoch  42/50: Train Loss: 0.337820, Val Loss: 0.331660, Val R²: 0.668063
+  Epoch  43/50: Train Loss: 0.334986, Val Loss: 0.329530, Val R²: 0.670195
+  Epoch  44/50: Train Loss: 0.331912, Val Loss: 0.328884, Val R²: 0.670842
+  Epoch  45/50: Train Loss: 0.329545, Val Loss: 0.326758, Val R²: 0.672969
+  Epoch  46/50: Train Loss: 0.327394, Val Loss: 0.325002, Val R²: 0.674727
+  Epoch  48/50: Train Loss: 0.322784, Val Loss: 0.322208, Val R²: 0.677523
+  Epoch  49/50: Train Loss: 0.320939, Val Loss: 0.320821, Val R²: 0.678911
+  Epoch  50/50: Train Loss: 0.319771, Val Loss: 0.319631, Val R²: 0.680102
+
+  ✓ Kombinasyon 29 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True}
+     Best Val R²: 0.680102 (Epoch 50)
+     Test R²: 0.685909
+     Test MAE: 4.621877
+     Test RMSE: 5.948948
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.319771, Val Loss: 0.319631
+       Train-Val Gap: 0.000140 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0004 (Negatif = Overfitting)
+       Best Epoch Gap: 0.000140
+
+================================================================================
+KOMBİNASYON 30/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.998990, Val Loss: 0.982706, Val R²: 0.016473
+  Epoch   2/50: Train Loss: 0.964468, Val Loss: 0.931433, Val R²: 0.067789
+  Epoch   3/50: Train Loss: 0.877485, Val Loss: 0.799745, Val R²: 0.199586
+  Epoch   4/50: Train Loss: 0.719941, Val Loss: 0.627744, Val R²: 0.371732
+  Epoch   5/50: Train Loss: 0.594580, Val Loss: 0.548311, Val R²: 0.451231
+  Epoch   6/50: Train Loss: 0.551361, Val Loss: 0.524312, Val R²: 0.475250
+  Epoch   7/50: Train Loss: 0.532553, Val Loss: 0.509323, Val R²: 0.490252
+  Epoch   8/50: Train Loss: 0.518123, Val Loss: 0.497101, Val R²: 0.502483
+  Epoch   9/50: Train Loss: 0.506834, Val Loss: 0.486057, Val R²: 0.513537
+  Epoch  10/50: Train Loss: 0.496987, Val Loss: 0.476283, Val R²: 0.523319
+  Epoch  11/50: Train Loss: 0.488250, Val Loss: 0.466957, Val R²: 0.532652
+  Epoch  12/50: Train Loss: 0.479556, Val Loss: 0.458893, Val R²: 0.540724
+  Epoch  13/50: Train Loss: 0.472177, Val Loss: 0.451544, Val R²: 0.548078
+  Epoch  14/50: Train Loss: 0.466098, Val Loss: 0.444785, Val R²: 0.554844
+  Epoch  15/50: Train Loss: 0.459460, Val Loss: 0.439039, Val R²: 0.560594
+  Epoch  16/50: Train Loss: 0.453419, Val Loss: 0.433415, Val R²: 0.566223
+  Epoch  17/50: Train Loss: 0.448927, Val Loss: 0.428691, Val R²: 0.570951
+  Epoch  18/50: Train Loss: 0.444681, Val Loss: 0.424032, Val R²: 0.575613
+  Epoch  19/50: Train Loss: 0.440984, Val Loss: 0.420760, Val R²: 0.578889
+  Epoch  20/50: Train Loss: 0.435088, Val Loss: 0.416894, Val R²: 0.582758
+  Epoch  21/50: Train Loss: 0.433033, Val Loss: 0.413746, Val R²: 0.585908
+  Epoch  22/50: Train Loss: 0.429979, Val Loss: 0.410153, Val R²: 0.589504
+  Epoch  23/50: Train Loss: 0.426261, Val Loss: 0.406688, Val R²: 0.592972
+  Epoch  24/50: Train Loss: 0.423307, Val Loss: 0.405019, Val R²: 0.594643
+  Epoch  25/50: Train Loss: 0.419405, Val Loss: 0.401449, Val R²: 0.598215
+  Epoch  26/50: Train Loss: 0.417998, Val Loss: 0.399806, Val R²: 0.599860
+  Epoch  27/50: Train Loss: 0.414482, Val Loss: 0.396406, Val R²: 0.603262
+  Epoch  28/50: Train Loss: 0.412094, Val Loss: 0.393768, Val R²: 0.605903
+  Epoch  29/50: Train Loss: 0.409407, Val Loss: 0.391744, Val R²: 0.607928
+  Epoch  30/50: Train Loss: 0.405723, Val Loss: 0.389092, Val R²: 0.610583
+  Epoch  31/50: Train Loss: 0.403936, Val Loss: 0.387366, Val R²: 0.612310
+  Epoch  32/50: Train Loss: 0.401082, Val Loss: 0.384993, Val R²: 0.614686
+  Epoch  33/50: Train Loss: 0.399252, Val Loss: 0.382789, Val R²: 0.616891
+  Epoch  34/50: Train Loss: 0.397317, Val Loss: 0.381044, Val R²: 0.618638
+  Epoch  35/50: Train Loss: 0.394342, Val Loss: 0.379307, Val R²: 0.620376
+  Epoch  36/50: Train Loss: 0.392057, Val Loss: 0.377400, Val R²: 0.622284
+  Epoch  37/50: Train Loss: 0.390771, Val Loss: 0.375408, Val R²: 0.624278
+  Epoch  38/50: Train Loss: 0.388763, Val Loss: 0.374361, Val R²: 0.625327
+  Epoch  39/50: Train Loss: 0.386370, Val Loss: 0.372331, Val R²: 0.627357
+  Epoch  40/50: Train Loss: 0.384910, Val Loss: 0.370822, Val R²: 0.628868
+  Epoch  41/50: Train Loss: 0.383065, Val Loss: 0.369385, Val R²: 0.630307
+  Epoch  42/50: Train Loss: 0.382136, Val Loss: 0.368569, Val R²: 0.631123
+  Epoch  43/50: Train Loss: 0.380293, Val Loss: 0.366362, Val R²: 0.633332
+  Epoch  44/50: Train Loss: 0.378144, Val Loss: 0.365860, Val R²: 0.633835
+  Epoch  45/50: Train Loss: 0.375926, Val Loss: 0.364123, Val R²: 0.635573
+  Epoch  46/50: Train Loss: 0.374962, Val Loss: 0.362624, Val R²: 0.637072
+  Epoch  47/50: Train Loss: 0.373555, Val Loss: 0.361743, Val R²: 0.637955
+  Epoch  48/50: Train Loss: 0.371127, Val Loss: 0.360680, Val R²: 0.639018
+  Epoch  49/50: Train Loss: 0.370287, Val Loss: 0.359264, Val R²: 0.640436
+  Epoch  50/50: Train Loss: 0.369409, Val Loss: 0.357815, Val R²: 0.641886
+
+  ✓ Kombinasyon 30 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': False}
+     Best Val R²: 0.641886 (Epoch 50)
+     Test R²: 0.647202
+     Test MAE: 4.914804
+     Test RMSE: 6.304867
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.369409, Val Loss: 0.357815
+       Train-Val Gap: 0.011594 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0324 (Negatif = Overfitting)
+       Best Epoch Gap: 0.011594
+
+================================================================================
+KOMBİNASYON 31/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 1.035765, Val Loss: 0.982944, Val R²: 0.016234
+  Epoch   2/50: Train Loss: 0.823566, Val Loss: 0.748364, Val R²: 0.251010
+  Epoch   3/50: Train Loss: 0.682663, Val Loss: 0.582793, Val R²: 0.416720
+  Epoch   4/50: Train Loss: 0.611855, Val Loss: 0.542267, Val R²: 0.457280
+  Epoch   5/50: Train Loss: 0.575290, Val Loss: 0.523577, Val R²: 0.475985
+  Epoch   6/50: Train Loss: 0.551776, Val Loss: 0.509220, Val R²: 0.490355
+  Epoch   7/50: Train Loss: 0.535915, Val Loss: 0.498016, Val R²: 0.501568
+  Epoch   8/50: Train Loss: 0.522853, Val Loss: 0.488822, Val R²: 0.510770
+  Epoch   9/50: Train Loss: 0.511842, Val Loss: 0.480024, Val R²: 0.519575
+  Epoch  10/50: Train Loss: 0.503379, Val Loss: 0.472312, Val R²: 0.527293
+  Epoch  11/50: Train Loss: 0.494569, Val Loss: 0.465012, Val R²: 0.534599
+  Epoch  12/50: Train Loss: 0.487689, Val Loss: 0.457778, Val R²: 0.541840
+  Epoch  13/50: Train Loss: 0.479532, Val Loss: 0.452123, Val R²: 0.547500
+  Epoch  14/50: Train Loss: 0.472414, Val Loss: 0.445217, Val R²: 0.554411
+  Epoch  15/50: Train Loss: 0.465560, Val Loss: 0.439029, Val R²: 0.560605
+  Epoch  16/50: Train Loss: 0.459661, Val Loss: 0.433874, Val R²: 0.565764
+  Epoch  17/50: Train Loss: 0.453641, Val Loss: 0.428633, Val R²: 0.571009
+  Epoch  18/50: Train Loss: 0.449272, Val Loss: 0.423992, Val R²: 0.575654
+  Epoch  19/50: Train Loss: 0.445329, Val Loss: 0.420245, Val R²: 0.579403
+  Epoch  20/50: Train Loss: 0.439035, Val Loss: 0.415720, Val R²: 0.583933
+  Epoch  21/50: Train Loss: 0.435966, Val Loss: 0.411944, Val R²: 0.587712
+  Epoch  22/50: Train Loss: 0.432733, Val Loss: 0.408227, Val R²: 0.591432
+  Epoch  23/50: Train Loss: 0.427498, Val Loss: 0.404930, Val R²: 0.594732
+  Epoch  24/50: Train Loss: 0.424823, Val Loss: 0.401801, Val R²: 0.597863
+  Epoch  25/50: Train Loss: 0.420040, Val Loss: 0.398873, Val R²: 0.600794
+  Epoch  26/50: Train Loss: 0.417950, Val Loss: 0.396020, Val R²: 0.603649
+  Epoch  27/50: Train Loss: 0.414545, Val Loss: 0.393742, Val R²: 0.605929
+  Epoch  28/50: Train Loss: 0.411656, Val Loss: 0.391357, Val R²: 0.608316
+  Epoch  29/50: Train Loss: 0.408868, Val Loss: 0.388226, Val R²: 0.611450
+  Epoch  30/50: Train Loss: 0.405111, Val Loss: 0.386690, Val R²: 0.612987
+  Epoch  31/50: Train Loss: 0.402327, Val Loss: 0.383946, Val R²: 0.615734
+  Epoch  32/50: Train Loss: 0.400648, Val Loss: 0.381583, Val R²: 0.618098
+  Epoch  33/50: Train Loss: 0.397857, Val Loss: 0.379712, Val R²: 0.619971
+  Epoch  34/50: Train Loss: 0.395249, Val Loss: 0.378275, Val R²: 0.621409
+  Epoch  35/50: Train Loss: 0.392304, Val Loss: 0.376083, Val R²: 0.623603
+  Epoch  36/50: Train Loss: 0.390106, Val Loss: 0.374224, Val R²: 0.625464
+  Epoch  37/50: Train Loss: 0.389422, Val Loss: 0.372677, Val R²: 0.627011
+  Epoch  38/50: Train Loss: 0.385970, Val Loss: 0.370550, Val R²: 0.629141
+  Epoch  39/50: Train Loss: 0.383343, Val Loss: 0.368760, Val R²: 0.630932
+  Epoch  40/50: Train Loss: 0.382434, Val Loss: 0.367417, Val R²: 0.632276
+  Epoch  41/50: Train Loss: 0.380013, Val Loss: 0.365565, Val R²: 0.634130
+  Epoch  42/50: Train Loss: 0.379188, Val Loss: 0.364127, Val R²: 0.635569
+  Epoch  43/50: Train Loss: 0.377680, Val Loss: 0.362356, Val R²: 0.637341
+  Epoch  44/50: Train Loss: 0.374591, Val Loss: 0.361226, Val R²: 0.638473
+  Epoch  45/50: Train Loss: 0.372630, Val Loss: 0.359603, Val R²: 0.640097
+  Epoch  46/50: Train Loss: 0.370345, Val Loss: 0.357723, Val R²: 0.641978
+  Epoch  47/50: Train Loss: 0.368406, Val Loss: 0.356540, Val R²: 0.643162
+  Epoch  49/50: Train Loss: 0.364985, Val Loss: 0.353752, Val R²: 0.645952
+  Epoch  50/50: Train Loss: 0.362822, Val Loss: 0.352137, Val R²: 0.647569
+
+  ✓ Kombinasyon 31 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': True}
+     Best Val R²: 0.647569 (Epoch 50)
+     Test R²: 0.655092
+     Test MAE: 4.861638
+     Test RMSE: 6.233962
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.362822, Val Loss: 0.352137
+       Train-Val Gap: 0.010685 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0303 (Negatif = Overfitting)
+       Best Epoch Gap: 0.010685
+
+================================================================================
+KOMBİNASYON 32/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 1.005882, Val Loss: 0.995178, Val R²: 0.003991
+  Epoch   2/50: Train Loss: 0.991002, Val Loss: 0.981292, Val R²: 0.017888
+  Epoch   3/50: Train Loss: 0.974571, Val Loss: 0.960112, Val R²: 0.039086
+  Epoch   4/50: Train Loss: 0.945894, Val Loss: 0.921328, Val R²: 0.077902
+  Epoch   5/50: Train Loss: 0.897647, Val Loss: 0.860343, Val R²: 0.138938
+  Epoch   6/50: Train Loss: 0.826371, Val Loss: 0.776301, Val R²: 0.223050
+  Epoch   7/50: Train Loss: 0.737873, Val Loss: 0.682348, Val R²: 0.317082
+  Epoch   8/50: Train Loss: 0.653141, Val Loss: 0.605085, Val R²: 0.394409
+  Epoch   9/50: Train Loss: 0.595769, Val Loss: 0.561041, Val R²: 0.438490
+  Epoch  10/50: Train Loss: 0.567556, Val Loss: 0.540692, Val R²: 0.458856
+  Epoch  11/50: Train Loss: 0.551581, Val Loss: 0.528383, Val R²: 0.471176
+  Epoch  12/50: Train Loss: 0.540787, Val Loss: 0.519302, Val R²: 0.480264
+  Epoch  13/50: Train Loss: 0.531526, Val Loss: 0.511633, Val R²: 0.487939
+  Epoch  14/50: Train Loss: 0.522371, Val Loss: 0.504118, Val R²: 0.495461
+  Epoch  15/50: Train Loss: 0.516022, Val Loss: 0.497414, Val R²: 0.502170
+  Epoch  16/50: Train Loss: 0.509254, Val Loss: 0.491144, Val R²: 0.508446
+  Epoch  17/50: Train Loss: 0.502718, Val Loss: 0.485034, Val R²: 0.514560
+  Epoch  18/50: Train Loss: 0.496750, Val Loss: 0.478934, Val R²: 0.520666
+  Epoch  19/50: Train Loss: 0.492811, Val Loss: 0.473602, Val R²: 0.526002
+  Epoch  20/50: Train Loss: 0.485450, Val Loss: 0.468258, Val R²: 0.531351
+  Epoch  21/50: Train Loss: 0.482057, Val Loss: 0.463568, Val R²: 0.536044
+  Epoch  22/50: Train Loss: 0.477460, Val Loss: 0.458846, Val R²: 0.540771
+  Epoch  23/50: Train Loss: 0.472419, Val Loss: 0.454427, Val R²: 0.545193
+  Epoch  24/50: Train Loss: 0.468930, Val Loss: 0.450366, Val R²: 0.549257
+  Epoch  25/50: Train Loss: 0.463816, Val Loss: 0.446236, Val R²: 0.553391
+  Epoch  26/50: Train Loss: 0.461132, Val Loss: 0.442587, Val R²: 0.557043
+  Epoch  27/50: Train Loss: 0.457301, Val Loss: 0.439016, Val R²: 0.560617
+  Epoch  28/50: Train Loss: 0.454935, Val Loss: 0.435925, Val R²: 0.563711
+  Epoch  29/50: Train Loss: 0.451149, Val Loss: 0.433530, Val R²: 0.566107
+  Epoch  30/50: Train Loss: 0.447166, Val Loss: 0.429908, Val R²: 0.569733
+  Epoch  31/50: Train Loss: 0.444414, Val Loss: 0.426919, Val R²: 0.572724
+  Epoch  32/50: Train Loss: 0.442741, Val Loss: 0.424382, Val R²: 0.575263
+  Epoch  33/50: Train Loss: 0.439808, Val Loss: 0.422163, Val R²: 0.577484
+  Epoch  34/50: Train Loss: 0.436881, Val Loss: 0.420285, Val R²: 0.579364
+  Epoch  35/50: Train Loss: 0.434782, Val Loss: 0.417953, Val R²: 0.581698
+  Epoch  36/50: Train Loss: 0.432890, Val Loss: 0.415337, Val R²: 0.584316
+  Epoch  37/50: Train Loss: 0.431123, Val Loss: 0.413427, Val R²: 0.586227
+  Epoch  38/50: Train Loss: 0.428439, Val Loss: 0.411328, Val R²: 0.588328
+  Epoch  39/50: Train Loss: 0.426297, Val Loss: 0.409371, Val R²: 0.590287
+  Epoch  40/50: Train Loss: 0.424875, Val Loss: 0.407742, Val R²: 0.591917
+  Epoch  41/50: Train Loss: 0.422660, Val Loss: 0.405581, Val R²: 0.594080
+  Epoch  42/50: Train Loss: 0.421088, Val Loss: 0.403971, Val R²: 0.595692
+  Epoch  43/50: Train Loss: 0.420104, Val Loss: 0.402302, Val R²: 0.597362
+  Epoch  44/50: Train Loss: 0.417412, Val Loss: 0.400645, Val R²: 0.599020
+  Epoch  45/50: Train Loss: 0.414722, Val Loss: 0.399017, Val R²: 0.600649
+  Epoch  46/50: Train Loss: 0.413999, Val Loss: 0.397499, Val R²: 0.602169
+  Epoch  47/50: Train Loss: 0.411672, Val Loss: 0.395986, Val R²: 0.603683
+  Epoch  48/50: Train Loss: 0.410289, Val Loss: 0.394744, Val R²: 0.604926
+  Epoch  49/50: Train Loss: 0.409498, Val Loss: 0.393259, Val R²: 0.606412
+  Epoch  50/50: Train Loss: 0.407064, Val Loss: 0.391411, Val R²: 0.608262
+
+  ✓ Kombinasyon 32 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': False}
+     Best Val R²: 0.608262 (Epoch 50)
+     Test R²: 0.613436
+     Test MAE: 5.192139
+     Test RMSE: 6.599685
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.407064, Val Loss: 0.391411
+       Train-Val Gap: 0.015653 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0400 (Negatif = Overfitting)
+       Best Epoch Gap: 0.015653
+
+================================================================================
+KOMBİNASYON 33/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 1.023036, Val Loss: 0.981626, Val R²: 0.017554
+  Epoch   2/50: Train Loss: 0.815666, Val Loss: 0.742056, Val R²: 0.257324
+  Epoch   3/50: Train Loss: 0.678335, Val Loss: 0.580389, Val R²: 0.419126
+  Epoch   4/50: Train Loss: 0.609895, Val Loss: 0.541428, Val R²: 0.458119
+  Epoch   5/50: Train Loss: 0.574196, Val Loss: 0.522929, Val R²: 0.476634
+  Epoch   6/50: Train Loss: 0.551141, Val Loss: 0.509358, Val R²: 0.490216
+  Epoch   7/50: Train Loss: 0.536112, Val Loss: 0.498476, Val R²: 0.501107
+  Epoch   8/50: Train Loss: 0.523660, Val Loss: 0.489596, Val R²: 0.509994
+  Epoch   9/50: Train Loss: 0.512961, Val Loss: 0.480911, Val R²: 0.518687
+  Epoch  10/50: Train Loss: 0.504419, Val Loss: 0.473609, Val R²: 0.525995
+  Epoch  11/50: Train Loss: 0.495839, Val Loss: 0.466188, Val R²: 0.533422
+  Epoch  12/50: Train Loss: 0.489409, Val Loss: 0.459171, Val R²: 0.540446
+  Epoch  13/50: Train Loss: 0.481305, Val Loss: 0.453392, Val R²: 0.546229
+  Epoch  14/50: Train Loss: 0.474138, Val Loss: 0.446891, Val R²: 0.552736
+  Epoch  15/50: Train Loss: 0.467219, Val Loss: 0.440705, Val R²: 0.558927
+  Epoch  16/50: Train Loss: 0.461243, Val Loss: 0.435315, Val R²: 0.564321
+  Epoch  17/50: Train Loss: 0.455181, Val Loss: 0.430138, Val R²: 0.569503
+  Epoch  18/50: Train Loss: 0.450939, Val Loss: 0.425282, Val R²: 0.574362
+  Epoch  19/50: Train Loss: 0.446918, Val Loss: 0.421210, Val R²: 0.578438
+  Epoch  20/50: Train Loss: 0.440303, Val Loss: 0.416834, Val R²: 0.582818
+  Epoch  21/50: Train Loss: 0.437277, Val Loss: 0.412935, Val R²: 0.586720
+  Epoch  22/50: Train Loss: 0.433948, Val Loss: 0.408974, Val R²: 0.590684
+  Epoch  23/50: Train Loss: 0.428631, Val Loss: 0.405654, Val R²: 0.594007
+  Epoch  24/50: Train Loss: 0.425994, Val Loss: 0.402691, Val R²: 0.596972
+  Epoch  25/50: Train Loss: 0.421352, Val Loss: 0.399575, Val R²: 0.600091
+  Epoch  26/50: Train Loss: 0.419217, Val Loss: 0.396649, Val R²: 0.603020
+  Epoch  27/50: Train Loss: 0.415876, Val Loss: 0.394493, Val R²: 0.605177
+  Epoch  28/50: Train Loss: 0.413012, Val Loss: 0.392228, Val R²: 0.607444
+  Epoch  29/50: Train Loss: 0.410140, Val Loss: 0.389066, Val R²: 0.610609
+  Epoch  30/50: Train Loss: 0.406386, Val Loss: 0.387672, Val R²: 0.612004
+  Epoch  31/50: Train Loss: 0.403911, Val Loss: 0.384765, Val R²: 0.614913
+  Epoch  32/50: Train Loss: 0.402093, Val Loss: 0.382462, Val R²: 0.617218
+  Epoch  33/50: Train Loss: 0.399097, Val Loss: 0.380474, Val R²: 0.619208
+  Epoch  34/50: Train Loss: 0.396548, Val Loss: 0.379109, Val R²: 0.620574
+  Epoch  35/50: Train Loss: 0.393774, Val Loss: 0.376843, Val R²: 0.622842
+  Epoch  36/50: Train Loss: 0.391582, Val Loss: 0.375135, Val R²: 0.624551
+  Epoch  37/50: Train Loss: 0.390688, Val Loss: 0.373415, Val R²: 0.626273
+  Epoch  38/50: Train Loss: 0.387359, Val Loss: 0.371491, Val R²: 0.628198
+  Epoch  39/50: Train Loss: 0.384384, Val Loss: 0.369550, Val R²: 0.630141
+  Epoch  40/50: Train Loss: 0.383689, Val Loss: 0.368221, Val R²: 0.631472
+  Epoch  41/50: Train Loss: 0.381264, Val Loss: 0.366352, Val R²: 0.633342
+  Epoch  42/50: Train Loss: 0.380384, Val Loss: 0.364932, Val R²: 0.634763
+  Epoch  43/50: Train Loss: 0.378611, Val Loss: 0.363037, Val R²: 0.636659
+  Epoch  44/50: Train Loss: 0.375463, Val Loss: 0.361898, Val R²: 0.637799
+  Epoch  45/50: Train Loss: 0.373862, Val Loss: 0.360374, Val R²: 0.639325
+  Epoch  46/50: Train Loss: 0.371240, Val Loss: 0.358403, Val R²: 0.641297
+  Epoch  47/50: Train Loss: 0.369198, Val Loss: 0.357105, Val R²: 0.642597
+  Epoch  49/50: Train Loss: 0.366166, Val Loss: 0.354350, Val R²: 0.645354
+  Epoch  50/50: Train Loss: 0.363746, Val Loss: 0.352708, Val R²: 0.646998
+
+  ✓ Kombinasyon 33 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': True}
+     Best Val R²: 0.646998 (Epoch 50)
+     Test R²: 0.654910
+     Test MAE: 4.859968
+     Test RMSE: 6.235611
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.363746, Val Loss: 0.352708
+       Train-Val Gap: 0.011039 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0313 (Negatif = Overfitting)
+       Best Epoch Gap: 0.011039
+
+================================================================================
+KOMBİNASYON 34/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 1.005882, Val Loss: 0.995178, Val R²: 0.003991
+  Epoch   2/50: Train Loss: 0.991002, Val Loss: 0.981293, Val R²: 0.017887
+  Epoch   3/50: Train Loss: 0.974570, Val Loss: 0.960102, Val R²: 0.039096
+  Epoch   4/50: Train Loss: 0.945882, Val Loss: 0.921322, Val R²: 0.077908
+  Epoch   5/50: Train Loss: 0.897668, Val Loss: 0.860490, Val R²: 0.138791
+  Epoch   6/50: Train Loss: 0.826505, Val Loss: 0.776471, Val R²: 0.222880
+  Epoch   7/50: Train Loss: 0.738025, Val Loss: 0.682499, Val R²: 0.316931
+  Epoch   8/50: Train Loss: 0.653273, Val Loss: 0.605207, Val R²: 0.394287
+  Epoch   9/50: Train Loss: 0.595855, Val Loss: 0.561108, Val R²: 0.438423
+  Epoch  10/50: Train Loss: 0.567603, Val Loss: 0.540725, Val R²: 0.458823
+  Epoch  11/50: Train Loss: 0.551599, Val Loss: 0.528358, Val R²: 0.471200
+  Epoch  12/50: Train Loss: 0.540761, Val Loss: 0.519218, Val R²: 0.480348
+  Epoch  13/50: Train Loss: 0.531503, Val Loss: 0.511513, Val R²: 0.488060
+  Epoch  14/50: Train Loss: 0.522300, Val Loss: 0.503882, Val R²: 0.495697
+  Epoch  15/50: Train Loss: 0.515744, Val Loss: 0.497048, Val R²: 0.502536
+  Epoch  16/50: Train Loss: 0.508890, Val Loss: 0.490928, Val R²: 0.508661
+  Epoch  17/50: Train Loss: 0.502308, Val Loss: 0.484674, Val R²: 0.514921
+  Epoch  18/50: Train Loss: 0.496381, Val Loss: 0.478751, Val R²: 0.520849
+  Epoch  19/50: Train Loss: 0.492550, Val Loss: 0.473473, Val R²: 0.526131
+  Epoch  20/50: Train Loss: 0.485270, Val Loss: 0.468139, Val R²: 0.531469
+  Epoch  21/50: Train Loss: 0.481903, Val Loss: 0.463473, Val R²: 0.536140
+  Epoch  22/50: Train Loss: 0.477347, Val Loss: 0.458755, Val R²: 0.540862
+  Epoch  23/50: Train Loss: 0.472324, Val Loss: 0.454334, Val R²: 0.545286
+  Epoch  24/50: Train Loss: 0.468812, Val Loss: 0.450233, Val R²: 0.549391
+  Epoch  25/50: Train Loss: 0.463672, Val Loss: 0.446068, Val R²: 0.553559
+  Epoch  26/50: Train Loss: 0.460972, Val Loss: 0.442433, Val R²: 0.557197
+  Epoch  27/50: Train Loss: 0.457149, Val Loss: 0.438868, Val R²: 0.560765
+  Epoch  28/50: Train Loss: 0.454801, Val Loss: 0.435776, Val R²: 0.563860
+  Epoch  29/50: Train Loss: 0.451010, Val Loss: 0.433359, Val R²: 0.566279
+  Epoch  30/50: Train Loss: 0.447038, Val Loss: 0.429752, Val R²: 0.569889
+  Epoch  31/50: Train Loss: 0.444290, Val Loss: 0.426770, Val R²: 0.572873
+  Epoch  32/50: Train Loss: 0.442619, Val Loss: 0.424243, Val R²: 0.575402
+  Epoch  33/50: Train Loss: 0.439707, Val Loss: 0.422030, Val R²: 0.577617
+  Epoch  34/50: Train Loss: 0.436806, Val Loss: 0.420155, Val R²: 0.579494
+  Epoch  35/50: Train Loss: 0.434705, Val Loss: 0.417859, Val R²: 0.581792
+  Epoch  36/50: Train Loss: 0.432843, Val Loss: 0.415240, Val R²: 0.584413
+  Epoch  37/50: Train Loss: 0.431073, Val Loss: 0.413358, Val R²: 0.586297
+  Epoch  38/50: Train Loss: 0.428404, Val Loss: 0.411264, Val R²: 0.588392
+  Epoch  39/50: Train Loss: 0.426262, Val Loss: 0.409324, Val R²: 0.590334
+  Epoch  40/50: Train Loss: 0.424861, Val Loss: 0.407723, Val R²: 0.591936
+  Epoch  41/50: Train Loss: 0.422647, Val Loss: 0.405566, Val R²: 0.594095
+  Epoch  42/50: Train Loss: 0.421066, Val Loss: 0.403950, Val R²: 0.595712
+  Epoch  43/50: Train Loss: 0.420099, Val Loss: 0.402279, Val R²: 0.597385
+  Epoch  44/50: Train Loss: 0.417422, Val Loss: 0.400623, Val R²: 0.599042
+  Epoch  45/50: Train Loss: 0.414724, Val Loss: 0.398992, Val R²: 0.600675
+  Epoch  46/50: Train Loss: 0.414001, Val Loss: 0.397501, Val R²: 0.602167
+  Epoch  47/50: Train Loss: 0.411679, Val Loss: 0.395992, Val R²: 0.603677
+  Epoch  48/50: Train Loss: 0.410221, Val Loss: 0.394597, Val R²: 0.605074
+  Epoch  49/50: Train Loss: 0.409325, Val Loss: 0.393087, Val R²: 0.606584
+  Epoch  50/50: Train Loss: 0.406723, Val Loss: 0.391202, Val R²: 0.608471
+
+  ✓ Kombinasyon 34 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': False}
+     Best Val R²: 0.608471 (Epoch 50)
+     Test R²: 0.613612
+     Test MAE: 5.189576
+     Test RMSE: 6.598183
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.406723, Val Loss: 0.391202
+       Train-Val Gap: 0.015521 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0397 (Negatif = Overfitting)
+       Best Epoch Gap: 0.015521
+
+================================================================================
+KOMBİNASYON 35/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 1.023025, Val Loss: 0.981675, Val R²: 0.017505
+  Epoch   2/50: Train Loss: 0.815695, Val Loss: 0.742201, Val R²: 0.257179
+  Epoch   3/50: Train Loss: 0.678360, Val Loss: 0.580395, Val R²: 0.419120
+  Epoch   4/50: Train Loss: 0.609883, Val Loss: 0.541391, Val R²: 0.458156
+  Epoch   5/50: Train Loss: 0.574181, Val Loss: 0.522960, Val R²: 0.476603
+  Epoch   6/50: Train Loss: 0.551126, Val Loss: 0.509333, Val R²: 0.490241
+  Epoch   7/50: Train Loss: 0.536109, Val Loss: 0.498489, Val R²: 0.501095
+  Epoch   8/50: Train Loss: 0.523665, Val Loss: 0.489566, Val R²: 0.510025
+  Epoch   9/50: Train Loss: 0.512961, Val Loss: 0.480903, Val R²: 0.518695
+  Epoch  10/50: Train Loss: 0.504435, Val Loss: 0.473611, Val R²: 0.525994
+  Epoch  11/50: Train Loss: 0.495849, Val Loss: 0.466150, Val R²: 0.533460
+  Epoch  12/50: Train Loss: 0.489422, Val Loss: 0.459152, Val R²: 0.540464
+  Epoch  13/50: Train Loss: 0.481325, Val Loss: 0.453313, Val R²: 0.546308
+  Epoch  14/50: Train Loss: 0.474151, Val Loss: 0.446857, Val R²: 0.552769
+  Epoch  15/50: Train Loss: 0.467235, Val Loss: 0.440710, Val R²: 0.558922
+  Epoch  16/50: Train Loss: 0.461284, Val Loss: 0.435302, Val R²: 0.564334
+  Epoch  17/50: Train Loss: 0.455228, Val Loss: 0.430229, Val R²: 0.569412
+  Epoch  18/50: Train Loss: 0.450965, Val Loss: 0.425329, Val R²: 0.574315
+  Epoch  19/50: Train Loss: 0.446940, Val Loss: 0.421239, Val R²: 0.578409
+  Epoch  20/50: Train Loss: 0.440316, Val Loss: 0.416843, Val R²: 0.582808
+  Epoch  21/50: Train Loss: 0.437278, Val Loss: 0.412926, Val R²: 0.586729
+  Epoch  22/50: Train Loss: 0.433945, Val Loss: 0.408986, Val R²: 0.590672
+  Epoch  23/50: Train Loss: 0.428609, Val Loss: 0.405581, Val R²: 0.594080
+  Epoch  24/50: Train Loss: 0.425962, Val Loss: 0.402613, Val R²: 0.597051
+  Epoch  25/50: Train Loss: 0.421308, Val Loss: 0.399508, Val R²: 0.600158
+  Epoch  26/50: Train Loss: 0.419187, Val Loss: 0.396579, Val R²: 0.603090
+  Epoch  27/50: Train Loss: 0.415829, Val Loss: 0.394437, Val R²: 0.605233
+  Epoch  28/50: Train Loss: 0.412965, Val Loss: 0.392095, Val R²: 0.607577
+  Epoch  29/50: Train Loss: 0.410072, Val Loss: 0.388973, Val R²: 0.610702
+  Epoch  30/50: Train Loss: 0.406318, Val Loss: 0.387661, Val R²: 0.612015
+  Epoch  31/50: Train Loss: 0.403859, Val Loss: 0.384693, Val R²: 0.614985
+  Epoch  32/50: Train Loss: 0.401999, Val Loss: 0.382421, Val R²: 0.617260
+  Epoch  33/50: Train Loss: 0.399020, Val Loss: 0.380393, Val R²: 0.619289
+  Epoch  34/50: Train Loss: 0.396485, Val Loss: 0.379113, Val R²: 0.620570
+  Epoch  35/50: Train Loss: 0.393716, Val Loss: 0.376827, Val R²: 0.622858
+  Epoch  36/50: Train Loss: 0.391498, Val Loss: 0.375121, Val R²: 0.624565
+  Epoch  37/50: Train Loss: 0.390606, Val Loss: 0.373415, Val R²: 0.626273
+  Epoch  38/50: Train Loss: 0.387254, Val Loss: 0.371453, Val R²: 0.628237
+  Epoch  39/50: Train Loss: 0.384298, Val Loss: 0.369500, Val R²: 0.630191
+  Epoch  40/50: Train Loss: 0.383610, Val Loss: 0.368137, Val R²: 0.631556
+  Epoch  41/50: Train Loss: 0.381177, Val Loss: 0.366326, Val R²: 0.633368
+  Epoch  42/50: Train Loss: 0.380274, Val Loss: 0.364847, Val R²: 0.634849
+  Epoch  43/50: Train Loss: 0.378512, Val Loss: 0.363023, Val R²: 0.636674
+  Epoch  44/50: Train Loss: 0.375398, Val Loss: 0.361831, Val R²: 0.637866
+  Epoch  45/50: Train Loss: 0.373743, Val Loss: 0.360290, Val R²: 0.639409
+  Epoch  46/50: Train Loss: 0.371153, Val Loss: 0.358286, Val R²: 0.641414
+  Epoch  47/50: Train Loss: 0.369140, Val Loss: 0.357047, Val R²: 0.642655
+  Epoch  49/50: Train Loss: 0.366090, Val Loss: 0.354284, Val R²: 0.645420
+  Epoch  50/50: Train Loss: 0.363691, Val Loss: 0.352640, Val R²: 0.647065
+
+  ✓ Kombinasyon 35 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': True}
+     Best Val R²: 0.647065 (Epoch 50)
+     Test R²: 0.654988
+     Test MAE: 4.857929
+     Test RMSE: 6.234909
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.363691, Val Loss: 0.352640
+       Train-Val Gap: 0.011051 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0313 (Negatif = Overfitting)
+       Best Epoch Gap: 0.011051
+
+================================================================================
+KOMBİNASYON 36/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 1.005882, Val Loss: 0.995178, Val R²: 0.003990
+  Epoch   2/50: Train Loss: 0.991004, Val Loss: 0.981294, Val R²: 0.017886
+  Epoch   3/50: Train Loss: 0.974573, Val Loss: 0.960114, Val R²: 0.039083
+  Epoch   4/50: Train Loss: 0.945900, Val Loss: 0.921336, Val R²: 0.077894
+  Epoch   5/50: Train Loss: 0.897664, Val Loss: 0.860367, Val R²: 0.138914
+  Epoch   6/50: Train Loss: 0.826413, Val Loss: 0.776359, Val R²: 0.222992
+  Epoch   7/50: Train Loss: 0.737938, Val Loss: 0.682425, Val R²: 0.317005
+  Epoch   8/50: Train Loss: 0.653204, Val Loss: 0.605143, Val R²: 0.394351
+  Epoch   9/50: Train Loss: 0.595809, Val Loss: 0.561076, Val R²: 0.438455
+  Epoch  10/50: Train Loss: 0.567577, Val Loss: 0.540709, Val R²: 0.458839
+  Epoch  11/50: Train Loss: 0.551591, Val Loss: 0.528381, Val R²: 0.471178
+  Epoch  12/50: Train Loss: 0.540768, Val Loss: 0.519278, Val R²: 0.480288
+  Epoch  13/50: Train Loss: 0.531504, Val Loss: 0.511599, Val R²: 0.487973
+  Epoch  14/50: Train Loss: 0.522324, Val Loss: 0.503914, Val R²: 0.495665
+  Epoch  15/50: Train Loss: 0.515693, Val Loss: 0.496971, Val R²: 0.502613
+  Epoch  16/50: Train Loss: 0.508690, Val Loss: 0.490596, Val R²: 0.508994
+  Epoch  17/50: Train Loss: 0.502025, Val Loss: 0.484467, Val R²: 0.515128
+  Epoch  18/50: Train Loss: 0.496088, Val Loss: 0.478606, Val R²: 0.520994
+  Epoch  19/50: Train Loss: 0.492352, Val Loss: 0.473321, Val R²: 0.526283
+  Epoch  20/50: Train Loss: 0.485055, Val Loss: 0.467993, Val R²: 0.531616
+  Epoch  21/50: Train Loss: 0.481730, Val Loss: 0.463349, Val R²: 0.536264
+  Epoch  22/50: Train Loss: 0.477222, Val Loss: 0.458619, Val R²: 0.540998
+  Epoch  23/50: Train Loss: 0.472172, Val Loss: 0.454205, Val R²: 0.545415
+  Epoch  24/50: Train Loss: 0.468662, Val Loss: 0.450102, Val R²: 0.549522
+  Epoch  25/50: Train Loss: 0.463499, Val Loss: 0.445955, Val R²: 0.553672
+  Epoch  26/50: Train Loss: 0.460819, Val Loss: 0.442345, Val R²: 0.557285
+  Epoch  27/50: Train Loss: 0.457009, Val Loss: 0.438780, Val R²: 0.560853
+  Epoch  28/50: Train Loss: 0.454684, Val Loss: 0.435691, Val R²: 0.563945
+  Epoch  29/50: Train Loss: 0.450903, Val Loss: 0.433284, Val R²: 0.566353
+  Epoch  30/50: Train Loss: 0.446971, Val Loss: 0.429691, Val R²: 0.569950
+  Epoch  31/50: Train Loss: 0.444212, Val Loss: 0.426729, Val R²: 0.572914
+  Epoch  32/50: Train Loss: 0.442547, Val Loss: 0.424197, Val R²: 0.575449
+  Epoch  33/50: Train Loss: 0.439630, Val Loss: 0.421981, Val R²: 0.577666
+  Epoch  34/50: Train Loss: 0.436729, Val Loss: 0.420114, Val R²: 0.579535
+  Epoch  35/50: Train Loss: 0.434649, Val Loss: 0.417793, Val R²: 0.581858
+  Epoch  36/50: Train Loss: 0.432769, Val Loss: 0.415167, Val R²: 0.584486
+  Epoch  37/50: Train Loss: 0.431010, Val Loss: 0.413287, Val R²: 0.586367
+  Epoch  38/50: Train Loss: 0.428344, Val Loss: 0.411199, Val R²: 0.588458
+  Epoch  39/50: Train Loss: 0.426194, Val Loss: 0.409236, Val R²: 0.590422
+  Epoch  40/50: Train Loss: 0.424794, Val Loss: 0.407618, Val R²: 0.592042
+  Epoch  41/50: Train Loss: 0.422571, Val Loss: 0.405456, Val R²: 0.594205
+  Epoch  42/50: Train Loss: 0.420997, Val Loss: 0.403824, Val R²: 0.595839
+  Epoch  43/50: Train Loss: 0.420036, Val Loss: 0.402155, Val R²: 0.597509
+  Epoch  44/50: Train Loss: 0.417356, Val Loss: 0.400484, Val R²: 0.599181
+  Epoch  45/50: Train Loss: 0.414635, Val Loss: 0.398828, Val R²: 0.600839
+  Epoch  46/50: Train Loss: 0.413776, Val Loss: 0.397203, Val R²: 0.602465
+  Epoch  47/50: Train Loss: 0.411344, Val Loss: 0.395663, Val R²: 0.604006
+  Epoch  48/50: Train Loss: 0.409859, Val Loss: 0.394330, Val R²: 0.605340
+  Epoch  49/50: Train Loss: 0.409063, Val Loss: 0.392874, Val R²: 0.606798
+  Epoch  50/50: Train Loss: 0.406491, Val Loss: 0.391046, Val R²: 0.608627
+
+  ✓ Kombinasyon 36 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.0001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': False}
+     Best Val R²: 0.608627 (Epoch 50)
+     Test R²: 0.613729
+     Test MAE: 5.188462
+     Test RMSE: 6.597186
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.406491, Val Loss: 0.391046
+       Train-Val Gap: 0.015445 (Negatif = Overfitting)
+       Overfitting Ratio: 0.0395 (Negatif = Overfitting)
+       Best Epoch Gap: 0.015445
+
+================================================================================
+KOMBİNASYON 37/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.631616, Val Loss: 0.530475, Val R²: 0.469082
+  Epoch   2/50: Train Loss: 0.466991, Val Loss: 0.415570, Val R²: 0.584082
+  Epoch   3/50: Train Loss: 0.427241, Val Loss: 0.385188, Val R²: 0.614490
+  Epoch   4/50: Train Loss: 0.400596, Val Loss: 0.367927, Val R²: 0.631765
+  Epoch   5/50: Train Loss: 0.381530, Val Loss: 0.354128, Val R²: 0.645576
+  Epoch   6/50: Train Loss: 0.366337, Val Loss: 0.348748, Val R²: 0.650960
+  Epoch   7/50: Train Loss: 0.353216, Val Loss: 0.335240, Val R²: 0.664480
+  Epoch   8/50: Train Loss: 0.339141, Val Loss: 0.322759, Val R²: 0.676971
+  Epoch   9/50: Train Loss: 0.327543, Val Loss: 0.318812, Val R²: 0.680921
+  Epoch  10/50: Train Loss: 0.318731, Val Loss: 0.306678, Val R²: 0.693066
+  Epoch  11/50: Train Loss: 0.307669, Val Loss: 0.303142, Val R²: 0.696605
+  Epoch  12/50: Train Loss: 0.298929, Val Loss: 0.295058, Val R²: 0.704696
+  Epoch  13/50: Train Loss: 0.291045, Val Loss: 0.290305, Val R²: 0.709452
+  Epoch  14/50: Train Loss: 0.282278, Val Loss: 0.285957, Val R²: 0.713804
+  Epoch  15/50: Train Loss: 0.274690, Val Loss: 0.281172, Val R²: 0.718593
+  Epoch  16/50: Train Loss: 0.268021, Val Loss: 0.279291, Val R²: 0.720476
+  Epoch  17/50: Train Loss: 0.264548, Val Loss: 0.273947, Val R²: 0.725824
+  Epoch  20/50: Train Loss: 0.249646, Val Loss: 0.268803, Val R²: 0.730973
+  Epoch  21/50: Train Loss: 0.244893, Val Loss: 0.264499, Val R²: 0.735280
+  Epoch  23/50: Train Loss: 0.236930, Val Loss: 0.259510, Val R²: 0.740273
+  Epoch  24/50: Train Loss: 0.234309, Val Loss: 0.257446, Val R²: 0.742338
+  Epoch  26/50: Train Loss: 0.228254, Val Loss: 0.255654, Val R²: 0.744132
+  Epoch  28/50: Train Loss: 0.222212, Val Loss: 0.251859, Val R²: 0.747931
+  Epoch  30/50: Train Loss: 0.218452, Val Loss: 0.252813, Val R²: 0.746975
+  Epoch  31/50: Train Loss: 0.215312, Val Loss: 0.247811, Val R²: 0.751982
+  Epoch  33/50: Train Loss: 0.211376, Val Loss: 0.246653, Val R²: 0.753141
+  Epoch  35/50: Train Loss: 0.208347, Val Loss: 0.245788, Val R²: 0.754007
+  Epoch  39/50: Train Loss: 0.201634, Val Loss: 0.243877, Val R²: 0.755919
+  Epoch  40/50: Train Loss: 0.202113, Val Loss: 0.244191, Val R²: 0.755605
+  Epoch  41/50: Train Loss: 0.204453, Val Loss: 0.242321, Val R²: 0.757477
+  Epoch  42/50: Train Loss: 0.200625, Val Loss: 0.241082, Val R²: 0.758716
+  Epoch  44/50: Train Loss: 0.195565, Val Loss: 0.239252, Val R²: 0.760548
+  Epoch  47/50: Train Loss: 0.193813, Val Loss: 0.237614, Val R²: 0.762188
+  Epoch  48/50: Train Loss: 0.191734, Val Loss: 0.236257, Val R²: 0.763546
+  Epoch  50/50: Train Loss: 0.191125, Val Loss: 0.235911, Val R²: 0.763892
+
+  ✓ Kombinasyon 37 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': True}
+     Best Val R²: 0.763892 (Epoch 50)
+     Test R²: 0.765445
+     Test MAE: 3.979864
+     Test RMSE: 5.140849
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.191125, Val Loss: 0.235911
+       Train-Val Gap: -0.044786 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1898 (Negatif = Overfitting)
+       Best Epoch Gap: -0.044786
+
+================================================================================
+KOMBİNASYON 38/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.773514, Val Loss: 0.524133, Val R²: 0.475429
+  Epoch   2/50: Train Loss: 0.506627, Val Loss: 0.456695, Val R²: 0.542923
+  Epoch   3/50: Train Loss: 0.457050, Val Loss: 0.421155, Val R²: 0.578493
+  Epoch   4/50: Train Loss: 0.431575, Val Loss: 0.406273, Val R²: 0.593387
+  Epoch   5/50: Train Loss: 0.415081, Val Loss: 0.390293, Val R²: 0.609381
+  Epoch   6/50: Train Loss: 0.401900, Val Loss: 0.379277, Val R²: 0.620406
+  Epoch   7/50: Train Loss: 0.392816, Val Loss: 0.371201, Val R²: 0.628489
+  Epoch   8/50: Train Loss: 0.383091, Val Loss: 0.366724, Val R²: 0.632969
+  Epoch   9/50: Train Loss: 0.376110, Val Loss: 0.360801, Val R²: 0.638898
+  Epoch  10/50: Train Loss: 0.369915, Val Loss: 0.353664, Val R²: 0.646040
+  Epoch  11/50: Train Loss: 0.363844, Val Loss: 0.350626, Val R²: 0.649081
+  Epoch  12/50: Train Loss: 0.357856, Val Loss: 0.345569, Val R²: 0.654142
+  Epoch  13/50: Train Loss: 0.351025, Val Loss: 0.340291, Val R²: 0.659425
+  Epoch  15/50: Train Loss: 0.341216, Val Loss: 0.331698, Val R²: 0.668024
+  Epoch  16/50: Train Loss: 0.334721, Val Loss: 0.329807, Val R²: 0.669918
+  Epoch  17/50: Train Loss: 0.332465, Val Loss: 0.328403, Val R²: 0.671323
+  Epoch  18/50: Train Loss: 0.326070, Val Loss: 0.325071, Val R²: 0.674658
+  Epoch  20/50: Train Loss: 0.319405, Val Loss: 0.319462, Val R²: 0.680271
+  Epoch  21/50: Train Loss: 0.312555, Val Loss: 0.316236, Val R²: 0.683500
+  Epoch  22/50: Train Loss: 0.311339, Val Loss: 0.312091, Val R²: 0.687648
+  Epoch  23/50: Train Loss: 0.307594, Val Loss: 0.309771, Val R²: 0.689970
+  Epoch  25/50: Train Loss: 0.299085, Val Loss: 0.305666, Val R²: 0.694079
+  Epoch  26/50: Train Loss: 0.298663, Val Loss: 0.302054, Val R²: 0.697694
+  Epoch  27/50: Train Loss: 0.294231, Val Loss: 0.301519, Val R²: 0.698229
+  Epoch  28/50: Train Loss: 0.289672, Val Loss: 0.300510, Val R²: 0.699239
+  Epoch  29/50: Train Loss: 0.287527, Val Loss: 0.298050, Val R²: 0.701701
+  Epoch  30/50: Train Loss: 0.283840, Val Loss: 0.306509, Val R²: 0.693235
+  Epoch  32/50: Train Loss: 0.279918, Val Loss: 0.292868, Val R²: 0.706888
+  Epoch  33/50: Train Loss: 0.275267, Val Loss: 0.292143, Val R²: 0.707613
+  Epoch  36/50: Train Loss: 0.274643, Val Loss: 0.289723, Val R²: 0.710034
+  Epoch  37/50: Train Loss: 0.268383, Val Loss: 0.286023, Val R²: 0.713738
+  Epoch  40/50: Train Loss: 0.264602, Val Loss: 0.285200, Val R²: 0.714561
+  Epoch  41/50: Train Loss: 0.260869, Val Loss: 0.282617, Val R²: 0.717147
+  Epoch  43/50: Train Loss: 0.262347, Val Loss: 0.281224, Val R²: 0.718541
+  Epoch  47/50: Train Loss: 0.255407, Val Loss: 0.277982, Val R²: 0.721785
+  Epoch  48/50: Train Loss: 0.251172, Val Loss: 0.276613, Val R²: 0.723156
+  Epoch  50/50: Train Loss: 0.254214, Val Loss: 0.276850, Val R²: 0.722918
+
+  ✓ Kombinasyon 38 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.0001, 'use_batchnorm': False}
+     Best Val R²: 0.723156 (Epoch 48)
+     Test R²: 0.729107
+     Test MAE: 4.264140
+     Test RMSE: 5.524734
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.254214, Val Loss: 0.276850
+       Train-Val Gap: -0.022636 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0818 (Negatif = Overfitting)
+       Best Epoch Gap: -0.025441
+
+================================================================================
+KOMBİNASYON 39/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.631645, Val Loss: 0.530107, Val R²: 0.469450
+  Epoch   2/50: Train Loss: 0.466991, Val Loss: 0.415634, Val R²: 0.584019
+  Epoch   3/50: Train Loss: 0.427421, Val Loss: 0.385638, Val R²: 0.614040
+  Epoch   4/50: Train Loss: 0.400886, Val Loss: 0.368849, Val R²: 0.630843
+  Epoch   5/50: Train Loss: 0.381582, Val Loss: 0.354476, Val R²: 0.645228
+  Epoch   6/50: Train Loss: 0.366495, Val Loss: 0.349262, Val R²: 0.650446
+  Epoch   7/50: Train Loss: 0.352992, Val Loss: 0.334123, Val R²: 0.665598
+  Epoch   8/50: Train Loss: 0.338729, Val Loss: 0.322440, Val R²: 0.677290
+  Epoch   9/50: Train Loss: 0.327217, Val Loss: 0.319197, Val R²: 0.680536
+  Epoch  10/50: Train Loss: 0.318605, Val Loss: 0.307102, Val R²: 0.692641
+  Epoch  11/50: Train Loss: 0.307370, Val Loss: 0.301486, Val R²: 0.698262
+  Epoch  12/50: Train Loss: 0.298688, Val Loss: 0.292288, Val R²: 0.707467
+  Epoch  13/50: Train Loss: 0.290016, Val Loss: 0.291219, Val R²: 0.708538
+  Epoch  14/50: Train Loss: 0.282193, Val Loss: 0.287713, Val R²: 0.712047
+  Epoch  15/50: Train Loss: 0.274603, Val Loss: 0.277306, Val R²: 0.722462
+  Epoch  16/50: Train Loss: 0.267396, Val Loss: 0.277109, Val R²: 0.722659
+  Epoch  17/50: Train Loss: 0.263530, Val Loss: 0.272155, Val R²: 0.727617
+  Epoch  20/50: Train Loss: 0.247598, Val Loss: 0.261360, Val R²: 0.738422
+  Epoch  22/50: Train Loss: 0.241259, Val Loss: 0.258702, Val R²: 0.741082
+  Epoch  23/50: Train Loss: 0.236256, Val Loss: 0.257752, Val R²: 0.742033
+  Epoch  24/50: Train Loss: 0.233172, Val Loss: 0.252651, Val R²: 0.747137
+  Epoch  28/50: Train Loss: 0.221869, Val Loss: 0.247504, Val R²: 0.752290
+  Epoch  30/50: Train Loss: 0.216544, Val Loss: 0.251346, Val R²: 0.748444
+  Epoch  32/50: Train Loss: 0.213057, Val Loss: 0.246325, Val R²: 0.753469
+  Epoch  33/50: Train Loss: 0.211155, Val Loss: 0.243141, Val R²: 0.756656
+  Epoch  34/50: Train Loss: 0.209452, Val Loss: 0.243078, Val R²: 0.756719
+  Epoch  35/50: Train Loss: 0.207268, Val Loss: 0.242984, Val R²: 0.756813
+  Epoch  36/50: Train Loss: 0.205733, Val Loss: 0.242747, Val R²: 0.757050
+  Epoch  38/50: Train Loss: 0.203627, Val Loss: 0.242112, Val R²: 0.757685
+  Epoch  39/50: Train Loss: 0.200601, Val Loss: 0.239539, Val R²: 0.760261
+  Epoch  40/50: Train Loss: 0.200304, Val Loss: 0.237482, Val R²: 0.762319
+  Epoch  43/50: Train Loss: 0.195360, Val Loss: 0.235412, Val R²: 0.764392
+  Epoch  50/50: Train Loss: 0.190473, Val Loss: 0.233368, Val R²: 0.766437
+
+  ✓ Kombinasyon 39 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': True}
+     Best Val R²: 0.766437 (Epoch 50)
+     Test R²: 0.770562
+     Test MAE: 3.936662
+     Test RMSE: 5.084467
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.190473, Val Loss: 0.233368
+       Train-Val Gap: -0.042896 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1838 (Negatif = Overfitting)
+       Best Epoch Gap: -0.042896
+
+================================================================================
+KOMBİNASYON 40/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.773986, Val Loss: 0.524242, Val R²: 0.475320
+  Epoch   2/50: Train Loss: 0.506640, Val Loss: 0.456819, Val R²: 0.542799
+  Epoch   3/50: Train Loss: 0.456849, Val Loss: 0.421013, Val R²: 0.578636
+  Epoch   4/50: Train Loss: 0.431419, Val Loss: 0.406412, Val R²: 0.593249
+  Epoch   5/50: Train Loss: 0.414942, Val Loss: 0.390779, Val R²: 0.608894
+  Epoch   6/50: Train Loss: 0.401681, Val Loss: 0.379226, Val R²: 0.620457
+  Epoch   7/50: Train Loss: 0.392480, Val Loss: 0.371103, Val R²: 0.628586
+  Epoch   8/50: Train Loss: 0.382643, Val Loss: 0.366604, Val R²: 0.633090
+  Epoch   9/50: Train Loss: 0.375680, Val Loss: 0.360486, Val R²: 0.639212
+  Epoch  10/50: Train Loss: 0.369156, Val Loss: 0.353021, Val R²: 0.646684
+  Epoch  11/50: Train Loss: 0.362555, Val Loss: 0.350181, Val R²: 0.649527
+  Epoch  12/50: Train Loss: 0.356463, Val Loss: 0.347647, Val R²: 0.652063
+  Epoch  13/50: Train Loss: 0.349353, Val Loss: 0.339446, Val R²: 0.660270
+  Epoch  15/50: Train Loss: 0.339482, Val Loss: 0.331228, Val R²: 0.668495
+  Epoch  16/50: Train Loss: 0.333317, Val Loss: 0.329690, Val R²: 0.670034
+  Epoch  17/50: Train Loss: 0.330066, Val Loss: 0.326871, Val R²: 0.672856
+  Epoch  18/50: Train Loss: 0.324178, Val Loss: 0.323965, Val R²: 0.675764
+  Epoch  19/50: Train Loss: 0.321449, Val Loss: 0.322965, Val R²: 0.676765
+  Epoch  20/50: Train Loss: 0.317995, Val Loss: 0.324376, Val R²: 0.675353
+  Epoch  21/50: Train Loss: 0.311355, Val Loss: 0.317324, Val R²: 0.682411
+  Epoch  22/50: Train Loss: 0.310231, Val Loss: 0.314537, Val R²: 0.685200
+  Epoch  23/50: Train Loss: 0.305877, Val Loss: 0.309729, Val R²: 0.690012
+  Epoch  24/50: Train Loss: 0.301412, Val Loss: 0.309428, Val R²: 0.690313
+  Epoch  25/50: Train Loss: 0.297830, Val Loss: 0.307766, Val R²: 0.691977
+  Epoch  26/50: Train Loss: 0.296860, Val Loss: 0.302757, Val R²: 0.696990
+  Epoch  28/50: Train Loss: 0.288655, Val Loss: 0.298785, Val R²: 0.700965
+  Epoch  29/50: Train Loss: 0.285290, Val Loss: 0.298785, Val R²: 0.700966
+  Epoch  30/50: Train Loss: 0.286638, Val Loss: 0.297949, Val R²: 0.701802
+  Epoch  32/50: Train Loss: 0.282667, Val Loss: 0.292791, Val R²: 0.706964
+  Epoch  33/50: Train Loss: 0.273801, Val Loss: 0.291893, Val R²: 0.707863
+  Epoch  36/50: Train Loss: 0.271652, Val Loss: 0.287052, Val R²: 0.712708
+  Epoch  38/50: Train Loss: 0.270554, Val Loss: 0.285117, Val R²: 0.714645
+  Epoch  40/50: Train Loss: 0.262671, Val Loss: 0.282901, Val R²: 0.716863
+  Epoch  41/50: Train Loss: 0.258662, Val Loss: 0.281537, Val R²: 0.718228
+  Epoch  45/50: Train Loss: 0.257074, Val Loss: 0.280654, Val R²: 0.719112
+  Epoch  47/50: Train Loss: 0.252946, Val Loss: 0.277159, Val R²: 0.722609
+  Epoch  48/50: Train Loss: 0.247862, Val Loss: 0.276240, Val R²: 0.723530
+  Epoch  50/50: Train Loss: 0.249060, Val Loss: 0.277952, Val R²: 0.721816
+
+  ✓ Kombinasyon 40 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.001, 'use_batchnorm': False}
+     Best Val R²: 0.723530 (Epoch 48)
+     Test R²: 0.728751
+     Test MAE: 4.251723
+     Test RMSE: 5.528367
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.249060, Val Loss: 0.277952
+       Train-Val Gap: -0.028892 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1039 (Negatif = Overfitting)
+       Best Epoch Gap: -0.028377
+
+================================================================================
+KOMBİNASYON 41/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.631664, Val Loss: 0.529866, Val R²: 0.469691
+  Epoch   2/50: Train Loss: 0.467056, Val Loss: 0.415610, Val R²: 0.584043
+  Epoch   3/50: Train Loss: 0.427275, Val Loss: 0.385494, Val R²: 0.614184
+  Epoch   4/50: Train Loss: 0.400709, Val Loss: 0.368131, Val R²: 0.631562
+  Epoch   5/50: Train Loss: 0.381619, Val Loss: 0.354394, Val R²: 0.645310
+  Epoch   6/50: Train Loss: 0.366567, Val Loss: 0.347663, Val R²: 0.652046
+  Epoch   7/50: Train Loss: 0.352844, Val Loss: 0.334745, Val R²: 0.664975
+  Epoch   8/50: Train Loss: 0.338560, Val Loss: 0.321799, Val R²: 0.677932
+  Epoch   9/50: Train Loss: 0.327137, Val Loss: 0.317086, Val R²: 0.682649
+  Epoch  10/50: Train Loss: 0.318338, Val Loss: 0.306828, Val R²: 0.692916
+  Epoch  11/50: Train Loss: 0.307265, Val Loss: 0.300688, Val R²: 0.699061
+  Epoch  12/50: Train Loss: 0.297963, Val Loss: 0.293743, Val R²: 0.706012
+  Epoch  13/50: Train Loss: 0.289877, Val Loss: 0.287520, Val R²: 0.712240
+  Epoch  14/50: Train Loss: 0.281457, Val Loss: 0.283105, Val R²: 0.716658
+  Epoch  15/50: Train Loss: 0.273388, Val Loss: 0.279187, Val R²: 0.720580
+  Epoch  16/50: Train Loss: 0.267203, Val Loss: 0.277881, Val R²: 0.721887
+  Epoch  17/50: Train Loss: 0.263119, Val Loss: 0.272784, Val R²: 0.726988
+  Epoch  20/50: Train Loss: 0.246889, Val Loss: 0.264867, Val R²: 0.734911
+  Epoch  21/50: Train Loss: 0.243305, Val Loss: 0.262260, Val R²: 0.737521
+  Epoch  22/50: Train Loss: 0.240529, Val Loss: 0.259488, Val R²: 0.740295
+  Epoch  23/50: Train Loss: 0.235428, Val Loss: 0.257033, Val R²: 0.742752
+  Epoch  24/50: Train Loss: 0.233449, Val Loss: 0.255852, Val R²: 0.743934
+  Epoch  26/50: Train Loss: 0.227445, Val Loss: 0.253087, Val R²: 0.746701
+  Epoch  28/50: Train Loss: 0.221229, Val Loss: 0.247702, Val R²: 0.752091
+  Epoch  30/50: Train Loss: 0.217367, Val Loss: 0.262317, Val R²: 0.737464
+  Epoch  31/50: Train Loss: 0.214356, Val Loss: 0.244883, Val R²: 0.754913
+  Epoch  32/50: Train Loss: 0.213834, Val Loss: 0.243227, Val R²: 0.756570
+  Epoch  33/50: Train Loss: 0.210737, Val Loss: 0.242326, Val R²: 0.757471
+  Epoch  35/50: Train Loss: 0.207316, Val Loss: 0.241600, Val R²: 0.758198
+  Epoch  37/50: Train Loss: 0.204337, Val Loss: 0.239302, Val R²: 0.760498
+  Epoch  40/50: Train Loss: 0.202037, Val Loss: 0.238610, Val R²: 0.761191
+  Epoch  42/50: Train Loss: 0.198806, Val Loss: 0.236865, Val R²: 0.762937
+  Epoch  43/50: Train Loss: 0.196155, Val Loss: 0.234648, Val R²: 0.765156
+  Epoch  44/50: Train Loss: 0.194304, Val Loss: 0.234379, Val R²: 0.765425
+  Epoch  48/50: Train Loss: 0.191227, Val Loss: 0.232845, Val R²: 0.766960
+  Epoch  50/50: Train Loss: 0.190153, Val Loss: 0.231036, Val R²: 0.768771
+
+  ✓ Kombinasyon 41 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True}
+     Best Val R²: 0.768771 (Epoch 50)
+     Test R²: 0.770028
+     Test MAE: 3.924082
+     Test RMSE: 5.090383
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.190153, Val Loss: 0.231036
+       Train-Val Gap: -0.040883 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1770 (Negatif = Overfitting)
+       Best Epoch Gap: -0.040883
+
+================================================================================
+KOMBİNASYON 42/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.773338, Val Loss: 0.524042, Val R²: 0.475520
+  Epoch   2/50: Train Loss: 0.507136, Val Loss: 0.457528, Val R²: 0.542090
+  Epoch   3/50: Train Loss: 0.458503, Val Loss: 0.422278, Val R²: 0.577369
+  Epoch   4/50: Train Loss: 0.433105, Val Loss: 0.405921, Val R²: 0.593740
+  Epoch   5/50: Train Loss: 0.416523, Val Loss: 0.390196, Val R²: 0.609478
+  Epoch   6/50: Train Loss: 0.403065, Val Loss: 0.380175, Val R²: 0.619507
+  Epoch   7/50: Train Loss: 0.393555, Val Loss: 0.372327, Val R²: 0.627362
+  Epoch   8/50: Train Loss: 0.384014, Val Loss: 0.367241, Val R²: 0.632453
+  Epoch   9/50: Train Loss: 0.376971, Val Loss: 0.360034, Val R²: 0.639665
+  Epoch  10/50: Train Loss: 0.370037, Val Loss: 0.353844, Val R²: 0.645860
+  Epoch  11/50: Train Loss: 0.364130, Val Loss: 0.351251, Val R²: 0.648456
+  Epoch  12/50: Train Loss: 0.357980, Val Loss: 0.345915, Val R²: 0.653796
+  Epoch  13/50: Train Loss: 0.351322, Val Loss: 0.340477, Val R²: 0.659238
+  Epoch  15/50: Train Loss: 0.341423, Val Loss: 0.332704, Val R²: 0.667018
+  Epoch  16/50: Train Loss: 0.335681, Val Loss: 0.331188, Val R²: 0.668535
+  Epoch  17/50: Train Loss: 0.333196, Val Loss: 0.328127, Val R²: 0.671598
+  Epoch  18/50: Train Loss: 0.327384, Val Loss: 0.326427, Val R²: 0.673300
+  Epoch  20/50: Train Loss: 0.320138, Val Loss: 0.321652, Val R²: 0.678079
+  Epoch  21/50: Train Loss: 0.313599, Val Loss: 0.319171, Val R²: 0.680563
+  Epoch  22/50: Train Loss: 0.312457, Val Loss: 0.314681, Val R²: 0.685057
+  Epoch  23/50: Train Loss: 0.308028, Val Loss: 0.310822, Val R²: 0.688918
+  Epoch  25/50: Train Loss: 0.299988, Val Loss: 0.309201, Val R²: 0.690541
+  Epoch  26/50: Train Loss: 0.301302, Val Loss: 0.305499, Val R²: 0.694246
+  Epoch  27/50: Train Loss: 0.295444, Val Loss: 0.302777, Val R²: 0.696970
+  Epoch  29/50: Train Loss: 0.289608, Val Loss: 0.299379, Val R²: 0.700370
+  Epoch  30/50: Train Loss: 0.284571, Val Loss: 0.302988, Val R²: 0.696759
+  Epoch  32/50: Train Loss: 0.283792, Val Loss: 0.299372, Val R²: 0.700378
+  Epoch  35/50: Train Loss: 0.275960, Val Loss: 0.290870, Val R²: 0.708887
+  Epoch  36/50: Train Loss: 0.273051, Val Loss: 0.290629, Val R²: 0.709128
+  Epoch  39/50: Train Loss: 0.271940, Val Loss: 0.288027, Val R²: 0.711732
+  Epoch  40/50: Train Loss: 0.266099, Val Loss: 0.293852, Val R²: 0.705902
+  Epoch  41/50: Train Loss: 0.265919, Val Loss: 0.285683, Val R²: 0.714078
+  Epoch  42/50: Train Loss: 0.261988, Val Loss: 0.283954, Val R²: 0.715808
+  Epoch  44/50: Train Loss: 0.261248, Val Loss: 0.283222, Val R²: 0.716542
+  Epoch  48/50: Train Loss: 0.252950, Val Loss: 0.278863, Val R²: 0.720904
+  Epoch  50/50: Train Loss: 0.255264, Val Loss: 0.277256, Val R²: 0.722512
+
+  ✓ Kombinasyon 42 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': False}
+     Best Val R²: 0.722512 (Epoch 50)
+     Test R²: 0.728839
+     Test MAE: 4.269710
+     Test RMSE: 5.527467
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.255264, Val Loss: 0.277256
+       Train-Val Gap: -0.021992 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0793 (Negatif = Overfitting)
+       Best Epoch Gap: -0.021992
+
+================================================================================
+KOMBİNASYON 43/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.731190, Val Loss: 0.819974, Val R²: 0.179341
+  Epoch   2/50: Train Loss: 0.513738, Val Loss: 0.524564, Val R²: 0.474998
+  Epoch   3/50: Train Loss: 0.470388, Val Loss: 0.430976, Val R²: 0.568664
+  Epoch   4/50: Train Loss: 0.441415, Val Loss: 0.404248, Val R²: 0.595414
+  Epoch   5/50: Train Loss: 0.422290, Val Loss: 0.388320, Val R²: 0.611356
+  Epoch   6/50: Train Loss: 0.404894, Val Loss: 0.375925, Val R²: 0.623761
+  Epoch   7/50: Train Loss: 0.391085, Val Loss: 0.365318, Val R²: 0.634377
+  Epoch   8/50: Train Loss: 0.380043, Val Loss: 0.360627, Val R²: 0.639072
+  Epoch   9/50: Train Loss: 0.370411, Val Loss: 0.349039, Val R²: 0.650670
+  Epoch  10/50: Train Loss: 0.359826, Val Loss: 0.341384, Val R²: 0.658330
+  Epoch  11/50: Train Loss: 0.351561, Val Loss: 0.334450, Val R²: 0.665271
+  Epoch  12/50: Train Loss: 0.342697, Val Loss: 0.331442, Val R²: 0.668281
+  Epoch  13/50: Train Loss: 0.333827, Val Loss: 0.320290, Val R²: 0.679442
+  Epoch  14/50: Train Loss: 0.326788, Val Loss: 0.318081, Val R²: 0.681653
+  Epoch  15/50: Train Loss: 0.317444, Val Loss: 0.309992, Val R²: 0.689749
+  Epoch  16/50: Train Loss: 0.309365, Val Loss: 0.306140, Val R²: 0.693604
+  Epoch  17/50: Train Loss: 0.301392, Val Loss: 0.302376, Val R²: 0.697371
+  Epoch  20/50: Train Loss: 0.284374, Val Loss: 0.288714, Val R²: 0.711044
+  Epoch  21/50: Train Loss: 0.278881, Val Loss: 0.282276, Val R²: 0.717488
+  Epoch  22/50: Train Loss: 0.273715, Val Loss: 0.278919, Val R²: 0.720848
+  Epoch  24/50: Train Loss: 0.264600, Val Loss: 0.275326, Val R²: 0.724444
+  Epoch  25/50: Train Loss: 0.258101, Val Loss: 0.271553, Val R²: 0.728220
+  Epoch  26/50: Train Loss: 0.255961, Val Loss: 0.269738, Val R²: 0.730037
+  Epoch  27/50: Train Loss: 0.251175, Val Loss: 0.267387, Val R²: 0.732389
+  Epoch  28/50: Train Loss: 0.247386, Val Loss: 0.266545, Val R²: 0.733232
+  Epoch  29/50: Train Loss: 0.244020, Val Loss: 0.264040, Val R²: 0.735739
+  Epoch  30/50: Train Loss: 0.238599, Val Loss: 0.268228, Val R²: 0.731548
+  Epoch  31/50: Train Loss: 0.236892, Val Loss: 0.260171, Val R²: 0.739612
+  Epoch  32/50: Train Loss: 0.234802, Val Loss: 0.257587, Val R²: 0.742198
+  Epoch  36/50: Train Loss: 0.226511, Val Loss: 0.251813, Val R²: 0.747977
+  Epoch  39/50: Train Loss: 0.221083, Val Loss: 0.249838, Val R²: 0.749954
+  Epoch  40/50: Train Loss: 0.218122, Val Loss: 0.256345, Val R²: 0.743440
+  Epoch  41/50: Train Loss: 0.216509, Val Loss: 0.247741, Val R²: 0.752052
+  Epoch  42/50: Train Loss: 0.214291, Val Loss: 0.247427, Val R²: 0.752366
+  Epoch  44/50: Train Loss: 0.211695, Val Loss: 0.246975, Val R²: 0.752819
+  Epoch  45/50: Train Loss: 0.212324, Val Loss: 0.246476, Val R²: 0.753318
+  Epoch  46/50: Train Loss: 0.210946, Val Loss: 0.245707, Val R²: 0.754088
+  Epoch  48/50: Train Loss: 0.207636, Val Loss: 0.244421, Val R²: 0.755375
+  Epoch  49/50: Train Loss: 0.203080, Val Loss: 0.243173, Val R²: 0.756624
+  Epoch  50/50: Train Loss: 0.202619, Val Loss: 0.246072, Val R²: 0.753723
+
+  ✓ Kombinasyon 43 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': True}
+     Best Val R²: 0.756624 (Epoch 49)
+     Test R²: 0.758807
+     Test MAE: 4.069274
+     Test RMSE: 5.213091
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.202619, Val Loss: 0.246072
+       Train-Val Gap: -0.043452 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1766 (Negatif = Overfitting)
+       Best Epoch Gap: -0.040093
+
+================================================================================
+KOMBİNASYON 44/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.932696, Val Loss: 0.746611, Val R²: 0.252765
+  Epoch   2/50: Train Loss: 0.615885, Val Loss: 0.525863, Val R²: 0.473698
+  Epoch   3/50: Train Loss: 0.520225, Val Loss: 0.481686, Val R²: 0.517912
+  Epoch   4/50: Train Loss: 0.485043, Val Loss: 0.457187, Val R²: 0.542431
+  Epoch   5/50: Train Loss: 0.464250, Val Loss: 0.438946, Val R²: 0.560687
+  Epoch   6/50: Train Loss: 0.446890, Val Loss: 0.422034, Val R²: 0.577614
+  Epoch   7/50: Train Loss: 0.432998, Val Loss: 0.409597, Val R²: 0.590061
+  Epoch   8/50: Train Loss: 0.422174, Val Loss: 0.399930, Val R²: 0.599736
+  Epoch   9/50: Train Loss: 0.412534, Val Loss: 0.391151, Val R²: 0.608522
+  Epoch  10/50: Train Loss: 0.403557, Val Loss: 0.384040, Val R²: 0.615639
+  Epoch  11/50: Train Loss: 0.395754, Val Loss: 0.377617, Val R²: 0.622068
+  Epoch  12/50: Train Loss: 0.390719, Val Loss: 0.374809, Val R²: 0.624877
+  Epoch  13/50: Train Loss: 0.384453, Val Loss: 0.367283, Val R²: 0.632410
+  Epoch  15/50: Train Loss: 0.374021, Val Loss: 0.359861, Val R²: 0.639839
+  Epoch  16/50: Train Loss: 0.368155, Val Loss: 0.356034, Val R²: 0.643668
+  Epoch  17/50: Train Loss: 0.364996, Val Loss: 0.352200, Val R²: 0.647506
+  Epoch  18/50: Train Loss: 0.361495, Val Loss: 0.349665, Val R²: 0.650043
+  Epoch  19/50: Train Loss: 0.357206, Val Loss: 0.346332, Val R²: 0.653379
+  Epoch  20/50: Train Loss: 0.351195, Val Loss: 0.343639, Val R²: 0.656074
+  Epoch  22/50: Train Loss: 0.347630, Val Loss: 0.339356, Val R²: 0.660360
+  Epoch  23/50: Train Loss: 0.342259, Val Loss: 0.335650, Val R²: 0.664069
+  Epoch  24/50: Train Loss: 0.340980, Val Loss: 0.332874, Val R²: 0.666848
+  Epoch  25/50: Train Loss: 0.334584, Val Loss: 0.331726, Val R²: 0.667997
+  Epoch  26/50: Train Loss: 0.332175, Val Loss: 0.329208, Val R²: 0.670517
+  Epoch  27/50: Train Loss: 0.331710, Val Loss: 0.326571, Val R²: 0.673156
+  Epoch  28/50: Train Loss: 0.328320, Val Loss: 0.324337, Val R²: 0.675392
+  Epoch  30/50: Train Loss: 0.322744, Val Loss: 0.320692, Val R²: 0.679040
+  Epoch  33/50: Train Loss: 0.312675, Val Loss: 0.317975, Val R²: 0.681759
+  Epoch  35/50: Train Loss: 0.316347, Val Loss: 0.314465, Val R²: 0.685272
+  Epoch  36/50: Train Loss: 0.309354, Val Loss: 0.312360, Val R²: 0.687379
+  Epoch  38/50: Train Loss: 0.303766, Val Loss: 0.309307, Val R²: 0.690435
+  Epoch  39/50: Train Loss: 0.299729, Val Loss: 0.308159, Val R²: 0.691583
+  Epoch  40/50: Train Loss: 0.300357, Val Loss: 0.317264, Val R²: 0.682471
+  Epoch  41/50: Train Loss: 0.298515, Val Loss: 0.305425, Val R²: 0.694320
+  Epoch  42/50: Train Loss: 0.296364, Val Loss: 0.304744, Val R²: 0.695002
+  Epoch  43/50: Train Loss: 0.292647, Val Loss: 0.304104, Val R²: 0.695642
+  Epoch  45/50: Train Loss: 0.292116, Val Loss: 0.301750, Val R²: 0.697998
+  Epoch  47/50: Train Loss: 0.291372, Val Loss: 0.301377, Val R²: 0.698371
+  Epoch  48/50: Train Loss: 0.287827, Val Loss: 0.298924, Val R²: 0.700826
+  Epoch  49/50: Train Loss: 0.283384, Val Loss: 0.297620, Val R²: 0.702132
+  Epoch  50/50: Train Loss: 0.284726, Val Loss: 0.296258, Val R²: 0.703495
+
+  ✓ Kombinasyon 44 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.0001, 'use_batchnorm': False}
+     Best Val R²: 0.703495 (Epoch 50)
+     Test R²: 0.708628
+     Test MAE: 4.446741
+     Test RMSE: 5.729759
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.284726, Val Loss: 0.296258
+       Train-Val Gap: -0.011531 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0389 (Negatif = Overfitting)
+       Best Epoch Gap: -0.011531
+
+================================================================================
+KOMBİNASYON 45/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.731180, Val Loss: 0.819752, Val R²: 0.179563
+  Epoch   2/50: Train Loss: 0.513650, Val Loss: 0.525047, Val R²: 0.474515
+  Epoch   3/50: Train Loss: 0.470214, Val Loss: 0.431004, Val R²: 0.568636
+  Epoch   4/50: Train Loss: 0.441357, Val Loss: 0.404972, Val R²: 0.594690
+  Epoch   5/50: Train Loss: 0.422280, Val Loss: 0.388655, Val R²: 0.611020
+  Epoch   6/50: Train Loss: 0.404902, Val Loss: 0.376216, Val R²: 0.623470
+  Epoch   7/50: Train Loss: 0.391200, Val Loss: 0.365312, Val R²: 0.634383
+  Epoch   8/50: Train Loss: 0.380125, Val Loss: 0.361155, Val R²: 0.638543
+  Epoch   9/50: Train Loss: 0.370458, Val Loss: 0.349986, Val R²: 0.649722
+  Epoch  10/50: Train Loss: 0.359882, Val Loss: 0.341188, Val R²: 0.658527
+  Epoch  11/50: Train Loss: 0.351559, Val Loss: 0.335131, Val R²: 0.664589
+  Epoch  12/50: Train Loss: 0.342974, Val Loss: 0.330780, Val R²: 0.668943
+  Epoch  13/50: Train Loss: 0.334090, Val Loss: 0.320405, Val R²: 0.679327
+  Epoch  14/50: Train Loss: 0.327035, Val Loss: 0.317501, Val R²: 0.682233
+  Epoch  15/50: Train Loss: 0.317426, Val Loss: 0.309287, Val R²: 0.690454
+  Epoch  16/50: Train Loss: 0.309592, Val Loss: 0.305825, Val R²: 0.693920
+  Epoch  17/50: Train Loss: 0.301370, Val Loss: 0.302084, Val R²: 0.697664
+  Epoch  19/50: Train Loss: 0.292264, Val Loss: 0.300094, Val R²: 0.699655
+  Epoch  20/50: Train Loss: 0.283782, Val Loss: 0.288402, Val R²: 0.711357
+  Epoch  21/50: Train Loss: 0.278398, Val Loss: 0.282850, Val R²: 0.716914
+  Epoch  22/50: Train Loss: 0.273600, Val Loss: 0.279064, Val R²: 0.720703
+  Epoch  24/50: Train Loss: 0.264564, Val Loss: 0.275118, Val R²: 0.724652
+  Epoch  25/50: Train Loss: 0.258595, Val Loss: 0.271424, Val R²: 0.728349
+  Epoch  26/50: Train Loss: 0.255546, Val Loss: 0.268297, Val R²: 0.731479
+  Epoch  27/50: Train Loss: 0.251043, Val Loss: 0.266666, Val R²: 0.733112
+  Epoch  28/50: Train Loss: 0.247317, Val Loss: 0.266416, Val R²: 0.733362
+  Epoch  29/50: Train Loss: 0.244028, Val Loss: 0.262192, Val R²: 0.737589
+  Epoch  30/50: Train Loss: 0.239116, Val Loss: 0.267605, Val R²: 0.732172
+  Epoch  31/50: Train Loss: 0.236723, Val Loss: 0.258848, Val R²: 0.740935
+  Epoch  32/50: Train Loss: 0.235270, Val Loss: 0.257368, Val R²: 0.742417
+  Epoch  33/50: Train Loss: 0.232566, Val Loss: 0.255636, Val R²: 0.744150
+  Epoch  36/50: Train Loss: 0.226874, Val Loss: 0.250540, Val R²: 0.749251
+  Epoch  39/50: Train Loss: 0.220112, Val Loss: 0.249208, Val R²: 0.750584
+  Epoch  40/50: Train Loss: 0.218220, Val Loss: 0.248624, Val R²: 0.751168
+  Epoch  41/50: Train Loss: 0.216659, Val Loss: 0.247986, Val R²: 0.751807
+  Epoch  42/50: Train Loss: 0.214649, Val Loss: 0.246910, Val R²: 0.752884
+  Epoch  44/50: Train Loss: 0.210921, Val Loss: 0.245855, Val R²: 0.753940
+  Epoch  45/50: Train Loss: 0.211283, Val Loss: 0.244911, Val R²: 0.754884
+  Epoch  46/50: Train Loss: 0.208628, Val Loss: 0.244480, Val R²: 0.755316
+  Epoch  48/50: Train Loss: 0.207112, Val Loss: 0.242680, Val R²: 0.757118
+  Epoch  49/50: Train Loss: 0.203986, Val Loss: 0.241030, Val R²: 0.758769
+  Epoch  50/50: Train Loss: 0.202960, Val Loss: 0.241177, Val R²: 0.758621
+
+  ✓ Kombinasyon 45 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': True}
+     Best Val R²: 0.758769 (Epoch 49)
+     Test R²: 0.759278
+     Test MAE: 4.056867
+     Test RMSE: 5.207993
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.202960, Val Loss: 0.241177
+       Train-Val Gap: -0.038217 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1585 (Negatif = Overfitting)
+       Best Epoch Gap: -0.037044
+
+================================================================================
+KOMBİNASYON 46/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.932675, Val Loss: 0.746543, Val R²: 0.252833
+  Epoch   2/50: Train Loss: 0.615841, Val Loss: 0.525861, Val R²: 0.473699
+  Epoch   3/50: Train Loss: 0.520151, Val Loss: 0.481591, Val R²: 0.518006
+  Epoch   4/50: Train Loss: 0.484872, Val Loss: 0.457137, Val R²: 0.542481
+  Epoch   5/50: Train Loss: 0.464084, Val Loss: 0.438829, Val R²: 0.560804
+  Epoch   6/50: Train Loss: 0.446794, Val Loss: 0.421987, Val R²: 0.577660
+  Epoch   7/50: Train Loss: 0.432992, Val Loss: 0.409636, Val R²: 0.590022
+  Epoch   8/50: Train Loss: 0.422329, Val Loss: 0.400034, Val R²: 0.599632
+  Epoch   9/50: Train Loss: 0.412816, Val Loss: 0.391466, Val R²: 0.608207
+  Epoch  10/50: Train Loss: 0.403887, Val Loss: 0.384362, Val R²: 0.615317
+  Epoch  11/50: Train Loss: 0.396031, Val Loss: 0.377695, Val R²: 0.621989
+  Epoch  12/50: Train Loss: 0.390876, Val Loss: 0.374439, Val R²: 0.625248
+  Epoch  13/50: Train Loss: 0.385145, Val Loss: 0.367481, Val R²: 0.632212
+  Epoch  15/50: Train Loss: 0.374698, Val Loss: 0.360262, Val R²: 0.639437
+  Epoch  16/50: Train Loss: 0.369473, Val Loss: 0.359321, Val R²: 0.640379
+  Epoch  17/50: Train Loss: 0.366643, Val Loss: 0.357379, Val R²: 0.642322
+  Epoch  18/50: Train Loss: 0.361146, Val Loss: 0.350725, Val R²: 0.648982
+  Epoch  19/50: Train Loss: 0.358162, Val Loss: 0.348349, Val R²: 0.651360
+  Epoch  20/50: Train Loss: 0.352692, Val Loss: 0.344605, Val R²: 0.655108
+  Epoch  22/50: Train Loss: 0.347751, Val Loss: 0.338957, Val R²: 0.660759
+  Epoch  23/50: Train Loss: 0.343512, Val Loss: 0.336469, Val R²: 0.663250
+  Epoch  25/50: Train Loss: 0.337533, Val Loss: 0.335847, Val R²: 0.663873
+  Epoch  26/50: Train Loss: 0.333819, Val Loss: 0.330295, Val R²: 0.669429
+  Epoch  28/50: Train Loss: 0.330956, Val Loss: 0.327027, Val R²: 0.672700
+  Epoch  29/50: Train Loss: 0.325357, Val Loss: 0.324571, Val R²: 0.675158
+  Epoch  30/50: Train Loss: 0.321540, Val Loss: 0.322448, Val R²: 0.677282
+  Epoch  31/50: Train Loss: 0.321500, Val Loss: 0.319718, Val R²: 0.680015
+  Epoch  32/50: Train Loss: 0.317840, Val Loss: 0.319636, Val R²: 0.680097
+  Epoch  33/50: Train Loss: 0.314087, Val Loss: 0.316780, Val R²: 0.682955
+  Epoch  35/50: Train Loss: 0.323585, Val Loss: 0.316016, Val R²: 0.683720
+  Epoch  36/50: Train Loss: 0.311093, Val Loss: 0.314569, Val R²: 0.685168
+  Epoch  38/50: Train Loss: 0.305333, Val Loss: 0.310555, Val R²: 0.689185
+  Epoch  39/50: Train Loss: 0.301247, Val Loss: 0.308899, Val R²: 0.690843
+  Epoch  40/50: Train Loss: 0.301815, Val Loss: 0.316138, Val R²: 0.683598
+  Epoch  41/50: Train Loss: 0.299623, Val Loss: 0.307341, Val R²: 0.692402
+  Epoch  42/50: Train Loss: 0.299352, Val Loss: 0.305378, Val R²: 0.694367
+  Epoch  45/50: Train Loss: 0.293615, Val Loss: 0.303228, Val R²: 0.696519
+  Epoch  48/50: Train Loss: 0.290950, Val Loss: 0.301665, Val R²: 0.698083
+  Epoch  49/50: Train Loss: 0.285641, Val Loss: 0.298125, Val R²: 0.701626
+  Epoch  50/50: Train Loss: 0.286800, Val Loss: 0.297992, Val R²: 0.701759
+
+  ✓ Kombinasyon 46 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.001, 'use_batchnorm': False}
+     Best Val R²: 0.701759 (Epoch 50)
+     Test R²: 0.705721
+     Test MAE: 4.457960
+     Test RMSE: 5.758270
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.286800, Val Loss: 0.297992
+       Train-Val Gap: -0.011192 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0376 (Negatif = Overfitting)
+       Best Epoch Gap: -0.011192
+
+================================================================================
+KOMBİNASYON 47/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': True}
+================================================================================
+  Epoch   1/50: Train Loss: 0.731163, Val Loss: 0.820849, Val R²: 0.178466
+  Epoch   2/50: Train Loss: 0.513722, Val Loss: 0.525891, Val R²: 0.473670
+  Epoch   3/50: Train Loss: 0.470312, Val Loss: 0.431783, Val R²: 0.567857
+  Epoch   4/50: Train Loss: 0.441424, Val Loss: 0.405380, Val R²: 0.594281
+  Epoch   5/50: Train Loss: 0.422318, Val Loss: 0.388351, Val R²: 0.611324
+  Epoch   6/50: Train Loss: 0.404809, Val Loss: 0.375708, Val R²: 0.623978
+  Epoch   7/50: Train Loss: 0.391119, Val Loss: 0.365211, Val R²: 0.634484
+  Epoch   8/50: Train Loss: 0.380034, Val Loss: 0.361148, Val R²: 0.638550
+  Epoch   9/50: Train Loss: 0.370313, Val Loss: 0.349230, Val R²: 0.650478
+  Epoch  10/50: Train Loss: 0.359721, Val Loss: 0.341208, Val R²: 0.658507
+  Epoch  11/50: Train Loss: 0.351313, Val Loss: 0.334631, Val R²: 0.665089
+  Epoch  12/50: Train Loss: 0.342713, Val Loss: 0.332358, Val R²: 0.667364
+  Epoch  13/50: Train Loss: 0.333782, Val Loss: 0.320199, Val R²: 0.679533
+  Epoch  15/50: Train Loss: 0.317527, Val Loss: 0.309551, Val R²: 0.690190
+  Epoch  16/50: Train Loss: 0.309123, Val Loss: 0.306850, Val R²: 0.692894
+  Epoch  17/50: Train Loss: 0.301420, Val Loss: 0.300969, Val R²: 0.698780
+  Epoch  20/50: Train Loss: 0.283712, Val Loss: 0.288075, Val R²: 0.711684
+  Epoch  21/50: Train Loss: 0.277911, Val Loss: 0.284363, Val R²: 0.715399
+  Epoch  22/50: Train Loss: 0.272898, Val Loss: 0.278688, Val R²: 0.721079
+  Epoch  24/50: Train Loss: 0.264785, Val Loss: 0.274451, Val R²: 0.725319
+  Epoch  25/50: Train Loss: 0.258056, Val Loss: 0.271891, Val R²: 0.727882
+  Epoch  26/50: Train Loss: 0.255857, Val Loss: 0.269355, Val R²: 0.730420
+  Epoch  27/50: Train Loss: 0.250821, Val Loss: 0.267486, Val R²: 0.732291
+  Epoch  28/50: Train Loss: 0.247428, Val Loss: 0.265125, Val R²: 0.734653
+  Epoch  29/50: Train Loss: 0.244463, Val Loss: 0.260903, Val R²: 0.738879
+  Epoch  30/50: Train Loss: 0.238746, Val Loss: 0.265050, Val R²: 0.734729
+  Epoch  31/50: Train Loss: 0.236728, Val Loss: 0.260315, Val R²: 0.739468
+  Epoch  32/50: Train Loss: 0.234536, Val Loss: 0.258468, Val R²: 0.741316
+  Epoch  33/50: Train Loss: 0.232650, Val Loss: 0.255645, Val R²: 0.744141
+  Epoch  36/50: Train Loss: 0.226418, Val Loss: 0.252035, Val R²: 0.747755
+  Epoch  40/50: Train Loss: 0.218939, Val Loss: 0.251562, Val R²: 0.748228
+  Epoch  42/50: Train Loss: 0.213966, Val Loss: 0.249608, Val R²: 0.750184
+  Epoch  43/50: Train Loss: 0.211833, Val Loss: 0.247302, Val R²: 0.752491
+  Epoch  45/50: Train Loss: 0.212651, Val Loss: 0.245514, Val R²: 0.754280
+  Epoch  46/50: Train Loss: 0.209623, Val Loss: 0.243944, Val R²: 0.755852
+  Epoch  48/50: Train Loss: 0.206878, Val Loss: 0.243878, Val R²: 0.755918
+  Epoch  49/50: Train Loss: 0.202995, Val Loss: 0.241541, Val R²: 0.758257
+  Epoch  50/50: Train Loss: 0.202489, Val Loss: 0.243001, Val R²: 0.756796
+
+  ✓ Kombinasyon 47 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': True}
+     Best Val R²: 0.758257 (Epoch 49)
+     Test R²: 0.762206
+     Test MAE: 4.035930
+     Test RMSE: 5.176224
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.202489, Val Loss: 0.243001
+       Train-Val Gap: -0.040512 (Negatif = Overfitting)
+       Overfitting Ratio: -0.1667 (Negatif = Overfitting)
+       Best Epoch Gap: -0.038546
+
+================================================================================
+KOMBİNASYON 48/48
+Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': False}
+================================================================================
+  Epoch   1/50: Train Loss: 0.932715, Val Loss: 0.746704, Val R²: 0.252672
+  Epoch   2/50: Train Loss: 0.615919, Val Loss: 0.525847, Val R²: 0.473714
+  Epoch   3/50: Train Loss: 0.520194, Val Loss: 0.481649, Val R²: 0.517949
+  Epoch   4/50: Train Loss: 0.485021, Val Loss: 0.457099, Val R²: 0.542519
+  Epoch   5/50: Train Loss: 0.464300, Val Loss: 0.439168, Val R²: 0.560465
+  Epoch   6/50: Train Loss: 0.446988, Val Loss: 0.422295, Val R²: 0.577353
+  Epoch   7/50: Train Loss: 0.433173, Val Loss: 0.409790, Val R²: 0.589868
+  Epoch   8/50: Train Loss: 0.422323, Val Loss: 0.399883, Val R²: 0.599783
+  Epoch   9/50: Train Loss: 0.412359, Val Loss: 0.391237, Val R²: 0.608436
+  Epoch  10/50: Train Loss: 0.403342, Val Loss: 0.384303, Val R²: 0.615376
+  Epoch  11/50: Train Loss: 0.395630, Val Loss: 0.377804, Val R²: 0.621880
+  Epoch  12/50: Train Loss: 0.390141, Val Loss: 0.374362, Val R²: 0.625325
+  Epoch  13/50: Train Loss: 0.384465, Val Loss: 0.367663, Val R²: 0.632030
+  Epoch  15/50: Train Loss: 0.373647, Val Loss: 0.360217, Val R²: 0.639482
+  Epoch  16/50: Train Loss: 0.368230, Val Loss: 0.356557, Val R²: 0.643145
+  Epoch  17/50: Train Loss: 0.365651, Val Loss: 0.353821, Val R²: 0.645883
+  Epoch  18/50: Train Loss: 0.360555, Val Loss: 0.350246, Val R²: 0.649462
+  Epoch  19/50: Train Loss: 0.357125, Val Loss: 0.348970, Val R²: 0.650739
+  Epoch  20/50: Train Loss: 0.351691, Val Loss: 0.343873, Val R²: 0.655840
+  Epoch  22/50: Train Loss: 0.346227, Val Loss: 0.338298, Val R²: 0.661419
+  Epoch  24/50: Train Loss: 0.338870, Val Loss: 0.333735, Val R²: 0.665986
+  Epoch  25/50: Train Loss: 0.334839, Val Loss: 0.333000, Val R²: 0.666722
+  Epoch  26/50: Train Loss: 0.335306, Val Loss: 0.331674, Val R²: 0.668048
+  Epoch  28/50: Train Loss: 0.328893, Val Loss: 0.324382, Val R²: 0.675347
+  Epoch  30/50: Train Loss: 0.322293, Val Loss: 0.322828, Val R²: 0.676902
+  Epoch  31/50: Train Loss: 0.320668, Val Loss: 0.321712, Val R²: 0.678019
+  Epoch  32/50: Train Loss: 0.318921, Val Loss: 0.317727, Val R²: 0.682007
+  Epoch  35/50: Train Loss: 0.316731, Val Loss: 0.314653, Val R²: 0.685084
+  Epoch  36/50: Train Loss: 0.310314, Val Loss: 0.312667, Val R²: 0.687071
+  Epoch  38/50: Train Loss: 0.304553, Val Loss: 0.309256, Val R²: 0.690485
+  Epoch  39/50: Train Loss: 0.300631, Val Loss: 0.308401, Val R²: 0.691342
+  Epoch  40/50: Train Loss: 0.301803, Val Loss: 0.315859, Val R²: 0.683877
+  Epoch  41/50: Train Loss: 0.299122, Val Loss: 0.305172, Val R²: 0.694573
+  Epoch  43/50: Train Loss: 0.294107, Val Loss: 0.304051, Val R²: 0.695695
+  Epoch  45/50: Train Loss: 0.292998, Val Loss: 0.301962, Val R²: 0.697785
+  Epoch  48/50: Train Loss: 0.289767, Val Loss: 0.298559, Val R²: 0.701192
+  Epoch  49/50: Train Loss: 0.285177, Val Loss: 0.297855, Val R²: 0.701896
+  Epoch  50/50: Train Loss: 0.285180, Val Loss: 0.297493, Val R²: 0.702258
+
+  ✓ Kombinasyon 48 tamamlandı:
+     Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 8192, 'weight_decay': 0.01, 'use_batchnorm': False}
+     Best Val R²: 0.702258 (Epoch 50)
+     Test R²: 0.705362
+     Test MAE: 4.456491
+     Test RMSE: 5.761781
+     Toplam Epoch: 50/50
+     Overfitting Analizi:
+       Final Train Loss: 0.285180, Val Loss: 0.297493
+       Train-Val Gap: -0.012313 (Negatif = Overfitting)
+       Overfitting Ratio: -0.0414 (Negatif = Overfitting)
+       Best Epoch Gap: -0.012313
+
+================================================================================
+ABLATION STUDY TAMAMLANDI
+En İyi Val R²: 0.768771
+En İyi Test R²: 0.7700277631936495
+En İyi Parametreler: {'dropout': 0.4, 'learning_rate': 0.001, 'batch_size': 4096, 'weight_decay': 0.01, 'use_batchnorm': True, 'score_mean': np.float64(-31.783556820965448), 'score_std': np.float64(10.572729642126047), 'best_val_r2': 0.7687713911960856, 'best_test_r2': 0.7700277631936495}
+================================================================================

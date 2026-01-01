@@ -1,0 +1,5 @@
+Plastic_Type,Model_Type,Test_R2,Test_MAE,Test_RMSE,hidden_dim,num_layers,dropout,learning_rate,batch_size,lambda_score,weight_decay,use_layernorm,use_batchnorm,latent_dim,beta_kl,gamma_score
+PVC,encdec,0.9489646196579768,1.7131816361973002,2.3979957023321465,256,3,0.1,0.001,1024,1.0,0.0001,True,,,,
+PVC,lstm,0.9080523606484138,,,256,3,0.1,0.001,2048,,0.01,True,False,,,
+PVC,cnn,0.7700277631936495,,,128,2,0.4,0.001,4096,,0.01,False,True,,,
+PVC,lstm_vae,0.906172236533076,,,256,3,0.1,0.001,1024,,0.0001,False,False,64.0,2.0,1.0

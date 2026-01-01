@@ -1,0 +1,130 @@
+
+================================================================================
+FINAL EĞİTİM: LSTM - PP
+Tarih: 2026-01-01 11:21:01
+Final Epochs: 250
+Seed: 42
+En İyi Parametreler (Ablation'dan):
+  hidden_dim: 256
+  num_layers: 3
+  dropout: 0.1
+  learning_rate: 0.001
+  batch_size: 2048
+  weight_decay: 0.01
+  use_layernorm: True
+================================================================================
+
+Epoch   1/250: Train Loss: 0.566369, Val Loss: 0.351362
+Epoch   2/250: Train Loss: 0.334072, Val Loss: 0.319224
+Epoch   3/250: Train Loss: 0.309467, Val Loss: 0.306773
+Epoch   4/250: Train Loss: 0.284614, Val Loss: 0.279324
+Epoch   5/250: Train Loss: 0.263570, Val Loss: 0.249884
+Epoch   6/250: Train Loss: 0.246442, Val Loss: 0.235467
+Epoch   7/250: Train Loss: 0.234034, Val Loss: 0.223407
+Epoch   8/250: Train Loss: 0.222206, Val Loss: 0.213785
+Epoch   9/250: Train Loss: 0.212782, Val Loss: 0.203715
+Epoch  10/250: Train Loss: 0.202621, Val Loss: 0.196665
+Epoch  11/250: Train Loss: 0.194278, Val Loss: 0.194478
+Epoch  12/250: Train Loss: 0.185880, Val Loss: 0.181459
+Epoch  13/250: Train Loss: 0.177863, Val Loss: 0.175475
+Epoch  14/250: Train Loss: 0.169088, Val Loss: 0.167587
+Epoch  15/250: Train Loss: 0.159019, Val Loss: 0.163047
+Epoch  16/250: Train Loss: 0.150689, Val Loss: 0.151192
+Epoch  17/250: Train Loss: 0.140521, Val Loss: 0.144866
+Epoch  18/250: Train Loss: 0.130042, Val Loss: 0.139068
+Epoch  19/250: Train Loss: 0.120632, Val Loss: 0.129326
+Epoch  20/250: Train Loss: 0.109508, Val Loss: 0.120129
+Epoch  21/250: Train Loss: 0.100006, Val Loss: 0.112580
+Epoch  22/250: Train Loss: 0.090926, Val Loss: 0.107269
+Epoch  23/250: Train Loss: 0.082255, Val Loss: 0.101539
+Epoch  24/250: Train Loss: 0.074331, Val Loss: 0.097419
+Epoch  25/250: Train Loss: 0.068113, Val Loss: 0.091890
+Epoch  26/250: Train Loss: 0.061671, Val Loss: 0.087052
+Epoch  27/250: Train Loss: 0.056721, Val Loss: 0.082941
+Epoch  28/250: Train Loss: 0.051723, Val Loss: 0.080744
+Epoch  29/250: Train Loss: 0.048568, Val Loss: 0.078899
+Epoch  30/250: Train Loss: 0.044923, Val Loss: 0.076362
+Epoch  31/250: Train Loss: 0.042025, Val Loss: 0.073787
+Epoch  32/250: Train Loss: 0.039385, Val Loss: 0.071364
+Epoch  33/250: Train Loss: 0.037284, Val Loss: 0.071022
+Epoch  34/250: Train Loss: 0.034983, Val Loss: 0.069111
+Epoch  35/250: Train Loss: 0.033252, Val Loss: 0.067496
+Epoch  36/250: Train Loss: 0.032142, Val Loss: 0.067186
+Epoch  37/250: Train Loss: 0.030520, Val Loss: 0.065976
+Epoch  38/250: Train Loss: 0.029360, Val Loss: 0.064375
+Epoch  40/250: Train Loss: 0.027053, Val Loss: 0.062467
+Epoch  41/250: Train Loss: 0.026211, Val Loss: 0.062450
+Epoch  43/250: Train Loss: 0.024534, Val Loss: 0.061039
+Epoch  45/250: Train Loss: 0.023173, Val Loss: 0.060252
+Epoch  46/250: Train Loss: 0.022593, Val Loss: 0.059250
+Epoch  47/250: Train Loss: 0.022015, Val Loss: 0.058592
+Epoch  50/250: Train Loss: 0.020428, Val Loss: 0.057857
+Epoch  51/250: Train Loss: 0.020044, Val Loss: 0.057458
+Epoch  52/250: Train Loss: 0.019695, Val Loss: 0.056749
+Epoch  55/250: Train Loss: 0.018512, Val Loss: 0.056310
+Epoch  56/250: Train Loss: 0.018178, Val Loss: 0.055785
+Epoch  57/250: Train Loss: 0.017732, Val Loss: 0.055647
+Epoch  58/250: Train Loss: 0.017431, Val Loss: 0.055576
+Epoch  59/250: Train Loss: 0.017188, Val Loss: 0.054866
+Epoch  60/250: Train Loss: 0.016991, Val Loss: 0.054536
+Epoch  62/250: Train Loss: 0.016419, Val Loss: 0.053932
+Epoch  67/250: Train Loss: 0.015355, Val Loss: 0.052563
+Epoch  69/250: Train Loss: 0.014787, Val Loss: 0.052189
+Epoch  70/250: Train Loss: 0.014673, Val Loss: 0.052849
+Epoch  71/250: Train Loss: 0.014462, Val Loss: 0.052150
+Epoch  73/250: Train Loss: 0.014251, Val Loss: 0.051370
+Epoch  76/250: Train Loss: 0.013892, Val Loss: 0.051267
+Epoch  78/250: Train Loss: 0.013359, Val Loss: 0.050728
+Epoch  79/250: Train Loss: 0.013139, Val Loss: 0.050664
+Epoch  80/250: Train Loss: 0.013022, Val Loss: 0.050534
+Epoch  82/250: Train Loss: 0.012798, Val Loss: 0.050276
+Epoch  83/250: Train Loss: 0.012691, Val Loss: 0.049787
+Epoch  86/250: Train Loss: 0.012338, Val Loss: 0.049533
+Epoch  88/250: Train Loss: 0.012168, Val Loss: 0.049317
+Epoch  89/250: Train Loss: 0.011931, Val Loss: 0.048988
+Epoch  90/250: Train Loss: 0.011880, Val Loss: 0.048492
+Epoch  91/250: Train Loss: 0.011796, Val Loss: 0.048450
+Epoch  93/250: Train Loss: 0.011580, Val Loss: 0.048382
+Epoch  97/250: Train Loss: 0.011151, Val Loss: 0.047826
+Epoch 100/250: Train Loss: 0.011001, Val Loss: 0.047987
+Epoch 101/250: Train Loss: 0.010949, Val Loss: 0.047463
+Epoch 103/250: Train Loss: 0.010689, Val Loss: 0.047260
+Epoch 104/250: Train Loss: 0.010581, Val Loss: 0.047236
+Epoch 106/250: Train Loss: 0.010410, Val Loss: 0.046749
+Epoch 109/250: Train Loss: 0.010310, Val Loss: 0.046559
+Epoch 110/250: Train Loss: 0.010175, Val Loss: 0.046431
+Epoch 113/250: Train Loss: 0.010109, Val Loss: 0.046254
+Epoch 114/250: Train Loss: 0.009863, Val Loss: 0.046150
+Epoch 120/250: Train Loss: 0.009633, Val Loss: 0.045856
+Epoch 121/250: Train Loss: 0.009500, Val Loss: 0.045695
+Epoch 124/250: Train Loss: 0.009444, Val Loss: 0.045513
+Epoch 127/250: Train Loss: 0.009225, Val Loss: 0.045363
+Epoch 130/250: Train Loss: 0.009079, Val Loss: 0.045259
+Epoch 131/250: Train Loss: 0.008977, Val Loss: 0.045039
+Epoch 132/250: Train Loss: 0.008929, Val Loss: 0.044911
+Epoch 133/250: Train Loss: 0.008925, Val Loss: 0.044659
+Epoch 139/250: Train Loss: 0.008594, Val Loss: 0.044512
+Epoch 140/250: Train Loss: 0.008668, Val Loss: 0.044729
+Epoch 141/250: Train Loss: 0.008556, Val Loss: 0.044480
+Epoch 143/250: Train Loss: 0.008449, Val Loss: 0.044436
+Epoch 145/250: Train Loss: 0.008418, Val Loss: 0.044232
+Epoch 146/250: Train Loss: 0.008399, Val Loss: 0.044228
+Epoch 147/250: Train Loss: 0.008300, Val Loss: 0.044182
+Epoch 150/250: Train Loss: 0.008173, Val Loss: 0.044051
+Epoch 151/250: Train Loss: 0.008111, Val Loss: 0.043798
+Epoch 160/250: Train Loss: 0.007935, Val Loss: 0.043806
+
+Early stopping at epoch 161
+Best validation loss: 0.043798 (at epoch 151)
+Current validation loss: 0.044034
+
+Best model state yüklendi: Epoch 151, Val Loss: 0.043798
+
+================================================================================
+FINAL EĞİTİM TAMAMLANDI
+Test R²: 0.956221
+Test MAE: 1.431594
+Test RMSE: 2.149457
+Best Val Loss: 0.043798
+Toplam Epoch: 161
+================================================================================
