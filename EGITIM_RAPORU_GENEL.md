@@ -1145,7 +1145,7 @@ Histidine (H) - Önemli Katkı
 ![PVC Training Curves](./ablation_results_PVC/figures/training_curves_encdec_PVC.png)
 
 ### Nylon Training Curves
-![Nylon Training Curves](./ablation_results_NYLON/figures/training_curves_encdec_Nylon.png)
+![Nylon Training Curves](./ablation_results_nylon/figures/training_curves_encdec_Nylon.png)
 
 ---
 
@@ -1161,7 +1161,7 @@ Histidine (H) - Önemli Katkı
 ![PVC Model Comparison](./ablation_results_PVC/figures/model_comparison_heatmap_PVC.png)
 
 ### Nylon Model Karşılaştırması
-![Nylon Model Comparison](./ablation_results_NYLON/figures/model_comparison_heatmap_Nylon.png)
+![Nylon Model Comparison](./ablation_results_nylon/figures/model_comparison_heatmap_Nylon.png)
 
 ---
 
@@ -1180,7 +1180,7 @@ Histidine (H) - Önemli Katkı
 ![PVC AA Heatmap](./ablation_results_PVC/figures/aa_probability_mass_heatmap_PVC.png)
 
 ### Nylon AA Probability Heatmap
-![Nylon AA Heatmap](./ablation_results_NYLON/figures/aa_probability_mass_heatmap_Nylon.png)
+![Nylon AA Heatmap](./ablation_results_nylon/figures/aa_probability_mass_heatmap_Nylon.png)
 
 ---
 
@@ -1199,7 +1199,7 @@ Histidine (H) - Önemli Katkı
 ![PVC Generated Peptides AA](./ablation_results_PVC/figures/generated_peptides_aa_heatmap_encdec_PVC.png)
 
 ### Nylon Üretilen Peptidler AA Heatmap
-![Nylon Generated Peptides AA](./ablation_results_NYLON/figures/generated_peptides_aa_heatmap_encdec_Nylon.png)
+![Nylon Generated Peptides AA](./ablation_results_nylon/figures/generated_peptides_aa_heatmap_encdec_Nylon.png)
 
 ---
 
@@ -1215,7 +1215,7 @@ Histidine (H) - Önemli Katkı
 ![PVC Overfitting ENCDEC](./ablation_results_PVC/figures/overfitting_analysis_encdec_PVC.png)
 
 ### Nylon Overfitting Analizi
-![Nylon Overfitting ENCDEC](./ablation_results_NYLON/figures/overfitting_analysis_encdec_Nylon.png)
+![Nylon Overfitting ENCDEC](./ablation_results_nylon/figures/overfitting_analysis_encdec_Nylon.png)
 
 ---
 
@@ -1235,11 +1235,11 @@ Histidine (H) - Önemli Katkı
 
 | LSTM | ENCDEC |
 |------|--------|
-| ![Nylon LSTM](./ablation_results_NYLON/figures/ablation_lstm_Nylon.png) | ![Nylon ENCDEC](./ablation_results_NYLON/figures/ablation_encdec_Nylon.png) |
+| ![Nylon LSTM](./ablation_results_nylon/figures/ablation_lstm_Nylon.png) | ![Nylon ENCDEC](./ablation_results_nylon/figures/ablation_encdec_Nylon.png) |
 
 | CNN | LSTM-VAE |
 |-----|----------|
-| ![Nylon CNN](./ablation_results_NYLON/figures/ablation_cnn_Nylon.png) | ![Nylon LSTM-VAE](./ablation_results_NYLON/figures/ablation_lstm_vae_Nylon.png) |
+| ![Nylon CNN](./ablation_results_nylon/figures/ablation_cnn_Nylon.png) | ![Nylon LSTM-VAE](./ablation_results_nylon/figures/ablation_lstm_vae_Nylon.png) |
 
 ---
 
