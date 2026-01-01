@@ -1,0 +1,5 @@
+Plastic_Type,Model_Type,Test_R2,Test_MAE,Test_RMSE,hidden_dim,num_layers,dropout,learning_rate,batch_size,weight_decay,use_layernorm,use_batchnorm,latent_dim,beta_kl,gamma_score,lambda_score
+PP,lstm,0.956220976287201,1.4315941626829771,2.1494570028554185,256.0,3.0,0.1,0.001,2048,0.01,True,,,,,
+PP,cnn,0.8263058182320734,,,,,0.2,0.001,4096,0.01,,True,,,,
+PP,lstm_vae,0.9156722318857161,,,256.0,3.0,0.1,0.001,1024,0.01,True,,64.0,2.0,1.0,
+PP,encdec,0.9415205543205861,,,256.0,2.0,0.1,0.001,1024,0.0001,True,,,,,1.0
