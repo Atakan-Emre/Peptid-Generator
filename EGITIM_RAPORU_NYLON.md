@@ -2,8 +2,8 @@
 
 **Tarih:** 28 Aralık 2025  
 **Plastik Tipi:** Nylon  
-**Platform:** Apple M4 Silicon (16GB RAM)  
-**Toplam Eğitim Süresi:** ~12 saat
+**Platform:** Windows 11 (RTX 4080 Super)  
+**Toplam Eğitim Süresi:** ~8 dakika (Final Training)
 
 ---
 
@@ -306,7 +306,7 @@ params_aggressive = {
 
 ```
 Peptid-Generator/
-├── ablation_study_mac.py          ← Ana eğitim scripti
+├── ablation_study_win.py          ← Ana eğitim scripti
 ├── EGITIM_RAPORU.md               ← Bu rapor
 ├── Data/
 │   └── Nylon.csv                  ← Eğitim verisi
@@ -335,8 +335,8 @@ Peptid-Generator/
 
 | Bileşen | Versiyon/Detay |
 |---------|----------------|
-| Python | 3.x |
-| PyTorch | 2.x (MPS backend) |
+| Python | 3.10+ |
+| PyTorch | 2.1.0+cu121 |
 | NumPy | Latest |
 | Pandas | Latest |
 | Matplotlib | Latest |
@@ -346,19 +346,19 @@ Peptid-Generator/
 
 | Bileşen | Değer |
 |---------|-------|
-| CPU | Apple M4 |
-| RAM | 16GB Unified Memory |
-| GPU | Integrated (MPS) |
-| Depolama | SSD |
+| CPU | AMD Ryzen 9 9700X |
+| RAM | 64GB DDR5 |
+| GPU | NVIDIA RTX 4080 Super (16GB) |
+| Depolama | NVMe SSD |
 
 ### Eğitim Konfigürasyonu
 
 ```python
-# MPS Optimizasyon Ayarları
-NUM_WORKERS = 0          # MPS için multiprocessing kapalı
-PIN_MEMORY = False       # MPS için gerekli değil
-PREFETCH_FACTOR = None   # NUM_WORKERS=0 olduğu için
-USE_AMP = False          # MPS'de tutarsız
+# CUDA Optimizasyon Ayarları
+NUM_WORKERS = 4          # DataLoader paralelliği
+PIN_MEMORY = True        # GPU transfer hızı
+PREFETCH_FACTOR = 2      # Önceden yükleme
+USE_AMP = True           # Mixed precision training
 ```
 
 ---
