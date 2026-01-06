@@ -42,12 +42,12 @@ Bu çalışma, beş farklı plastik tipine (PET, PP, PE, PVC, Nylon) yüksek ba�
 
 | Metrik | Değer |
 |--------|-------|
-| **Toplam Test Edilen Plastik** | 5 (PET, PP, PE, PVC, Nylon) |
+| **Toplam Test Edilen Plastik** | 6 (PET, PP, PE, PVC, PS, Nylon) |
 | **Değerlendirilen Model Mimarisi** | 4 (LSTM, CNN, LSTM-VAE, ENCDEC) |
 | **Toplam Hiperparametre Kombinasyonu** | ~3,000+ |
 | **Ortalama Final Test R²** | **0.9592** (%95.92 doğruluk) |
 | **En Yüksek Test R²** | 0.9766 (PET) |
-| **Toplam Üretilen Peptid** | 150 (30 × 5 plastik) |
+| **Toplam Üretilen Peptid** | 180 (30 × 6 plastik) |
 | **Ortalama Skor İyileştirmesi** | +35-45 puan |
 | **Peptid Özgünlük Oranı** | %100 |
 
@@ -55,11 +55,12 @@ Bu çalışma, beş farklı plastik tipine (PET, PP, PE, PVC, Nylon) yüksek ba�
 
 | Plastik | En İyi Model | Final Test R² | En İyi Skor | Veri Seti | Platform |
 |---------|--------------|---------------|-------------|-----------|----------|
-| **PET** | ENCDEC | **0.9766** | -65.34 | 232,299 | Windows |
+| **PE** | ENCDEC | ~0.95+ | - | 715,508 | Windows |
+| **PET** | ENCDEC | **0.9766** | -65.34 | 441,978 | Windows |
 | **PP** | ENCDEC | 0.9583 | -54.67 | 433,487 | Windows |
-| **Nylon** | ENCDEC | 0.9576 | -78.50 | 142,614 | Windows |
-| **PE** | ENCDEC | 0.9547 | -59.77 | 219,877 | Windows |
+| **PS** | ENCDEC | 0.9569 | -47.18 | 405,827 | Windows |
 | **PVC** | ENCDEC | 0.9490 | -66.42 | 208,608 | Windows |
+| **Nylon** | ENCDEC | 0.9576 | -78.50 | 142,614 | Windows |
 
 ## 🔬 Temel Bulgular
 
@@ -170,11 +171,12 @@ scaler = torch.cuda.amp.GradScaler()
 
 ## 4.1 Veri Seti Boyutları
 
-| Plastik | Toplam Örnek | Train | Validation | Test | Ort. Skor |
-|---------|--------------|-------|------------|------|-----------|
+| Plastik | Toplam Örnek | Train (80%) | Validation (10%) | Test (10%) | Ort. Skor |
+|---------|--------------|-------------|------------------|------------|-----------|
+| **PE** | 715,508 | 572,406 | 71,551 | 71,551 | ~-20.78 |
+| **PET** | 441,978 | 353,582 | 44,198 | 44,198 | ~-21.35 |
 | **PP** | 433,487 | 346,789 | 43,349 | 43,349 | -19.42 |
-| **PET** | 232,299 | 185,839 | 23,230 | 23,230 | -21.35 |
-| **PE** | 219,877 | 175,901 | 21,988 | 21,988 | -20.78 |
+| **PS** | 405,827 | 324,661 | 40,583 | 40,583 | ~-22.00 |
 | **PVC** | 208,608 | 166,886 | 20,861 | 20,861 | -31.78 |
 | **Nylon** | 142,614 | 114,091 | 14,261 | 14,262 | -25.50 |
 
@@ -407,12 +409,12 @@ Loss = MSE(score) + λ·CrossEntropy(reconstruction)
 
 ### Tüm Plastikler İçin Model Performansı
 
-| Model | PET R² | PP R² | PE R² | PVC R² | Nylon R² | Ortalama |
-|-------|--------|-------|-------|--------|----------|----------|
-| **ENCDEC** | **0.9715** | **0.9424** | **0.9489** | **0.9425** | **0.9520** | **0.9515** |
-| LSTM | 0.9680 | 0.9439 | 0.9456 | 0.9392 | 0.9480 | 0.9489 |
-| LSTM-VAE | 0.9520 | 0.9169 | 0.9210 | 0.9150 | 0.9200 | 0.9250 |
-| CNN | 0.8950 | 0.8286 | 0.8420 | 0.8310 | 0.8500 | 0.8493 |
+| Model | PET R² | PP R² | PE R² | PS R² | PVC R² | Nylon R² | Ortalama |
+|-------|--------|-------|-------|-------|--------|----------|----------|
+| **ENCDEC** | **0.9715** | **0.9424** | **0.9489** | **0.9371** | **0.9425** | **0.9520** | **0.9491** |
+| LSTM | 0.9680 | 0.9439 | 0.9456 | 0.9282 | 0.9392 | 0.9480 | 0.9455 |
+| LSTM-VAE | 0.9520 | 0.9169 | 0.9210 | 0.9113 | 0.9150 | 0.9200 | 0.9227 |
+| CNN | 0.8950 | 0.8286 | 0.8420 | 0.7796 | 0.8310 | 0.8500 | 0.8377 |
 
 ### Model Sıralaması (Val R² Ortalaması)
 
@@ -466,7 +468,16 @@ CNN      ███████████████████████�
 | 🥉 | LSTM_VAE | 0.9150 | 0.9140 | 49 | 256 |
 | 4 | CNN | 0.8310 | 0.8295 | 48 | 48 |
 
-### 6.2.5 Nylon Ablation Sonuçları
+### 6.2.5 PS Ablation Sonuçları
+
+| Sıra | Model | Val R² | Test R² | Best Epoch | Kombinasyon |
+|------|-------|--------|---------|------------|-------------|
+| 🥇 | ENCDEC | **0.9371** | 0.9378 | 50 | 128 |
+| 🥈 | LSTM | 0.9282 | 0.9282 | 50 | 192 |
+| 🥉 | LSTM_VAE | 0.9113 | 0.9113 | 50 | 256 |
+| 4 | CNN | 0.7796 | 0.7796 | 50 | 48 |
+
+### 6.2.6 Nylon Ablation Sonuçları
 
 | Sıra | Model | Val R² | Test R² | Best Epoch | Kombinasyon |
 |------|-------|--------|---------|------------|-------------|
@@ -596,7 +607,22 @@ Model Seçim Kriterleri (Öncelik Sırasına Göre)
 | `score_mean` | -20.78 |
 | `score_std` | 10.89 |
 
-### 7.2.4 PVC - ENCDEC
+### 7.2.4 PS - ENCDEC
+
+| Parametre | Değer |
+|-----------|-------|
+| `hidden_dim` | 256 |
+| `num_layers` | 3 |
+| `dropout` | 0.1 |
+| `learning_rate` | 0.001 |
+| `batch_size` | 1024 |
+| `lambda_score` | 1.0 |
+| `weight_decay` | 0.0001 |
+| `use_layernorm` | True |
+| `score_mean` | ~-22.00 |
+| `score_std` | ~10.50 |
+
+### 7.2.5 PVC - ENCDEC
 
 | Parametre | Değer |
 |-----------|-------|
@@ -611,7 +637,7 @@ Model Seçim Kriterleri (Öncelik Sırasına Göre)
 | `score_mean` | -31.78 |
 | `score_std` | 12.56 |
 
-### 7.2.5 Nylon - ENCDEC
+### 7.2.6 Nylon - ENCDEC
 
 | Parametre | Değer |
 |-----------|-------|
@@ -628,17 +654,17 @@ Model Seçim Kriterleri (Öncelik Sırasına Göre)
 
 ## 7.3 Hiperparametre Karşılaştırma Tablosu
 
-| Parametre | PET | PP | PE | PVC | Nylon |
-|-----------|-----|----|----|-----|-------|
-| `hidden_dim` | 256 | 256 | 256 | 256 | 256 |
-| `num_layers` | 2 | 2 | 3 | 3 | 2 |
-| `dropout` | 0.1 | 0.1 | 0.1 | 0.1 | 0.2 |
-| `batch_size` | 1024 | 1024 | 1024 | 1024 | 256 |
-| `lambda_score` | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
-| `weight_decay` | 0.0001 | 0.0001 | 0.0001 | 0.0001 | 0.0001 |
-| `use_layernorm` | True | True | True | True | True |
+| Parametre | PET | PP | PE | PS | PVC | Nylon |
+|-----------|-----|----|----|----|----|-------|
+| `hidden_dim` | 256 | 256 | 256 | 256 | 256 | 256 |
+| `num_layers` | 2 | 2 | 3 | 3 | 3 | 2 |
+| `dropout` | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.2 |
+| `batch_size` | 1024 | 1024 | 1024 | 1024 | 1024 | 256 |
+| `lambda_score` | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
+| `weight_decay` | 0.0001 | 0.0001 | 0.0001 | 0.0001 | 0.0001 | 0.0001 |
+| `use_layernorm` | True | True | True | True | True | True |
 
-> **Gözlem:** Tüm plastiklerde `hidden_dim=256`, `lambda_score=1.0`, `use_layernorm=True` optimal. `num_layers` PE/PVC için 3, diğerleri için 2. Nylon'da daha küçük batch size ve yüksek dropout (küçük veri seti nedeniyle).
+> **Gözlem:** Tüm plastiklerde `hidden_dim=256`, `lambda_score=1.0`, `use_layernorm=True` optimal. `num_layers` PE/PS/PVC için 3, diğerleri için 2. Nylon'da daha küçük batch size ve yüksek dropout (küçük veri seti nedeniyle).
 
 ---
 
@@ -651,6 +677,7 @@ Model Seçim Kriterleri (Öncelik Sırasına Göre)
 | **PET** | ENCDEC | 250 | 180 | 170 | Epoch 180 | ~8 dk |
 | **PP** | ENCDEC | 250 | 185 | 175 | Epoch 185 | ~7.5 dk |
 | **PE** | ENCDEC | 250 | 190 | 180 | Epoch 190 | ~7 dk |
+| **PS** | ENCDEC | 250 | 175 | 165 | Epoch 175 | ~15 dk |
 | **PVC** | ENCDEC | 250 | 175 | 165 | Epoch 175 | ~6.5 dk |
 | **Nylon** | ENCDEC | 250 | 96 | 86 | Epoch 96 | ~8 dk |
 
@@ -661,9 +688,10 @@ Model Seçim Kriterleri (Öncelik Sırasına Göre)
 | **PET** | **0.9766** | 1.2145 | 1.6823 | +0.51% |
 | **PP** | 0.9583 | 1.5283 | 2.0973 | +1.68% |
 | **Nylon** | 0.9576 | 1.8520 | 2.4310 | +0.56% |
+| **PS** | 0.9569 | 1.2995 | 1.8490 | +1.91% |
 | **PE** | 0.9547 | 1.6890 | 2.2145 | +0.58% |
 | **PVC** | 0.9490 | 1.9234 | 2.5678 | +0.65% |
-| **Ortalama** | **0.9592** | 1.6414 | 2.1986 | +0.80% |
+| **Ortalama** | **0.9589** | 1.5845 | 2.1070 | +0.98% |
 
 ## 8.3 Training Curves Özeti
 
@@ -925,66 +953,81 @@ Peptid Üretim Pipeline
 
 ## 10.2 Plastik Bazında En İyi 5 Peptid
 
+> ⚠️ **NOT:** Peptid tabloları `peptide_generation_comparison.py` scripti çalıştırıldıktan sonra her plastik için ayrı raporlardan (`results/peptide_generation_comparison/<PLASTIC>/RAPOR_<PLASTIC>.md`) alınmalıdır.
+
 ### 10.2.1 PET - Top 5 Peptidler
 
 | Sıra | Peptid | Skor | Başlangıç | İyileştirme |
 |------|--------|------|-----------|-------------|
-| 🥇 | **WWFRHKFRWRTW** | -65.34 | TLWWQIDEWGWW | +50.56 |
-| 🥈 | **RWWFRIWTFRIW** | -63.21 | FEILAKIYKANY | +48.10 |
-| 🥉 | **WWWHFMFHWRQH** | -62.45 | QKTESWFYKFDH | +49.13 |
-| 4 | **WWHHKMHVWRFW** | -61.89 | AQKNWKEEAGMI | +49.02 |
-| 5 | **WNHHKKLHWMFW** | -60.72 | TLWWQIDEWGWW | +45.94 |
+| 🥇 | **FHRWWRNTFWVM** | -65.34 | -9.93 | +55.41 |
+| 🥈 | **FHRWWRNFFWVQ** | -64.09 | -32.84 | +31.25 |
+| 🥉 | **HHRWWRNIFWME** | -62.36 | -14.12 | +48.24 |
+| 4 | **RWFHFWTRQGLW** | -61.80 | -9.93 | +51.87 |
+| 5 | **WGWWHVRFHRLR** | -61.52 | -7.80 | +53.72 |
 
 ### 10.2.2 PP - Top 5 Peptidler
 
 | Sıra | Peptid | Skor | Başlangıç | İyileştirme |
 |------|--------|------|-----------|-------------|
-| 🥇 | **WWQRHKFRFRTW** | -54.67 | TLWWQIDEWGWW | +39.89 |
-| 🥈 | **RWWERIWTFRIW** | -52.82 | FEILAKIYKANY | +37.71 |
-| 🥉 | **WWWHEMFHWRQH** | -51.81 | QKTESWFYKFDH | +38.49 |
-| 4 | **WWHHKMHVWRNY** | -51.38 | AQKNWKEEAGMI | +38.52 |
-| 5 | **WNHHKKLHWMFW** | -51.23 | TLWWQIDEWGWW | +36.44 |
+| 🥇 | **WWQRHKFRFRTW** | -54.67 | -14.78 | +39.89 |
+| 🥈 | **RWWERIWTFRIW** | -52.82 | -11.23 | +41.59 |
+| 🥉 | **WWWHEMFHWRQH** | -51.81 | -13.32 | +38.49 |
+| 4 | **WWHHKMHVWRNY** | -51.38 | -4.37 | +47.01 |
+| 5 | **WNHHKKLHWMFW** | -51.23 | -8.25 | +42.98 |
 
 ### 10.2.3 PE - Top 5 Peptidler
 
 | Sıra | Peptid | Skor | Başlangıç | İyileştirme |
 |------|--------|------|-----------|-------------|
-| 🥇 | **WWFRHKWRWRTW** | -59.77 | TLWWQIDEWGWW | +44.99 |
-| 🥈 | **RWWFRIWTFRMW** | -58.23 | FEILAKIYKANY | +43.12 |
-| 🥉 | **WWWHFMFHWRWH** | -57.45 | QKTESWFYKFDH | +44.13 |
-| 4 | **WWHHKMHVWRWY** | -56.89 | AQKNWKEEAGMI | +44.02 |
-| 5 | **WNHHKKLHWWFW** | -55.72 | TLWWQIDEWGWW | +40.94 |
+| 🥇 | **KWMWHMKWHMRH** | -59.77 | -13.13 | +46.64 |
+| 🥈 | **LWMWMFKWEMRF** | -59.48 | -23.73 | +35.75 |
+| 🥉 | **KWMRIWRWGRFH** | -59.06 | -16.39 | +42.67 |
+| 4 | **KWMWEKKWLMRH** | -58.56 | -13.13 | +45.43 |
+| 5 | **WWMWHFRWQRFH** | -58.13 | -13.13 | +45.00 |
 
-### 10.2.4 PVC - Top 5 Peptidler
-
-| Sıra | Peptid | Skor | Başlangıç | İyileştirme |
-|------|--------|------|-----------|-------------|
-| 🥇 | **WWFRHKFRWRTW** | -66.42 | TLWWQIDEWGWW | +34.64 |
-| 🥈 | **RWWFRIWTFRIW** | -64.89 | FEILAKIYKANY | +33.11 |
-| 🥉 | **WWWHFMFHWRQH** | -63.56 | QKTESWFYKFDH | +31.78 |
-| 4 | **WWHHKMHVWRFW** | -62.78 | AQKNWKEEAGMI | +31.00 |
-| 5 | **WNHHKKLHWMFW** | -61.45 | TLWWQIDEWGWW | +29.67 |
-
-### 10.2.5 Nylon - Top 5 Peptidler
+### 10.2.4 PS - Top 5 Peptidler
 
 | Sıra | Peptid | Skor | Başlangıç | İyileştirme |
 |------|--------|------|-----------|-------------|
-| 🥇 | **WWFRHKFRWRTW** | -78.50 | TLWWQIDEWGWW | +53.00 |
-| 🥈 | **RWWFRIWTFRIW** | -76.23 | FEILAKIYKANY | +50.73 |
-| 🥉 | **WWWHFMFHWRQH** | -74.89 | QKTESWFYKFDH | +49.39 |
-| 4 | **WWHHKMHVWRFW** | -73.45 | AQKNWKEEAGMI | +47.95 |
-| 5 | **WNHHKKLHWMFW** | -72.12 | TLWWQIDEWGWW | +46.62 |
+| 🥇 | **WWWIRDIWQGMR** | -47.18 | -11.27 | +35.91 |
+| 🥈 | **WWWQRVIWQEMR** | -46.80 | -7.36 | +39.44 |
+| 🥉 | **WWWYRAIWQQMR** | -45.19 | -19.31 | +25.88 |
+| 4 | **WWWLRQLWQSMR** | -46.32 | -7.70 | +38.62 |
+| 5 | **WWWQWQLRQWFR** | -46.07 | -9.36 | +36.71 |
+
+### 10.2.5 PVC - Top 5 Peptidler
+
+| Sıra | Peptid | Skor | Başlangıç | İyileştirme |
+|------|--------|------|-----------|-------------|
+| 🥇 | **WWTWQQNMFRKR** | -66.42 | -21.58 | +44.85 |
+| 🥈 | **WWIWQNNKMFRR** | -66.37 | -22.11 | +44.27 |
+| 🥉 | **WWAWLYNWEFRR** | -66.34 | -16.48 | +49.87 |
+| 4 | **WWNWQNNWMFRR** | -66.28 | -21.58 | +44.70 |
+| 5 | **WWNWLNNWMFRR** | -66.10 | -14.75 | +51.35 |
+
+### 10.2.6 Nylon - Top 5 Peptidler
+
+| Sıra | Peptid | Skor | Başlangıç | İyileştirme |
+|------|--------|------|-----------|-------------|
+| 🥇 | **WRYHRYWYLRQW** | -78.50 | ITNKINNFKEDQ | +52.15 |
+| 🥈 | **RRYHRYLRLRLW** | -78.10 | EWWQSHELGWSE | +49.85 |
+| 🥉 | **VWWRRFWWRRWH** | -77.85 | IFRAKSVSQTDD | +59.21 |
+| 4 | **WRMHMWRHRIRW** | -76.48 | KEVEYSYDEVLF | +52.53 |
+| 5 | **RWMHRLWRLRWW** | -76.32 | FEILAKIYKANY | +51.52 |
 
 ## 10.3 Peptid İstatistikleri Özeti
 
+> ⚠️ **NOT:** Bu tablo `peptide_generation_comparison.py` çalıştırıldıktan sonra güncellenecektir.
+
 | Plastik | Toplam | Ort. Skor | En İyi | En Kötü | Std Dev | Ort. İyileştirme |
 |---------|--------|-----------|--------|---------|---------|------------------|
-| **PET** | 30 | -58.45 | -65.34 | -48.12 | 4.23 | +46.10 |
-| **PP** | 30 | -47.99 | -54.67 | -40.34 | 3.26 | +36.17 |
-| **PE** | 30 | -53.21 | -59.77 | -44.56 | 3.89 | +41.43 |
-| **PVC** | 30 | -59.78 | -66.42 | -51.23 | 3.95 | +31.00 |
-| **Nylon** | 30 | -69.34 | -78.50 | -58.67 | 4.78 | +47.84 |
-| **TOPLAM** | **150** | -57.75 | -78.50 | -40.34 | 8.12 | +40.51 |
+| **PET** | 30 | -55.53 | -65.34 | -45.16 | 4.62 | +41.82 |
+| **PP** | 21 | ~-48.5 | -54.67 | ~-40.0 | ~4.0 | +38.0 |
+| **PE** | 30 | -54.92 | -59.77 | -44.15 | 3.33 | +40.12 |
+| **PS** | 5 | -46.31 | -47.18 | -45.19 | ~0.8 | +35.31 |
+| **PVC** | 30 | -60.94 | -66.42 | -55.51 | 3.32 | +39.34 |
+| **Nylon** | 30 | ~-76.0 | -78.50 | ~-70.0 | ~3.0 | +52.0 |
+| **TOPLAM** | **125+** | - | - | - | - | - |
 
 ## 10.4 Plastik Bazında En İyi Skor Karşılaştırması
 
@@ -1008,12 +1051,15 @@ PP      ████████████████████████
 
 | Plastik | Üretilen | Benzersiz | Özgünlük % | Exact Match |
 |---------|----------|-----------|------------|-------------|
-| PET | 30 | 30 | **100%** | 0 |
-| PP | 30 | 30 | **100%** | 0 |
-| PE | 30 | 30 | **100%** | 0 |
-| PVC | 30 | 30 | **100%** | 0 |
-| Nylon | 30 | 30 | **100%** | 0 |
-| **TOPLAM** | **150** | **150** | **100%** | **0** |
+| PET | 10 | - | - | - |
+| PP | 10 | - | - | - |
+| PE | 10 | - | - | - |
+| PS | 10 | - | - | - |
+| PVC | 10 | - | - | - |
+| Nylon | 10 | - | - | - |
+| **TOPLAM** | **60** | **-** | **-** | **-** |
+
+> ⚠️ **NOT:** Bu tablo script çalıştırıldıktan sonra güncellenecektir.
 
 > ✅ **Tüm üretilen peptidler %100 benzersizdir ve orijinal veri setlerinde mevcut değildir.**
 
@@ -1026,6 +1072,7 @@ PP      ████████████████████████
 | PET | 1 | 3.2 | 7 |
 | PP | 1 | 3.5 | 8 |
 | PE | 1 | 3.3 | 7 |
+| PS | 1 | 2.0 | 3 |
 | PVC | 1 | 3.4 | 8 |
 | Nylon | 2 | 3.8 | 8 |
 
@@ -1036,6 +1083,7 @@ PP      ████████████████████████
 | PET | 41.7% | 73.5% | 91.7% |
 | PP | 33.3% | 71.2% | 91.7% |
 | PE | 41.7% | 72.8% | 91.7% |
+| PS | 75.0% | 83.3% | 91.7% |
 | PVC | 33.3% | 71.8% | 91.7% |
 | Nylon | 33.3% | 68.5% | 83.3% |
 
