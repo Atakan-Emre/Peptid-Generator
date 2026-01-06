@@ -1,0 +1,18 @@
+{
+  "plastic": "PVC",
+  "test_r2": 0.948930733293041,
+  "test_mae": 1.7149440420556645,
+  "test_rmse": 2.398791678799572,
+  "best_epoch": 178,
+  "time": 1343.24051,
+  "params": {
+    "hidden_dim": 256,
+    "num_layers": 3,
+    "dropout": 0.1,
+    "learning_rate": 0.001,
+    "batch_size": 1024,
+    "lambda_score": 1.0,
+    "weight_decay": 0.0001,
+    "use_layernorm": true
+  }
+}

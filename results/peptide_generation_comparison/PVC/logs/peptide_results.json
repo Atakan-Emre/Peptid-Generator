@@ -1,0 +1,208 @@
+{
+  "training": {
+    "plastic": "PVC",
+    "test_r2": 0.948930733293041,
+    "test_mae": 1.7149440420556645,
+    "test_rmse": 2.398791678799572,
+    "best_epoch": 178,
+    "time": 1343.24051,
+    "params": {
+      "hidden_dim": 256,
+      "num_layers": 3,
+      "dropout": 0.1,
+      "learning_rate": 0.001,
+      "batch_size": 1024,
+      "lambda_score": 1.0,
+      "weight_decay": 0.0001,
+      "use_layernorm": true
+    }
+  },
+  "peptides": {
+    "SA": [
+      {
+        "peptide": "WWWWISNEERQR",
+        "score": -65.20995723134706,
+        "initial": "QAGGSRWDKAFM",
+        "improvement": 45.95836768889453
+      },
+      {
+        "peptide": "HWVWQQNFMRIR",
+        "score": -68.4163323783999,
+        "initial": "AFQMFNTATRIE",
+        "improvement": 42.986969803527366
+      },
+      {
+        "peptide": "WWRWQNQMFFIR",
+        "score": -66.92468733652214,
+        "initial": "YIDDVNTSMYIM",
+        "improvement": 40.75963307539311
+      },
+      {
+        "peptide": "WWQWRREWWMRL",
+        "score": -58.72419636353128,
+        "initial": "TQVNRAGHDGDH",
+        "improvement": 36.26252934423248
+      },
+      {
+        "peptide": "RMISFRKLRVWV",
+        "score": -60.52114528802352,
+        "initial": "QIIFGWQNFSEI",
+        "improvement": 38.01253398731171
+      },
+      {
+        "peptide": "RFWWQTRVHRIW",
+        "score": -63.119088064306474,
+        "initial": "YQNRVSGAHGFW",
+        "improvement": 40.01223320441628
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670986780635,
+        "initial": "VHQKWLGGNGNW",
+        "improvement": 43.5791346098228
+      },
+      {
+        "peptide": "WWHWRNNFQFYR",
+        "score": -68.59369130555922,
+        "initial": "KFYMDADQTKDI",
+        "improvement": 43.360405376913945
+      },
+      {
+        "peptide": "VMMIWRILRQHQ",
+        "score": -59.29409425562743,
+        "initial": "YMYVARRMGQEK",
+        "improvement": 31.66464945646248
+      },
+      {
+        "peptide": "GMLFYRQLRKWN",
+        "score": -59.64402271310689,
+        "initial": "LYVGMFWVHQNE",
+        "improvement": 32.07285037924714
+      }
+    ],
+    "ILS": [
+      {
+        "peptide": "HWVWQNNFMRIR",
+        "score": -67.09082794189453,
+        "initial": "QAGGSRWDKAFM",
+        "improvement": 47.83924102783203
+      },
+      {
+        "peptide": "RHMYRWILRLWQ",
+        "score": -63.64613342285156,
+        "initial": "AFQMFNTATRIE",
+        "improvement": 38.21677207946777
+      },
+      {
+        "peptide": "RHMIRYQLRLWV",
+        "score": -62.703643798828125,
+        "initial": "YIDDVNTSMYIM",
+        "improvement": 36.53858947753906
+      },
+      {
+        "peptide": "WWIWIQNFMRIR",
+        "score": -68.86005401611328,
+        "initial": "TQVNRAGHDGDH",
+        "improvement": 46.39838790893555
+      },
+      {
+        "peptide": "WWDWRHNFFFIR",
+        "score": -67.86031341552734,
+        "initial": "QIIFGWQNFSEI",
+        "improvement": 45.35170364379883
+      },
+      {
+        "peptide": "WWNWIQNFMFIR",
+        "score": -68.66643524169922,
+        "initial": "YQNRVSGAHGFW",
+        "improvement": 45.5595817565918
+      },
+      {
+        "peptide": "RHMYQRHLRLWS",
+        "score": -62.69664001464844,
+        "initial": "VHQKWLGGNGNW",
+        "improvement": 37.109066009521484
+      },
+      {
+        "peptide": "RWYNLQRWMRIW",
+        "score": -65.84720611572266,
+        "initial": "KFYMDADQTKDI",
+        "improvement": 40.613922119140625
+      },
+      {
+        "peptide": "RWYQNVRWMRIF",
+        "score": -66.32688903808594,
+        "initial": "YMYVARRMGQEK",
+        "improvement": 38.697444915771484
+      },
+      {
+        "peptide": "HWNWLQNFMRIR",
+        "score": -68.31836700439453,
+        "initial": "LYVGMFWVHQNE",
+        "improvement": 40.747196197509766
+      }
+    ],
+    "MOCO-CEM": [
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "QAGGSRWDKAFM",
+        "improvement": 49.915122985839844
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "AFQMFNTATRIE",
+        "improvement": 43.737348556518555
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "YIDDVNTSMYIM",
+        "improvement": 43.00165557861328
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "TQVNRAGHDGDH",
+        "improvement": 46.70504379272461
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "QIIFGWQNFSEI",
+        "improvement": 46.65810012817383
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "YQNRVSGAHGFW",
+        "improvement": 46.05985641479492
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "VHQKWLGGNGNW",
+        "improvement": 43.57913589477539
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "KFYMDADQTKDI",
+        "improvement": 43.93342590332031
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "YMYVARRMGQEK",
+        "improvement": 41.53726577758789
+      },
+      {
+        "peptide": "HWNWIQNFMFIR",
+        "score": -69.16670989990234,
+        "initial": "LYVGMFWVHQNE",
+        "improvement": 41.59553909301758
+      }
+    ]
+  }
+}

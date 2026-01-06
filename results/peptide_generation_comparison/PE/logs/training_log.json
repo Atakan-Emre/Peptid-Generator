@@ -1,0 +1,18 @@
+{
+  "plastic": "PE",
+  "test_r2": 0.9542884977224324,
+  "test_mae": 1.4940380277896204,
+  "test_rmse": 2.179030737005286,
+  "best_epoch": 183,
+  "time": 2065.257916,
+  "params": {
+    "hidden_dim": 256,
+    "num_layers": 3,
+    "dropout": 0.1,
+    "learning_rate": 0.001,
+    "batch_size": 1024,
+    "lambda_score": 1.0,
+    "weight_decay": 0.0001,
+    "use_layernorm": true
+  }
+}
