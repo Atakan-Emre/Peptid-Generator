@@ -1,0 +1,44 @@
+================================================================================
+DETAYLI ABLATION STUDY RAPORU
+================================================================================
+
+📊 GENEL İSTATİSTİKLER
+--------------------------------------------------------------------------------
+Toplam Model-Plastik Kombinasyonu: 4
+En Yüksek Test R²: 0.9569
+En Düşük Test R²: 0.7796
+Ortalama Test R²: 0.8940
+Test R² Standart Sapma: 0.0785
+
+📊 MODEL TİPİNE GÖRE PERFORMANS
+--------------------------------------------------------------------------------
+CNN:
+  Ortalama R²: 0.7796 ± nan
+  Aralık: [0.7796, 0.7796]
+  Örnek Sayısı: 1
+
+ENCDEC:
+  Ortalama R²: 0.9569 ± nan
+  Aralık: [0.9569, 0.9569]
+  Örnek Sayısı: 1
+
+LSTM:
+  Ortalama R²: 0.9282 ± nan
+  Aralık: [0.9282, 0.9282]
+  Örnek Sayısı: 1
+
+LSTM_VAE:
+  Ortalama R²: 0.9113 ± nan
+  Aralık: [0.9113, 0.9113]
+  Örnek Sayısı: 1
+
+📊 PLASTİK TİPİNE GÖRE PERFORMANS
+--------------------------------------------------------------------------------
+PS:
+  Ortalama R²: 0.8940 ± 0.0785
+  Aralık: [0.7796, 0.9569]
+  Örnek Sayısı: 4
+
+🏆 EN İYİ KOMBİNASYONLAR
+--------------------------------------------------------------------------------
+PS - encdec: R² = 0.9569

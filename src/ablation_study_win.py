@@ -34,9 +34,9 @@ IS_COLAB = False
 if is_main_process():
     print("✓ Windows yerel PC ortamı tespit edildi")
 
-# Proje kök dizini (script'in bulunduğu klasör)
+# Proje kök dizini (src'nin üst klasörü = PeptidGenerator)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = SCRIPT_DIR
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)  # src'nin üst dizini
 
 # Yerel PC için proje dizini
 DRIVE_PROJECT_DIR = PROJECT_ROOT
