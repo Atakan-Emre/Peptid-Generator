@@ -1,0 +1,45 @@
+generate_peptides_with_best_model(...) içinde SA yerine MOCO’yu bağlama
+
+Şu bloğu:
+
+optimizer = PeptideOptimizer(
+    model=model,
+    model_type=model_type,
+    score_mean=score_mean,
+    score_std=score_std,
+    initial_temp=initial_temp,
+    cooling_rate=cooling_rate,
+    max_iterations=max_iterations
+)
+
+
+şununla değiştir:
+
+optimizer = MocoCEMPeptideOptimizer(
+    model=model,
+    model_type=model_type,
+    score_mean=score_mean,
+    score_std=score_std,
+
+    # MOCO budget
+    max_iterations=350,       # SA 3000 yerine genelde 200-600 arası yeterli
+    batch_size=128,
+    elite_frac=0.12,
+    alpha=0.18,
+
+    # exploration -> exploitation
+    tau_start=1.8,
+    tau_end=0.65,
+    tau_schedule="linear",
+
+    # stability
+    base_mix=0.05,
+    min_prob=1e-6,
+
+    # elite local improvement
+    use_local_search=True,
+    local_search_elite_frac=0.25,
+    local_steps=25,
+
+    seed=1
+)

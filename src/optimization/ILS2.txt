@@ -1,0 +1,18 @@
+from ils_peptide_optimizer import ILSPeptideOptimizer
+
+optimizer = ILSPeptideOptimizer(
+    model=model,
+    model_type=model_type,
+    score_mean=score_mean,
+    score_std=score_std,
+    max_iterations=800,
+    local_steps=60,
+    kick_strength=1,
+    kick_max=4,
+    stagnation_iters=50,
+    restart_iters=250,
+    accept_mode="greedy",  # veya "metropolis"
+    seed=1
+)
+
+opt_results = optimizer.optimize(initial_peptide, n_samples=n_optimizations)
