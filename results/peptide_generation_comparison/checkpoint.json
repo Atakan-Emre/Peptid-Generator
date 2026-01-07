@@ -4,7 +4,8 @@
     "PP",
     "PE",
     "PVC",
-    "PS"
+    "PS",
+    "Nylon"
   ],
   "results": {
     "PET": {
@@ -928,6 +929,191 @@
             "peptide": "WHWQREIWQSMR",
             "score": -45.34385681152344,
             "improvement": 33.33778190612793
+          }
+        ]
+      }
+    },
+    "Nylon": {
+      "training": {
+        "plastic": "Nylon",
+        "test_r2": 0.9689052976474757,
+        "test_mae": 1.4130847770465613,
+        "test_rmse": 2.1097741744055747,
+        "best_epoch": 249,
+        "time": 2715.380684,
+        "params": {
+          "hidden_dim": 256,
+          "num_layers": 2,
+          "dropout": 0.2,
+          "learning_rate": 0.001,
+          "batch_size": 128,
+          "lambda_score": 1.0,
+          "weight_decay": 0.0001,
+          "use_layernorm": false
+        },
+        "dirs": {
+          "base": "D:\\GoogleDrive\\Projeler\\PeptidGenerator\\results\\peptide_generation_comparison\\Nylon",
+          "model": "D:\\GoogleDrive\\Projeler\\PeptidGenerator\\results\\peptide_generation_comparison\\Nylon\\model",
+          "figures": "D:\\GoogleDrive\\Projeler\\PeptidGenerator\\results\\peptide_generation_comparison\\Nylon\\figures",
+          "peptides": "D:\\GoogleDrive\\Projeler\\PeptidGenerator\\results\\peptide_generation_comparison\\Nylon\\peptides",
+          "logs": "D:\\GoogleDrive\\Projeler\\PeptidGenerator\\results\\peptide_generation_comparison\\Nylon\\logs"
+        }
+      },
+      "peptides": {
+        "SA": [
+          {
+            "peptide": "MWWMMSWWMRWW",
+            "score": -77.52225963991167,
+            "improvement": 56.24019317818096
+          },
+          {
+            "peptide": "WRMHWRMWNEWR",
+            "score": -69.42431810007452,
+            "improvement": 40.8892641003983
+          },
+          {
+            "peptide": "WWRMRDWWLRWW",
+            "score": -77.7069877029419,
+            "improvement": 50.54827452354556
+          },
+          {
+            "peptide": "FWWMRDWRLRWW",
+            "score": -76.80839879350845,
+            "improvement": 53.63711721436887
+          },
+          {
+            "peptide": "WWYMRQWWRRWW",
+            "score": -76.67924350255046,
+            "improvement": 53.2381227375369
+          },
+          {
+            "peptide": "WRRKWRYWEEWR",
+            "score": -69.93448910435016,
+            "improvement": 41.76655199164642
+          },
+          {
+            "peptide": "MWEMRQWFLRQW",
+            "score": -76.11702055565468,
+            "improvement": 52.27291691820579
+          },
+          {
+            "peptide": "WRHYWMYMVEWR",
+            "score": -67.67478696201725,
+            "improvement": 38.39676471469126
+          },
+          {
+            "peptide": "WWRMRDWWLRWW",
+            "score": -77.7069877029419,
+            "improvement": 45.46612656130799
+          },
+          {
+            "peptide": "KFYFRYWWRRWR",
+            "score": -72.31034481864027,
+            "improvement": 43.080924805237224
+          }
+        ],
+        "ILS": [
+          {
+            "peptide": "MWRMMSWWLRWW",
+            "score": -78.17417907714844,
+            "improvement": 56.89211082458496
+          },
+          {
+            "peptide": "YWRMRDWWLRWW",
+            "score": -77.60960388183594,
+            "improvement": 49.07454872131348
+          },
+          {
+            "peptide": "RWWLMAWWRRWW",
+            "score": -76.87384033203125,
+            "improvement": 49.715126037597656
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 55.61807632446289
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 55.34823799133301
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 50.621421813964844
+          },
+          {
+            "peptide": "YWRMMNWWLRWW",
+            "score": -78.27949523925781,
+            "improvement": 54.43539047241211
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 49.51133728027344
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 46.54849624633789
+          },
+          {
+            "peptide": "MWRMMSWWLRWW",
+            "score": -78.17417907714844,
+            "improvement": 48.94475746154785
+          }
+        ],
+        "MOCO-CEM": [
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 57.50729179382324
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 50.25430488586426
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 51.630645751953125
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 55.61807632446289
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 55.34823799133301
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 50.621421813964844
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 54.945255279541016
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 49.51133728027344
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 46.54849624633789
+          },
+          {
+            "peptide": "YWRMMDWWLRWW",
+            "score": -78.78936004638672,
+            "improvement": 49.55993843078613
           }
         ]
       }
