@@ -1,0 +1,18 @@
+{
+  "plastic": "PET",
+  "test_r2": 0.9789558755049451,
+  "test_mae": 1.3796012371135962,
+  "test_rmse": 2.0862682688209597,
+  "best_epoch": 248,
+  "time": 1866.473996,
+  "params": {
+    "hidden_dim": 256,
+    "num_layers": 3,
+    "dropout": 0.1,
+    "learning_rate": 0.001,
+    "batch_size": 2048,
+    "lambda_score": 1.0,
+    "weight_decay": 0.01,
+    "use_layernorm": true
+  }
+}
