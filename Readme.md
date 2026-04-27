@@ -5,7 +5,7 @@
 [![CUDA](https://img.shields.io/badge/CUDA-12.1-green.svg)](https://developer.nvidia.com/cuda-toolkit)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Derin öğrenme tabanlı mikroplastik bağlayıcı peptid tasarım sistemi. 5 farklı plastik tipi için optimize edilmiş ENCDEC (Encoder-Decoder) modeli ile yüksek afinite peptidler üretir.
+Derin öğrenme tabanlı mikroplastik bağlayıcı peptid tasarım sistemi. 6 farklı plastik tipi için optimize edilmiş ENCDEC (Encoder-Decoder) modeli ile yüksek afinite peptidler üretir.
 
 ---
 
@@ -13,12 +13,12 @@ Derin öğrenme tabanlı mikroplastik bağlayıcı peptid tasarım sistemi. 5 fa
 
 | Metrik | Değer |
 |--------|-------|
-| **Desteklenen Plastikler** | PET, PP, PE, PVC, Nylon |
+| **Desteklenen Plastikler** | PET, PP, PE, PVC, PS, Nylon |
 | **Model Mimarileri** | LSTM, CNN, LSTM-VAE, ENCDEC |
-| **Test Edilen Kombinasyon** | ~3,100+ |
-| **Ortalama Test R²** | **0.9592** (%95.92) |
+| **Test Edilen Kombinasyon** | 4,056 |
+| **Ortalama Test R²** | **0.9588** (%95.88) |
 | **En İyi R²** | 0.9766 (PET) |
-| **Üretilen Peptid** | 150 (30 × 5 plastik) |
+| **Üretilen Peptid** | 180 (30 × 6 plastik) |
 | **Peptid Özgünlüğü** | %100 |
 
 ---
@@ -32,14 +32,14 @@ Peptid-Generator/
 │   ├── ablation_study_win.py        # Windows ana eğitim scripti (RTX 4080)
 │   ├── ablation_study_mlx.py        # Mac MLX eğitim scripti
 │   ├── ablation_study_mac.py        # Mac PyTorch scripti
-│   ├── run_encdec_pp_final.py       # PP final eğitim scripti
+│   ├── peptide_generation_comparison.py # SA, ILS, MOCO-CEM karşılaştırması
 │   ├── analiz_raporu.py             # Analiz raporu oluşturma
-│   └── durum_raporu.py              # Durum raporu oluşturma
+│   ├── durum_raporu.py              # Durum raporu oluşturma
+│   └── optimization/                # ILS ve MOCO-CEM optimizasyon kodları
 │
 ├── 📂 data/                         # Veri Dosyaları
-│   ├── Data_win/                    # Windows veri seti
-│   │   └── PP.csv                   # PP peptid verileri
-│   └── sortingData/                 # Veri sıralama scriptleri
+│   ├── Data_win/                    # Windows uyumluluk/veri klasörü
+│   └── sortingData/                 # PET, PP, PE, PVC, PS, Nylon CSV veri setleri
 │
 ├── 📂 results/                      # Eğitim Sonuçları
 │   ├── ablation_results_PET/        # PET sonuçları
@@ -51,8 +51,9 @@ Peptid-Generator/
 │   ├── ablation_results_PP_LSTM/    # PP LSTM sonuçları
 │   ├── ablation_results_PE/         # PE sonuçları
 │   ├── ablation_results_PVC/        # PVC sonuçları
-│   ├── ablation_results_nylon/      # Nylon sonuçları
-│   └── ablation_results_old/        # Eski sonuçlar (arşiv)
+│   ├── ablation_results_PS/         # PS sonuçları
+│   ├── ablation_results_NYLON/      # Nylon sonuçları
+│   └── peptide_generation_comparison/ # Üretim yöntemi karşılaştırmaları
 │
 ├── 📂 reports/                      # Eğitim Raporları
 │   ├── EGITIM_RAPORU_GENEL.md       # 📌 Kapsamlı birleşik rapor
@@ -61,6 +62,7 @@ Peptid-Generator/
 │   ├── EGITIM_RAPORU_PP_LSTM.md     # PP LSTM raporu
 │   ├── EGITIM_RAPORU_PE.md          # PE detaylı raporu
 │   ├── EGITIM_RAPORU_PVC.md         # PVC detaylı raporu
+│   ├── EGITIM_RAPORU_PS.md          # PS detaylı raporu
 │   └── EGITIM_RAPORU_NYLON.md       # Nylon detaylı raporu
 │
 ├── README.md                        # 📌 Bu dosya
@@ -76,21 +78,36 @@ Peptid-Generator/
 
 | Plastik | Model | Test R² | MAE | RMSE | Veri Boyutu |
 |---------|-------|---------|-----|------|-------------|
-| **PET** | ENCDEC | **0.9766** | 1.21 | 1.68 | 232,299 |
+| **PET** | ENCDEC | **0.9766** | 1.48 | 2.20 | 441,978 |
 | **PP** | ENCDEC | 0.9583 | 1.53 | 2.10 | 433,487 |
 | **Nylon** | ENCDEC | 0.9576 | 1.75 | 2.46 | 142,614 |
-| **PE** | ENCDEC | 0.9547 | 1.69 | 2.21 | 219,877 |
-| **PVC** | ENCDEC | 0.9490 | 1.92 | 2.57 | 208,608 |
+| **PS** | ENCDEC | 0.9569 | 1.30 | 1.85 | 405,827 |
+| **PE** | ENCDEC | 0.9547 | 1.51 | 2.17 | 715,508 |
+| **PVC** | ENCDEC | 0.9490 | 1.71 | 2.40 | 208,608 |
+
+### Veri Seti Yapısı
+
+| Plastik | CSV Dosyası | Satır Sayısı | Benzersiz Sequence | Tekrarlı Sequence |
+|---------|-------------|--------------|--------------------|-------------------|
+| **PET** | `data/sortingData/PET.csv` | 441,978 | 381,065 | 60,913 |
+| **PP** | `data/sortingData/PP.csv` | 433,487 | 433,487 | 0 |
+| **PE** | `data/sortingData/PE.csv` | 715,508 | 715,508 | 0 |
+| **PVC** | `data/sortingData/PVC.csv` | 208,608 | 208,608 | 0 |
+| **PS** | `data/sortingData/PS.csv` | 405,827 | 405,827 | 0 |
+| **Nylon** | `data/sortingData/Nylon.csv` | 142,614 | 142,614 | 0 |
+
+> 📝 **Not:** Her CSV dosyası `Sequence` ve `Score` kolonlarından oluşur. PET veri setinde aynı sequence için tekrarlı satırlar bulunmaktadır.
 
 ### En İyi Üretilen Peptidler
 
 | Plastik | Peptid | Skor | İyileştirme |
 |---------|--------|------|-------------|
-| **Nylon** | WRYHRYWYLRQW | -78.50 | +52.15 |
-| **PVC** | WWFRHKFRWRTW | -66.42 | +34.64 |
-| **PET** | WWFRHKFRWRTW | -65.34 | +50.56 |
-| **PE** | WWFRHKWRWRTW | -59.77 | +44.99 |
-| **PP** | WWQRHKFRFRTW | -54.67 | +39.89 |
+| **Nylon** | YWRMMDWWLRWW | -78.79 | +55.62 |
+| **PVC** | HWNWIQNFMFIR | -69.17 | +49.92 |
+| **PET** | WEWWFGFHHRLR | -66.11 | +54.89 |
+| **PE** | AHYHFLWHQMRW | -60.77 | +51.38 |
+| **PP** | WWQRRAFFWRMW | -55.53 | +38.44 |
+| **PS** | WHWQREIWQSMR | -45.34 | +36.34 |
 
 > 📝 **Not:** Daha negatif skor = Daha iyi bağlanma afinitesi
 
@@ -126,11 +143,11 @@ cd src
 python ablation_study_win.py
 ```
 
-### 2. Final Model Eğitimi
+### 2. Peptid Üretim Karşılaştırması
 
 ```bash
 cd src
-python run_encdec_pp_final.py
+python peptide_generation_comparison.py
 ```
 
 ### 3. Analiz Raporu Oluşturma
@@ -181,7 +198,7 @@ Loss = MSE(score) + λ·CrossEntropy(reconstruction)
 
 ### Ablation Study (50 Epoch)
 - 4 model × hiperparametre kombinasyonları
-- Her plastik için ~600+ kombinasyon
+- Toplam 4,056 aktif kombinasyon
 - Val R² bazında en iyi model seçimi
 
 ### Final Training (250 Epoch)
@@ -229,6 +246,7 @@ Tüm grafikler `results/ablation_results_*/figures/` klasöründe:
 | PP ENCDEC Raporu | PP ENCDEC modeli | [`reports/EGITIM_RAPORU_PP_ENCDEC.md`](reports/EGITIM_RAPORU_PP_ENCDEC.md) |
 | PE Raporu | PE detaylı analizi | [`reports/EGITIM_RAPORU_PE.md`](reports/EGITIM_RAPORU_PE.md) |
 | PVC Raporu | PVC detaylı analizi | [`reports/EGITIM_RAPORU_PVC.md`](reports/EGITIM_RAPORU_PVC.md) |
+| PS Raporu | PS detaylı analizi | [`reports/EGITIM_RAPORU_PS.md`](reports/EGITIM_RAPORU_PS.md) |
 | Nylon Raporu | Nylon detaylı analizi | [`reports/EGITIM_RAPORU_NYLON.md`](reports/EGITIM_RAPORU_NYLON.md) |
 
 ---
@@ -237,14 +255,14 @@ Tüm grafikler `results/ablation_results_*/figures/` klasöründe:
 
 ### ENCDEC Optimal Parametreler
 
-| Parametre | PET | PP | PE | PVC | Nylon |
-|-----------|-----|----|----|-----|-------|
-| `hidden_dim` | 256 | 256 | 256 | 256 | 256 |
-| `num_layers` | 2 | 2 | 3 | 3 | 3 |
-| `dropout` | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 |
-| `lambda_score` | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
-| `batch_size` | 1024 | 1024 | 1024 | 1024 | 128 |
-| `learning_rate` | 0.001 | 0.001 | 0.001 | 0.001 | 0.001 |
+| Parametre | PET | PP | PE | PVC | PS | Nylon |
+|-----------|-----|----|----|-----|----|-------|
+| `hidden_dim` | 256 | 256 | 256 | 256 | 256 | 256 |
+| `num_layers` | 3 | 2 | 3 | 3 | 3 | 3 |
+| `dropout` | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 |
+| `lambda_score` | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
+| `batch_size` | 1024 | 1024 | 1024 | 1024 | 1024 | 128 |
+| `learning_rate` | 0.001 | 0.001 | 0.001 | 0.001 | 0.001 | 0.001 |
 
 ---
 
@@ -304,4 +322,4 @@ Bu proje, plastik kirliliğiyle mücadele için biyolojik çözümler geliştirm
 
 ---
 
-*Son Güncelleme: 1 Ocak 2026*
+*Son Güncelleme: 27 Nisan 2026*
