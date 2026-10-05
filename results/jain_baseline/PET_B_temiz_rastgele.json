@@ -1,0 +1,34 @@
+{
+  "train_r2_mean": 0.887076,
+  "train_r2_std": 0.002203,
+  "train_rmse_mean": 4.738408,
+  "train_rmse_std": 0.046265,
+  "train_mae_mean": 3.469097,
+  "train_mae_std": 0.036479,
+  "val_r2_mean": 0.874753,
+  "val_r2_std": 0.0018,
+  "val_rmse_mean": 5.020546,
+  "val_rmse_std": 0.036105,
+  "val_mae_mean": 3.650933,
+  "val_mae_std": 0.029247,
+  "test_r2_mean": 0.87225,
+  "test_r2_std": 0.001419,
+  "test_rmse_mean": 5.048588,
+  "test_rmse_std": 0.028006,
+  "test_mae_mean": 3.691187,
+  "test_mae_std": 0.027052,
+  "per_seed_test_r2": [
+    0.872808,
+    0.870637,
+    0.873306
+  ],
+  "leakage": {
+    "exact_test_in_train_pct": 0.0,
+    "nn_hamming_mean": 2.697,
+    "nn_hamming_median": 2.0,
+    "nn_identity_mean_pct": 77.53,
+    "pct_nn_le_2": 52.67,
+    "pct_nn_le_3": 72.33
+  },
+  "n_samples": 381065
+}

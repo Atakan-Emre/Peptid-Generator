@@ -1,0 +1,1160 @@
+{
+  "plastic": "PVC",
+  "architecture": "lstm",
+  "split_strategy": "clustered",
+  "n_configs": 24,
+  "subsample_n": 200000,
+  "best_config": {
+    "architecture": "lstm",
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "dropout": 0.1,
+    "latent_dim": 64,
+    "n_filters": 128,
+    "kernel_size": 3,
+    "use_layernorm": true,
+    "bidirectional": true,
+    "lambda_recon": 1.0,
+    "beta_kl": 0.01,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "max_epochs": 25,
+    "patience": 6,
+    "grad_clip": 1.0,
+    "seed": 42,
+    "amp": false,
+    "scheduler": "cosine"
+  },
+  "best_val_r2": 0.610638,
+  "all_runs": [
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 2,
+        "dropout": 0.1,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 26.9,
+      "metrics": {
+        "train": {
+          "r2": 0.640962,
+          "rmse": 6.353141,
+          "mae": 4.932748,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.593956,
+          "rmse": 6.46015,
+          "mae": 5.032125,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.640111,
+          "rmse": 6.502326,
+          "mae": 5.11434,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 2,
+        "dropout": 0.1,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 7.5,
+      "metrics": {
+        "train": {
+          "r2": -6.4e-05,
+          "rmse": 10.603088,
+          "mae": 8.539544,
+          "n": 159999
+        },
+        "val": {
+          "r2": -9.6e-05,
+          "rmse": 10.138572,
+          "mae": 8.258645,
+          "n": 20000
+        },
+        "test": {
+          "r2": -8.6e-05,
+          "rmse": 10.839345,
+          "mae": 8.661358,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 2,
+        "dropout": 0.2,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 26.7,
+      "metrics": {
+        "train": {
+          "r2": 0.635463,
+          "rmse": 6.401614,
+          "mae": 4.970462,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.590225,
+          "rmse": 6.489761,
+          "mae": 5.053949,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.634503,
+          "rmse": 6.552793,
+          "mae": 5.146133,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 2,
+        "dropout": 0.2,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 7.5,
+      "metrics": {
+        "train": {
+          "r2": -5.8e-05,
+          "rmse": 10.603059,
+          "mae": 8.539698,
+          "n": 159999
+        },
+        "val": {
+          "r2": -0.000104,
+          "rmse": 10.13861,
+          "mae": 8.258731,
+          "n": 20000
+        },
+        "test": {
+          "r2": -8e-05,
+          "rmse": 10.839311,
+          "mae": 8.661527,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 2,
+        "dropout": 0.3,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 26.6,
+      "metrics": {
+        "train": {
+          "r2": 0.634926,
+          "rmse": 6.406329,
+          "mae": 4.978423,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.590141,
+          "rmse": 6.490428,
+          "mae": 5.053098,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.634695,
+          "rmse": 6.551067,
+          "mae": 5.145918,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 2,
+        "dropout": 0.3,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 7.5,
+      "metrics": {
+        "train": {
+          "r2": -6.3e-05,
+          "rmse": 10.603083,
+          "mae": 8.539568,
+          "n": 159999
+        },
+        "val": {
+          "r2": -9.7e-05,
+          "rmse": 10.138578,
+          "mae": 8.258659,
+          "n": 20000
+        },
+        "test": {
+          "r2": -8.5e-05,
+          "rmse": 10.83934,
+          "mae": 8.661385,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 3,
+        "dropout": 0.1,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 38.9,
+      "metrics": {
+        "train": {
+          "r2": 0.638923,
+          "rmse": 6.371162,
+          "mae": 4.935688,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.592257,
+          "rmse": 6.473648,
+          "mae": 5.032269,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.637663,
+          "rmse": 6.524403,
+          "mae": 5.09702,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 3,
+        "dropout": 0.1,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 10.7,
+      "metrics": {
+        "train": {
+          "r2": -0.000159,
+          "rmse": 10.603596,
+          "mae": 8.537598,
+          "n": 159999
+        },
+        "val": {
+          "r2": -2.4e-05,
+          "rmse": 10.138208,
+          "mae": 8.2576,
+          "n": 20000
+        },
+        "test": {
+          "r2": -0.000192,
+          "rmse": 10.839917,
+          "mae": 8.659224,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 3,
+        "dropout": 0.2,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 38.9,
+      "metrics": {
+        "train": {
+          "r2": 0.632413,
+          "rmse": 6.42834,
+          "mae": 4.997576,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.586763,
+          "rmse": 6.517117,
+          "mae": 5.077465,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.632415,
+          "rmse": 6.571478,
+          "mae": 5.164635,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 3,
+        "dropout": 0.2,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 10.8,
+      "metrics": {
+        "train": {
+          "r2": -0.000146,
+          "rmse": 10.603523,
+          "mae": 8.537822,
+          "n": 159999
+        },
+        "val": {
+          "r2": -3.1e-05,
+          "rmse": 10.138239,
+          "mae": 8.25772,
+          "n": 20000
+        },
+        "test": {
+          "r2": -0.000177,
+          "rmse": 10.839836,
+          "mae": 8.659472,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 3,
+        "dropout": 0.3,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 38.8,
+      "metrics": {
+        "train": {
+          "r2": 0.629862,
+          "rmse": 6.450601,
+          "mae": 5.01023,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.582854,
+          "rmse": 6.547869,
+          "mae": 5.103266,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.631451,
+          "rmse": 6.580089,
+          "mae": 5.161332,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 128,
+        "num_layers": 3,
+        "dropout": 0.3,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 10.9,
+      "metrics": {
+        "train": {
+          "r2": -0.000137,
+          "rmse": 10.603477,
+          "mae": 8.537972,
+          "n": 159999
+        },
+        "val": {
+          "r2": -3.5e-05,
+          "rmse": 10.138261,
+          "mae": 8.2578,
+          "n": 20000
+        },
+        "test": {
+          "r2": -0.000168,
+          "rmse": 10.839785,
+          "mae": 8.659637,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 2,
+        "dropout": 0.1,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 25.8,
+      "metrics": {
+        "train": {
+          "r2": 0.65955,
+          "rmse": 6.186501,
+          "mae": 4.758411,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.610638,
+          "rmse": 6.326052,
+          "mae": 4.881638,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.654254,
+          "rmse": 6.37328,
+          "mae": 4.975571,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 2,
+        "dropout": 0.1,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 7.3,
+      "metrics": {
+        "train": {
+          "r2": -5.8e-05,
+          "rmse": 10.603057,
+          "mae": 8.539709,
+          "n": 159999
+        },
+        "val": {
+          "r2": -0.000104,
+          "rmse": 10.138612,
+          "mae": 8.258737,
+          "n": 20000
+        },
+        "test": {
+          "r2": -8e-05,
+          "rmse": 10.839309,
+          "mae": 8.661539,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 2,
+        "dropout": 0.2,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 25.8,
+      "metrics": {
+        "train": {
+          "r2": 0.652377,
+          "rmse": 6.251339,
+          "mae": 4.817276,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.604198,
+          "rmse": 6.378156,
+          "mae": 4.921425,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.649382,
+          "rmse": 6.418024,
+          "mae": 5.008152,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 2,
+        "dropout": 0.2,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 7.3,
+      "metrics": {
+        "train": {
+          "r2": -5.8e-05,
+          "rmse": 10.603058,
+          "mae": 8.539702,
+          "n": 159999
+        },
+        "val": {
+          "r2": -0.000104,
+          "rmse": 10.13861,
+          "mae": 8.258733,
+          "n": 20000
+        },
+        "test": {
+          "r2": -8e-05,
+          "rmse": 10.839311,
+          "mae": 8.661531,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 2,
+        "dropout": 0.3,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 25.8,
+      "metrics": {
+        "train": {
+          "r2": 0.653073,
+          "rmse": 6.245076,
+          "mae": 4.811951,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.604909,
+          "rmse": 6.372423,
+          "mae": 4.931353,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.64929,
+          "rmse": 6.418867,
+          "mae": 5.021023,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 2,
+        "dropout": 0.3,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 7.2,
+      "metrics": {
+        "train": {
+          "r2": -4.4e-05,
+          "rmse": 10.602984,
+          "mae": 8.540136,
+          "n": 159999
+        },
+        "val": {
+          "r2": -0.000126,
+          "rmse": 10.138721,
+          "mae": 8.258974,
+          "n": 20000
+        },
+        "test": {
+          "r2": -6.4e-05,
+          "rmse": 10.839223,
+          "mae": 8.662005,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 3,
+        "dropout": 0.1,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 40.0,
+      "metrics": {
+        "train": {
+          "r2": 0.647767,
+          "rmse": 6.292649,
+          "mae": 4.857507,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.600327,
+          "rmse": 6.409267,
+          "mae": 4.957884,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.646251,
+          "rmse": 6.446617,
+          "mae": 5.042787,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 3,
+        "dropout": 0.1,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 11.1,
+      "metrics": {
+        "train": {
+          "r2": -5.2e-05,
+          "rmse": 10.603028,
+          "mae": 8.539869,
+          "n": 159999
+        },
+        "val": {
+          "r2": -0.000112,
+          "rmse": 10.138652,
+          "mae": 8.258825,
+          "n": 20000
+        },
+        "test": {
+          "r2": -7.4e-05,
+          "rmse": 10.839275,
+          "mae": 8.661713,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 3,
+        "dropout": 0.2,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 24,
+      "epochs_run": 25,
+      "train_seconds": 40.2,
+      "metrics": {
+        "train": {
+          "r2": 0.645827,
+          "rmse": 6.309955,
+          "mae": 4.872719,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.59987,
+          "rmse": 6.412932,
+          "mae": 4.967885,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.642347,
+          "rmse": 6.482095,
+          "mae": 5.068757,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 3,
+        "dropout": 0.2,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 11.1,
+      "metrics": {
+        "train": {
+          "r2": -5.7e-05,
+          "rmse": 10.603052,
+          "mae": 8.539738,
+          "n": 159999
+        },
+        "val": {
+          "r2": -0.000106,
+          "rmse": 10.138619,
+          "mae": 8.258752,
+          "n": 20000
+        },
+        "test": {
+          "r2": -7.9e-05,
+          "rmse": 10.839303,
+          "mae": 8.66157,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 3,
+        "dropout": 0.3,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 21,
+      "epochs_run": 25,
+      "train_seconds": 40.1,
+      "metrics": {
+        "train": {
+          "r2": 0.641266,
+          "rmse": 6.350458,
+          "mae": 4.919745,
+          "n": 159999
+        },
+        "val": {
+          "r2": 0.594486,
+          "rmse": 6.455934,
+          "mae": 5.019577,
+          "n": 20000
+        },
+        "test": {
+          "r2": 0.638368,
+          "rmse": 6.518046,
+          "mae": 5.110172,
+          "n": 20000
+        }
+      }
+    },
+    {
+      "config": {
+        "architecture": "lstm",
+        "hidden_dim": 256,
+        "num_layers": 3,
+        "dropout": 0.3,
+        "latent_dim": 64,
+        "n_filters": 128,
+        "kernel_size": 3,
+        "use_layernorm": true,
+        "bidirectional": true,
+        "lambda_recon": 1.0,
+        "beta_kl": 0.01,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_size": 1024,
+        "max_epochs": 25,
+        "patience": 6,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "amp": false,
+        "scheduler": "cosine"
+      },
+      "best_epoch": 0,
+      "epochs_run": 7,
+      "train_seconds": 11.2,
+      "metrics": {
+        "train": {
+          "r2": -5.6e-05,
+          "rmse": 10.603049,
+          "mae": 8.539752,
+          "n": 159999
+        },
+        "val": {
+          "r2": -0.000106,
+          "rmse": 10.138623,
+          "mae": 8.25876,
+          "n": 20000
+        },
+        "test": {
+          "r2": -7.8e-05,
+          "rmse": 10.8393,
+          "mae": 8.661586,
+          "n": 20000
+        }
+      }
+    }
+  ]
+}

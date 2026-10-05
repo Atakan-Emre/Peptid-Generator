@@ -1,0 +1,50 @@
+{
+  "plastic": "PVC",
+  "split_strategy": "clustered",
+  "max_hamming": 3,
+  "identity_threshold_pct": 75.0,
+  "seed": 42,
+  "n_after_prep": 208608,
+  "split_sizes": {
+    "train": 166886,
+    "val": 20861,
+    "test": 20861
+  },
+  "split_pct": {
+    "train": 80.0,
+    "val": 10.0,
+    "test": 10.0
+  },
+  "dedup": {
+    "n_raw": 208608,
+    "n_unique": 208608,
+    "n_removed": 0,
+    "duplicate_pct": 0.0,
+    "score_spread_of_duplicates": null
+  },
+  "clustering": {
+    "n_sequences": 208608,
+    "n_clusters": 40137,
+    "largest_cluster": 314,
+    "largest_cluster_pct": 0.151,
+    "mean_cluster_size": 5.2,
+    "median_cluster_size": 5.0,
+    "singletons": 1526,
+    "singleton_pct": 3.8
+  },
+  "normalization": {
+    "mean": -31.816640853881836,
+    "std": 10.600166320800781,
+    "fitted_on": "train"
+  },
+  "leakage": {
+    "exact_test_in_train_pct": 0.0,
+    "nn_hamming_mean": 3.25,
+    "nn_hamming_median": 3.0,
+    "nn_identity_mean_pct": 72.92,
+    "pct_nn_le_2": 34.0,
+    "pct_nn_le_3": 59.0
+  },
+  "npz": "PVC_clustered_seed42.npz",
+  "data_sha1": "4f1912066e267030"
+}

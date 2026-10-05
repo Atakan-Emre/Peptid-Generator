@@ -1,0 +1,1316 @@
+[
+  {
+    "plastic": "PET",
+    "target_model": {
+      "architecture": "encdec",
+      "split_strategy": "clustered"
+    },
+    "optimized": {
+      "n": 30,
+      "mean": -64.8443,
+      "std": 4.9211,
+      "best": -73.7561,
+      "median": -65.3574,
+      "p05": -72.291
+    },
+    "random_baseline": {
+      "n": 2000,
+      "mean": -14.6612,
+      "std": 6.798,
+      "best": -45.2321,
+      "median": -13.9923,
+      "p05": -27.0618
+    },
+    "train_top1pct_measured": {
+      "n": 3048,
+      "mean": -56.8718,
+      "std": 1.9065,
+      "best": -63.765,
+      "median": -56.61,
+      "p05": -60.3465
+    },
+    "train_top1pct_predicted": {
+      "n": 3048,
+      "mean": -56.2903,
+      "std": 2.424,
+      "best": -63.2762,
+      "median": -56.3143,
+      "p05": -60.3001
+    },
+    "gain_vs_random": -50.1831,
+    "gain_vs_train_top1pct_measured": -7.9725,
+    "beats_best_training_sequence": true,
+    "best_training_score": -63.765,
+    "validator_model": {
+      "architecture": "lstm",
+      "split_strategy": "clustered",
+      "optimized": {
+        "n": 30,
+        "mean": -43.5661,
+        "std": 4.6858,
+        "best": -54.3455,
+        "median": -43.582,
+        "p05": -51.4209
+      },
+      "random_baseline": {
+        "n": 2000,
+        "mean": -14.8515,
+        "std": 6.1899,
+        "best": -46.688,
+        "median": -14.0267,
+        "p05": -26.3619
+      },
+      "gain_vs_random": -28.7146,
+      "agreement_pearson": 0.121198,
+      "agreement_spearman": 0.1604
+    },
+    "validator_confirms_gain": true,
+    "sequences": [
+      {
+        "sequence": "FWNGKFVWHWWY",
+        "target_score": -61.3433,
+        "validator_score": -34.1918
+      },
+      {
+        "sequence": "HSWAGGGRIKLA",
+        "target_score": -65.6402,
+        "validator_score": -54.3455
+      },
+      {
+        "sequence": "KIWRWMYFQYWI",
+        "target_score": -57.2196,
+        "validator_score": -43.8911
+      },
+      {
+        "sequence": "KWWWHFQIMMMW",
+        "target_score": -57.3194,
+        "validator_score": -46.9417
+      },
+      {
+        "sequence": "LYQMNYLTWWFV",
+        "target_score": -59.6195,
+        "validator_score": -40.2753
+      },
+      {
+        "sequence": "MMMERWIFQNSR",
+        "target_score": -57.8293,
+        "validator_score": -39.8035
+      },
+      {
+        "sequence": "NYWREYTRMWMG",
+        "target_score": -53.3175,
+        "validator_score": -43.3996
+      },
+      {
+        "sequence": "QYRRWRMFMRWW",
+        "target_score": -61.8,
+        "validator_score": -40.5514
+      },
+      {
+        "sequence": "RHEWVWWVRRWM",
+        "target_score": -63.0812,
+        "validator_score": -46.5017
+      },
+      {
+        "sequence": "RMWWWMFRYWWM",
+        "target_score": -60.0428,
+        "validator_score": -41.9871
+      },
+      {
+        "sequence": "RWRRMWWIFRWW",
+        "target_score": -73.6183,
+        "validator_score": -47.5206
+      },
+      {
+        "sequence": "SDYIGKGRIAAA",
+        "target_score": -62.2733,
+        "validator_score": -48.1863
+      },
+      {
+        "sequence": "WHWYWNFRWWWR",
+        "target_score": -67.0507,
+        "validator_score": -41.6125
+      },
+      {
+        "sequence": "WKWWYMHRWWWG",
+        "target_score": -64.8131,
+        "validator_score": -41.0541
+      },
+      {
+        "sequence": "WMWWWVMLRMMY",
+        "target_score": -65.1133,
+        "validator_score": -44.7819
+      },
+      {
+        "sequence": "WMWWYMVWYWWY",
+        "target_score": -68.297,
+        "validator_score": -32.622
+      },
+      {
+        "sequence": "WWKYAMFRMWWA",
+        "target_score": -68.1679,
+        "validator_score": -49.5902
+      },
+      {
+        "sequence": "WWKYWRFLWWWR",
+        "target_score": -69.0697,
+        "validator_score": -40.9895
+      },
+      {
+        "sequence": "WWRERWRWIRWW",
+        "target_score": -70.4493,
+        "validator_score": -43.9834
+      },
+      {
+        "sequence": "WWSYWMRYYWWY",
+        "target_score": -67.5293,
+        "validator_score": -43.8369
+      },
+      {
+        "sequence": "WWWRQWFNRRWR",
+        "target_score": -66.6401,
+        "validator_score": -42.6661
+      },
+      {
+        "sequence": "WWWWDYVWKWWI",
+        "target_score": -64.4987,
+        "validator_score": -38.484
+      },
+      {
+        "sequence": "WWYRFYWRWRWW",
+        "target_score": -63.3312,
+        "validator_score": -43.8045
+      },
+      {
+        "sequence": "WWYWEWRYMRWW",
+        "target_score": -73.7561,
+        "validator_score": -43.1563
+      },
+      {
+        "sequence": "WWYWHWFRYRWW",
+        "target_score": -70.6687,
+        "validator_score": -40.6647
+      },
+      {
+        "sequence": "WWYWSYMRWWWN",
+        "target_score": -65.7552,
+        "validator_score": -43.7643
+      },
+      {
+        "sequence": "WYHWFMRTWWAN",
+        "target_score": -67.6116,
+        "validator_score": -51.9858
+      },
+      {
+        "sequence": "WYWYFWFFRRWW",
+        "target_score": -70.4776,
+        "validator_score": -44.5321
+      },
+      {
+        "sequence": "WYWYWMMTWWIM",
+        "target_score": -63.3948,
+        "validator_score": -41.1278
+      },
+      {
+        "sequence": "WYYWWRMIYWWY",
+        "target_score": -65.6016,
+        "validator_score": -50.7305
+      }
+    ]
+  },
+  {
+    "plastic": "PE",
+    "target_model": {
+      "architecture": "encdec",
+      "split_strategy": "clustered"
+    },
+    "optimized": {
+      "n": 30,
+      "mean": -60.5163,
+      "std": 4.5503,
+      "best": -72.4221,
+      "median": -59.4022,
+      "p05": -67.4958
+    },
+    "random_baseline": {
+      "n": 2000,
+      "mean": -15.3537,
+      "std": 5.2668,
+      "best": -36.9193,
+      "median": -14.8477,
+      "p05": -24.7442
+    },
+    "train_top1pct_measured": {
+      "n": 5724,
+      "mean": -51.2272,
+      "std": 2.3039,
+      "best": -59.6183,
+      "median": -50.5304,
+      "p05": -56.1969
+    },
+    "train_top1pct_predicted": {
+      "n": 5724,
+      "mean": -50.4474,
+      "std": 3.0469,
+      "best": -61.0373,
+      "median": -50.3321,
+      "p05": -55.8576
+    },
+    "gain_vs_random": -45.1626,
+    "gain_vs_train_top1pct_measured": -9.2891,
+    "beats_best_training_sequence": true,
+    "best_training_score": -59.6183,
+    "validator_model": {
+      "architecture": "lstm",
+      "split_strategy": "clustered",
+      "optimized": {
+        "n": 30,
+        "mean": -51.5234,
+        "std": 3.6202,
+        "best": -57.7123,
+        "median": -52.6228,
+        "p05": -55.779
+      },
+      "random_baseline": {
+        "n": 2000,
+        "mean": -15.1752,
+        "std": 5.186,
+        "best": -42.1128,
+        "median": -14.5561,
+        "p05": -24.7662
+      },
+      "gain_vs_random": -36.3481,
+      "agreement_pearson": 0.341156,
+      "agreement_spearman": 0.212458
+    },
+    "validator_confirms_gain": true,
+    "sequences": [
+      {
+        "sequence": "DWRLTMRWRMIF",
+        "target_score": -68.2885,
+        "validator_score": -47.952
+      },
+      {
+        "sequence": "EFMLTMKYRMIF",
+        "target_score": -66.5268,
+        "validator_score": -48.1852
+      },
+      {
+        "sequence": "EFMVTKKWHMRF",
+        "target_score": -66.2847,
+        "validator_score": -55.2695
+      },
+      {
+        "sequence": "EFMWHKHWLMRW",
+        "target_score": -63.5169,
+        "validator_score": -56.1958
+      },
+      {
+        "sequence": "HKYWHELWTMRK",
+        "target_score": -63.2674,
+        "validator_score": -50.8111
+      },
+      {
+        "sequence": "HLWFWLHYRMHW",
+        "target_score": -62.3659,
+        "validator_score": -49.0715
+      },
+      {
+        "sequence": "HMYHILKWIMRK",
+        "target_score": -63.2045,
+        "validator_score": -54.5509
+      },
+      {
+        "sequence": "HVWWWSHFRVHM",
+        "target_score": -55.6308,
+        "validator_score": -48.5067
+      },
+      {
+        "sequence": "HWMHTMYWRMMW",
+        "target_score": -58.4864,
+        "validator_score": -53.1213
+      },
+      {
+        "sequence": "HWYHWEKWQMRY",
+        "target_score": -59.5289,
+        "validator_score": -53.0299
+      },
+      {
+        "sequence": "MFRWGKIWLMRW",
+        "target_score": -59.2755,
+        "validator_score": -52.1756
+      },
+      {
+        "sequence": "MWMWSMRWRMMW",
+        "target_score": -59.5965,
+        "validator_score": -54.3394
+      },
+      {
+        "sequence": "MWRWGMRWLMRW",
+        "target_score": -58.9686,
+        "validator_score": -54.888
+      },
+      {
+        "sequence": "MWYWAMRWRMMW",
+        "target_score": -58.3226,
+        "validator_score": -53.4442
+      },
+      {
+        "sequence": "RHWWWDHFRMFW",
+        "target_score": -55.4735,
+        "validator_score": -53.1521
+      },
+      {
+        "sequence": "RWFWLTRHQMRW",
+        "target_score": -61.0851,
+        "validator_score": -48.497
+      },
+      {
+        "sequence": "RWMYIEKWTMRY",
+        "target_score": -63.2708,
+        "validator_score": -55.0158
+      },
+      {
+        "sequence": "TFLMTMKWRMLF",
+        "target_score": -72.4221,
+        "validator_score": -57.7123
+      },
+      {
+        "sequence": "TWRMTRYWRMIF",
+        "target_score": -64.8765,
+        "validator_score": -47.4235
+      },
+      {
+        "sequence": "WFFYLMKWKMGR",
+        "target_score": -58.7787,
+        "validator_score": -46.3806
+      },
+      {
+        "sequence": "WFRYLWKWEMRQ",
+        "target_score": -63.8491,
+        "validator_score": -50.9779
+      },
+      {
+        "sequence": "WMRRWSRWEMMW",
+        "target_score": -58.66,
+        "validator_score": -52.1137
+      },
+      {
+        "sequence": "WRRHWWWFQNFW",
+        "target_score": -51.9511,
+        "validator_score": -41.8504
+      },
+      {
+        "sequence": "WRWRWSFWRNFK",
+        "target_score": -57.2644,
+        "validator_score": -53.9099
+      },
+      {
+        "sequence": "WWYRFWLWVHFR",
+        "target_score": -54.9251,
+        "validator_score": -53.0482
+      },
+      {
+        "sequence": "WYRRHWLWHIFH",
+        "target_score": -56.62,
+        "validator_score": -52.3717
+      },
+      {
+        "sequence": "YRWWWSHRETMW",
+        "target_score": -62.6238,
+        "validator_score": -52.8738
+      },
+      {
+        "sequence": "YRWWWSHYMTMW",
+        "target_score": -59.0859,
+        "validator_score": -54.122
+      },
+      {
+        "sequence": "YRWWWTFRETMW",
+        "target_score": -57.832,
+        "validator_score": -50.1387
+      },
+      {
+        "sequence": "YWRWWSWWDQLW",
+        "target_score": -53.5076,
+        "validator_score": -44.572
+      }
+    ]
+  },
+  {
+    "plastic": "PP",
+    "target_model": {
+      "architecture": "encdec",
+      "split_strategy": "clustered"
+    },
+    "optimized": {
+      "n": 30,
+      "mean": -57.0971,
+      "std": 4.9509,
+      "best": -64.7695,
+      "median": -57.9563,
+      "p05": -63.1349
+    },
+    "random_baseline": {
+      "n": 2000,
+      "mean": -11.3573,
+      "std": 4.9444,
+      "best": -35.501,
+      "median": -10.8607,
+      "p05": -20.4099
+    },
+    "train_top1pct_measured": {
+      "n": 3467,
+      "mean": -45.6351,
+      "std": 1.6557,
+      "best": -52.3295,
+      "median": -45.0612,
+      "p05": -49.1825
+    },
+    "train_top1pct_predicted": {
+      "n": 3467,
+      "mean": -45.3596,
+      "std": 2.361,
+      "best": -53.8517,
+      "median": -45.1612,
+      "p05": -49.7458
+    },
+    "gain_vs_random": -45.7398,
+    "gain_vs_train_top1pct_measured": -11.462,
+    "beats_best_training_sequence": true,
+    "best_training_score": -52.3295,
+    "validator_model": {
+      "architecture": "lstm",
+      "split_strategy": "clustered",
+      "optimized": {
+        "n": 30,
+        "mean": -40.7416,
+        "std": 5.7202,
+        "best": -48.8891,
+        "median": -40.0511,
+        "p05": -47.6407
+      },
+      "random_baseline": {
+        "n": 2000,
+        "mean": -11.3653,
+        "std": 4.461,
+        "best": -36.7023,
+        "median": -10.8156,
+        "p05": -19.6245
+      },
+      "gain_vs_random": -29.3764,
+      "agreement_pearson": 0.494998,
+      "agreement_spearman": 0.52881
+    },
+    "validator_confirms_gain": true,
+    "sequences": [
+      {
+        "sequence": "FRWSIIWFYELW",
+        "target_score": -55.8593,
+        "validator_score": -33.7161
+      },
+      {
+        "sequence": "FWLWQIFERRLW",
+        "target_score": -64.7695,
+        "validator_score": -40.3821
+      },
+      {
+        "sequence": "FYMEIRMHWMRR",
+        "target_score": -49.7287,
+        "validator_score": -33.9469
+      },
+      {
+        "sequence": "KRFWEMKWSIMR",
+        "target_score": -51.636,
+        "validator_score": -30.3764
+      },
+      {
+        "sequence": "LKWMTRMHVIMI",
+        "target_score": -45.2213,
+        "validator_score": -29.6606
+      },
+      {
+        "sequence": "WEWVMLMMMIKR",
+        "target_score": -56.813,
+        "validator_score": -33.3711
+      },
+      {
+        "sequence": "WHERMKLMWMHW",
+        "target_score": -50.5142,
+        "validator_score": -37.6614
+      },
+      {
+        "sequence": "WHWFHFWFHYWW",
+        "target_score": -49.6753,
+        "validator_score": -39.7202
+      },
+      {
+        "sequence": "WTRWRWNHFWFF",
+        "target_score": -48.8794,
+        "validator_score": -46.283
+      },
+      {
+        "sequence": "WWAIKYQAYRIW",
+        "target_score": -58.7777,
+        "validator_score": -38.9904
+      },
+      {
+        "sequence": "WWEFIEFKWRGW",
+        "target_score": -61.1605,
+        "validator_score": -47.5448
+      },
+      {
+        "sequence": "WWGKFFTTWWYW",
+        "target_score": -62.1551,
+        "validator_score": -39.2699
+      },
+      {
+        "sequence": "WWHWIHFLWRVW",
+        "target_score": -60.2402,
+        "validator_score": -46.4473
+      },
+      {
+        "sequence": "WWHWQIKFWRTW",
+        "target_score": -59.8291,
+        "validator_score": -44.708
+      },
+      {
+        "sequence": "WWIKKHTAYIIW",
+        "target_score": -57.1496,
+        "validator_score": -36.1732
+      },
+      {
+        "sequence": "WWLRRYGHFWWF",
+        "target_score": -56.4863,
+        "validator_score": -38.6921
+      },
+      {
+        "sequence": "WWMMMMFEWRDW",
+        "target_score": -59.9799,
+        "validator_score": -43.8554
+      },
+      {
+        "sequence": "WWMWHMFLWRGW",
+        "target_score": -62.6442,
+        "validator_score": -47.7193
+      },
+      {
+        "sequence": "WWMWLQFLYRAW",
+        "target_score": -60.3779,
+        "validator_score": -39.3207
+      },
+      {
+        "sequence": "WWMWMIHFWRGW",
+        "target_score": -62.4068,
+        "validator_score": -47.3908
+      },
+      {
+        "sequence": "WWMWYHDDYIYW",
+        "target_score": -57.5463,
+        "validator_score": -39.4479
+      },
+      {
+        "sequence": "WWNRVMFSWRLW",
+        "target_score": -63.5364,
+        "validator_score": -46.7921
+      },
+      {
+        "sequence": "WWRFVIFVHRVW",
+        "target_score": -58.3663,
+        "validator_score": -46.2098
+      },
+      {
+        "sequence": "WWRRWAKHWRFW",
+        "target_score": -53.6189,
+        "validator_score": -46.1281
+      },
+      {
+        "sequence": "WWRYMRKMWIDW",
+        "target_score": -56.5203,
+        "validator_score": -30.5045
+      },
+      {
+        "sequence": "WWYRFGFLWRYW",
+        "target_score": -61.412,
+        "validator_score": -48.8891
+      },
+      {
+        "sequence": "WWYWGLFIFRVW",
+        "target_score": -60.3071,
+        "validator_score": -43.7687
+      },
+      {
+        "sequence": "YIKWWWMIFMML",
+        "target_score": -52.9452,
+        "validator_score": -44.7461
+      },
+      {
+        "sequence": "YKFWYWMHLWHR",
+        "target_score": -60.0686,
+        "validator_score": -38.8647
+      },
+      {
+        "sequence": "YWTYWEWMLWMR",
+        "target_score": -54.2881,
+        "validator_score": -41.6692
+      }
+    ]
+  },
+  {
+    "plastic": "PS",
+    "target_model": {
+      "architecture": "encdec",
+      "split_strategy": "clustered"
+    },
+    "optimized": {
+      "n": 30,
+      "mean": -43.8936,
+      "std": 2.7901,
+      "best": -51.5515,
+      "median": -43.6494,
+      "p05": -47.2675
+    },
+    "random_baseline": {
+      "n": 2000,
+      "mean": -9.9446,
+      "std": 4.5131,
+      "best": -27.5768,
+      "median": -9.6621,
+      "p05": -17.783
+    },
+    "train_top1pct_measured": {
+      "n": 3246,
+      "mean": -39.6017,
+      "std": 1.8058,
+      "best": -44.5288,
+      "median": -39.1092,
+      "p05": -42.8814
+    },
+    "train_top1pct_predicted": {
+      "n": 3246,
+      "mean": -39.2532,
+      "std": 2.2123,
+      "best": -45.9456,
+      "median": -39.0903,
+      "p05": -43.1134
+    },
+    "gain_vs_random": -33.949,
+    "gain_vs_train_top1pct_measured": -4.2919,
+    "beats_best_training_sequence": true,
+    "best_training_score": -44.5288,
+    "validator_model": {
+      "architecture": "lstm",
+      "split_strategy": "clustered",
+      "optimized": {
+        "n": 30,
+        "mean": -33.7322,
+        "std": 4.6458,
+        "best": -43.2656,
+        "median": -34.8598,
+        "p05": -39.7401
+      },
+      "random_baseline": {
+        "n": 2000,
+        "mean": -10.0847,
+        "std": 4.0581,
+        "best": -31.6324,
+        "median": -9.6494,
+        "p05": -17.4223
+      },
+      "gain_vs_random": -23.6475,
+      "agreement_pearson": 0.468622,
+      "agreement_spearman": 0.433593
+    },
+    "validator_confirms_gain": true,
+    "sequences": [
+      {
+        "sequence": "EEVWRWEIQRYM",
+        "target_score": -42.5385,
+        "validator_score": -28.2044
+      },
+      {
+        "sequence": "FRRHWRWWAWWY",
+        "target_score": -43.5596,
+        "validator_score": -38.7942
+      },
+      {
+        "sequence": "FWRHNRHWLLWY",
+        "target_score": -42.3365,
+        "validator_score": -34.8223
+      },
+      {
+        "sequence": "FWSSWILRYWFR",
+        "target_score": -45.7633,
+        "validator_score": -37.9022
+      },
+      {
+        "sequence": "HVWRWYMTQHQM",
+        "target_score": -47.7903,
+        "validator_score": -39.2022
+      },
+      {
+        "sequence": "HYMWYVQYFHQM",
+        "target_score": -41.841,
+        "validator_score": -31.9127
+      },
+      {
+        "sequence": "IFWRYAVLQHQM",
+        "target_score": -51.5515,
+        "validator_score": -38.2468
+      },
+      {
+        "sequence": "IKSMWRIIAWWW",
+        "target_score": -42.4102,
+        "validator_score": -27.1138
+      },
+      {
+        "sequence": "KAGAFWIITFWK",
+        "target_score": -43.8972,
+        "validator_score": -26.3025
+      },
+      {
+        "sequence": "KFHRFFLQQHQM",
+        "target_score": -41.581,
+        "validator_score": -27.4079
+      },
+      {
+        "sequence": "KRLERWIWQWFL",
+        "target_score": -41.3348,
+        "validator_score": -35.8759
+      },
+      {
+        "sequence": "KWEERRYRHWFT",
+        "target_score": -46.2213,
+        "validator_score": -30.2618
+      },
+      {
+        "sequence": "KWRGRIFWLWMF",
+        "target_score": -44.4843,
+        "validator_score": -32.1128
+      },
+      {
+        "sequence": "LMMRWWHIRMQM",
+        "target_score": -45.1681,
+        "validator_score": -32.9935
+      },
+      {
+        "sequence": "MMRRWQRFMRRM",
+        "target_score": -36.5482,
+        "validator_score": -29.7362
+      },
+      {
+        "sequence": "NREGFFRMGMVK",
+        "target_score": -39.6455,
+        "validator_score": -26.6652
+      },
+      {
+        "sequence": "RKGELWIIIIVK",
+        "target_score": -43.4433,
+        "validator_score": -25.7663
+      },
+      {
+        "sequence": "VLMWWHIWQWIR",
+        "target_score": -43.5888,
+        "validator_score": -35.0653
+      },
+      {
+        "sequence": "WFELFKSKWWWW",
+        "target_score": -46.6284,
+        "validator_score": -33.4478
+      },
+      {
+        "sequence": "WFGWWWLRFWWR",
+        "target_score": -46.1419,
+        "validator_score": -43.2656
+      },
+      {
+        "sequence": "WFRFMRWWFWMW",
+        "target_score": -41.6751,
+        "validator_score": -36.0028
+      },
+      {
+        "sequence": "WKHFWLKLLWWR",
+        "target_score": -46.346,
+        "validator_score": -35.0216
+      },
+      {
+        "sequence": "WKMFWWKWLWWK",
+        "target_score": -42.5762,
+        "validator_score": -31.0934
+      },
+      {
+        "sequence": "WMEWFWKWFWWM",
+        "target_score": -42.6372,
+        "validator_score": -31.4375
+      },
+      {
+        "sequence": "WNEWWRLRYFFR",
+        "target_score": -45.9228,
+        "validator_score": -35.9787
+      },
+      {
+        "sequence": "WRESHRILLWWR",
+        "target_score": -44.6508,
+        "validator_score": -39.7723
+      },
+      {
+        "sequence": "WRNIRRWWQWLH",
+        "target_score": -41.3547,
+        "validator_score": -37.8869
+      },
+      {
+        "sequence": "WWEWWWWKWWAM",
+        "target_score": -46.5556,
+        "validator_score": -35.0749
+      },
+      {
+        "sequence": "WWMRWWLLWHWM",
+        "target_score": -44.906,
+        "validator_score": -39.7007
+      },
+      {
+        "sequence": "WWRRWWSLKWWR",
+        "target_score": -43.7099,
+        "validator_score": -34.8973
+      }
+    ]
+  },
+  {
+    "plastic": "PVC",
+    "target_model": {
+      "architecture": "encdec",
+      "split_strategy": "clustered"
+    },
+    "optimized": {
+      "n": 30,
+      "mean": -69.2302,
+      "std": 4.9367,
+      "best": -78.6834,
+      "median": -69.305,
+      "p05": -77.0724
+    },
+    "random_baseline": {
+      "n": 2000,
+      "mean": -24.2283,
+      "std": 6.0048,
+      "best": -48.7937,
+      "median": -24.1239,
+      "p05": -34.1417
+    },
+    "train_top1pct_measured": {
+      "n": 1668,
+      "mean": -58.6514,
+      "std": 2.6754,
+      "best": -66.253,
+      "median": -57.4736,
+      "p05": -64.4673
+    },
+    "train_top1pct_predicted": {
+      "n": 1668,
+      "mean": -58.1999,
+      "std": 3.4283,
+      "best": -68.5649,
+      "median": -57.343,
+      "p05": -64.4731
+    },
+    "gain_vs_random": -45.0019,
+    "gain_vs_train_top1pct_measured": -10.5788,
+    "beats_best_training_sequence": true,
+    "best_training_score": -66.253,
+    "validator_model": {
+      "architecture": "lstm",
+      "split_strategy": "clustered",
+      "optimized": {
+        "n": 30,
+        "mean": -52.4101,
+        "std": 5.9774,
+        "best": -66.6379,
+        "median": -53.6135,
+        "p05": -61.6521
+      },
+      "random_baseline": {
+        "n": 2000,
+        "mean": -24.1607,
+        "std": 5.0329,
+        "best": -49.4354,
+        "median": -23.7621,
+        "p05": -33.0166
+      },
+      "gain_vs_random": -28.2494,
+      "agreement_pearson": 0.126407,
+      "agreement_spearman": 0.08743
+    },
+    "validator_confirms_gain": true,
+    "sequences": [
+      {
+        "sequence": "EIMVKRRVRIWH",
+        "target_score": -66.8744,
+        "validator_score": -52.4554
+      },
+      {
+        "sequence": "FRLKVRLLRRRR",
+        "target_score": -74.78,
+        "validator_score": -51.449
+      },
+      {
+        "sequence": "GWWWRRWVWIYW",
+        "target_score": -61.7759,
+        "validator_score": -54.2558
+      },
+      {
+        "sequence": "HEILFHQLKEWN",
+        "target_score": -70.0157,
+        "validator_score": -48.3588
+      },
+      {
+        "sequence": "HIRLVHRLNHWN",
+        "target_score": -62.2345,
+        "validator_score": -54.2796
+      },
+      {
+        "sequence": "HWGMRQILRRRH",
+        "target_score": -70.5978,
+        "validator_score": -54.8061
+      },
+      {
+        "sequence": "HWVLMRQLRLHT",
+        "target_score": -68.2231,
+        "validator_score": -53.2307
+      },
+      {
+        "sequence": "IRKWYRMIRRRR",
+        "target_score": -68.5944,
+        "validator_score": -47.3917
+      },
+      {
+        "sequence": "KRKFMQRLMRRR",
+        "target_score": -74.0765,
+        "validator_score": -47.2122
+      },
+      {
+        "sequence": "KWERMMNLRRRR",
+        "target_score": -75.2592,
+        "validator_score": -45.4488
+      },
+      {
+        "sequence": "KWTMRVNMRRRR",
+        "target_score": -78.6834,
+        "validator_score": -54.1981
+      },
+      {
+        "sequence": "LMWWRRWIVYHW",
+        "target_score": -62.172,
+        "validator_score": -54.2149
+      },
+      {
+        "sequence": "LWYFLVDNKKRR",
+        "target_score": -64.9246,
+        "validator_score": -42.267
+      },
+      {
+        "sequence": "MLMTHRRLRLWG",
+        "target_score": -72.0134,
+        "validator_score": -58.4691
+      },
+      {
+        "sequence": "MRLKRQQLRRRR",
+        "target_score": -77.1389,
+        "validator_score": -46.9673
+      },
+      {
+        "sequence": "MRMLKRNLRRRR",
+        "target_score": -76.9911,
+        "validator_score": -53.9963
+      },
+      {
+        "sequence": "MWQIMRQLRMRN",
+        "target_score": -65.9318,
+        "validator_score": -57.0848
+      },
+      {
+        "sequence": "NMVVFHNLKLWE",
+        "target_score": -64.0999,
+        "validator_score": -39.6315
+      },
+      {
+        "sequence": "QLMLFRRLRRWG",
+        "target_score": -71.1609,
+        "validator_score": -57.6501
+      },
+      {
+        "sequence": "QLWAMRRLRRWW",
+        "target_score": -75.0605,
+        "validator_score": -58.1918
+      },
+      {
+        "sequence": "QWMGIRLLRLHS",
+        "target_score": -70.1917,
+        "validator_score": -52.4781
+      },
+      {
+        "sequence": "RHAWMRQLRRWR",
+        "target_score": -66.281,
+        "validator_score": -66.6379
+      },
+      {
+        "sequence": "RHWLYNELRRRN",
+        "target_score": -64.4916,
+        "validator_score": -49.0673
+      },
+      {
+        "sequence": "RWENQSRWEMHR",
+        "target_score": -65.3444,
+        "validator_score": -54.1141
+      },
+      {
+        "sequence": "RWLNNIRLRRWW",
+        "target_score": -73.4423,
+        "validator_score": -64.2563
+      },
+      {
+        "sequence": "VWMQKRRLRRWG",
+        "target_score": -70.7612,
+        "validator_score": -56.7309
+      },
+      {
+        "sequence": "WFLERLNERRRR",
+        "target_score": -71.0373,
+        "validator_score": -49.2915
+      },
+      {
+        "sequence": "WWEQLIVLWMHI",
+        "target_score": -64.1526,
+        "validator_score": -43.422
+      },
+      {
+        "sequence": "WWNWWLHNMFFR",
+        "target_score": -67.7231,
+        "validator_score": -55.0721
+      },
+      {
+        "sequence": "WWRIMQHLEYWN",
+        "target_score": -62.8731,
+        "validator_score": -49.6739
+      }
+    ]
+  },
+  {
+    "plastic": "Nylon",
+    "target_model": {
+      "architecture": "encdec",
+      "split_strategy": "clustered"
+    },
+    "optimized": {
+      "n": 30,
+      "mean": -75.9659,
+      "std": 4.0179,
+      "best": -83.0505,
+      "median": -75.5244,
+      "p05": -82.3291
+    },
+    "random_baseline": {
+      "n": 2000,
+      "mean": -26.0105,
+      "std": 5.7676,
+      "best": -52.7617,
+      "median": -25.8063,
+      "p05": -35.7169
+    },
+    "train_top1pct_measured": {
+      "n": 1140,
+      "mean": -68.1962,
+      "std": 1.8726,
+      "best": -72.9686,
+      "median": -67.8613,
+      "p05": -71.8121
+    },
+    "train_top1pct_predicted": {
+      "n": 1140,
+      "mean": -67.135,
+      "std": 3.2682,
+      "best": -75.1766,
+      "median": -67.3003,
+      "p05": -72.1587
+    },
+    "gain_vs_random": -49.9553,
+    "gain_vs_train_top1pct_measured": -7.7697,
+    "beats_best_training_sequence": true,
+    "best_training_score": -72.9686,
+    "validator_model": {
+      "architecture": "lstm",
+      "split_strategy": "clustered",
+      "optimized": {
+        "n": 30,
+        "mean": -65.5404,
+        "std": 6.201,
+        "best": -78.2194,
+        "median": -64.9266,
+        "p05": -75.3218
+      },
+      "random_baseline": {
+        "n": 2000,
+        "mean": -26.3309,
+        "std": 5.6512,
+        "best": -48.8149,
+        "median": -25.96,
+        "p05": -35.8001
+      },
+      "gain_vs_random": -39.2094,
+      "agreement_pearson": 0.591393,
+      "agreement_spearman": 0.625362
+    },
+    "validator_confirms_gain": true,
+    "sequences": [
+      {
+        "sequence": "EWFMRGWRMRWW",
+        "target_score": -79.769,
+        "validator_score": -73.2556
+      },
+      {
+        "sequence": "FWYKLGWWLKWH",
+        "target_score": -71.0473,
+        "validator_score": -61.6129
+      },
+      {
+        "sequence": "HFYYVMWWKKWR",
+        "target_score": -78.6653,
+        "validator_score": -54.9168
+      },
+      {
+        "sequence": "KWFQRQFWRRWM",
+        "target_score": -76.2329,
+        "validator_score": -68.587
+      },
+      {
+        "sequence": "KWYHRQWWMRWW",
+        "target_score": -80.7406,
+        "validator_score": -72.4011
+      },
+      {
+        "sequence": "LWYHRQWWLRWW",
+        "target_score": -78.9637,
+        "validator_score": -71.5895
+      },
+      {
+        "sequence": "MFYMRNWWKLWW",
+        "target_score": -77.9581,
+        "validator_score": -65.6684
+      },
+      {
+        "sequence": "MWYRRMWRLRWR",
+        "target_score": -74.3171,
+        "validator_score": -64.7485
+      },
+      {
+        "sequence": "RWEHRDWWLRWR",
+        "target_score": -75.4095,
+        "validator_score": -64.4749
+      },
+      {
+        "sequence": "RWHRHGWRMRRW",
+        "target_score": -74.7591,
+        "validator_score": -69.4353
+      },
+      {
+        "sequence": "RWIHRRSERIWW",
+        "target_score": -70.4849,
+        "validator_score": -53.7927
+      },
+      {
+        "sequence": "RWIHRSWLNRRW",
+        "target_score": -76.6191,
+        "validator_score": -71.0508
+      },
+      {
+        "sequence": "RWMHHMWRLRRW",
+        "target_score": -81.6076,
+        "validator_score": -73.9454
+      },
+      {
+        "sequence": "RWMHRWWLLRRW",
+        "target_score": -81.138,
+        "validator_score": -78.2194
+      },
+      {
+        "sequence": "RWMIWHWRLRRW",
+        "target_score": -82.9195,
+        "validator_score": -67.7718
+      },
+      {
+        "sequence": "RWMKRWWRLRWW",
+        "target_score": -80.3908,
+        "validator_score": -68.3336
+      },
+      {
+        "sequence": "RWMLWHWRLRRW",
+        "target_score": -83.0505,
+        "validator_score": -70.1504
+      },
+      {
+        "sequence": "RWWHMQWWWWMW",
+        "target_score": -70.0529,
+        "validator_score": -65.1048
+      },
+      {
+        "sequence": "VWYYQVWWWRWM",
+        "target_score": -73.2635,
+        "validator_score": -57.8718
+      },
+      {
+        "sequence": "WRHHWIHWLLWR",
+        "target_score": -71.3557,
+        "validator_score": -65.2422
+      },
+      {
+        "sequence": "WRHWWHEMHEWR",
+        "target_score": -75.3988,
+        "validator_score": -59.7959
+      },
+      {
+        "sequence": "WRHWWHLWMNWR",
+        "target_score": -77.9852,
+        "validator_score": -61.6728
+      },
+      {
+        "sequence": "WRHWWIWWINWM",
+        "target_score": -72.1389,
+        "validator_score": -58.9013
+      },
+      {
+        "sequence": "WRHWWMMWMEWR",
+        "target_score": -74.634,
+        "validator_score": -63.5021
+      },
+      {
+        "sequence": "WRMFHRNKHEWR",
+        "target_score": -68.1738,
+        "validator_score": -59.889
+      },
+      {
+        "sequence": "WRRHWMWWLRWW",
+        "target_score": -75.6393,
+        "validator_score": -76.448
+      },
+      {
+        "sequence": "WRSHWRERINRR",
+        "target_score": -74.0828,
+        "validator_score": -63.6374
+      },
+      {
+        "sequence": "WRSHWREWMIWR",
+        "target_score": -76.0759,
+        "validator_score": -64.4572
+      },
+      {
+        "sequence": "YWWQRDWWRRWR",
+        "target_score": -70.9281,
+        "validator_score": -61.8973
+      },
+      {
+        "sequence": "YWYKQGWWKKWR",
+        "target_score": -75.1744,
+        "validator_score": -57.837
+      }
+    ]
+  }
+]

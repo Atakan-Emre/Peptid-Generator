@@ -1,0 +1,4466 @@
+[
+  {
+    "plastic": "PET",
+    "n_generated": 30,
+    "n_reference": 304851,
+    "exact_matches": 0,
+    "nn_hamming_min": 3,
+    "nn_hamming_max": 6,
+    "nn_hamming_mean": 5.333,
+    "nn_identity_mean_pct": 55.56,
+    "nn_identity_min_pct": 50.0,
+    "nn_identity_max_pct": 75.0,
+    "pct_above_90_identity": 0.0,
+    "identity_histogram": {
+      "identity_0_60": 27,
+      "identity_60_70": 2,
+      "identity_70_80": 1,
+      "identity_80_90": 0,
+      "identity_90_100": 0,
+      "identity_100": 0
+    },
+    "records": [
+      {
+        "plastic": "PET",
+        "sequence": "FWNGKFVWHWWY",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWNGAKVWHWFG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWNGIKVWHWFT",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWNGAKVWHWNG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "HSWAGGGRIKLA",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HAWIGHGRHELA",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RSMAGHGRNNLA",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RSMAGHGRNQLA",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "KIWRWMYFQYWI",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WIRTWMNHQYNI",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WIRTWMNKQYNI",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "KFTRSFYEQYWG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "KWWWHFQIMMMW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "KFWWHAQIMRNW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "KFWWHGQIMRNW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "KFWWHQQIMRNW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "LYQMNYLTWWFV",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "EWQRNYHTWWFM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "EWQRNYHTWWFA",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "EWQRNYHTWWFR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "MMMERWIFQNSR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "AMFERWRNQNNW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "AMFERWRQQNNW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HMHHEWTFQNQR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "NYWREYTRMWMG",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "IWQREYHRWWHG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "DWQREYHRWWMT",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "DWQREYHRWWQG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "QYRRWRMFMRWW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "QYDQWSRWMRWG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "QYLTWQRWMRWD",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "YIRRWHHFASWW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "RHEWVWWVRRWM",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RHEWVWWHHLRM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RHEWVWWHHGRM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RHEWVWWHHQRM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "RMWWWMFRYWWM",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "EMWWWFQRHRTM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "RMIWHHKTYWHM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "TMWWIMERRWNQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "RWRRMWWIFRWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWRRFWWIFHSE",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWRRFWWIFQHE",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWRRFWWIFQSE",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "SDYIGKGRIAAA",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "SSYIGAGRVTLE",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "SSYIGAGRVHDQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "SHYIGAGRVNLQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WHWYWNFRWWWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHWYWNKHIDHR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "DQWYRFFTWWTR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "AHQYQYYRWWWA",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WKWWYMHRWWWG",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWQRYYHRWWIG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "AKQYTRHVWWWG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HKQYHRHFWWWG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WMWWWVMLRMMY",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WDWWSVMHHRMR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WMWWHAMHHRMR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WMWWDSMHHRMR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WMWWYMVWYWWY",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHQHYMRWTWRY",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WHSHYMRWTWRY",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WHEHYMRWQWRY",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWKYAMFRMWWA",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWKNAHFRMHWA",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "WWQHHMFRMEWA",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WWSHHMFRMEWA",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWKYWRFLWWWR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HKQYERHLWWWE",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HKQYNRHLWWWE",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HKQYNRHLWWWL",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWRERWRWIRWW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHRMQWAHIRLW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HHRMTWAWIRLW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HHRMHWAWIRLW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWSYWMRYYWWY",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWSYWHRYRHVG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWSYWHRYRHQG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWSYWHRYRSVG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWWRQWFNRRWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWHIQHFDRTWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WEWWQVFHHRLR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WEWWQHFHHRLR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWWWDYVWKWWI",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWRGQHVWKWVI",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HWQKAHVWKWTI",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HWQKAHVWKWGI",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWYRFYWRWRWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWYRFQWRSAHH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWYRFQWRSDHH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WFTRFMWQERHW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWYWEWRYMRWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWSWAGRYMRWS",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWAWSGRYMRWS",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWNWIGRYMRWS",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWYWHWFRYRWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWEHHFFRMRWT",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWEHHFFRMRWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWDHHFFRMRWT",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WWYWSYMRWWWN",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "AWQRSYYRWWIN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "AWQRSYTRWWIN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "SDWHSYMRWWIN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WYHWFMRTWWAN",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RYVWHMRHYWAN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RYQWHMRTYWAG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RYQWLMRTYWAH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WYWYFWFFRRWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "VYWYFGHSRRWQ",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "MEWYTFHFRRWQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "GMWYFHHTRRWQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WYWYWMMTWWIM",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "TYWERFMTWWHR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "QYWERFMTWWQR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "QYWERFMTWWTR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PET",
+        "sequence": "WYYWWRMIYWWY",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WYASERQINNWY",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "FHRWWRNIFWSD",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "FHRWWRNIFWSE",
+            "hamming": 7,
+            "identity_pct": 41.67
+          }
+        ]
+      }
+    ],
+    "recommended_wording": "Uretilen diziler egitim setinde birebir yer almamakla birlikte en yakin komsularina ortalama %55.6 kimlik tasimaktadir; bu nedenle metinde 'novel' yerine 'optimizasyonla iyilestirilmis varyantlar' (optimization-refined variants) ifadesi kullanilmalidir."
+  },
+  {
+    "plastic": "PE",
+    "n_generated": 30,
+    "n_reference": 572406,
+    "exact_matches": 0,
+    "nn_hamming_min": 2,
+    "nn_hamming_max": 6,
+    "nn_hamming_mean": 4.467,
+    "nn_identity_mean_pct": 62.78,
+    "nn_identity_min_pct": 50.0,
+    "nn_identity_max_pct": 83.33,
+    "pct_above_90_identity": 0.0,
+    "identity_histogram": {
+      "identity_0_60": 17,
+      "identity_60_70": 8,
+      "identity_70_80": 4,
+      "identity_80_90": 1,
+      "identity_90_100": 0,
+      "identity_100": 0
+    },
+    "records": [
+      {
+        "plastic": "PE",
+        "sequence": "DWRLTMRWRMIF",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWRLTWRWEMHF",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HWRLTWRWDMHF",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "TWRLTWRWEMHF",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "EFMLTMKYRMIF",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RFMNQMKYQMHF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "EWMWTMKWHMRH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "EWMWTMKWQMRH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "EFMVTKKWHMRF",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "EFMWTQKWHLRF",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "EWMWTMKWHMRH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "EFMWHQKWHLRF",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "EFMWHKHWLMRW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "EWMWHMKWHMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "EWMWHMKWTMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "EWMWHMKWQMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "HKYWHELWTMRK",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWMWHMKWTMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWHEKWMMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWHMKWHMRH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "HLWFWLHYRMHW",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HLWWWDHYRMHK",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "HLWHKLHQRMHW",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "HHWWWDHYRMHK",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "HMYHILKWIMRK",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "NMYHIHHWVMRK",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "QMYHIHHWVMRK",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HWYHELHWHMRM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "HVWWWSHFRVHM",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HRWWWDHFRVHF",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "HRWWWDHFRVHY",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "HRWWWDHFRHHM",
+            "hamming": 3,
+            "identity_pct": 75.0
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "HWMHTMYWRMMW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWMWTMKWHMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWTMKWTMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWTMKWQMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "HWYHWEKWQMRY",
+        "nn_hamming": 2,
+        "nn_identity_pct": 83.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWYHWNKWQMRI",
+            "hamming": 2,
+            "identity_pct": 83.33
+          },
+          {
+            "sequence": "HWYHWNKWNMRI",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "HWYHWNHWQMRI",
+            "hamming": 3,
+            "identity_pct": 75.0
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "MFRWGKIWLMRW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HFLWGRIWHMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HFYKGLHWHMRW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "TFYKGLHWHMRW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "MWMWSMRWRMMW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWMWSMKWHMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWSMKWAMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWSMKWGMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "MWRWGMRWLMRW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWMWGMKWHMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWGMKWTMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWGMKWSMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "MWYWAMRWRMMW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWMWAMKWHMRH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HWMWAMKWTMRH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HWMWAMKWQMRH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "RHWWWDHFRMFW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HRWWWDHFRMHF",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HHWWWDHYRMHK",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HHWWHDHFRTHW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "RWFWLTRHQMRW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "DWYKLLHHQMRW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "DWYHLLHHQMRW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "AWYKLLHHQMRW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "RWMYIEKWTMRY",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWMWAMKWTMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWHMKWTMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWMWEMKWTMRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "TFLMTMKWRMLF",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HFHEHMKWTMLF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "TRHMHMKWEMLM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "TRHMTNKWVMLM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "TWRMTRYWRMIF",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "TWRLTWEWEMHF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "TWRLTWRWEMHF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "TWRKTWHWMMIH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "WFFYLMKWKMGR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WFFEQWKQNMWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WFFTQWKQNMWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WFFTQWKQHMWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "WFRYLWKWEMRQ",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "VFMMQHKHEMRQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "VFMMQHKEEMRQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WFRIAWFSHMRH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "WMRRWSRWEMMW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HSMHWSRWEMMW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HSKHWSRWEMMW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HSRRWSIWEGMW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "WRRHWWWFQNFW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "DFRHKWWHQNFW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "DYRHKWWHQNFW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "VRRIHWWHQNFW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "WRWRWSFWRNFK",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HRWHWSFWQNFK",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "WHWHWSFYRAFK",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WHWHWSFYREFK",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "WWYRFWLWVHFR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWMRFWRWHHFH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "AWMRFWRWHHFH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "EWMRFWRWHHFH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "WYRRHWLWHIFH",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WFLRHWRWHHFH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WFVRHWRWHHFH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "MWMRHWRWHHFH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "YRWWWSHRETMW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "LWMWQRHRETMW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "DWMWQRHRETMW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "AWMWQRHRETMW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "YRWWWSHYMTMW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HRWWKMHYMTHW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HRWWWDHYMLHK",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HRWWWDHYMAHK",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "YRWWWTFRETMW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "QRWWATFMRTMW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "GRWWTRFMHTMW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HRWWTRFMGTMW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PE",
+        "sequence": "YWRWWSWWDQLW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HSRWWSIYDQHW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HSRWWSIYIQHW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HSRWWSIYDIHW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      }
+    ],
+    "recommended_wording": "Uretilen diziler egitim setinde birebir yer almamakla birlikte en yakin komsularina ortalama %62.8 kimlik tasimaktadir; bu nedenle metinde 'novel' yerine 'optimizasyonla iyilestirilmis varyantlar' (optimization-refined variants) ifadesi kullanilmalidir."
+  },
+  {
+    "plastic": "PP",
+    "n_generated": 30,
+    "n_reference": 346789,
+    "exact_matches": 0,
+    "nn_hamming_min": 3,
+    "nn_hamming_max": 6,
+    "nn_hamming_mean": 5.0,
+    "nn_identity_mean_pct": 58.33,
+    "nn_identity_min_pct": 50.0,
+    "nn_identity_max_pct": 75.0,
+    "pct_above_90_identity": 0.0,
+    "identity_histogram": {
+      "identity_0_60": 24,
+      "identity_60_70": 5,
+      "identity_70_80": 1,
+      "identity_80_90": 0,
+      "identity_90_100": 0,
+      "identity_100": 0
+    },
+    "records": [
+      {
+        "plastic": "PP",
+        "sequence": "FRWSIIWFYELW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HRWSQQSFYMLW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HRWSQQEFYMLW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HRWSQQQFYMLW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "FWLWQIFERRLW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FWWQQIKEHRLF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FWWNQIKEHRLF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FWWRQITEHRLF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "FYMEIRMHWMRR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "TYMHIRIHWARH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FTERHWMHWMRW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "FSERHWMHWMRW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "KRFWEMKWSIMR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HNHWEWGWSRMR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "LSHWEWGWSRMR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "LNHWEWGWSRMR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "LKWMTRMHVIMI",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WQWMTRQHFRMW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "IHNMTRMHHRMM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "THNMTRMHHRMM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WEWVMLMMMIKR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHSQMSMMWIKR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WASQMSMMWIKR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WSSQMSMMWIKR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WHERMKLMWMHW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHERHFMQWMRW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHERHFMTWMRW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHERHFMNWMRW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WHWFHFWFHYWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHWHHFHDRYLW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHWHHFHHRYLW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WEHFHSWFHFRW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WTRWRWNHFWFF",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWEWRQNHFRFF",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WTRWRTHHIHFF",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WTRFFHNHWWKF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWAIKYQAYRIW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWQIKYQHFQGW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWQRHQFAFRIW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WHHHKMIAWRIW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWEFIEFKWRGW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWEFHHYKWRMH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWEFHHQKWRMH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWEFAHQKWRMH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWGKFFTTWWYW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHHKKFTMEWYW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWHKHFFTWNYR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WARHFFTHWWNF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWHWIHFLWRVW",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWHWIHFLRRQW",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "HWEWIHFLRRQW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WKHFIHNNWRVW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWHWQIKFWRTW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHMRQIHSWRTW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWHFQNQVWRTY",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWHFTVKNWRTY",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWIKKHTAYIIW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWIKTHTAIKQW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WWIFTHTAIKQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWIKTHQAIKQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWLRRYGHFWWF",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWEWRQHHFRFF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWEWRQTHFRFF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WGKHWYNHFWRF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWMMMMFEWRDW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWQRHMFEFRTW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWQRHMFEFRHW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WFQRHMFEWRSW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWMWHMFLWRGW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWQRHMFHFRGW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WWQRHMFSFRGW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WWQRHMFNFRGW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWMWLQFLYRAW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHMRLQFHWRTW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHYWHHFLRRAW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHVWLQFNHRHW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWMWMIHFWRGW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WQFSMGHFWRGW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WQFQMGHFWRGW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WQFNMGHFWRGW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWMWYHDDYIYW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWTQYAHAEIYW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWTQYEHAEIYW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WHMGYHDQEWVW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWNRVMFSWRLW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWQRHMFSFRTW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WWQRHMFSFREW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WWQRHMFSFRHW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWRFVIFVHRVW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWWQAIGNHRVF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWWQKINSHRVF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWWQRINSHRVF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWRRWAKHWRFW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHMRNQFHWRFW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWQRHMFHFRTW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWQRHMFHFRAW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWRYMRKMWIDW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WQRQMFRHWIHW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WQRHMFRQWIHW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WQRGMFRHWIHW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWYRFGFLWRYW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWQRHHFLFRTW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWQRHHFSFRYW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WFQRHHFQWRYW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "WWYWGLFIFRVW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHYWQAFIKRTW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHYWQAFIKRNW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHYWQAFIKRSW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "YIKWWWMIFMML",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "YSKWHWNRFMMA",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "YSKWTWNRFMMA",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "YSKWQWNRFMMA",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "YKFWYWMHLWHR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WEFWYKHHFWHR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "YHKGNWQWLWHR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "YHKGNWAWLWHR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PP",
+        "sequence": "YWTYWEWMLWMR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WQTEWRWMFQMR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WTTYWRWMFQNR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WATHWRWMFSMR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      }
+    ],
+    "recommended_wording": "Uretilen diziler egitim setinde birebir yer almamakla birlikte en yakin komsularina ortalama %58.3 kimlik tasimaktadir; bu nedenle metinde 'novel' yerine 'optimizasyonla iyilestirilmis varyantlar' (optimization-refined variants) ifadesi kullanilmalidir."
+  },
+  {
+    "plastic": "PS",
+    "n_generated": 30,
+    "n_reference": 324661,
+    "exact_matches": 0,
+    "nn_hamming_min": 3,
+    "nn_hamming_max": 7,
+    "nn_hamming_mean": 5.033,
+    "nn_identity_mean_pct": 58.06,
+    "nn_identity_min_pct": 41.67,
+    "nn_identity_max_pct": 75.0,
+    "pct_above_90_identity": 0.0,
+    "identity_histogram": {
+      "identity_0_60": 20,
+      "identity_60_70": 8,
+      "identity_70_80": 2,
+      "identity_80_90": 0,
+      "identity_90_100": 0,
+      "identity_100": 0
+    },
+    "records": [
+      {
+        "plastic": "PS",
+        "sequence": "EEVWRWEIQRYM",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "DETWRHMIQRFW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "GERWTWHIHRWM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "ESHWRFVLQRYH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "FRRHWRWWAWWY",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FRHHLRWWAWLH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "FRLHHRWWAWLH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "FRIHHRWWAWLH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "FWRHNRHWLLWY",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FSQHNHHWLLWQ",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "FSQHWHHWLLWQ",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FFRHNHHWQIHR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "FWSSWILRYWFR",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FWHSWIHRHWFR",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "FWHSWIHRQWFR",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "FWNSWIHRHWFR",
+            "hamming": 3,
+            "identity_pct": 75.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "HVWRWYMTQHQM",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HMMRWLKTQHQM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "GFWRWYKTWHQM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "KHWRWVHTQHQM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "HYMWYVQYFHQM",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHMRWRQYFHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WDMRWRQYFHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WDMRWDQYFHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "IFWRYAVLQHQM",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WGIRYHKLQHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WGIRYHNLQHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "MGIRYHKLQHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "IKSMWRIIAWWW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "KESMFRHHAWWM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WEQMFRHHAWWM",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "KEHMFRHHAWWM",
+            "hamming": 7,
+            "identity_pct": 41.67
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "KAGAFWIITFWK",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "KHGSFLIDTWWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "KHGAFMIQAQWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "KHGAFLIQAQWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "KFHRFFLQQHQM",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WEMRWILQSHQM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WDMRWILQAHQM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WGMRWELQSHQM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "KRLERWIWQWFL",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "ERLEHWFSQWFY",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "GHLWRHMWQWKL",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "GNLWRHMWQWKL",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "KWEERRYRHWFT",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WMEEWRQRHWFT",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WMEEWRQRHWFH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WMEEWRQRHWFS",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "KWRGRIFWLWMF",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "VDRQRHFWHWMF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "VGRQRHFWHWMF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HFRGRHFWHWMW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "LMMRWWHIRMQM",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "DMMRHWHMRMQQ",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WDMRWFHWRHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WDMRWFHERHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "MMRRWQRFMRRM",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "MERIWHMFQNRM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "MERIWHMFQSRM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "AFRGWQINMSRM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "NREGFFRMGMVK",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "NFHGFHKMDMMK",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "NAWHFFRMHHVM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "NATWFFRMHHVM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "RKGELWIIIIVK",
+        "nn_hamming": 7,
+        "nn_identity_pct": 41.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HKGWTWIHIRLW",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "HKGWHWIHIRLW",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "HKGHFWIHIRLW",
+            "hamming": 7,
+            "identity_pct": 41.67
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "VLMWWHIWQWIR",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "VQMWHHRWQWMR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "VSMWHHRWQWMR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "VQMWWHRFQEWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WFELFKSKWWWW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WLDLFKHAQWWQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WLNLFKHAQWWQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WHNLFKHAQWWF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WFGWWWLRFWWR",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "GFGWWWLRTHHR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HWGHWQLRFWFR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWGQWQLRFWFR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WFRFMRWWFWMW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WFRWMRSEFWHN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WFRWMRSEFWHH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WFRWMRSQFWHN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WKHFWLKLLWWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHAQHLRLLWWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHGQHLRLLWWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHNQHLRLLWWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WKMFWWKWLWWK",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WHMFFAKTLQWK",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHMAFAKTLQWK",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WHFAFWKSLQWK",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WMEWFWKWFWWM",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WMEVFHHRHWWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WMEVFHRHHWWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WMEVFHRHTWWR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WNEWWRLRYFFR",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "TNEHWILRYLFR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HNETWILRYLFR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "TNESWILRYLFR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WRESHRILLWWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FRESHRWWLWLH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHAQHLRLLWWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WHGQHLRLLWWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WRNIRRWWQWLH",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FRNNLRWWQWLH",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "FRHALRWWQWLH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "FRHHLRWWQWLH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WWEWWWWKWWAM",
+        "nn_hamming": 7,
+        "nn_identity_pct": 41.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WYMRWWHKGHQM",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "WIMRWANKWHQM",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "WEMRWANKWHQM",
+            "hamming": 7,
+            "identity_pct": 41.67
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WWMRWWLLWHWM",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WAMRWTGLLHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WAMRWTALHHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WAMRWTKLLHQM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PS",
+        "sequence": "WWRRWWSLKWWR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WQMRWISLKHQM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WHRYSWSLFWHQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WHRFMWSMHWHR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      }
+    ],
+    "recommended_wording": "Uretilen diziler egitim setinde birebir yer almamakla birlikte en yakin komsularina ortalama %58.1 kimlik tasimaktadir; bu nedenle metinde 'novel' yerine 'optimizasyonla iyilestirilmis varyantlar' (optimization-refined variants) ifadesi kullanilmalidir."
+  },
+  {
+    "plastic": "PVC",
+    "n_generated": 30,
+    "n_reference": 166886,
+    "exact_matches": 0,
+    "nn_hamming_min": 3,
+    "nn_hamming_max": 7,
+    "nn_hamming_mean": 5.333,
+    "nn_identity_mean_pct": 55.56,
+    "nn_identity_min_pct": 41.67,
+    "nn_identity_max_pct": 75.0,
+    "pct_above_90_identity": 0.0,
+    "identity_histogram": {
+      "identity_0_60": 26,
+      "identity_60_70": 3,
+      "identity_70_80": 1,
+      "identity_80_90": 0,
+      "identity_90_100": 0,
+      "identity_100": 0
+    },
+    "records": [
+      {
+        "plastic": "PVC",
+        "sequence": "EIMVKRRVRIWH",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "NIMTYRQMRLWH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "TIMTYRQMRLWH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HHMVIQRLRNWH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "FRLKVRLLRRRR",
+        "nn_hamming": 7,
+        "nn_identity_pct": 41.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FGTYVLHLRRSW",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "FHTWVRLHNHRG",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "FHTWVRLHNHRF",
+            "hamming": 7,
+            "identity_pct": 41.67
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "GWWWRRWVWIYW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "THWWRRHINIYW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "QHWWRRHIAIYW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "THWWRRHIAIYW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "HEILFHQLKEWN",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HAIVMHQLRLWN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "GHILMRQLRLWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "DHILMRQLRLWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "HIRLVHRLNHWN",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HSKFVHRNNMWN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HRMLVRQLNLWS",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HWRRVQNHNQWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "HWGMRQILRRRH",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "SWHMNQIWWRRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "AWHMNQIWWRRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWSQLQVWRRFH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "HWVLMRQLRLHT",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HHILMRQLRLWQ",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HHINMRQLRLWT",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HHIWMRQLRLWT",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "IRKWYRMIRRRR",
+        "nn_hamming": 7,
+        "nn_identity_pct": 41.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "SNDWYRMDQNWR",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "SVDWYRMDQNWR",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "SHDWYRMDQNWR",
+            "hamming": 7,
+            "identity_pct": 41.67
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "KRKFMQRLMRRR",
+        "nn_hamming": 7,
+        "nn_identity_pct": 41.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "GRHDMQRLLMWT",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "IRHSMQRLLMWT",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "DRHGMQRLLMWT",
+            "hamming": 7,
+            "identity_pct": 41.67
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "KWERMMNLRRRR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "KWTRMSNLSHYE",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWEWQQNFRFIR",
+            "hamming": 7,
+            "identity_pct": 41.67
+          },
+          {
+            "sequence": "WWEWQNNFRFIR",
+            "hamming": 7,
+            "identity_pct": 41.67
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "KWTMRVNMRRRR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWTFSVNFNFRR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWTHSVNFNFRR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWTFSVNHNFRR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "LMWWRRWIVYHW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "QHWHRRIIHYHW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HHWHRRIIQYHW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "TWWHRRWIQYHQ",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "LWYFLVDNKKRR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "LWHFLAWWKNRN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "LWTFLAWHKNRN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "LWWFLAWHKNRN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "MLMTHRRLRLWG",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "MHMLHRQLRLWG",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "MHMLHRTLRLWG",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "MHMNHRQLRLWN",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "MRLKRQQLRRRR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "MQLFAQQSSRHR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "MQLFAQQSSRER",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "MWLERQQWLDRS",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "MRMLKRNLRRRR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "MHMLHRQLRLWG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "NRMLFNNLRLWQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "MHMLHRTLRLWG",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "MWQIMRQLRMRN",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "GHMFMRQLRMHN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "QMMFMRQLRMHN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "QMMAMRQLRMHN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "NMVVFHNLKLWE",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "NRMVFNNLRLWT",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "NRMVFNNLRLWQ",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "NRMLFNNLRLWQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "QLMLFRRLRRWG",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "AHMLFRQLRLWT",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "GHMLFRQLRMWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "MHMLHRQLRLWG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "QLWAMRRLRRWW",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "QWMAHRQLRLWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "THWNMRQLRLWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "THWNMRQLRLWT",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "QWMGIRLLRLHS",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "QWQGWRFLRLHN",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "QWNGWRFLRLHN",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "QWNGWRVLRLHG",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "RHAWMRQLRRWR",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HHIWMRQLRLWT",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "GHILMRQLRLWN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "DHILMRQLRLWN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "RHWLYNELRRRN",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "THWNYRQLRMWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "RWQLHNEWRHWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "RWHLWNEYRIWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "RWENQSRWEMHR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "KWQNLSRWEMQF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "KWQNESRWEMQF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FWQNESRWEMQF",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "RWLNNIRLRRWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RWLNHIHWRHWN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWLNHINWRHWL",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWNNNIRWMRLQ",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "VWMQKRRLRRWG",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "VHMWHRQLRLWG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "VHMNHRQLRLWG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "VHMFHRQLRLWG",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "WFLERLNERRRR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWLWQLNEQFRR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWLWQLNENFRR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWLWTLNEQFRR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "WWEQLIVLWMHI",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWNQLINLNFRR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "QWEQLIRQWLRF",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WWEQRQHWHMQI",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "WWNWWLHNMFFR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WWNWQQNFMFRR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWNWQNNFMFRR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WWNWQLNFRFQR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "PVC",
+        "sequence": "WWRIMQHLEYWN",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "QWTRMQHLKDWN",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "DWRRQQHHWQWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "FWRRQQHHWQWN",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      }
+    ],
+    "recommended_wording": "Uretilen diziler egitim setinde birebir yer almamakla birlikte en yakin komsularina ortalama %55.6 kimlik tasimaktadir; bu nedenle metinde 'novel' yerine 'optimizasyonla iyilestirilmis varyantlar' (optimization-refined variants) ifadesi kullanilmalidir."
+  },
+  {
+    "plastic": "Nylon",
+    "n_generated": 30,
+    "n_reference": 114090,
+    "exact_matches": 0,
+    "nn_hamming_min": 3,
+    "nn_hamming_max": 6,
+    "nn_hamming_mean": 4.533,
+    "nn_identity_mean_pct": 62.22,
+    "nn_identity_min_pct": 50.0,
+    "nn_identity_max_pct": 75.0,
+    "pct_above_90_identity": 0.0,
+    "identity_histogram": {
+      "identity_0_60": 18,
+      "identity_60_70": 9,
+      "identity_70_80": 3,
+      "identity_80_90": 0,
+      "identity_90_100": 0,
+      "identity_100": 0
+    },
+    "records": [
+      {
+        "plastic": "Nylon",
+        "sequence": "EWFMRGWRMRWW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "EWFQQQWRMRWH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "EWFQQYWRMRWH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "EWFQQTWRMRWH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "FWYKLGWWLKWH",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FWYTTHWWHKEH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FWNLFGWWHKRH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FWYQQQWRMRWH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "HFYYVMWWKKWR",
+        "nn_hamming": 6,
+        "nn_identity_pct": 50.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HFYRQNWWMRWH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HFYLRQWWERWH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "HFYLRNWWERWH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "KWFQRQFWRRWM",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "DWFQRQFWYRWH",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "HWFQRQFWYRWH",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "TWFQRQFWHRWH",
+            "hamming": 3,
+            "identity_pct": 75.0
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "KWYHRQWWMRWW",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "DWYHRQWFMRWH",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "EWYHRQWFMRWH",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "FWYHQQWRMRWH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "LWYHRQWWLRWW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWLHRQWYLRQW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HWYHRIWHLRQW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "HWEHRQWYLRQW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "MFYMRNWWKLWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "QFYLRNWWERWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HFYLRNWWERWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "MFYQRQWWERWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "MWYRRMWRLRWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "EWYQQQWRLRWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "QWYQQQWRLRWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "MWYQQQWRFRWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWEHRDWWLRWR",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWYHHDWWLRFR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RWDHHDWWLRFH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RWHHHDWWLRFH",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWHRHGWRMRRW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWHKHGWYLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWHHHEWHLRLW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWHHHIWHLRLW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWIHRRSERIWW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RWIHRQQEFLWW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RWIHRNQEFLWW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RWIHRHQEFLWW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWIHRSWLNRRW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RWIHRSALHQWW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RWIHRSMLHQWW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RWIHRSDLHQWW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWMHHMWRLRRW",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RWNHHIWHLRMW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RWEHHIWHLRMW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "RWLHHLWHLRHW",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWMHRWWLLRRW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWNHRMWYLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWNHRNWYLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWQHRLWYLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWMIWHWRLRRW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RWDIHEWHLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWDIHYWHLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWYIHAWHLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWMKRWWRLRWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "HWMKRNWHLQMW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWMYHNWHLRHW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "HWNHRMWYLRQW",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWMLWHWRLRRW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RWDLHMWHLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWDLHEWHLRQW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "MWQYHHWRLRHW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "RWWHMQWWWWMW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "RWQHHQWNLRMW",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWVHQQWWHAMR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "RWVHQQWWAAMR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "VWYYQVWWWRWM",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "FWNYQRWNWRHM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FWEYQRWNWRHM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FWQYQRWNWRHM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRHHWIHWLLWR",
+        "nn_hamming": 3,
+        "nn_identity_pct": 75.0,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRHHYIHWIEWR",
+            "hamming": 3,
+            "identity_pct": 75.0
+          },
+          {
+            "sequence": "WRHHWMHWNELR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WRHHWMHWNEIR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRHWWHEMHEWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRHHWMEWNEIR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRHHWMEWNELR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRHHWMEQEVWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRHWWHLWMNWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRHHWMLWNELR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRHHWMLWNEIR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRHHWMLQNVWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRHWWIWWINWM",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRHHYRQWINWM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WRHHYIQWIEWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRHHYITWIEWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRHWWMMWMEWR",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRHHWMVWNELR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WRHHWMQWNELR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WRHHWMVWNEIR",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRMFHRNKHEWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRMHWINWHELR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRMHWRNWNELM",
+            "hamming": 6,
+            "identity_pct": 50.0
+          },
+          {
+            "sequence": "WRIHWMNWHELR",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRRHWMWWLRWW",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRRHWMNWNELM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRRHWMHWNELM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRRHWMTWNELM",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRSHWRERINRR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRSHWMQWIELR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRSHWMNWIELR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "WRNHWMTWINLR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "WRSHWREWMIWR",
+        "nn_hamming": 4,
+        "nn_identity_pct": 66.67,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "WRHHWREWNIFM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WRHHWREWNILM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          },
+          {
+            "sequence": "WRHHWREWNIHM",
+            "hamming": 4,
+            "identity_pct": 66.67
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "YWWQRDWWRRWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "YWYQRQFWHRWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "QWYQRDYWFRWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "QFYQRDWWHRWH",
+            "hamming": 5,
+            "identity_pct": 58.33
+          }
+        ]
+      },
+      {
+        "plastic": "Nylon",
+        "sequence": "YWYKQGWWKKWR",
+        "nn_hamming": 5,
+        "nn_identity_pct": 58.33,
+        "exact_match": false,
+        "neighbours": [
+          {
+            "sequence": "EFYKQNWWFNWR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "FWYHQGWWANYR",
+            "hamming": 5,
+            "identity_pct": 58.33
+          },
+          {
+            "sequence": "EWYQQGWRYRWH",
+            "hamming": 6,
+            "identity_pct": 50.0
+          }
+        ]
+      }
+    ],
+    "recommended_wording": "Uretilen diziler egitim setinde birebir yer almamakla birlikte en yakin komsularina ortalama %62.2 kimlik tasimaktadir; bu nedenle metinde 'novel' yerine 'optimizasyonla iyilestirilmis varyantlar' (optimization-refined variants) ifadesi kullanilmalidir."
+  }
+]

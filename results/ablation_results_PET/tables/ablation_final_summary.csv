@@ -1,5 +1,0 @@
-Plastic_Type,Model_Type,Test_R2,Test_MAE,Test_RMSE,hidden_dim,num_layers,dropout,learning_rate,batch_size,lambda_score,weight_decay,use_layernorm,use_batchnorm,latent_dim,beta_kl,gamma_score
-PET,encdec,0.9765757088450783,1.477150437760607,2.201090758019882,256.0,3.0,0.1,0.001,1024,1.0,0.01,True,,,,
-PET,lstm,0.9680184378982832,,,256.0,3.0,0.1,0.001,2048,,0.01,True,,,,
-PET,cnn,0.8617552815400756,,,,,0.2,0.001,4096,,0.01,,True,,,
-PET,lstm_vae,0.9481658837250442,,,256.0,3.0,0.2,0.001,1024,,0.0001,False,,64.0,1.0,1.0

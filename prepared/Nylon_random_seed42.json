@@ -1,0 +1,41 @@
+{
+  "plastic": "Nylon",
+  "split_strategy": "random",
+  "max_hamming": null,
+  "identity_threshold_pct": null,
+  "seed": 42,
+  "n_after_prep": 142614,
+  "split_sizes": {
+    "train": 114091,
+    "val": 14261,
+    "test": 14262
+  },
+  "split_pct": {
+    "train": 80.0,
+    "val": 10.0,
+    "test": 10.0
+  },
+  "dedup": {
+    "n_raw": 142614,
+    "n_unique": 142614,
+    "n_removed": 0,
+    "duplicate_pct": 0.0,
+    "score_spread_of_duplicates": null
+  },
+  "clustering": null,
+  "normalization": {
+    "mean": -37.02894973754883,
+    "std": 11.82476806640625,
+    "fitted_on": "train"
+  },
+  "leakage": {
+    "exact_test_in_train_pct": 0.0,
+    "nn_hamming_mean": 1.517,
+    "nn_hamming_median": 1.0,
+    "nn_identity_mean_pct": 87.36,
+    "pct_nn_le_2": 89.0,
+    "pct_nn_le_3": 97.0
+  },
+  "npz": "Nylon_random_seed42.npz",
+  "data_sha1": "ff22069ce02e612b"
+}

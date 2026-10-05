@@ -1,0 +1,35 @@
+{
+  "plastic": "PE",
+  "split_strategy": "random",
+  "max_hamming": null,
+  "identity_threshold_pct": null,
+  "seed": 42,
+  "n_after_prep": 715508,
+  "split_sizes": {
+    "train": 572406,
+    "val": 71550,
+    "test": 71552
+  },
+  "split_pct": {
+    "train": 80.0,
+    "val": 10.0,
+    "test": 10.0
+  },
+  "dedup": null,
+  "clustering": null,
+  "normalization": {
+    "mean": -24.97516441345215,
+    "std": 10.179009437561035,
+    "fitted_on": "train"
+  },
+  "leakage": {
+    "exact_test_in_train_pct": 0.0,
+    "nn_hamming_mean": 3.337,
+    "nn_hamming_median": 3.0,
+    "nn_identity_mean_pct": 72.19,
+    "pct_nn_le_2": 37.0,
+    "pct_nn_le_3": 56.0
+  },
+  "npz": "PE_random_seed42_raw.npz",
+  "data_sha1": "476cca8406b27102"
+}

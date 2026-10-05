@@ -1,0 +1,50 @@
+{
+  "plastic": "PET",
+  "split_strategy": "clustered",
+  "max_hamming": 3,
+  "identity_threshold_pct": 75.0,
+  "seed": 42,
+  "n_after_prep": 381065,
+  "split_sizes": {
+    "train": 304851,
+    "val": 38107,
+    "test": 38107
+  },
+  "split_pct": {
+    "train": 80.0,
+    "val": 10.0,
+    "test": 10.0
+  },
+  "dedup": {
+    "n_raw": 441978,
+    "n_unique": 381065,
+    "n_removed": 60913,
+    "duplicate_pct": 13.782,
+    "score_spread_of_duplicates": 0.3035
+  },
+  "clustering": {
+    "n_sequences": 381065,
+    "n_clusters": 66806,
+    "largest_cluster": 370,
+    "largest_cluster_pct": 0.097,
+    "mean_cluster_size": 5.7,
+    "median_cluster_size": 5.0,
+    "singletons": 2306,
+    "singleton_pct": 3.45
+  },
+  "normalization": {
+    "mean": -27.678163528442383,
+    "std": 14.10433292388916,
+    "fitted_on": "train"
+  },
+  "leakage": {
+    "exact_test_in_train_pct": 0.0,
+    "nn_hamming_mean": 3.803,
+    "nn_hamming_median": 4.0,
+    "nn_identity_mean_pct": 68.31,
+    "pct_nn_le_2": 21.67,
+    "pct_nn_le_3": 41.67
+  },
+  "npz": "PET_clustered_seed42.npz",
+  "data_sha1": "e198d0ea3c737dcb"
+}

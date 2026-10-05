@@ -51,6 +51,23 @@ Thumbs.db
 # Logs
 *.log
 
-# Checkpoints (keep in git for reproducibility, but can be large)
-# ablation_results/checkpoints/
+# drawio / Office gecici yedekleri
+.$*
+*.bkp
+*.drawio
 
+# --- Pipeline outputs -------------------------------------------------
+# Results are tracked so the reported numbers can be checked without a
+# rerun; only the large regenerable artefacts are excluded.
+results/models/
+prepared/*.npz
+logs/
+
+# Windows launcher scripts (local convenience, not part of the method)
+*.bat
+
+# Local configuration and launcher scripts are not part of the delivery.
+# The experimental setup is documented in Readme.md (polymers, architectures,
+# seeds, splits and the selected hyperparameters) so it can be reconstructed.
+configs/
+*.local.json

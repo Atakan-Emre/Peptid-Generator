@@ -1,0 +1,455 @@
+{
+  "strategy": "clustered",
+  "validator_architecture": "lstm",
+  "candidates": [
+    {
+      "generator_architecture": "cnn",
+      "per_plastic": {
+        "PET": {
+          "n_peptides": 26,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 27.3865,
+          "best_scoring_plastic": "PET",
+          "degeneracy": {
+            "n": 26,
+            "max_aa_fraction": 0.625,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 4.46,
+            "position_entropy": 0.4348,
+            "is_degenerate": true
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -35.0559,
+            "random_mean": -14.7809,
+            "gain_vs_random": 20.275,
+            "confirms": true
+          }
+        },
+        "PE": {
+          "n_peptides": 30,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 18.817,
+          "best_scoring_plastic": "PE",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.4583,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 5.73,
+            "position_entropy": 0.4829,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -45.5624,
+            "random_mean": -15.1218,
+            "gain_vs_random": 30.4406,
+            "confirms": true
+          }
+        },
+        "PP": {
+          "n_peptides": 30,
+          "target_is_best": false,
+          "rank_of_target": 2,
+          "selectivity_index": 7.7522,
+          "best_scoring_plastic": "Nylon",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.4389,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 5.33,
+            "position_entropy": 0.4876,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -42.0881,
+            "random_mean": -11.3802,
+            "gain_vs_random": 30.7079,
+            "confirms": true
+          }
+        },
+        "PS": {
+          "n_peptides": 30,
+          "target_is_best": false,
+          "rank_of_target": 3,
+          "selectivity_index": 1.3725,
+          "best_scoring_plastic": "Nylon",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.2917,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 6.47,
+            "position_entropy": 0.592,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -36.3599,
+            "random_mean": -10.1411,
+            "gain_vs_random": 26.2188,
+            "confirms": true
+          }
+        },
+        "PVC": {
+          "n_peptides": 30,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 35.1438,
+          "best_scoring_plastic": "PVC",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.4167,
+            "most_common_aa": "R",
+            "mean_distinct_aa": 5.2,
+            "position_entropy": 0.4597,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -53.2974,
+            "random_mean": -24.1925,
+            "gain_vs_random": 29.1049,
+            "confirms": true
+          }
+        },
+        "Nylon": {
+          "n_peptides": 29,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 35.4634,
+          "best_scoring_plastic": "Nylon",
+          "degeneracy": {
+            "n": 29,
+            "max_aa_fraction": 0.3851,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 5.69,
+            "position_entropy": 0.4916,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -65.1012,
+            "random_mean": -26.3962,
+            "gain_vs_random": 38.705,
+            "confirms": true
+          }
+        }
+      },
+      "selectivity_matrix": {
+        "Nylon": {
+          "Nylon": -72.1708,
+          "PE": -38.3688,
+          "PET": -40.7443,
+          "PP": -33.082,
+          "PS": -24.7584,
+          "PVC": -46.5837,
+          "selectivity_index": 35.4634,
+          "rank_of_target": 1,
+          "target_is_best": true
+        },
+        "PE": {
+          "Nylon": -51.2939,
+          "PE": -57.6622,
+          "PET": -46.3097,
+          "PP": -30.8619,
+          "PS": -22.9299,
+          "PVC": -42.8308,
+          "selectivity_index": 18.817,
+          "rank_of_target": 1,
+          "target_is_best": true
+        },
+        "PET": {
+          "Nylon": -53.5685,
+          "PE": -41.0535,
+          "PET": -66.3451,
+          "PP": -32.8699,
+          "PS": -25.2943,
+          "PVC": -42.0067,
+          "selectivity_index": 27.3865,
+          "rank_of_target": 1,
+          "target_is_best": true
+        },
+        "PP": {
+          "Nylon": -51.5852,
+          "PE": -41.8138,
+          "PET": -47.0098,
+          "PP": -49.523,
+          "PS": -26.6419,
+          "PVC": -41.8034,
+          "selectivity_index": 7.7522,
+          "rank_of_target": 2,
+          "target_is_best": false
+        },
+        "PS": {
+          "Nylon": -45.5866,
+          "PE": -35.816,
+          "PET": -38.7146,
+          "PP": -31.2352,
+          "PS": -40.3152,
+          "PVC": -43.361,
+          "selectivity_index": 1.3725,
+          "rank_of_target": 3,
+          "target_is_best": false
+        },
+        "PVC": {
+          "Nylon": -47.4395,
+          "PE": -29.8132,
+          "PET": -31.7187,
+          "PP": -24.1519,
+          "PS": -25.1452,
+          "PVC": -66.7975,
+          "selectivity_index": 35.1438,
+          "rank_of_target": 1,
+          "target_is_best": true
+        }
+      },
+      "summary": {
+        "n_plastics": 6,
+        "n_target_best": 4,
+        "selectivity_pass": false,
+        "mean_validator_gain": 29.242,
+        "n_validator_confirms": 6,
+        "mean_max_aa_fraction": 0.436,
+        "mean_position_entropy": 0.4914,
+        "n_degenerate": 1,
+        "surrogate_train_test_gap": 0.1385
+      }
+    },
+    {
+      "generator_architecture": "encdec",
+      "per_plastic": {
+        "PET": {
+          "n_peptides": 30,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 30.5652,
+          "best_scoring_plastic": "PET",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.3667,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 6.23,
+            "position_entropy": 0.6183,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -43.5661,
+            "random_mean": -14.7809,
+            "gain_vs_random": 28.7852,
+            "confirms": true
+          }
+        },
+        "PE": {
+          "n_peptides": 30,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 26.2681,
+          "best_scoring_plastic": "PE",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.2528,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 7.13,
+            "position_entropy": 0.5822,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -51.5234,
+            "random_mean": -15.1218,
+            "gain_vs_random": 36.4016,
+            "confirms": true
+          }
+        },
+        "PP": {
+          "n_peptides": 30,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 21.6366,
+          "best_scoring_plastic": "PP",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.3028,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 7.03,
+            "position_entropy": 0.6491,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -40.7416,
+            "random_mean": -11.3802,
+            "gain_vs_random": 29.3614,
+            "confirms": true
+          }
+        },
+        "PS": {
+          "n_peptides": 30,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 9.5276,
+          "best_scoring_plastic": "PS",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.2806,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 6.73,
+            "position_entropy": 0.6752,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -33.7322,
+            "random_mean": -10.1411,
+            "gain_vs_random": 23.5911,
+            "confirms": true
+          }
+        },
+        "PVC": {
+          "n_peptides": 30,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 42.7433,
+          "best_scoring_plastic": "PVC",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.275,
+            "most_common_aa": "R",
+            "mean_distinct_aa": 7.17,
+            "position_entropy": 0.637,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -52.4101,
+            "random_mean": -24.1925,
+            "gain_vs_random": 28.2176,
+            "confirms": true
+          }
+        },
+        "Nylon": {
+          "n_peptides": 30,
+          "target_is_best": true,
+          "rank_of_target": 1,
+          "selectivity_index": 40.33,
+          "best_scoring_plastic": "Nylon",
+          "degeneracy": {
+            "n": 30,
+            "max_aa_fraction": 0.3417,
+            "most_common_aa": "W",
+            "mean_distinct_aa": 5.97,
+            "position_entropy": 0.5099,
+            "is_degenerate": false
+          },
+          "validator": {
+            "available": true,
+            "validator_architecture": "lstm",
+            "optimized_mean": -65.5404,
+            "random_mean": -26.3962,
+            "gain_vs_random": 39.1441,
+            "confirms": true
+          }
+        }
+      },
+      "selectivity_matrix": {
+        "Nylon": {
+          "Nylon": -75.9659,
+          "PE": -37.993,
+          "PET": -39.3065,
+          "PP": -29.842,
+          "PS": -25.2958,
+          "PVC": -45.7421,
+          "selectivity_index": 40.33,
+          "rank_of_target": 1,
+          "target_is_best": true
+        },
+        "PE": {
+          "Nylon": -46.1378,
+          "PE": -60.5163,
+          "PET": -34.7322,
+          "PP": -26.9635,
+          "PS": -23.3742,
+          "PVC": -40.0334,
+          "selectivity_index": 26.2681,
+          "rank_of_target": 1,
+          "target_is_best": true
+        },
+        "PET": {
+          "Nylon": -45.2051,
+          "PE": -34.1003,
+          "PET": -64.8443,
+          "PP": -29.3002,
+          "PS": -25.2909,
+          "PVC": -37.4989,
+          "selectivity_index": 30.5652,
+          "rank_of_target": 1,
+          "target_is_best": true
+        },
+        "PP": {
+          "Nylon": -45.2245,
+          "PE": -33.8258,
+          "PET": -36.0896,
+          "PP": -57.0971,
+          "PS": -22.8474,
+          "PVC": -39.315,
+          "selectivity_index": 21.6366,
+          "rank_of_target": 1,
+          "target_is_best": true
+        },
+        "PS": {
+          "Nylon": -42.7414,
+          "PE": -30.6754,
+          "PET": -33.6296,
+          "PP": -28.5296,
+          "PS": -43.8936,
+          "PVC": -36.2541,
+          "selectivity_index": 9.5276,
+          "rank_of_target": 1,
+          "target_is_best": true
+        },
+        "PVC": {
+          "Nylon": -42.0434,
+          "PE": -23.5003,
+          "PET": -26.5638,
+          "PP": -21.2328,
+          "PS": -19.0941,
+          "PVC": -69.2302,
+          "selectivity_index": 42.7433,
+          "rank_of_target": 1,
+          "target_is_best": true
+        }
+      },
+      "summary": {
+        "n_plastics": 6,
+        "n_target_best": 6,
+        "selectivity_pass": true,
+        "mean_validator_gain": 30.9168,
+        "n_validator_confirms": 6,
+        "mean_max_aa_fraction": 0.3033,
+        "mean_position_entropy": 0.6119,
+        "n_degenerate": 0,
+        "surrogate_train_test_gap": 0.0916
+      }
+    }
+  ],
+  "selection": {
+    "selected": "encdec",
+    "reason": "encdec passes the selectivity test on all 6 polymers, with a mean gain of 30.9168 confirmed by the independent model.",
+    "fallback": false
+  }
+}

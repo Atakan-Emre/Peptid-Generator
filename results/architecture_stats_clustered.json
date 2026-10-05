@@ -1,0 +1,384 @@
+{
+  "metric": "test_r2",
+  "reference": "cnn",
+  "per_plastic": {
+    "PET": {
+      "lstm": {
+        "comparison": "cnn vs lstm",
+        "n_seeds": 5,
+        "cnn_mean": 0.891204,
+        "cnn_std": 0.000811,
+        "lstm_mean": 0.824324,
+        "lstm_std": 0.002475,
+        "mean_difference": 0.06688,
+        "paired_t_statistic": 68.8537,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 30.7923,
+        "difference_ci95": [
+          0.064183,
+          0.069576
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm'den anlamli olarak farkli (p=0.0)"
+      },
+      "lstm_vae": {
+        "comparison": "cnn vs lstm_vae",
+        "n_seeds": 5,
+        "cnn_mean": 0.891204,
+        "cnn_std": 0.000811,
+        "lstm_vae_mean": 0.77792,
+        "lstm_vae_std": 0.001199,
+        "mean_difference": 0.113284,
+        "paired_t_statistic": 221.8182,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 99.2001,
+        "difference_ci95": [
+          0.111866,
+          0.114702
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm_vae'den anlamli olarak farkli (p=0.0)"
+      },
+      "encdec": {
+        "comparison": "cnn vs encdec",
+        "n_seeds": 5,
+        "cnn_mean": 0.891204,
+        "cnn_std": 0.000811,
+        "encdec_mean": 0.847987,
+        "encdec_std": 0.001182,
+        "mean_difference": 0.043216,
+        "paired_t_statistic": 52.0058,
+        "paired_t_pvalue": 1e-06,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 23.2577,
+        "difference_ci95": [
+          0.040909,
+          0.045524
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, encdec'den anlamli olarak farkli (p=1e-06)"
+      }
+    },
+    "PE": {
+      "lstm": {
+        "comparison": "cnn vs lstm",
+        "n_seeds": 5,
+        "cnn_mean": 0.855556,
+        "cnn_std": 0.000655,
+        "lstm_mean": 0.788408,
+        "lstm_std": 0.001157,
+        "mean_difference": 0.067148,
+        "paired_t_statistic": 208.4641,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 93.228,
+        "difference_ci95": [
+          0.066254,
+          0.068042
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm'den anlamli olarak farkli (p=0.0)"
+      },
+      "lstm_vae": {
+        "comparison": "cnn vs lstm_vae",
+        "n_seeds": 5,
+        "cnn_mean": 0.855556,
+        "cnn_std": 0.000655,
+        "lstm_vae_mean": 0.742396,
+        "lstm_vae_std": 0.002033,
+        "mean_difference": 0.11316,
+        "paired_t_statistic": 100.004,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 44.7231,
+        "difference_ci95": [
+          0.110018,
+          0.116302
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm_vae'den anlamli olarak farkli (p=0.0)"
+      },
+      "encdec": {
+        "comparison": "cnn vs encdec",
+        "n_seeds": 5,
+        "cnn_mean": 0.855556,
+        "cnn_std": 0.000655,
+        "encdec_mean": 0.803399,
+        "encdec_std": 0.001298,
+        "mean_difference": 0.052157,
+        "paired_t_statistic": 106.8774,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 47.797,
+        "difference_ci95": [
+          0.050802,
+          0.053512
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, encdec'den anlamli olarak farkli (p=0.0)"
+      }
+    },
+    "PP": {
+      "lstm": {
+        "comparison": "cnn vs lstm",
+        "n_seeds": 5,
+        "cnn_mean": 0.863853,
+        "cnn_std": 0.001055,
+        "lstm_mean": 0.800701,
+        "lstm_std": 0.00291,
+        "mean_difference": 0.063152,
+        "paired_t_statistic": 43.2582,
+        "paired_t_pvalue": 2e-06,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 19.3457,
+        "difference_ci95": [
+          0.059099,
+          0.067206
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm'den anlamli olarak farkli (p=2e-06)"
+      },
+      "lstm_vae": {
+        "comparison": "cnn vs lstm_vae",
+        "n_seeds": 5,
+        "cnn_mean": 0.863853,
+        "cnn_std": 0.001055,
+        "lstm_vae_mean": 0.749324,
+        "lstm_vae_std": 0.004044,
+        "mean_difference": 0.114529,
+        "paired_t_statistic": 68.1826,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 30.4922,
+        "difference_ci95": [
+          0.109866,
+          0.119193
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm_vae'den anlamli olarak farkli (p=0.0)"
+      },
+      "encdec": {
+        "comparison": "cnn vs encdec",
+        "n_seeds": 5,
+        "cnn_mean": 0.863853,
+        "cnn_std": 0.001055,
+        "encdec_mean": 0.815507,
+        "encdec_std": 0.001746,
+        "mean_difference": 0.048347,
+        "paired_t_statistic": 67.9872,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 30.4048,
+        "difference_ci95": [
+          0.046372,
+          0.050321
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, encdec'den anlamli olarak farkli (p=0.0)"
+      }
+    },
+    "PS": {
+      "lstm": {
+        "comparison": "cnn vs lstm",
+        "n_seeds": 5,
+        "cnn_mean": 0.837263,
+        "cnn_std": 0.001718,
+        "lstm_mean": 0.754489,
+        "lstm_std": 0.00205,
+        "mean_difference": 0.082774,
+        "paired_t_statistic": 71.1918,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 31.838,
+        "difference_ci95": [
+          0.079546,
+          0.086002
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm'den anlamli olarak farkli (p=0.0)"
+      },
+      "lstm_vae": {
+        "comparison": "cnn vs lstm_vae",
+        "n_seeds": 5,
+        "cnn_mean": 0.837263,
+        "cnn_std": 0.001718,
+        "lstm_vae_mean": 0.693956,
+        "lstm_vae_std": 0.008899,
+        "mean_difference": 0.143307,
+        "paired_t_statistic": 34.9426,
+        "paired_t_pvalue": 4e-06,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 15.6268,
+        "difference_ci95": [
+          0.13192,
+          0.154693
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm_vae'den anlamli olarak farkli (p=4e-06)"
+      },
+      "encdec": {
+        "comparison": "cnn vs encdec",
+        "n_seeds": 5,
+        "cnn_mean": 0.837263,
+        "cnn_std": 0.001718,
+        "encdec_mean": 0.774531,
+        "encdec_std": 0.000441,
+        "mean_difference": 0.062732,
+        "paired_t_statistic": 84.9119,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 37.9737,
+        "difference_ci95": [
+          0.06068,
+          0.064783
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, encdec'den anlamli olarak farkli (p=0.0)"
+      }
+    },
+    "PVC": {
+      "lstm": {
+        "comparison": "cnn vs lstm",
+        "n_seeds": 5,
+        "cnn_mean": 0.805716,
+        "cnn_std": 0.001539,
+        "lstm_mean": 0.67704,
+        "lstm_std": 0.005198,
+        "mean_difference": 0.128676,
+        "paired_t_statistic": 56.9733,
+        "paired_t_pvalue": 1e-06,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 25.4793,
+        "difference_ci95": [
+          0.122405,
+          0.134947
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm'den anlamli olarak farkli (p=1e-06)"
+      },
+      "lstm_vae": {
+        "comparison": "cnn vs lstm_vae",
+        "n_seeds": 5,
+        "cnn_mean": 0.805716,
+        "cnn_std": 0.001539,
+        "lstm_vae_mean": 0.676947,
+        "lstm_vae_std": 0.006062,
+        "mean_difference": 0.128769,
+        "paired_t_statistic": 43.1994,
+        "paired_t_pvalue": 2e-06,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 19.3193,
+        "difference_ci95": [
+          0.120493,
+          0.137045
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm_vae'den anlamli olarak farkli (p=2e-06)"
+      },
+      "encdec": {
+        "comparison": "cnn vs encdec",
+        "n_seeds": 5,
+        "cnn_mean": 0.805716,
+        "cnn_std": 0.001539,
+        "encdec_mean": 0.723426,
+        "encdec_std": 0.003609,
+        "mean_difference": 0.08229,
+        "paired_t_statistic": 63.34,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 28.3265,
+        "difference_ci95": [
+          0.078683,
+          0.085897
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, encdec'den anlamli olarak farkli (p=0.0)"
+      }
+    },
+    "Nylon": {
+      "lstm": {
+        "comparison": "cnn vs lstm",
+        "n_seeds": 5,
+        "cnn_mean": 0.85199,
+        "cnn_std": 0.002274,
+        "lstm_mean": 0.707919,
+        "lstm_std": 0.006744,
+        "mean_difference": 0.144071,
+        "paired_t_statistic": 60.99,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 27.2756,
+        "difference_ci95": [
+          0.137512,
+          0.15063
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm'den anlamli olarak farkli (p=0.0)"
+      },
+      "lstm_vae": {
+        "comparison": "cnn vs lstm_vae",
+        "n_seeds": 5,
+        "cnn_mean": 0.85199,
+        "cnn_std": 0.002274,
+        "lstm_vae_mean": 0.71759,
+        "lstm_vae_std": 0.013091,
+        "mean_difference": 0.1344,
+        "paired_t_statistic": 21.3685,
+        "paired_t_pvalue": 2.8e-05,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 9.5563,
+        "difference_ci95": [
+          0.116937,
+          0.151863
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, lstm_vae'den anlamli olarak farkli (p=2.8e-05)"
+      },
+      "encdec": {
+        "comparison": "cnn vs encdec",
+        "n_seeds": 5,
+        "cnn_mean": 0.85199,
+        "cnn_std": 0.002274,
+        "encdec_mean": 0.755995,
+        "encdec_std": 0.001948,
+        "mean_difference": 0.095995,
+        "paired_t_statistic": 65.3936,
+        "paired_t_pvalue": 0.0,
+        "wilcoxon_pvalue": 0.0625,
+        "cohens_d": 29.2449,
+        "difference_ci95": [
+          0.091919,
+          0.10007
+        ],
+        "significant_at_0.05": true,
+        "verdict": "cnn, encdec'den anlamli olarak farkli (p=0.0)"
+      }
+    }
+  },
+  "summary": {
+    "n_comparisons": 18,
+    "n_significant": 18,
+    "significant_pairs": [
+      "PET: cnn vs lstm",
+      "PET: cnn vs lstm_vae",
+      "PET: cnn vs encdec",
+      "PE: cnn vs lstm",
+      "PE: cnn vs lstm_vae",
+      "PE: cnn vs encdec",
+      "PP: cnn vs lstm",
+      "PP: cnn vs lstm_vae",
+      "PP: cnn vs encdec",
+      "PS: cnn vs lstm",
+      "PS: cnn vs lstm_vae",
+      "PS: cnn vs encdec",
+      "PVC: cnn vs lstm",
+      "PVC: cnn vs lstm_vae",
+      "PVC: cnn vs encdec",
+      "Nylon: cnn vs lstm",
+      "Nylon: cnn vs lstm_vae",
+      "Nylon: cnn vs encdec"
+    ]
+  }
+}

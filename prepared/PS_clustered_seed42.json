@@ -1,0 +1,50 @@
+{
+  "plastic": "PS",
+  "split_strategy": "clustered",
+  "max_hamming": 3,
+  "identity_threshold_pct": 75.0,
+  "seed": 42,
+  "n_after_prep": 405827,
+  "split_sizes": {
+    "train": 324661,
+    "val": 40583,
+    "test": 40583
+  },
+  "split_pct": {
+    "train": 80.0,
+    "val": 10.0,
+    "test": 10.0
+  },
+  "dedup": {
+    "n_raw": 405827,
+    "n_unique": 405827,
+    "n_removed": 0,
+    "duplicate_pct": 0.0,
+    "score_spread_of_duplicates": null
+  },
+  "clustering": {
+    "n_sequences": 405827,
+    "n_clusters": 77884,
+    "largest_cluster": 282,
+    "largest_cluster_pct": 0.069,
+    "mean_cluster_size": 5.21,
+    "median_cluster_size": 5.0,
+    "singletons": 2659,
+    "singleton_pct": 3.41
+  },
+  "normalization": {
+    "mean": -15.391802787780762,
+    "std": 8.859885215759277,
+    "fitted_on": "train"
+  },
+  "leakage": {
+    "exact_test_in_train_pct": 0.0,
+    "nn_hamming_mean": 4.157,
+    "nn_hamming_median": 4.0,
+    "nn_identity_mean_pct": 65.36,
+    "pct_nn_le_2": 17.67,
+    "pct_nn_le_3": 35.33
+  },
+  "npz": "PS_clustered_seed42.npz",
+  "data_sha1": "bdd611df6ed57ab4"
+}

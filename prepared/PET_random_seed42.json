@@ -1,0 +1,41 @@
+{
+  "plastic": "PET",
+  "split_strategy": "random",
+  "max_hamming": null,
+  "identity_threshold_pct": null,
+  "seed": 42,
+  "n_after_prep": 381065,
+  "split_sizes": {
+    "train": 304852,
+    "val": 38106,
+    "test": 38107
+  },
+  "split_pct": {
+    "train": 80.0,
+    "val": 10.0,
+    "test": 10.0
+  },
+  "dedup": {
+    "n_raw": 441978,
+    "n_unique": 381065,
+    "n_removed": 60913,
+    "duplicate_pct": 13.782,
+    "score_spread_of_duplicates": 0.3035
+  },
+  "clustering": null,
+  "normalization": {
+    "mean": -27.69182777404785,
+    "std": 14.101114273071289,
+    "fitted_on": "train"
+  },
+  "leakage": {
+    "exact_test_in_train_pct": 0.0,
+    "nn_hamming_mean": 2.697,
+    "nn_hamming_median": 2.0,
+    "nn_identity_mean_pct": 77.53,
+    "pct_nn_le_2": 52.67,
+    "pct_nn_le_3": 72.33
+  },
+  "npz": "PET_random_seed42.npz",
+  "data_sha1": "e198d0ea3c737dcb"
+}

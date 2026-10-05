@@ -1,0 +1,5 @@
+{
+  "architecture": "encdec",
+  "reason": "encdec passes the selectivity test on all 6 polymers, with a mean gain of 30.9168 confirmed by the independent model.",
+  "fallback": false
+}

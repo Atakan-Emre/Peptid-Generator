@@ -1,0 +1,185 @@
+{
+  "SA": {
+    "runs": [
+      {
+        "sequence": "WRGHWWWWKKWM",
+        "score": -74.4313,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "RWYQRNFWWRWH",
+        "score": -77.8234,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "RWWWFRWHLRMW",
+        "score": -74.6127,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "RWYHRLWWLRWH",
+        "score": -76.5261,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "EFYYRYWMLRMW",
+        "score": -73.6347,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "WWWWFNWHDYRR",
+        "score": -68.0541,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "RWWHRFWRHKWM",
+        "score": -72.5049,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "FFYGRMWQLRMW",
+        "score": -73.484,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "RYHRMWFRLRWW",
+        "score": -65.4409,
+        "n_evaluations": 801
+      },
+      {
+        "sequence": "RWWWRRWWMRWH",
+        "score": -72.2451,
+        "n_evaluations": 801
+      }
+    ],
+    "best": {
+      "sequence": "RWYQRNFWWRWH",
+      "score": -77.8234,
+      "n_evaluations": 801
+    },
+    "mean_score": -72.8757,
+    "diversity_ratio": 1.0
+  },
+  "ILS": {
+    "runs": [
+      {
+        "sequence": "MFYMQEWRFRWW",
+        "score": -68.9413,
+        "n_evaluations": 3162
+      },
+      {
+        "sequence": "RWWHRWKKHRWK",
+        "score": -69.1234,
+        "n_evaluations": 3162
+      },
+      {
+        "sequence": "RWYHRFWFLRYW",
+        "score": -71.0486,
+        "n_evaluations": 3131
+      },
+      {
+        "sequence": "LWFQRDWQLRMW",
+        "score": -72.5727,
+        "n_evaluations": 3131
+      },
+      {
+        "sequence": "WRSHWWDQHLWW",
+        "score": -71.7216,
+        "n_evaluations": 3162
+      },
+      {
+        "sequence": "WWWWWWWWWWWW",
+        "score": -71.2242,
+        "n_evaluations": 3131
+      },
+      {
+        "sequence": "WRRHWWFRFMWH",
+        "score": -71.0805,
+        "n_evaluations": 3131
+      },
+      {
+        "sequence": "WWWWWWWWWWWW",
+        "score": -71.2242,
+        "n_evaluations": 3162
+      },
+      {
+        "sequence": "WRRHWMSRFRWH",
+        "score": -73.7341,
+        "n_evaluations": 3131
+      },
+      {
+        "sequence": "WRWVHRWQLRMW",
+        "score": -71.9326,
+        "n_evaluations": 3162
+      }
+    ],
+    "best": {
+      "sequence": "WRRHWMSRFRWH",
+      "score": -73.7341,
+      "n_evaluations": 3131
+    },
+    "mean_score": -71.2603,
+    "diversity_ratio": 0.9
+  },
+  "MOCO-CEM": {
+    "runs": [
+      {
+        "sequence": "RWYRRHWRLRMW",
+        "score": -74.636,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "WWWWWNWWRWRW",
+        "score": -71.0622,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "FWWHHYWMLRMW",
+        "score": -71.9762,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "YWWLRHWWFRWH",
+        "score": -74.9678,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "RWWHRRMYHRWM",
+        "score": -73.2821,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "WRVHWRFWWRWH",
+        "score": -77.7912,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "RWFQRDWWLRFW",
+        "score": -77.7572,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "RWLWWNWRWWRW",
+        "score": -64.8495,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "RFRWQWWWWWWW",
+        "score": -62.4494,
+        "n_evaluations": 2944
+      },
+      {
+        "sequence": "RWYHRFWWLRWR",
+        "score": -74.0596,
+        "n_evaluations": 2944
+      }
+    ],
+    "best": {
+      "sequence": "WRVHWRFWWRWH",
+      "score": -77.7912,
+      "n_evaluations": 2944
+    },
+    "mean_score": -72.2831,
+    "diversity_ratio": 1.0
+  }
+}

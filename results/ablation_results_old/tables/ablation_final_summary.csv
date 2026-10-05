@@ -1,2 +1,0 @@
-Plastic_Type,Model_Type,Test_R2,Test_MAE,Test_RMSE,hidden_dim,num_layers,dropout,latent_dim,learning_rate,batch_size,beta_kl,gamma_score
-Nylon,lstm_vae,0.9651229607488281,0.8725118021441048,1.2261770890681447,512,3,0.0,64,0.001,256,1.0,2.0
