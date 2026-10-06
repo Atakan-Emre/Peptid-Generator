@@ -46,23 +46,34 @@ def table_split_comparison(cfg) -> str:
 
 
 def table_full_metrics(cfg, strategy) -> str:
-    """Tablo A: tum mimari x plastik icin train/val/test R2, RMSE, MAE + ss."""
+    """Her mimari x plastik icin train/val/test setlerinin R2, RMSE ve MAE'si.
+
+    Hakem 2, ucuncu maddede bu dokuz metrigin tamamini istemisti; tablo
+    kisaltilmadan verilir.
+    """
     f = Path(cfg["out_dir"]) / f"summary_{strategy}.json"
     if not f.exists():
         return f"_summary_{strategy}.json missing._\n"
     data = json.loads(f.read_text())
-    rows = ["| Polymer | Architecture | Train R2 | Val R2 | Test R2 | Test RMSE | "
-            "Test MAE | Seeds |",
-            "| --- | --- | --- | --- | --- | --- | --- | --- |"]
+    sets = ("train", "val", "test")
+    head = ["Polymer", "Architecture"]
+    for st in sets:
+        lbl = {"train": "Train", "val": "Validation", "test": "Test"}[st]
+        head += [f"{lbl} R2", f"{lbl} RMSE", f"{lbl} MAE"]
+    head.append("Seeds")
+    rows = ["| " + " | ".join(head) + " |",
+            "| " + " | ".join("---" for _ in head) + " |"]
     for s in sorted(data, key=lambda x: (x["plastic"], x["architecture"])):
-        rows.append(
-            f"| {s['plastic']} | {s['architecture']} | "
-            f"{s['train_r2_mean']:.4f} ± {s['train_r2_std']:.4f} | "
-            f"{s['val_r2_mean']:.4f} ± {s['val_r2_std']:.4f} | "
-            f"{s['test_r2_mean']:.4f} ± {s['test_r2_std']:.4f} | "
-            f"{s['test_rmse_mean']:.3f} ± {s['test_rmse_std']:.3f} | "
-            f"{s['test_mae_mean']:.3f} ± {s['test_mae_std']:.3f} | {s['n_seeds']} |")
-    return "\n".join(rows)
+        cells = [s["plastic"], s["architecture"]]
+        for st in sets:
+            cells.append(f"{s[f'{st}_r2_mean']:.4f} ± {s[f'{st}_r2_std']:.4f}")
+            cells.append(f"{s[f'{st}_rmse_mean']:.3f} ± {s[f'{st}_rmse_std']:.3f}")
+            cells.append(f"{s[f'{st}_mae_mean']:.3f} ± {s[f'{st}_mae_std']:.3f}")
+        cells.append(str(s["n_seeds"]))
+        rows.append("| " + " | ".join(cells) + " |")
+    return "\n".join(rows) + (
+        "\n\nMean ± standard deviation over the seeds. RMSE and MAE are in "
+        "the units of the binding score.\n")
 
 
 def table_arch_stats(cfg, strategy) -> str:

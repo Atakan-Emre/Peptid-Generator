@@ -487,13 +487,14 @@ def reviewer2(n):
                 "margin on every polymer. The manuscript's architecture claim is now a CNN "
                 "claim and it is supported by the statistics rather than asserted.",
 
-                "(b) Full metrics on the test set. New Tables 3 (identity-aware) and 4 "
-                "(random) report train, validation and test R2, RMSE and MAE for every "
-                "architecture, polymer and split as mean +/- SD over 5 seeds: 48 rows, "
-                "every cell measured. No model comparison in the manuscript is made on "
-                "validation R2 any more. Model selection uses validation, model comparison "
-                "uses test, and the two are never mixed. The former Table 10 and Figure 7, "
-                "which reported validation R2 only, have been replaced.",
+                "(b) Full metrics for all three sets. New Tables 3 (identity-aware) and "
+                "4 (random) report R2, RMSE and MAE for the training, validation and test "
+                "sets, for every architecture and every polymer, as mean +/- SD over 5 "
+                "seeds. That is nine metrics per row, 48 rows and 432 measured cells in "
+                "total, with no abbreviation. No model comparison in the manuscript is "
+                "made on validation R2 any more: model selection uses validation, model "
+                "comparison uses test, and the two are never mixed. The former Table 10 "
+                "and Figure 7, which reported validation R2 only, have been replaced.",
 
                 "(c) Normalisation. We confirm that z-score statistics are computed from "
                 "the training split only, separately per polymer. We have verified this "
