@@ -26,6 +26,8 @@ FIGURES = [
     ("F6 novelty",                 "novelty",                 "07_run_analyses"),
     ("F7 interpretability",        "interpretability",        "07_run_analyses"),
     ("F8 physicochemical",         "physicochemical",         "07_run_analyses"),
+    ("F9 docking correlation",     "docking_correlation",
+     "07_run_analyses --docking-csv <laboratuvar sonucu>"),
 ]
 
 
@@ -49,6 +51,7 @@ def main() -> int:
         "novelty": lambda: figures.novelty(out_root, fig_dir, cfg),
         "interpretability": lambda: figures.interpretability(out_root, fig_dir, cfg),
         "physicochemical": lambda: figures.physicochemical(out_root, fig_dir, cfg),
+        "docking_correlation": lambda: figures.docking_correlation(out_root, fig_dir),
     }
 
     made, skipped = [], []

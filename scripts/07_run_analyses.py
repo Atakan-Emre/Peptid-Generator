@@ -10,6 +10,7 @@ Produces:
   novelty          exact matches and nearest-neighbour identity distribution
   physicochemical  property-score correlations
   interpretability positional importance and consensus sequence
+  docking          correlation with docking scores when a CSV is supplied
 """
 import argparse, json, sys
 from pathlib import Path
@@ -22,7 +23,7 @@ from pbp.config import load_config
 
 from pbp.device import configure
 from pbp.analysis import (independent_validation, selectivity, novelty,
-                          physchem, interpretability)
+                          physchem, interpretability, docking_corr)
 from pbp.analysis.scoring import ScoredModel, load_all_models
 from pbp.encoding import decode_many
 
@@ -31,6 +32,8 @@ def main():
     cfg = load_config()
     ap = argparse.ArgumentParser()
     ap.add_argument("--strategy", default="clustered")
+    ap.add_argument("--docking-csv",
+                    default="results/analysis/docking_selection.csv")
     an = cfg.get("analysis", {})
     ap.add_argument("--architecture", default=None,
                     help="verilmezse 06_compare_generators.py'nin sectigi mimari")
@@ -133,6 +136,21 @@ def main():
         print(f"  {p}: en onemli pozisyonlar {r['most_important_positions']}  "
               f"uzlasim {r['consensus_sequence']}")
     interpretability.save(interp, out_root)
+
+    # --- docking korelasyonu ---
+    # Laboratuvar sonuclari geldiginde calisir; CSV yoksa veya skor sutunu
+    # hala bossa sessizce atlanir, boylece adim her durumda tamamlanir.
+    dp = Path(a.docking_csv)
+    if dp.exists():
+        import pandas as _pd
+        _df = _pd.read_csv(dp)
+        if "docking_score" in _df.columns and _df["docking_score"].notna().any():
+            print("\n=== docking korelasyonu ===", flush=True)
+            dres = docking_corr.analyse(dp, models)
+            docking_corr.save(dres, out_root / "analysis")
+            print(json.dumps(dres["per_plastic"], indent=1, ensure_ascii=False))
+        else:
+            print(f"\n  Docking skorlari henuz girilmemis: {dp}")
 
     print(f"\nTum analizler: {out_root}")
 

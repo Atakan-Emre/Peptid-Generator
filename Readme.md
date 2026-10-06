@@ -62,6 +62,8 @@ Peptid-Generator/
 │   ├── 09_build_paper_tables.py     # T1-T10
 │   ├── 10_build_figures.py          # F1-F8
 │   ├── 11_review_compliance.py      # Reviewer-request audit
+│   ├── 12_select_docking_set.py     # Stratified peptide set for docking
+│   ├── 13_make_peptide_summary.py   # Peptide summary document for the lab
 │   ├── make_review_documents.py     # Response letters + revision notes
 │   └── run_pipeline.py              # Runs all thirteen steps in order
 │
@@ -83,7 +85,8 @@ Peptid-Generator/
 │   ├── jain_baseline/               # Prior-work benchmark
 │   ├── paper_tables/ALL_TABLES.md   # 📌 T1-T10, the tables as reported
 │   ├── figures/                     # 📌 F1-F8, PNG (300 dpi) + PDF
-│   └── review_compliance.md         # 📌 Reviewer-request audit
+│   ├── review_compliance.md         # 📌 Reviewer-request audit
+│   └── analysis/docking_selection.* # 📌 Peptides to dock, with rationale
 │
 ├── diyagram.drawio                  # Workflow diagram (manuscript Figure 1)
 ├── Readme.md                        # 📌 This file
@@ -346,6 +349,8 @@ python scripts/07_run_analyses.py                        # characterisation
 python scripts/09_build_paper_tables.py                  # T1-T10
 python scripts/10_build_figures.py                       # F1-F8
 python scripts/11_review_compliance.py                   # reviewer audit
+python scripts/12_select_docking_set.py                  # docking work list
+python scripts/13_make_peptide_summary.py                # lab summary (.docx)
 ```
 
 Figures and tables are built from the same JSON outputs and never recompute a

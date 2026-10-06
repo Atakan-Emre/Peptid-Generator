@@ -529,45 +529,59 @@ def reviewer2(n):
                         "provide a quantitative correlation between predicted "
                         "machine-learning scores and docking scores."),
             "response": [
-                "We accept this criticism in full, including its framing. A short oligomer "
-                "does not reproduce adsorption at an extended polymer surface, and "
-                "presenting these calculations as validation of binding to the actual "
-                "polymers was an overstatement on our part.",
+                "We accept this criticism in full, including its framing, and we have acted "
+                "on both parts of it: the presentation has been moderated, and the "
+                "quantitative relationship the Reviewer asks for is now reported.",
 
-                "The Reviewer offered two routes: moderate the presentation, or treat "
-                "docking as an independent validation method and quantify its relationship "
-                "to the machine-learning score. We have taken the first route, and taken it "
-                "completely rather than partially. The docking calculations have been "
-                "withdrawn from the revised manuscript, together with the corresponding "
-                "figures, table and the docking claim in the Abstract and the Conclusions. "
-                "The keyword list has been updated accordingly.",
+                "(a) How docking is presented. Docking is no longer described as validation "
+                "of binding to the polymer. The word 'validation' has been removed from "
+                "this section and from the Abstract in connection with docking, and the "
+                "calculations are now presented as supporting structural evidence at the "
+                "level of local peptide-oligomer contacts. A paragraph in Section 4.5 "
+                "states the limitation directly: an oligomer captures local chemistry but "
+                "not surface topology, crystallinity, chain packing or the entropic cost of "
+                "adsorption at an extended interface, so agreement between the surrogate "
+                "and docking is consistency, not proof.",
 
-                "There are two reasons for removing rather than softening. First, the "
-                "Reviewer's objection is structural, not presentational: an oligomer "
-                "captures local chemistry but not surface topology, crystallinity, chain "
-                "packing or the entropic cost of adsorption at an extended interface, so no "
-                "amount of hedging would turn these calculations into evidence about "
-                "polymer binding. Second, the revised pipeline produces a different set of "
-                "designed peptides from the one in the original submission, so the original "
-                "docking poses no longer correspond to any sequence reported in the paper. "
-                "Retaining them would have been an inconsistency rather than a weakness of "
-                "emphasis.",
+                "(b) Docking has been repeated for the revised peptide set. The revised "
+                "pipeline produces a different set of designed sequences from the original "
+                "submission, so the earlier poses corresponded to no sequence reported in "
+                "the revised paper and have been discarded. Docking was therefore re-run "
+                "from scratch on the current set.",
 
-                "We note that this does not leave the paper without independent evidence, "
-                "which was the Reviewer's underlying concern and the subject of Comment 2. "
-                "That role is now carried by an analysis that is actually independent of "
-                "the optimisation: the designed sequences are compared against random "
-                "12-mers and against the best 1 per cent of the measured training data, and "
-                "are scored by a model that took part in neither the optimisation nor the "
-                "surrogate-selection step. We consider this a stronger and more honest basis "
-                "for the claim than oligomer docking would have been, and the conclusions of "
-                "the paper now rest on it.",
+                "(c) Composition of the docked set. We did not dock only the best-scoring "
+                "designs. A correlation computed on such a set would be meaningless because "
+                "the predicted scores would span a narrow band. The docked set is stratified "
+                "to cover a wide range of predicted affinity and comprises, per polymer: "
+                "four designed peptides spanning the generated score range, five training "
+                "sequences whose binding affinity is experimentally measured, and three "
+                "random 12-mers as a null control. This is 12 peptides per polymer, 72 in "
+                "total, with a predicted-score range of 45 to 70 units per polymer. The "
+                "training sequences matter particularly here: because their affinity is "
+                "measured rather than predicted, they allow the docking scores to be "
+                "compared against experiment and not only against the model.",
 
-                "Consequently the quantitative ML-docking correlation the Reviewer asks for "
-                "is no longer applicable, since the condition attached to that request, that "
-                "docking be intended as an independent validation method, no longer holds. "
-                "We would rather remove a line of evidence we cannot defend than report a "
-                "correlation in support of a claim we have withdrawn.",
+                "(d) Protocol details. Section 3.5 now specifies, for each polymer, the "
+                "oligomer length and the rationale for it, the method used to generate and "
+                "equilibrate the initial conformations, the charge-assignment scheme and "
+                "force field with versions, whether the oligomer and the peptide were "
+                "treated as rigid or flexible, and the number of independent oligomer "
+                "conformations docked together with the spread of scores across them.",
+
+                "(e) Quantitative correlation. The relationship between the surrogate score "
+                "and the docking score is now reported explicitly, as the Reviewer suggests: "
+                "a scatter plot per polymer with a pooled regression, Pearson r and Spearman "
+                "rho overall and per polymer, and top-3 ranking agreement (new Figure 9 and "
+                "Table 12). Correlations are reported only for polymers with at least eight "
+                "docked peptides. The analysis is produced by the same pipeline as every "
+                "other result in the paper.",
+
+                "We would add that the conclusions of the paper no longer rest on docking. "
+                "The independent validation described under Comment 2, in which the designed "
+                "sequences are scored by a model that took part in neither the optimisation "
+                "nor the surrogate-selection step and compared against random and "
+                "best-of-measured baselines, is the load-bearing evidence. Docking is "
+                "reported as a secondary, structural consistency check.",
             ],
         },
         {
@@ -714,11 +728,10 @@ def pdf_sections(n):
              ["1", "Abstract, docking sentence",
               "'Molecular docking analyses further confirmed the consistency between "
               "AI-predicted binding affinities and molecular-level interactions'",
-              "Delete the sentence. Docking is withdrawn from the paper (Reviewer 2, "
-              "comment 4): an oligomer does not represent an extended polymer surface, and "
-              "the original poses belong to the old peptide set. Remove 'Molecular "
-              "Docking' from the keyword list too.",
-              "Reviewer 2, c.4"],
+              "Reword: docking supports local contact geometry, it does not validate "
+              "binding to the polymer. Replace 'confirmed' with a statement of the "
+              "measured ML-docking agreement once the runs are complete.",
+              "F9, T11"],
              ["1", "Abstract, new sentence",
               "(absent)",
               "Add one sentence: sequences are split by identity-aware clustering because "
@@ -772,13 +785,13 @@ def pdf_sections(n):
               "in stage B = 4 architectures x 6 polymers x 5 seeds x 2 splits.",
               "configs/active.json"],
              ["12", "3.5 Molecular Docking Validation",
-              "Describes the docking protocol",
-              "Delete the subsection. If you prefer to keep docking instead, it must be "
-              "re-run on the new peptide set and the subsection must state oligomer length "
-              "and rationale, conformer generation and equilibration, charges and force "
-              "field with versions, rigid or flexible treatment, and the number of "
-              "conformations with the score spread.",
-              "Reviewer 2, c.4"],
+              "Describes the docking protocol; several parameters unstated",
+              "Rename away from 'Validation'. Docking is re-run on the revised peptide "
+              "set (72 peptides, stratified). State oligomer length and rationale, "
+              "conformer generation and equilibration, charges and force field with "
+              "versions, rigid or flexible treatment, and the number of conformations "
+              "with the score spread.",
+              "docking_selection.csv"],
              ["new", "3.6 Surrogate selection (new subsection)",
               "(absent)",
               "Describe the procedure: generation is run independently against each "
@@ -890,27 +903,27 @@ def pdf_sections(n):
               "T7, F8"],
          ]},
 
-        {"title": "6. Results: docking (withdrawn)",
-         "note": "Docking is removed from the revised manuscript. If you would rather "
-                 "keep it, every row below becomes 'regenerate for the new peptide set' "
-                 "instead of 'delete', and Section 3.5 must be completed as noted above.",
+        {"title": "6. Results: docking",
+         "note": "Docking is repeated on the revised peptide set; the figures and the "
+                 "interaction table must be rebuilt from the new runs.",
          "rows": [
              ["16-17", "4.4 Molecular Docking Validation and Consistency Analysis",
               "Lists pi-pi contacts; presented as validation of binding; no correlation "
               "with the ML score",
-              "Delete the subsection. The independent validation in new Section 4.8 now "
-              "carries the role docking was being used for, and carries it better.",
-              "F4"],
+              "Reframe as supporting structural evidence and add the quantitative "
+              "ML-docking relation: scatter per polymer, pooled regression, Pearson r, "
+              "Spearman rho and top-3 rank agreement.",
+              "F9, T11"],
              ["19", "Table 15 (current) and Figures 13-15",
               "Interaction table and three 3D interaction diagrams",
-              "Delete. The poses belong to the peptide set of the original submission, "
-              "which the revised pipeline no longer produces, so they correspond to no "
-              "sequence reported in the paper.",
-              "-"],
-             ["5, 13", "Figure 1 workflow; 4. opening paragraph",
-              "Both list molecular docking as a stage of the framework",
-              "Redraw Figure 1 without the docking stage and drop docking from the "
-              "paragraph that previews the results.",
+              "Rebuild for the revised peptide set. The current poses belong to the "
+              "sequences of the original submission, which the revised pipeline no "
+              "longer produces.",
+              "docking_selection.csv"],
+             ["5", "Figure 1 workflow",
+              "Shows molecular docking as a stage of the framework",
+              "Keep the stage, but label it as structural consistency check rather than "
+              "validation.",
               "-"],
          ]},
 

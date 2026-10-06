@@ -467,3 +467,65 @@ def physicochemical(out_root: Path, fig_dir: Path, cfg) -> Path | None:
                  "property-affinity relationships are polymer-specific",
                  fontsize=10.5, y=1.02)
     return style.save(fig, fig_dir, "F8_physicochemical")
+
+
+# --------------------------------------------------------------------------
+# F9 - ML skoru ile docking skoru iliskisi (Reviewer 2.4)
+# --------------------------------------------------------------------------
+def docking_correlation(out_root: Path, fig_dir: Path) -> Path | None:
+    f = out_root / "analysis" / "docking_correlation.json"
+    if not f.exists():
+        return None
+    d = _load(f)
+    pairs = d.get("pairs") or []
+    if not pairs:
+        return None
+    polymers = sorted({r["plastic"] for r in pairs})
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.6, 4.0),
+                                   gridspec_kw={"width_ratios": [1.3, 1]})
+    cmap = plt.get_cmap("tab10")(np.linspace(0, 0.9, len(polymers)))
+    for p, col in zip(polymers, cmap):
+        sel = [r for r in pairs if r["plastic"] == p]
+        ax1.scatter([r["ml_score"] for r in sel], [r["docking_score"] for r in sel],
+                    s=22, alpha=0.8, label=p, color=col, edgecolor="white",
+                    linewidth=0.4)
+    ml = np.array([r["ml_score"] for r in pairs])
+    dk = np.array([r["docking_score"] for r in pairs])
+    if len(pairs) > 2:
+        k, b = np.polyfit(ml, dk, 1)
+        xs = np.linspace(ml.min(), ml.max(), 20)
+        ax1.plot(xs, k * xs + b, "--", color=style.ACCENT, linewidth=1.2)
+    po = d.get("pooled", {})
+    note = []
+    if "pearson" in po:
+        note.append(f"pooled Pearson r = {po['pearson']:.2f}")
+    if "spearman" in po:
+        note.append(f"Spearman rho = {po['spearman']:.2f}")
+    if note:
+        ax1.annotate("   ".join(note), (0.03, 0.04), xycoords="axes fraction",
+                     fontsize=8, color=style.ACCENT)
+    ax1.set_xlabel("Predicted (surrogate) score")
+    ax1.set_ylabel("Docking score (kcal/mol)")
+    ax1.set_title("(a) Surrogate score vs docking score")
+    ax1.legend(ncol=2, fontsize=7.5)
+
+    per = d.get("per_plastic", {})
+    have = [p for p in polymers if "spearman" in per.get(p, {})]
+    if have:
+        ax2.barh(have, [per[p]["spearman"] for p in have],
+                 color=style.ARCH_COLOR["encdec"], edgecolor="white", linewidth=0.5)
+        ax2.axvline(0, color=style.NEUTRAL, linewidth=0.8)
+        ax2.invert_yaxis()
+        ax2.set_xlabel("Spearman rho (surrogate vs docking)")
+        ax2.set_title("(b) Rank agreement per polymer")
+        ax2.set_axisbelow(True)
+        ax2.yaxis.grid(False)
+    else:
+        ax2.axis("off")
+        ax2.text(0.5, 0.5, "Per-polymer correlation not reported:\n"
+                           "fewer than 8 docked peptides per polymer.",
+                 ha="center", va="center", fontsize=8, color=style.NEUTRAL)
+    fig.suptitle("Docking as supporting evidence, quantified rather than asserted",
+                 fontsize=10.5, y=1.02)
+    return style.save(fig, fig_dir, "F9_docking_correlation")

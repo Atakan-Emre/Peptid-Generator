@@ -116,7 +116,12 @@ def main():
         parts[dst] = p.read_text(encoding="utf-8") if p.exists() else f"_{src} missing._\n"
 
 
-    # T1..T10 sirasiyla yaz (sozluk ekleme sirasi degil, tablo numarasi).
+    # T11 yalnizca laboratuvar docking skorlari geldiginde olusur.
+    dc = an / "docking_correlation.md"
+    if dc.exists():
+        parts["T11_docking_correlation.md"] = dc.read_text(encoding="utf-8")
+
+    # T1..T11 sirasiyla yaz (sozluk ekleme sirasi degil, tablo numarasi).
     parts = dict(sorted(parts.items(),
                         key=lambda kv: int(re.match(r"T(\d+)", kv[0]).group(1))))
 
