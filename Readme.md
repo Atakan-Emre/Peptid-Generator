@@ -49,7 +49,7 @@ Peptid-Generator/
 │   │                                # interpretability, statistics
 │   └── reporting/                   # Shared figure style, paper figures
 │
-├── 📂 scripts/                      # Pipeline steps 00-11 + helpers
+├── 📂 scripts/                      # Pipeline steps 00-11
 │   ├── 00_check_device.py           # GPU and architecture smoke test
 │   ├── 01_prepare_data.py           # Deduplicate, cluster, split, leakage report
 │   ├── 02_estimate_budget.py        # Training-time estimate
@@ -61,11 +61,8 @@ Peptid-Generator/
 │   ├── 08_jain_baseline.py          # Benchmark against Jain et al. (2025)
 │   ├── 09_build_paper_tables.py     # T1-T10
 │   ├── 10_build_figures.py          # F1-F8
-│   ├── 11_review_compliance.py      # Reviewer-request audit
-│   ├── 12_select_docking_set.py     # Stratified peptide set for docking
-│   ├── 13_make_peptide_summary.py   # Peptide summary document for the lab
-│   ├── make_review_documents.py     # Response letters + revision notes
-│   └── run_pipeline.py              # Runs all thirteen steps in order
+│   ├── 11_select_docking_set.py     # Stratified peptide set for docking
+│   └── run_pipeline.py              # Runs all twelve steps in order
 │
 ├── 📂 configs/active.json           # Local configuration, not tracked
 │
@@ -85,9 +82,9 @@ Peptid-Generator/
 │   ├── jain_baseline/               # Prior-work benchmark
 │   ├── paper_tables/ALL_TABLES.md   # 📌 T1-T10, the tables as reported
 │   ├── figures/                     # 📌 F1-F8, PNG (300 dpi) + PDF
-│   ├── review_compliance.md         # 📌 Reviewer-request audit
-│   └── analysis/docking_selection.* # 📌 Peptides to dock, with rationale
+│   └── analysis/docking_selection.* # 📌 Peptides selected for docking
 │
+├── requirements.txt                 # Pinned versions used for the results
 ├── diyagram.drawio                  # Workflow diagram (manuscript Figure 1)
 ├── Readme.md                        # 📌 This file
 ├── .gitignore
@@ -304,14 +301,12 @@ python -m venv .venv
 # source .venv/bin/activate            # Linux / macOS
 
 # RTX 50-series (Blackwell, sm_120) requires the CUDA 12.8 wheel
-pip install torch --index-url https://download.pytorch.org/whl/cu128
-pip install numpy pandas scipy matplotlib
+pip install -r requirements.txt
 ```
 
-`matplotlib` is needed from step 10 onward (figures). The helper that writes
-the reviewer-response documents additionally needs `python-docx`, `reportlab`
-and `pypdf`; it is not part of the pipeline, so install those only if you want
-to regenerate those documents.
+`requirements.txt` pins every version used to produce the reported results.
+`torch` is listed with the CUDA 12.8 build; on other hardware install the
+matching wheel instead. `matplotlib` is needed from step 10 onward (figures).
 
 ### Hardware
 
@@ -329,7 +324,7 @@ to regenerate those documents.
 ### Full pipeline
 
 ```bash
-python scripts/run_pipeline.py              # all thirteen steps, resumable
+python scripts/run_pipeline.py              # all twelve steps, resumable
 python scripts/run_pipeline.py --from 07    # from a given step onward
 ```
 
@@ -348,9 +343,7 @@ python scripts/06_compare_generators.py                  # surrogate selection
 python scripts/07_run_analyses.py                        # characterisation
 python scripts/09_build_paper_tables.py                  # T1-T10
 python scripts/10_build_figures.py                       # F1-F8
-python scripts/11_review_compliance.py                   # reviewer audit
-python scripts/12_select_docking_set.py                  # docking work list
-python scripts/13_make_peptide_summary.py                # lab summary (.docx)
+python scripts/11_select_docking_set.py                  # docking work list
 ```
 
 Figures and tables are built from the same JSON outputs and never recompute a
@@ -506,7 +499,7 @@ torch.backends.cudnn.allow_tf32 = True
 ### Figures
 
 Each figure is written as a 300 dpi PNG and as a vector PDF in
-`results/figures/`, and each answers one question raised in review.
+`results/figures/`.
 
 | Figure | Shows |
 |--------|-------|
@@ -525,7 +518,6 @@ Each figure is written as a 300 dpi PNG and as a vector PDF in
 |------|----------|
 | [`results/paper_tables/ALL_TABLES.md`](results/paper_tables/ALL_TABLES.md) | 📌 T1–T10, all tables in one file |
 | [`results/figures/`](results/figures/) | 📌 F1–F8, PNG (300 dpi) and PDF |
-| [`results/review_compliance.md`](results/review_compliance.md) | 📌 Reviewer-request audit: which artefact answers which comment |
 | [`prepared/leakage_summary.json`](prepared/leakage_summary.json) | Duplicates and nearest-neighbour identity per polymer and split |
 | [`results/summary_clustered.json`](results/summary_clustered.json) | Per-seed metrics, identity-aware split |
 | [`results/summary_random.json`](results/summary_random.json) | Per-seed metrics, random split |

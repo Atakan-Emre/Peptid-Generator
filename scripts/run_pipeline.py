@@ -37,7 +37,6 @@ STEPS = [
     ("09", "peptit analizleri",         ["scripts/07_run_analyses.py"]),
     ("10", "makale tablolari",         ["scripts/09_build_paper_tables.py"]),
     ("11", "makale figurleri",         ["scripts/10_build_figures.py"]),
-    ("12", "hakem uyum denetimi",      ["scripts/11_review_compliance.py"]),
 ]
 
 

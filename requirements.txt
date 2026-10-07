@@ -1,0 +1,10 @@
+# Pipeline (adim 00-11)
+# PyTorch, RTX 50 serisi (Blackwell, sm_120) icin CUDA 12.8 tekerlegiyle kurulur:
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+
+# Figurler (adim 10)
+matplotlib==3.11.2

@@ -71,3 +71,17 @@ logs/
 # seeds, splits and the selected hyperparameters) so it can be reconstructed.
 configs/
 *.local.json
+
+# gecici makale metni (denetim icin)
+.makaleV2_metin.txt
+
+# Makale revizyon sureci icin hazirlanan yardimci dosyalar.
+# Bunlar makalenin hesaplama hattina ait degil; ayri tutuluyorlar.
+scripts/11_review_compliance.py
+scripts/13_make_peptide_summary.py
+scripts/14_make_coauthor_memo.py
+scripts/15_make_audit_report.py
+scripts/16_make_todo_list.py
+scripts/make_review_documents.py
+scripts/review_content.py
+results/review_compliance.md
